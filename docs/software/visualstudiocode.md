@@ -12,7 +12,7 @@ Visual Studio Code is available throughout all nodes.
 To use Visual Studio Code, you simply run code command at the terminal.
 
 ```
-[xinghuang@login01 ~]$ code
+[me@login01 ~]$ code
 ```
 
 ![[vscode_gui-1024x651.png]]

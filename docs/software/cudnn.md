@@ -12,7 +12,7 @@ To use CUDNN, you’ll use the module tool.
 You can see what versions are available by using:
 
 ```
-[xinghuang@login01 ~]$ module avail cudnn/
+[me@login01 ~]$ module avail cudnn/
 
 
 ------------------------------- /opt/modulefiles -------------------------------
@@ -29,7 +29,7 @@ any of the "keys".
 To load a specific version, you would use:
 
 ```
-[xinghuang@login01 ~]$ module load cudnn/8.1.1
+[me@login01 ~]$ module load cudnn/8.1.1
 ```
 
 while the “cudnn” wildcard will load the default version, cudnn-8.1.1 in this case.

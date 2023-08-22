@@ -12,7 +12,7 @@ To use DCMTK, you’ll use the module tool.
 You can see what versions are available by using:
 
 ```
-[xinghuang@login01 ~]$ module avail dcmtk/
+[me@login01 ~]$ module avail dcmtk/
 
 ------------------------------- /opt/modulefiles -------------------------------
    dcmtk/3.6.7
@@ -30,7 +30,7 @@ any of the "keys".
 To load a specific version, you would use:
 
 ```
-[xinghuang@login01 ~]$ module load dcmtk/3.6.7
+[me@login01 ~]$ module load dcmtk/3.6.7
 ```
 
 while the “dcmtk” wildcard will load the default version, dcmtk-3.6.7 in this case.
@@ -38,7 +38,7 @@ while the “dcmtk” wildcard will load the default version, dcmtk-3.6.7 in thi
 You should now be able to run CAPTK commands:
 
 ```
-[xinghuang@login01 ~]$ dcmdump
+[me@login01 ~]$ dcmdump
 $dcmtk: dcmdump v3.6.7 2022-04-22 $
 
 dcmdump: Dump DICOM file and data set

@@ -12,7 +12,7 @@ To use ITK-SNAP, you’ll use the module tool.
 You can see what versions are available by using:
 
 ```
-[xinghuang@login01 ~]$ module avail itksnap/
+[me@login01 ~]$ module avail itksnap/
 
 ------------------------------ /opt/modulefiles -------------------------------
    itksnap/3.8.0
@@ -25,7 +25,7 @@ any of the "keys".
 To load a specific version, you would use:
 
 ```
-[xinghuang@login01 ~]$ module load itksnap/3.8.0
+[me@login01 ~]$ module load itksnap/3.8.0
 ```
 
 while the “itksnap” wildcard will load the default version, itksnap-3.8.0 in this case.
@@ -33,7 +33,7 @@ while the “itksnap” wildcard will load the default version, itksnap-3.8.0 in
 You should now be able to run ITK-SNAP commands:
 
 ```
-[xinghuang@login01 ~]$ itksnap --help
+[me@login01 ~]$ itksnap --help
 ITK-SnAP Command Line Usage:
    /export/itksnap/itksnap-3.8.0/lib/snap-3.8.0/ITK-SNAP [options] [main_image]
 Image Options:

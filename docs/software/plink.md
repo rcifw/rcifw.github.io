@@ -12,7 +12,7 @@ To use PLINK, you’ll use the module tool.
 You can see what versions are available by using:
 
 ```
-[xinghuang@login01 ~]$ module avail plink/
+[me@login01 ~]$ module avail plink/
 
 ------------------------------ /opt/modulefiles -------------------------------
    plink/2.0
@@ -25,7 +25,7 @@ any of the "keys".
 To load a specific version, you would use:
 
 ```
-[xinghuang@login01 ~]$ module load plink/2.0
+[me@login01 ~]$ module load plink/2.0
 ```
 
 while the “plink” wildcard will load the default version, plink-2.0 in this case.
@@ -33,6 +33,6 @@ while the “plink” wildcard will load the default version, plink-2.0 in this 
 You should now be able to run SINGULARITY commands:
 
 ```
-[xinghuang@login01 ~]$ plink2 --version
+[me@login01 ~]$ plink2 --version
 PLINK v2.00a3LM AVX2 Intel (12 Dec 2020)
 ```

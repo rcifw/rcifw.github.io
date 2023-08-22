@@ -14,7 +14,7 @@ To run MATLAB interactively on the cluster, you’ll use the module tool.
 You can see what versions are available by using:
 
 ```
-[xinghuang@login01 ~]$ module avail matlab/
+[me@login01 ~]$ module avail matlab/
 
 ------------------------------ /opt/modulefiles -------------------------------
    matlab/R2021a
@@ -27,7 +27,7 @@ any of the "keys".
 To load a specific version, you would use:
 
 ```
-[xinghuang@login01 ~]$ module load matlab/R2021a
+[me@login01 ~]$ module load matlab/R2021a
 ```
 
 while the “matlab” wildcard will load the default version, MATLAB R2021a in this case.
@@ -35,23 +35,23 @@ while the “matlab” wildcard will load the default version, MATLAB R2021a in 
 You should now be able to run MATLAB interactively on login nodes:
 
 ```
-[xinghuang@login01 ~]$ matlab
+[me@login01 ~]$ matlab
 MATLAB is selecting SOFTWARE OPENGL rendering.
 ```
 
 Or you can run it on compute nodes (using CPU or GPU) interactively using X11 forwarding:
 
 ```
-[xinghuang@login01 ~]$ srun -p test -N 1 -n 8 --time=04:00:00 --pty --x11 bash
-[xinghuang@node01 ~]$ module load matlab/R2021a
-[xinghuang@node01 ~]$ matlab
+[me@login01 ~]$ srun -p test -N 1 -n 8 --time=04:00:00 --pty --x11 bash
+[me@node01 ~]$ module load matlab/R2021a
+[me@node01 ~]$ matlab
 MATLAB is selecting SOFTWARE OPENGL rendering.
 ```
 
 ```
-[xinghuang@login01 ~]$ srun -p test -N 1 -n 2 --gres gpu:1 --time=04:00:00 --pty --x11 bash
-[xinghuang@gpu01 ~]$ module load matlab/R2021a
-[xinghuang@gpu01 ~]$ matlab
+[me@login01 ~]$ srun -p test -N 1 -n 2 --gres gpu:1 --time=04:00:00 --pty --x11 bash
+[me@gpu01 ~]$ module load matlab/R2021a
+[me@gpu01 ~]$ matlab
 MATLAB is selecting SOFTWARE OPENGL rendering.
 ```
 

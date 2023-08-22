@@ -12,7 +12,7 @@ To use ELASTIX, you’ll use the module tool.
 You can see what versions are available by using:
 
 ```
-[xinghuang@login01 ~]$ module avail elastix/
+[me@login01 ~]$ module avail elastix/
 
 ------------------------------- /opt/modulefiles -------------------------------
    elastix/5.0.1
@@ -30,7 +30,7 @@ any of the "keys".
 To load a specific version, you would use:
 
 ```
-[xinghuang@login01 ~]$ module load elastix/5.0.1
+[me@login01 ~]$ module load elastix/5.0.1
 ```
 
 while the “elastix” wildcard will load the default version, elastix-5.0.1 in this case.
@@ -38,7 +38,7 @@ while the “elastix” wildcard will load the default version, elastix-5.0.1 in
 You should now be able to run ELASTIX commands:
 
 ```
-[xinghuang@login01 ~]$ elastix --help
+[me@login01 ~]$ elastix --help
 elastix version: 5.0.1
 
 elastix registers a moving image to a fixed image.

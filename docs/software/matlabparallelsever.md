@@ -33,7 +33,7 @@ Next, configure MATLAB to run parallel jobs on your cluster by calling “config
 
 ```
 >> configCluster
-Username on CHPC (e.g. joe): xinghuang
+Username on CHPC (e.g. joe): me
 Warning: Unable to write to requested folder 'C:\Program
 Files\MATLAB\R2021a\bin'. Perhaps you do not have the correct access
 permissions. You will be unable to store any job and tasks here.

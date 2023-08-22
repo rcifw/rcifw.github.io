@@ -13,7 +13,7 @@ The Virtual Network Computing (VNC) home page is [https://www.realvnc.com/en/](h
 You would first need to create a password for VNC connection on both login nodes by running “vncpasswd” command:
 
 ```
-[xinghuang@login01 ~]$ vncpasswd
+[me@login01 ~]$ vncpasswd
 Password:
 Verify:
 Would you like to enter a view-only password (y/n): n
@@ -29,7 +29,7 @@ Then, you can download and install the version of VNC that fits your computer OS
 After installing the client , you can establish the connection to the login node using ssh port-forwarding. An example of doing this is shown as below, and please remember to replace both port numbers before and after “localhost” with your exclusively assigned port number.
 
 ```
-[xhuang@solomon ~]$ ssh -L 5902:localhost:5902 xinghuang@login3.chpc.wustl.edu
+[xhuang@my_local_machine ~]$ ssh -L 5902:localhost:5902 me@login3.chpc.wustl.edu
 ```
 
 After logging, you can start the VNC client on your local computer. ![[vnc_client.jpg]]

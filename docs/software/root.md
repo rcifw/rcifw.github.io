@@ -12,7 +12,7 @@ To use ROOT, you’ll use the module tool.
 You can see what versions are available by using:
 
 ```
-[xinghuang@login01 ~]$ module avail root/
+[me@login01 ~]$ module avail root/
 
 ------------------------------ /opt/modulefiles -------------------------------
    root/6.20.02
@@ -25,7 +25,7 @@ any of the "keys".
 To load a specific version, you would use:
 
 ```
-[xinghuang@login01 ~]$ module load root/6.24.0
+[me@login01 ~]$ module load root/6.24.0
 ```
 
 while the “root” wildcard will load the default version, root-6.24.0 in this case.
@@ -33,7 +33,7 @@ while the “root” wildcard will load the default version, root-6.24.0 in this
 You should now be able to run ROOT commands:
 
 ```
-[xinghuang@login01 ~]$ root --help
+[me@login01 ~]$ root --help
 
 usage: root [-b B] [-x X] [-e E] [-n N] [-t T] [-q Q] [-l L] [-a A]
             [-config CONFIG] [-memstat MEMSTAT] [-h HELP] [--version VERSION]

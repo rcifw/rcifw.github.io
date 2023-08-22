@@ -12,7 +12,7 @@ To use FFMPEG, you’ll use the module tool.
 You can see what versions are available by using:
 
 ```
-[xinghuang@login01 ~]$ module avail ffmpeg/
+[me@login01 ~]$ module avail ffmpeg/
 
 ------------------------------ /opt/modulefiles -------------------------------
    ffmpeg/5.1.2
@@ -25,7 +25,7 @@ any of the "keys".
 To load a specific version, you would use:
 
 ```
-[xinghuang@login01 ~]$ module load ffmpeg/5.1.2
+[me@login01 ~]$ module load ffmpeg/5.1.2
 ```
 
 while the “ffmpeg” wildcard will load the default version, ffmpeg-5.1.2 in this case.
@@ -33,7 +33,7 @@ while the “ffmpeg” wildcard will load the default version, ffmpeg-5.1.2 in t
 You should now be able to run FFMPEG commands:
 
 ```
-[xinghuang@login01 ~]$ ffmpeg
+[me@login01 ~]$ ffmpeg
 ffmpeg version 5.1.2 Copyright (c) 2000-2022 the FFmpeg developers
   built with gcc 8 (GCC)
   configuration: --prefix=/export/ffmpeg/ffmpeg-5.1.2

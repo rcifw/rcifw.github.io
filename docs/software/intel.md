@@ -12,7 +12,7 @@ To use the INTEL compilers, you’ll use the module tool.
 You can see what versions of the compilers are available by using:
 
 ```
-[xinghuang@login01 ~]$ module avail intel/
+[me@login01 ~]$ module avail intel/
 
 ------------------------------ /opt/modulefiles -------------------------------
    intel/19.1.0.166
@@ -25,7 +25,7 @@ any of the "keys".
 To load a specific version, you would use:
 
 ```
-[xinghuang@login01 ~]$ module load intel/19.1.0.166
+[me@login01 ~]$ module load intel/19.1.0.166
 ```
 
 while the “intel” wildcard will load the default version, intel-19.1.0.166 in this case.
@@ -33,7 +33,7 @@ while the “intel” wildcard will load the default version, intel-19.1.0.166 i
 You should now have INTEL compilers in your path:
 
 ```
-[xinghuang@login01 ~]$ which icc
+[me@login01 ~]$ which icc
 /opt/intel/compilers_and_libraries_2020.0.166/linux/bin/intel64/icc
 [xhuang@login01 ~]$ icc --version
 icc (ICC) 19.1.0.166 20191121
@@ -49,7 +49,7 @@ Copyright (C) 1985-2019 Intel Corporation.  All rights reserved.
 You should now be able to compile your code:
 
 ```
-[xinghuang@login01 C]$ icc hello.c
-[xinghuang@login01 C]$ ./a.out
+[me@login01 C]$ icc hello.c
+[me@login01 C]$ ./a.out
 hello
 ```

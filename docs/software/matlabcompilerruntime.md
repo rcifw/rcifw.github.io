@@ -14,7 +14,7 @@ We support running MATLAB via the MATLAB Compiler Runtime (MCR).
 You’ll find various versions of the MCR under:
 
 ```
-[xinghuang@login01 ~]$ ls /export/matlab/MCR/
+[me@login01 ~]$ ls /export/matlab/MCR/
 R2012b  R2014a  R2014b  R2015a  R2015b  R2016a  R2016b  R2017a  R2017b  R2018a  R2018b  R2019a  R2019b
 ```
 

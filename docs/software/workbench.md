@@ -12,7 +12,7 @@ To use WORKBENCH, you’ll use the module tool.
 You can see what versions are available by using:
 
 ```
-[xinghuang@login01 ~]$ module avail workbench/
+[me@login01 ~]$ module avail workbench/
 
 ------------------------------ /opt/modulefiles -------------------------------
    workbench/1.5.0
@@ -25,7 +25,7 @@ any of the "keys".
 To load a specific version, you would use:
 
 ```
-[xinghuang@login01 ~]$ module load workbench/1.5.0
+[me@login01 ~]$ module load workbench/1.5.0
 ```
 
 while the “workbench” wildcard will load the default version, workbench-1.5.0 in this case.
@@ -33,7 +33,7 @@ while the “workbench” wildcard will load the default version, workbench-1.5.
 You should now be able to run WORKBENCH commands:
 
 ```
-[xinghuang@login01 ~]$ wb_command
+[me@login01 ~]$ wb_command
 Version: 1.5.0
 Commit Date: 2021-02-16 13:46:47 -0600
 Operating System: Linux

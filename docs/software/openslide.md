@@ -12,7 +12,7 @@ To use OPENSLIDE, you’ll use the module tool.
 You can see what versions are available by using:
 
 ```
-[xinghuang@login01 ~]$ module avail openslide/
+[me@login01 ~]$ module avail openslide/
 
 ------------------------------- /opt/modulefiles -------------------------------
    openslide/3.4.1
@@ -30,7 +30,7 @@ any of the "keys".
 To load a specific version, you would use:
 
 ```
-[xinghuang@login01 ~]$ module load elastix/3.4.1
+[me@login01 ~]$ module load elastix/3.4.1
 ```
 
 while the “openslide” wildcard will load the default version, openslide-3.4.1 in this case.
@@ -38,7 +38,7 @@ while the “openslide” wildcard will load the default version, openslide-3.4.
 You should now be able to run ELASTIX commands:
 
 ```
-[xinghuang@login01 ~]$ openslide-show-properties
+[me@login01 ~]$ openslide-show-properties
 Usage:
   openslide-show-properties [OPTION…] FILE...
 

@@ -11,7 +11,7 @@ To use ANTS, you’ll use the module tool.
 
 You can see what versions are available by using:
 ```
-[xinghuang@login01 ~]$ module avail ants/
+[me@login01 ~]$ module avail ants/
 
 ------------------------------- /opt/modulefiles -------------------------------
    ants/2.3.1    ants/2.3.5    ants/2.4.0 (D)
@@ -31,14 +31,14 @@ any of the "keys".
 
 To load a specific version, you would use:
 ```
-[xinghuang@login01 ~]$ module load ants/2.4.0
+[me@login01 ~]$ module load ants/2.4.0
 ```
 
 while the “ants” wildcard will load the default version, ants-2.4.0 in this case.
 
 You should now be able to run ANTS commands:
 ```
-[xinghuang@login01 ~]$ antsRegistration --version
+[me@login01 ~]$ antsRegistration --version
 ANTs Version: v2.4.0.post18-gac45328
 Compiled: Aug 16 2022 16:19:48
 ```

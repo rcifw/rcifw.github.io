@@ -12,7 +12,7 @@ To use SINGULARITY, you’ll use the module tool.
 You can see what versions are available by using:
 
 ```
-[xinghuang@login01 ~]$ module avail singularity/
+[me@login01 ~]$ module avail singularity/
 
 ------------------------------ /opt/modulefiles -------------------------------
    Singularity/3.5.2    Singularity/3.9.0 (D)    singularity/3.7.0
@@ -28,7 +28,7 @@ Use "module keyword key1 key2 ..." to search for all possible modules matching a
 To load a specific version, you would use:
 
 ```
-[xinghuang@login01 ~]$ module load singularity/3.7.0
+[me@login01 ~]$ module load singularity/3.7.0
 ```
 
 while the “singularity” wildcard will load the default version, singularity-3.7.0 in this case.
@@ -36,7 +36,7 @@ while the “singularity” wildcard will load the default version, singularity-
 You should now be able to run SINGULARITY commands:
 
 ```
-[xinghuang@login01 ~]$ singularity --version
+[me@login01 ~]$ singularity --version
 singularity version 3.7.0
 ```
 

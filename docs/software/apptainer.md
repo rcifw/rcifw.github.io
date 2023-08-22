@@ -14,7 +14,7 @@ To use APPTAINER, you’ll use the module tool.
 You can see what versions are available by using:
 
 ```
-[xinghuang@login01 ~]$ module avail apptainer/
+[me@login01 ~]$ module avail apptainer/
 
 ------------------------------- /opt/modulefiles -------------------------------
    apptainer/1.1.3
@@ -31,7 +31,7 @@ Use "module keyword key1 key2 ..." to search for all possible modules matching a
 To load a specific version, you would use:
 
 ```
-[xinghuang@login01 ~]$ module load apptainer/1.1.3
+[me@login01 ~]$ module load apptainer/1.1.3
 ```
 
 while the “apptainer” wildcard will load the default version, apptainer-1.1.3 in this case.
@@ -39,7 +39,7 @@ while the “apptainer” wildcard will load the default version, apptainer-1.1.
 You should now be able to run APPTAINER commands:
 
 ```
-[xinghuang@login01 ~]$ apptainer --version
+[me@login01 ~]$ apptainer --version
 apptainer version 1.1.3
 ```
 

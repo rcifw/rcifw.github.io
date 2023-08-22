@@ -12,7 +12,7 @@ To use PERL, you’ll use the module tool.
 You can see what versions are available by using:
 
 ```
-[xinghuang@login01 ~]$ module avail perl/
+[me@login01 ~]$ module avail perl/
 
 ------------------------------ /opt/modulefiles -------------------------------
    perl/5.10.1
@@ -25,7 +25,7 @@ any of the "keys".
 To load a specific version, you would use:
 
 ```
-[xinghuang@login01 ~]$ module load perl/5.10.1
+[me@login01 ~]$ module load perl/5.10.1
 ```
 
 while the “perl” wildcard will load the default version, perl-5.10.1 in this case.
@@ -33,7 +33,7 @@ while the “perl” wildcard will load the default version, perl-5.10.1 in this
 You should now be able to run PERL commands:
 
 ```
-[xinghuang@login01 ~]$ perl --version
+[me@login01 ~]$ perl --version
 
 This is perl, v5.10.1 (*) built for x86_64-linux
 

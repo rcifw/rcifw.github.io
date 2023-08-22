@@ -11,7 +11,7 @@ To use AFNI, you’ll use the module tool.
 
 You can see what versions are available by using:
 ```
-[xinghuang@login01 ~]$ module avail afni/
+[me@login01 ~]$ module avail afni/
 
 ------------------------------ /opt/modulefiles -------------------------------
    afni/20.3.03
@@ -23,13 +23,13 @@ any of the "keys".
 
 To load a specific version, you would use:
 ```
-[xinghuang@login01 ~]$ module load afni/20.3.03
+[me@login01 ~]$ module load afni/20.3.03
 ```
 
 while the “afni” wildcard will load the default version, afni-20.3.03 in this case.
 
 You should now be able to run AFNI commands:
 ```
-[xinghuang@login01 ~]$ afni --version
+[me@login01 ~]$ afni --version
 Precompiled binary linux_openmp_64: Dec  7 2020 (Version AFNI_20.3.03 'Vespasian')
 ```

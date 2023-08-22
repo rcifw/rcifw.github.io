@@ -12,7 +12,7 @@ To use the MVAPICH2 compilers, you’ll use the module tool.
 You can see what versions are available by using:
 
 ```
-[xinghuang@login01 ~]$ module avail mvapich2/
+[me@login01 ~]$ module avail mvapich2/
 
 ------------------------------ /opt/modulefiles -------------------------------
    mvapich2/2.3.2-gcc-8.3.1    mvapich2/2.3.2-intel-19.1.0.166 (D)
@@ -30,7 +30,7 @@ Versions of MVAPICH2 compiled with both the gcc compiler and the intel compiler 
 To load a specific version, you would use:
 
 ```
-[xinghuang@login01 ~]$ module load mvapich2/2.3.2-gcc-8.3.1
+[me@login01 ~]$ module load mvapich2/2.3.2-gcc-8.3.1
 ```
 
 while the “mvapich2” wildcard will load the default version, mvapich2/2.3.2-intel-19.1.0.166 in this case.
@@ -38,7 +38,7 @@ while the “mvapich2” wildcard will load the default version, mvapich2/2.3.2-
 You should now have MVAPICH2 compilers in your path:
 
 ```
-[xinghuang@login01 ~]$ which mpicc
+[me@login01 ~]$ which mpicc
 /opt/apps/mpi/mvapich2-2.3.2_gcc-8.3.1/bin/mpicc
 [xhuang@login01 ~]$ mpicc --version
 gcc (GCC) 8.3.1 20191121 (Red Hat 8.3.1-5)

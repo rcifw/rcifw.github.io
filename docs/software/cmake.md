@@ -12,7 +12,7 @@ To use CMAKE, you’ll use the module tool.
 You can see what versions are available by using:
 
 ```
-[xinghuang@login01 ~]$ module avail cmake/
+[me@login01 ~]$ module avail cmake/
 
 ------------------------------ /opt/modulefiles -------------------------------
    cmake/3.14.5    cmake/3.20.0 (D)
@@ -28,7 +28,7 @@ any of the "keys".
 To load a specific version, you would use:
 
 ```
-[xinghuang@login01 ~]$ module load cmake/3.20.0
+[me@login01 ~]$ module load cmake/3.20.0
 ```
 
 while the “cmake” wildcard will load the default version, cmake-3.20.0 in this case.
@@ -36,7 +36,7 @@ while the “cmake” wildcard will load the default version, cmake-3.20.0 in th
 You should now be able to run CMAKE commands:
 
 ```
-[xinghuang@login01 ~]$ cmake --version
+[me@login01 ~]$ cmake --version
 cmake version 3.20.0-rc3
 
 CMake suite maintained and supported by Kitware (kitware.com/cmake).

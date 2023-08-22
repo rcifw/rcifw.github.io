@@ -12,7 +12,7 @@ To use the MPICH compilers, you’ll use the module tool.
 You can see what versions are available by using:
 
 ```
-[xinghuang@login01 ~]$ module avail mpich/
+[me@login01 ~]$ module avail mpich/
 
 ------------------------------ /opt/modulefiles -------------------------------
    mpich/3.3.1-gcc-8.3.1    mpich/3.3.1-intel-19.1.0.166 (D)
@@ -30,7 +30,7 @@ Versions of MPICH compiled with both the gcc compiler and the intel compiler are
 To load a specific version, you would use:
 
 ```
-[xinghuang@login01 ~]$ module load mpich/3.3.1-gcc-8.3.1
+[me@login01 ~]$ module load mpich/3.3.1-gcc-8.3.1
 ```
 
 while the “mpich” wildcard will load the default version, mpich-3.3.1-intel-19.1.0.166 in this case.
@@ -38,17 +38,17 @@ while the “mpich” wildcard will load the default version, mpich-3.3.1-intel-
 You should now have MPICH compilers in your path:
 
 ```
-[xinghuang@login01 ~]$ which mpicc
+[me@login01 ~]$ which mpicc
 /opt/apps/mpi/mpich-3.3.1_gcc-8.3.1/bin/mpicc
-[xinghuang@login01 ~]$ mpicc --version
+[me@login01 ~]$ mpicc --version
 gcc (GCC) 8.3.1 20191121 (Red Hat 8.3.1-5)
 Copyright (C) 2018 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
-[xinghuang@login01 ~]$ which mpifort
+[me@login01 ~]$ which mpifort
 /opt/apps/mpi/mpich-3.3.1_gcc-8.3.1/bin/mpifort
-[xinghuang@login01 ~]$ mpifort --version
+[me@login01 ~]$ mpifort --version
 GNU Fortran (GCC) 8.3.1 20191121 (Red Hat 8.3.1-5)
 Copyright (C) 2018 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO

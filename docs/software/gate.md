@@ -12,7 +12,7 @@ To use GATE, you’ll use the module tool.
 You can see what versions are available by using:
 
 ```
-[xinghuang@login01 ~]$ module avail geant4/
+[me@login01 ~]$ module avail geant4/
 
 ------------------------------ /opt/modulefiles -------------------------------
    gate/9.1
@@ -25,7 +25,7 @@ any of the "keys".
 To load a specific version, you would use:
 
 ```
-[xinghuang@login01 ~]$ module load gate/9.1
+[me@login01 ~]$ module load gate/9.1
 ```
 
 while the “gate” wildcard will load the default version, gate-9.1 in this case.
@@ -33,7 +33,7 @@ while the “gate” wildcard will load the default version, gate-9.1 in this ca
 You should now be able to run GATE commands:
 
 ```
-[xinghuang@login01 ~]$ Gate
+[me@login01 ~]$ Gate
 [G4]
 [G4] **************************************************************
 [G4]  Geant4 version Name: geant4-10-07-patch-01    (5-February-2021)

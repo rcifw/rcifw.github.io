@@ -11,7 +11,7 @@ _Computations were performed using the facilities of the Washington University R
 See current list [here](publications.md)
 
 # Calendar of Events
-**September 7, 2023** -- Stay tuned for more details on our mixer in East Imaging!
+**September 7, 2023** -- Stay tuned for more details on our mixer in East Imaging from 2:30-3:30pm!
 
 **mid-October 2023** -- Stay tuned for more details on our all-RCIF open house!
 

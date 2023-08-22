@@ -12,23 +12,23 @@ While we don’t support Docker directly, we do support Singularity which is a c
 Before you take action, you must first load the singularity module on the cluster by running:
 
 ```
-[xinghuang@login01 ~]$ module load singularity/3.7.0
+[me@login01 ~]$ module load singularity/3.7.0
 ```
 
 Once you have loaded the singularity module, you can run the Docker image by:
 
 ```
-[xinghuang@login01 ~]$ singularity exec ubuntu.simg cat /etc/os-release
+[me@login01 ~]$ singularity exec ubuntu.simg cat /etc/os-release
 ```
 
 Also, you can run the Docker image interactively by:
 
 ```
-[xinghuang@login01 ~]$ singularity shell ubuntu.simg
+[me@login01 ~]$ singularity shell ubuntu.simg
 ```
 
 If the data to be processed is in /scratch folder, you just need to map /scratch folder on the cluster to the /scratch folder in the container image:
 
 ```
-[xinghuang@login01 ~]$ singularity exec -B /scratch:/scratch ubuntu.simg YOUR_CODE
+[me@login01 ~]$ singularity exec -B /scratch:/scratch ubuntu.simg YOUR_CODE
 ```

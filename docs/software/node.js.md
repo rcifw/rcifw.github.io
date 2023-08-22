@@ -12,7 +12,7 @@ To use Node.js, you’ll use the module tool.
 You can see what versions are available by using:
 
 ```
-[xinghuang@login01 ~]$ module avail node/
+[me@login01 ~]$ module avail node/
 
 ------------------------------- /opt/modulefiles -------------------------------
    node/19.0.0
@@ -30,7 +30,7 @@ any of the "keys".
 To load a specific version, you would use:
 
 ```
-[xinghuang@login01 ~]$ module load node/19.0.0
+[me@login01 ~]$ module load node/19.0.0
 ```
 
 while the “node” wildcard will load the default version, node-19.0.0 in this case.
@@ -38,7 +38,7 @@ while the “node” wildcard will load the default version, node-19.0.0 in this
 You should now be able to run Node.js commands:
 
 ```
-[xinghuang@login01 ~]$ node --help
+[me@login01 ~]$ node --help
 Usage: node [options] [ script.js ] [arguments]
        node inspect [options] [ script.js | host:port ] [arguments]
 

@@ -12,7 +12,7 @@ To use GO, you’ll use the module tool.
 You can see what versions are available by using:
 
 ```
-[xinghuang@login01 ~]$ module avail go/
+[me@login01 ~]$ module avail go/
 
 ------------------------------ /opt/modulefiles -------------------------------
    go/1.13    go/1.15.6   go/1.17.5    go/1.19.2 (D)
@@ -33,7 +33,7 @@ any of the "keys".
 To load a specific version, you would use:
 
 ```
-[xinghuang@login01 ~]$ module load go/1.15.6
+[me@login01 ~]$ module load go/1.15.6
 ```
 
 while the “go” wildcard will load the default version, go-1.15.6 in this case.
@@ -41,7 +41,7 @@ while the “go” wildcard will load the default version, go-1.15.6 in this cas
 You should now be able to run GO commands:
 
 ```
-[xinghuang@login01 ~]$ go help build
+[me@login01 ~]$ go help build
 usage: go build [-o output] [-i] [build flags] [packages]
 
 Build compiles the packages named by the import paths,

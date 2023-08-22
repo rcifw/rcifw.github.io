@@ -12,7 +12,7 @@ To use OCTAVE, you’ll use the module tool.
 You can see what versions are available by using:
 
 ```
-[xinghuang@login01 ~]$ module avail octave/
+[me@login01 ~]$ module avail octave/
 
 ------------------------------ /opt/modulefiles -------------------------------
    octave/6.4.0    octave/7.3.0 (D)
@@ -33,7 +33,7 @@ of the "keys".
 To load a specific version, you would use:
 
 ```
-[xinghuang@login01 ~]$ module load octave/7.3.0
+[me@login01 ~]$ module load octave/7.3.0
 ```
 
 while the “octave” wildcard will load the default version, octave-7.3.0 in this case.

@@ -12,7 +12,7 @@ To use MOOSE, you’ll use the module tool.
 You can see what versions are available by using:
 
 ```
-[xinghuang@login01 ~]$ module avail moose/
+[me@login01 ~]$ module avail moose/
 
 ------------------------------- /opt/modulefiles -------------------------------
    moose/0.1.0
@@ -30,7 +30,7 @@ any of the "keys".
 To load a specific version, you would use:
 
 ```
-[xinghuang@login01 ~]$ module load moose/0.1.0
+[me@login01 ~]$ module load moose/0.1.0
 ```
 
 while the “moose” wildcard will load the default version, moose-0.1.0 in this case.
@@ -38,12 +38,12 @@ while the “moose” wildcard will load the default version, moose-0.1.0 in thi
 Before running moose command, you need to activate the Python Virtual Environment after loading the module.
 
 ```
-[xinghuang@login01 ~]$ conda activate moose_env
-(moose_env) [xinghuang@login01 ~]$
+[me@login01 ~]$ conda activate moose_env
+(moose_env) [me@login01 ~]$
 ```
 
 You should now be able to run MOOSE commands:
 
 ```
-(moose_env) [xinghuang@login01 ~]$ moose
+(moose_env) [me@login01 ~]$ moose
 ```

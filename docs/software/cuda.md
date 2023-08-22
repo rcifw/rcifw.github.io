@@ -12,7 +12,7 @@ To use the CUDA compilers, you’ll use the module tool.
 You can see what versions are available by using:
 
 ```
-[xinghuang@login01 ~]$ module avail cuda/
+[me@login01 ~]$ module avail cuda/
 
 ------------------------------- /opt/modulefiles -------------------------------
    cuda/6.0    cuda/9.1     cuda/10.2 (D)    cuda/11.1    cuda/11.3
@@ -28,7 +28,7 @@ Use "module keyword key1 key2 ..." to search for all possible modules matching a
 To load a specific version, you would use:
 
 ```
-[xinghuang@login01 ~]$ module load cuda/11.0
+[me@login01 ~]$ module load cuda/11.0
 ```
 
 while the “cuda” wildcard will load the default version, cuda-10.2 in this case.
@@ -36,7 +36,7 @@ while the “cuda” wildcard will load the default version, cuda-10.2 in this c
 You should now have CUDA compilers in your path:
 
 ```
-[xinghuang@login01 ~]$ nvcc --version
+[me@login01 ~]$ nvcc --version
 nvcc: NVIDIA (R) Cuda compiler driver
 Copyright (c) 2005-2020 NVIDIA Corporation
 Built on Wed_Jul_22_19:09:09_PDT_2020

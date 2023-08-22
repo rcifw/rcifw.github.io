@@ -12,7 +12,7 @@ To use MRICRON, you’ll use the module tool.
 You can see what versions are available by using:
 
 ```
-[xinghuang@login01 ~]$ module avail mricron/
+[me@login01 ~]$ module avail mricron/
 
 ------------------------------ /opt/modulefiles -------------------------------
    mricron/20190902
@@ -25,7 +25,7 @@ any of the "keys".
 To load a specific version, you would use:
 
 ```
-[xinghuang@login01 ~]$ module load mricron/20190902
+[me@login01 ~]$ module load mricron/20190902
 ```
 
 while the “mricron” wildcard will load the default version, mricron-20190902 in this case.
@@ -33,7 +33,7 @@ while the “mricron” wildcard will load the default version, mricron-20190902
 You should now be able to run MRICRON commands:
 
 ```
-[xinghuang@login01 ~]$ dcm2niix --version
+[me@login01 ~]$ dcm2niix --version
 Chris Rorden's dcm2niiX version v1.0.20190902  (JP2:OpenJPEG) GCC4.8.2 (64-bit Linux)
 v1.0.20190902
 ```
