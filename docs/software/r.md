@@ -7,27 +7,7 @@ author:
 
 The R home page is [https://www.r-project.org/](https://www.r-project.org/).
 
-To use R, you’ll need to use Anaconda distributions, which come pre-bundled with many R packages. Regardless of which R package you use, you need to set up a R environment similar to Python Virtual Environment using conda command. This will allow you to update or install any packages that you’d like.
-
-Since Anaconda distributions also provide python packages, you can see what versions of Anaconda distributions available by checking the version of python:
-
-```
-[me@login01 ~]$ module avail python/
-
------------------------------- /opt/modulefiles -------------------------------
-   python/2.7.16    python/3.6.5    python/3.7.4    python/3.8.3 (D)
-
-  Where:
-   D:  Default Module
-
-Use "module spider" to find all possible modules and extensions.
-Use "module keyword key1 key2 ..." to search for all possible modules matching
-any of the "keys".
-
-[me@login01 ~]$ module load python/3.8.3
-[me@login01 ~]$ which conda
-/export/anaconda/anaconda3/anaconda3-2020.07/bin/conda
-```
+To use R, you’ll want to use Anaconda distributions (see [Python](python.md) for instructions on how to setup your conda environment), which come pre-bundled with many R packages. Regardless of which R package you use, you need to set up a R environment similar to Python Virtual Environment using conda command. This will allow you to update or install any packages that you’d like.
 
 You can now create a R environment with:
 
@@ -54,7 +34,6 @@ To install R packages within this environment, you can start R, and then use “
 An example of creating a new R environment is shown here:
 
 ```
-[me@login01 ~]$ module load python/3.8.3
 [me@login01 ~]$ conda create -n r-env r-essentials r-base
 [me@login01 ~]$ source activate r-env
 (r-env) [me@login01 ~]$ R
