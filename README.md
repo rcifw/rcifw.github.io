@@ -17,7 +17,7 @@ this repo, since it is only for documentation. Basically, if you want to suggest
 3. when you are happy with them, make sure the branch is pushed to the origin (`git push origin my_branch`)
 4. then open up a [pull request](https://github.com/rcifw/rcifw.github.io/pulls) ... aka "PR"
 5. someone will look at the changes and either approve or suggest changes
-6. once all changes are accepted, the pull request can be merged by you ...
+6. once all changes are accepted, the pull request can be merged by an admin ...
 7. and magically you will see your contributions in [https://rcifw.github.io/](https://rcifw.github.io/) 
 
 # Conventions
