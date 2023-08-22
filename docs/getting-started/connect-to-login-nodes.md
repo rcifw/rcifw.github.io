@@ -102,14 +102,14 @@ The key's randomart image is:
 The next step would be to place the public key on the login nodes.
 
 ```
-[/home/mobaxterm]$ ssh-copy-id xinghuang@login3-01.chpc.wustl.edu
+[/home/mobaxterm]$ ssh-copy-id me@login3-01.chpc.wustl.edu
 /bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
 /bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
 stty: standard input: Inappropriate ioctl for device
 
 Number of key(s) added: 1
 
-Now try logging into the machine, with:   "ssh 'xinghuang@login3-01.chpc.wustl.edu'"
+Now try logging into the machine, with:   "ssh 'me@login3-01.chpc.wustl.edu'"
 and check to make sure that only the key(s) you wanted were added.
 ```
 
