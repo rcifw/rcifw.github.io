@@ -30,12 +30,12 @@ any of the "keys".
 To load a specific version, you would use:
 
 ```
-[me@login01 ~]$ module load elastix/3.4.1
+[me@login01 ~]$ module load openslide/3.4.1
 ```
 
 while the “openslide” wildcard will load the default version, openslide-3.4.1 in this case.
 
-You should now be able to run ELASTIX commands:
+You should now be able to run OpenSlide commands:
 
 ```
 [me@login01 ~]$ openslide-show-properties
