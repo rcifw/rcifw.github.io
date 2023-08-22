@@ -12,7 +12,7 @@ To use GATE, you’ll use the module tool.
 You can see what versions are available by using:
 
 ```
-[me@login01 ~]$ module avail geant4/
+[me@login01 ~]$ module avail gate/
 
 ------------------------------ /opt/modulefiles -------------------------------
    gate/9.1
