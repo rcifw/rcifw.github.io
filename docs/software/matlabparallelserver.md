@@ -24,7 +24,7 @@ To find out the right location, start MATLAB on your local workstation, and run 
 
 ans =
 
-    'C:\Users\Xing Huang\Documents\MATLAB'
+    'C:\Users\Me\Documents\MATLAB'
 ```
 
 On the Linux machine, it is expected to be unzipped under /toolbox/local.
@@ -83,7 +83,7 @@ The following settings are optional depending on the nature of your job.
 *   Specify e-mail address to receive notifications about your job
 
 ```
->> c.AdditionalProperties.EmailAddress = 'x.huang@wustl.edu';
+>> c.AdditionalProperties.EmailAddress = 'me@wustl.edu';
 ```
 
 *   Specify number of GPUs per node

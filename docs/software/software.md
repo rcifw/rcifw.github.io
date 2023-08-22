@@ -24,7 +24,7 @@ We support a variety of software on the RCIF HPC cluster
 * [jupyternotebook](jupyternotebook.md)
 * [matlabcompilerruntime](matlabcompilerruntime.md)
 * [matlabinteractive](matlabinteractive.md)
-* [matlabparallelsever](matlabparallelsever.md)
+* [matlabparallelserver](matlabparallelserver.md)
 * [moose](moose.md)
 * [mpich](mpich.md)
 * [mricron](mricron.md)
