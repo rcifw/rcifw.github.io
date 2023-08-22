@@ -9,7 +9,6 @@ We support a variety of software on the RCIF HPC cluster
 * [cuda](cuda.md)
 * [cudnn](cudnn.md)
 * [dcmtk](dcmtk.md)
-* [dockerimages](dockerimages.md)
 * [dramms](dramms.md)
 * [elastix](elastix.md)
 * [ffmpeg](ffmpeg.md)
