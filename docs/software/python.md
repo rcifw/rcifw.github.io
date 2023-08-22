@@ -41,7 +41,7 @@ You should now have PYTHON in your path:
 ```
 [me@login01 ~]$ which python
 /opt/apps/anaconda/anaconda3/Anaconda3-2019.10/bin/python
-[other_me@login01 ~]$ python --version
+[me@login01 ~]$ python --version
 Python 3.7.4
 ```
 
