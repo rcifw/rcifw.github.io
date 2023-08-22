@@ -35,13 +35,13 @@ You should now have INTEL compilers in your path:
 ```
 [me@login01 ~]$ which icc
 /opt/intel/compilers_and_libraries_2020.0.166/linux/bin/intel64/icc
-[xhuang@login01 ~]$ icc --version
+[other_me@login01 ~]$ icc --version
 icc (ICC) 19.1.0.166 20191121
 Copyright (C) 1985-2019 Intel Corporation.  All rights reserved.
 
-[xhuang@login01 ~]$ which ifort
+[other_me@login01 ~]$ which ifort
 /opt/intel/compilers_and_libraries_2020.0.166/linux/bin/intel64/ifort
-[xhuang@login01 ~]$ ifort --version
+[other_me@login01 ~]$ ifort --version
 ifort (IFORT) 19.1.0.166 20191121
 Copyright (C) 1985-2019 Intel Corporation.  All rights reserved.
 ```

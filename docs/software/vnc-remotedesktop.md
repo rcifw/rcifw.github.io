@@ -29,7 +29,7 @@ Then, you can download and install the version of VNC that fits your computer OS
 After installing the client , you can establish the connection to the login node using ssh port-forwarding. An example of doing this is shown as below, and please remember to replace both port numbers before and after “localhost” with your exclusively assigned port number.
 
 ```
-[xhuang@my_local_machine ~]$ ssh -L 5902:localhost:5902 me@login3.chpc.wustl.edu
+[other_me@my_local_machine ~]$ ssh -L 5902:localhost:5902 me@login3.chpc.wustl.edu
 ```
 
 After logging, you can start the VNC client on your local computer. ![[vnc_client.jpg]]

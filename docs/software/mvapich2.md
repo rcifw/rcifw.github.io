@@ -40,15 +40,15 @@ You should now have MVAPICH2 compilers in your path:
 ```
 [me@login01 ~]$ which mpicc
 /opt/apps/mpi/mvapich2-2.3.2_gcc-8.3.1/bin/mpicc
-[xhuang@login01 ~]$ mpicc --version
+[other_me@login01 ~]$ mpicc --version
 gcc (GCC) 8.3.1 20191121 (Red Hat 8.3.1-5)
 Copyright (C) 2018 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
-[xhuang@login01 ~]$ which mpifort
+[other_me@login01 ~]$ which mpifort
 /opt/apps/mpi/mvapich2-2.3.2_gcc-8.3.1/bin/mpifort
-[xhuang@login01 ~]$ mpifort --version
+[other_me@login01 ~]$ mpifort --version
 GNU Fortran (GCC) 8.3.1 20191121 (Red Hat 8.3.1-5)
 Copyright (C) 2018 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO

@@ -12,7 +12,7 @@ To run Jupyter Notebook on the login nodes, we need to employ port forwarding an
 First of all, you need to forward the port that you want to run Jupyter Notebook on one of the login nodes to one of the ports on your local machine. The following example is forwarding port 5900 on login02, to port 8080 on your local machine. You can choose the port number on your local machine as you prefer. Similarly, it can run on login01 as well.
 
 ```
-[xhuang@my_local_machine ~]$ ssh -L localhost:8080:localhost:5900 me@login3-02.chpc.wustl.edu
+[other_me@my_local_machine ~]$ ssh -L localhost:8080:localhost:5900 me@login3-02.chpc.wustl.edu
 ```
 
 Next start Jupyter Notebook run on port 5900 of login02:
@@ -57,7 +57,7 @@ After the interactive job is launched, you would be assigned to a compute node, 
 Open another terminal window, and you need to forward the port of the assigned nodes to one of the ports on your local machine. The following example is forwarding port 5900 on node22, to port 8080 on your local machine. You can choose the port number on your local machine as you prefer.
 
 ```
-[xhuang@my_local_machine ~]$ ssh -L localhost:8080:localhost:5900 me@login3-02.chpc.wustl.edu
+[other_me@my_local_machine ~]$ ssh -L localhost:8080:localhost:5900 me@login3-02.chpc.wustl.edu
 [me@login02 ~] ssh -L localhost:5900:localhost:5900 me@node22
 ```
 
