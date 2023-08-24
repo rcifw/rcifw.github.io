@@ -1,8 +1,10 @@
 ---
+title: Apptainer
 created: 2023-03-31T09:26:07 (UTC -04:00)
 tags: []
 source: https://sites.wustl.edu/chpc/resources/software/apptainer/
 author: 
+exclude: true
 ---
 
 Singularity is not longer officially supported and Apptainer is the replacement for it.

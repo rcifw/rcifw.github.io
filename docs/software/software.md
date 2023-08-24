@@ -1,4 +1,8 @@
-# Software
+---
+title: Software
+tags: []
+author: Scott Johnson
+---
 
 We support a variety of software on the RCIF HPC cluster
 * [afni](afni.md)

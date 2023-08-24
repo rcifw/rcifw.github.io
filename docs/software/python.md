@@ -1,8 +1,10 @@
 ---
+title: Python
 created: 2023-03-31T09:27:31 (UTC -04:00)
 tags: []
 source: https://sites.wustl.edu/chpc/resources/software/python/
 author:
+exclude: true
 ---
 
 We recommend using a local conda environment for Python development, e.g., [Miniconda](https://docs.conda.io/en/main/miniconda.html) is one such choice. It can be installed using:

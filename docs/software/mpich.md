@@ -1,8 +1,10 @@
 ---
+title: MPICH
 created: 2023-03-31T09:27:10 (UTC -04:00)
 tags: []
 source: https://sites.wustl.edu/chpc/resources/software/mpich/
 author:
+exclude: true
 ---
 
 The MPICH Developers home page is [https://www.mpich.org/](https://www.mpich.org/).

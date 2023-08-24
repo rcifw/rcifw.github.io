@@ -1,5 +1,7 @@
 ---
+title: Connect
 created: 2023-03-31T09:22:22 (UTC -04:00)
+last_modified_at: 2023-08-24T09:30:21 (UTC -05:00)
 tags: []
 source: https://sites.wustl.edu/chpc/for-users/frequently-asked-questions-faq/connecting-to-login-nodes-1/
 author:

@@ -1,8 +1,10 @@
 ---
+title: Gnu Compilers
 created: 2023-03-31T09:26:44 (UTC -04:00)
 tags: []
 source: https://sites.wustl.edu/chpc/resources/software/gcc/
 author:
+exclude: true
 ---
 
 The GCC Developers home page is [https://gcc.gnu.org](https://gcc.gnu.org/).

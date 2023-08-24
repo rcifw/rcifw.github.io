@@ -1,8 +1,10 @@
 ---
+title: CUDA
 created: 2023-03-31T09:26:23 (UTC -04:00)
 tags: []
 source: https://sites.wustl.edu/chpc/resources/software/cuda/
 author: 
+exclude: true
 ---
 
 The CUDA Developers home page is [https://developer.nvidia.com/cuda-zone](https://developer.nvidia.com/cuda-zone).

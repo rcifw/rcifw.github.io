@@ -1,3 +1,9 @@
+---
+title: Hardware
+tags: []
+author: 
+---
+
 # Login Nodes
 ## login\[1-2\]
 -  Summary: 2 x [ACTserv x1210](https://www.advancedclustering.com/act_systems/actserv-x1210/) (32-cores, 192GB, 480GB SSD)

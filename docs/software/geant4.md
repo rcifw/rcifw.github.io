@@ -1,8 +1,10 @@
 ---
+title: GEANT4
 created: 2023-03-31T09:26:46 (UTC -04:00)
 tags: []
 source: https://sites.wustl.edu/chpc/resources/software/geant4/
 author:
+exclude: true
 ---
 
 The GEANT4 home page is [https://geant4.web.cern.ch/](https://geant4.web.cern.ch/).
