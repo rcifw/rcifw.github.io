@@ -1,8 +1,10 @@
 ---
+title: MVAPICH
 created: 2023-03-31T09:27:14 (UTC -04:00)
 tags: []
 source: https://sites.wustl.edu/chpc/resources/software/mvapich2/
 author:
+exclude: true
 ---
 
 The MVAPICH2 Developers home page is [http://mvapich.cse.ohio-state.edu](http://mvapich.cse.ohio-state.edu/).

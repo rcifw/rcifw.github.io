@@ -1,8 +1,10 @@
 ---
+title: Octave
 created: 2023-03-31T09:27:19 (UTC -04:00)
 tags: []
 source: https://sites.wustl.edu/chpc/resources/software/octave/
 author:
+exclude: true
 ---
 
 The OCTAVE home page is [https://www.gnu.org/software/octave/index/](https://www.gnu.org/software/octave/index).

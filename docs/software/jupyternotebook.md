@@ -1,8 +1,10 @@
 ---
+title: Jupyter Notebook
 created: 2023-03-31T09:26:57 (UTC -04:00)
 tags: []
 source: https://sites.wustl.edu/chpc/resources/software/jupyter-notebook/
 author:
+exclude: true
 ---
 
 To run Jupyter Notebook on the login nodes, we need to employ port forwarding and Python package.

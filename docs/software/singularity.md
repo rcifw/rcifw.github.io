@@ -1,8 +1,10 @@
 ---
+title: Singularity
 created: 2023-03-31T09:27:42 (UTC -04:00)
 tags: []
 source: https://sites.wustl.edu/chpc/resources/software/singularity/
 author:
+exclude: true
 ---
 
 The SINGULARITY home page is [https://sylabs.io/docs](https://sylabs.io/docs/).

@@ -1,8 +1,10 @@
 ---
+title: Node.JS
 created: 2023-03-31T09:27:16 (UTC -04:00)
 tags: []
 source: https://sites.wustl.edu/chpc/resources/software/node/
 author:
+exclude: true
 ---
 
 The Node.js home page is [https://nodejs.org/en/](https://nodejs.org/en/).

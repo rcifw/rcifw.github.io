@@ -1,8 +1,10 @@
 ---
+title: Perl
 created: 2023-03-31T09:27:26 (UTC -04:00)
 tags: []
 source: https://sites.wustl.edu/chpc/resources/software/perl/
 author:
+exclude: true
 ---
 
 The PERL home page is [https://www.perl.org](https://www.perl.org/).

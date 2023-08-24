@@ -1,8 +1,10 @@
 ---
+title: CMAKE
 created: 2023-03-31T09:26:10 (UTC -04:00)
 tags: []
 source: https://sites.wustl.edu/chpc/resources/software/cmake/
 author: 
+exclude: true
 ---
 
 The CMAKE home page is [https://cmake.org](https://cmake.org/).

@@ -1,8 +1,10 @@
 ---
+title: MATLAB Interactive
 created: 2023-03-31T09:27:02 (UTC -04:00)
 tags: []
 source: https://sites.wustl.edu/chpc/resources/software/matlab_interactive/
 author:
+exclude: true
 ---
 
 The MATLAB home page is [https://www.mathworks.com/](https://www.mathworks.com/).

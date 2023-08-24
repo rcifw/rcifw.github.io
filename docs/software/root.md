@@ -1,8 +1,10 @@
 ---
+title: ROOT
 created: 2023-03-31T09:27:39 (UTC -04:00)
 tags: []
 source: https://sites.wustl.edu/chpc/resources/software/root/
 author:
+exclude: true
 ---
 
 The ROOT home page is [https://root.cern](https://root.cern/).

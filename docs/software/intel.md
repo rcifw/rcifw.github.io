@@ -1,8 +1,10 @@
 ---
+title: Intel Developer Tools
 created: 2023-03-31T09:26:53 (UTC -04:00)
 tags: []
 source: https://sites.wustl.edu/chpc/resources/software/intel/
 author:
+exclude: true
 ---
 
 The INTEL Developers home page is [https://software.intel.com/content/www/us/en/develop/tools/parallel-studio-xe.html](https://software.intel.com/content/www/us/en/develop/tools/parallel-studio-xe.html).

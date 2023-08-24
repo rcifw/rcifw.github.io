@@ -1,8 +1,10 @@
 ---
+title: GO
 created: 2023-03-31T09:26:49 (UTC -04:00)
 tags: []
 source: https://sites.wustl.edu/chpc/resources/software/go/
 author:
+exclude: true
 ---
 
 The GO home page is [https://go.dev](https://go.dev/).

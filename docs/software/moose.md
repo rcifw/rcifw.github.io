@@ -1,8 +1,10 @@
 ---
+title: MOOSE
 created: 2023-03-31T09:27:07 (UTC -04:00)
 tags: []
 source: https://sites.wustl.edu/chpc/resources/software/moose/
 author:
+exclude: true
 ---
 
 The MOOSE home page is [https://pythonawesome.com/moose-multi-organ-objective-segmentation-a-data-centric-ai-solution/](https://pythonawesome.com/moose-multi-organ-objective-segmentation-a-data-centric-ai-solution/#:~:text=MOOSE%20%28Multi-organ%20objective%20segmentation%29%20a%20data-centric%20AI%20solution,whole-body%2018F-FDG%20PET%2FCT%20image.%20%3F%20Required%20folder%20structure).
