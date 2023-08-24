@@ -11,6 +11,7 @@ author:
 - [Gateways](#gateway-nodes)
 - [Storage](#storage)
 - [Fabric](#infiniband) 
+- [Legacy](#legacy) 
 
 # Login Nodes
 ## login\[1-2\]
@@ -52,6 +53,8 @@ author:
 [top](#quick-links)
 
 # GPU Nodes
+GPU acceleration adds 412TF of SFLOP performance and 798GB of global memory from 27 GPUs.
+
 ## gpu01
 - Summary: [ACTserv x2280c](https://www.advancedclustering.com/act_systems/actserv-x2280c/) (32-cores, 384GB)
 *   GPU: 4x NVIDIA Tesla A100 PCI-E Passive Single GPU each with 40GB of GDDR5 memory
@@ -168,5 +171,16 @@ croit-mds03
 *   Used IB ports: 38x HDR-100 ports
 *   Unused ports: 42x HDR-100 available ports for expansion – 21x HDR-200 physical
 *   Node cables: 19x 2 Meter HDR Infiniband Cable – 1x QSFP (200Gb/s) to 2x QSFP (100Gb/s)
+
+[top](#quick-links)
+
+# Legacy
+
+CHPC2 has 528 CPU cores in 23x CPU-based nodes and 11x GPU-accelerated nodes.
+GPU acceleration adds 122.5TF of SFLOP performance and 160GB of global memory from 31 GPUs.  
+
+*   Dual-socket Intel E5-2630 8-core CPUs
+*   128GB memory
+*   GPU-acceleration: NVIDIA K20m and K20xm
 
 [top](#quick-links)
