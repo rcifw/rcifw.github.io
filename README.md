@@ -8,6 +8,12 @@ The documentation is organized in sections under the main `docs/` directory, and
 repository is automatically published to [https://rcifw.github.io/](https://rcifw.github.io/) whenever a pull 
 request is merged to the branch.
 
+You can run Jekyll locally to test your changes. Follow the [instructions](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll) to setup local testing via Jekyll. When you are finished, you can run `run_local.sh` from the `/docs` directory in your terminal or just:
+```
+bundle install
+bundle exec jekyll serve
+```
+
 # Contributing
 If you would like to contribute content, and we know you do, we follow a simple
 [Gitflow](https://nvie.com/posts/a-successful-git-branching-model/) branching model. This is even simpler for
