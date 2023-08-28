@@ -7,6 +7,10 @@ author: Scott Johnson
 
 For details on 2023 rates see the July users meeting [slides](https://wustl.box.com/s/j0ot01qxdh463qyrs21dxzvutax6byzr)
 
+## Where can I get funding for this?
+
+What is better than getting RCIF computation at lower than market rates? Have someone else pay for it! Pilot funds are available for **any** researcher (in MIR or not) who is using qualifying MIR facilities – **we are a qualifying facility**! Please see [here](https://www.mir.wustl.edu/research/core-resources/pilot-funds/) for details, and note that while left off the main list, in the links for the [pilot funding](https://apps.mir.wustl.edu/PilotFunding) we are listed as the “Research Computing and Informatics Facility” and for the [ICTS JIT](https://icts.wustl.edu/funding/just-in-time-jit/) we are listed as the “Center for High Performance Computing (CHPC)” in the [PDF](https://wustl.box.com/s/umpd5cel70codg1x0wpxf599p4p8827a).
+
 ## What do the “Limits” represent in the rates tables?
 
 The “Limits” term on the rates slide refers to the time limit applied to each job. These limits are applied to the **reserved** time for each job.
