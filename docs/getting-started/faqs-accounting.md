@@ -23,6 +23,12 @@ CPU-inclusive only includes CPU cycles in the subscription. Users enrolled in th
 
 The all-inclusive option would include both CPU and GPU cycles under the subscription plan, where a user would be paying for priority rather than cycles on the resource pools – this priority is governed by the [Fair Tree](https://slurm.schedmd.com/fair_tree.html#algorithm) algorithm as implemented in SLURM.
 
+## What is a "fractional A100"?
+
+An "A100" is the NVIDIA A100 accelerator, and "fractional" refers to a [MIG](https://www.nvidia.com/en-us/technologies/multi-instance-gpu/) partition. Since the Ampere generation of accelerators, NVIDIA has allowed administrators to set up MIG (multi-instance GPU) to isolate both logic and memory resources of a single hardware GPU into several virtual GPUs, which look to the applications as though they are separate GPU’s.
+
+For the A100 and H100, up to 7 MIG partitions per GPU are allowed. For users who want the Ampere features but cannot use a full A100 (or would rather test out a workload on a cheaper resource), getting a fractional A100 can be a much more efficient choice.
+
 ## How is the priority of my job determined?
 
 While it is useful to understand the algorithm (for reference you can find the contributions of the various factors [here](https://slurm.schedmd.com/priority_multifactor.html#general), and the most complex factor is Fairshare, which is described [here](https://slurm.schedmd.com/fair_tree.html#algorithm) and an accessible presentation of the “Fair Tree” is [here](https://slurm.schedmd.com/SUG14/fair_tree.pdf)), the priority of a job at any given time is strongly affected by the competitive landscape among those who have bought shares in the system and their usage pattern.
