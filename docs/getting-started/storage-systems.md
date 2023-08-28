@@ -6,6 +6,10 @@ author: Scott Johnson
 exclude: true
 ---
 
+# Best Practices
+It is always best for users to use the "scratch" file system (currently, `/mnt/beegfs`) for production runs. See [NERSC Best Practices](https://docs.nersc.gov/jobs/best-practices/#do-not-run-production-jobs-in-global-homes) for a good overview of the reasons for this.
+
+# Background
 The RCIF comprises multiple storage systems. This is architected around the core concept of a 
 storage cache architecture, where each lower layer is closer to the computing hardware. Typically, this
 follows the rule that as your cache is closer to the hardware it is both faster and more volatile.
@@ -31,7 +35,7 @@ This is usually a parallel file system consisting of a number of storage volume 
 which is connected to the computing nodes via 1 (or more) [InfiniBand](https://www.nvidia.com/en-us/networking/products/infiniband/) 
 interfaces and tuned for performance.
 
-For our system, we currently use [BeeGFS](https://www.beegfs.io/c/) as the file system in our high-throughput storage. This is considered
+For our system, we currently use [BeeGFS](https://www.beegfs.io/c/) mounted at `/mnt/beegfs` as the file system in our high-throughput storage. This is considered
 as **scratch** space, which is meant for staging data for processing. While this persists beyond the duration of a user's job, it is considered
 somewhat volatile, and users will be notifed when the file system reaches 85% capacity that data will be purged. Sufficient notice is given to 
 allow users time to move data to persistent storage. This data is also not backed up.

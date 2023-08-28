@@ -119,7 +119,7 @@ GPU acceleration adds 412TF of SFLOP performance and 798GB of global memory from
 [top](#quick-links)
 
 # Storage
-For architectural concepts and usage of storage, see [here](../getting-started/storage-systems.md).
+For architectural concepts and usage of storage, see [here](../getting-started/storage-systems.html).
 
 ## High-throughput file system (scratch)
 BeeGFS storage with 1.3PB (i.e., 1,327,032 GiB) of total usable storage.
