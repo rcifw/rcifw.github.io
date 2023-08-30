@@ -4,6 +4,15 @@ tags: []
 author: 
 ---
 
+# Quick links
+- [Login](#login-nodes) 
+- [CPU compute](#cpu-nodes) including high-memory
+- [GPU-accelerated compute](#gpu-nodes)
+- [Gateways](#gateway-nodes)
+- [Storage](#storage)
+- [Fabric](#infiniband) 
+- [Legacy](#legacy) 
+
 # Login Nodes
 ## login\[1-2\]
 -  Summary: 2 x [ACTserv x1210](https://www.advancedclustering.com/act_systems/actserv-x1210/) (32-cores, 192GB, 480GB SSD)
@@ -11,8 +20,9 @@ author:
 *   Memory: 192GB – 12x 16GB DDR4 2933MHz
 *   Storage: 2x 240GB SATA 2.5″ solid state drives
 
+[top](#quick-links)
 
-# Compute Nodes
+# CPU Nodes
 ## node\[01-14\]
 - Summary: 14 x Dual Socket Xeon SP (32-cores, 768GB)
 *   Processor: 2x Intel 16-Core Xeon Gold 6226R 2.9GHz – 150W
@@ -40,8 +50,11 @@ author:
 *   Memory: 3TB – 48x 64GB DDR4 2933MHz
 *   Storage: 240GB solid state drives
 
+[top](#quick-links)
 
 # GPU Nodes
+GPU acceleration adds 412TF of SFLOP performance and 798GB of global memory from 27 GPUs.
+
 ## gpu01
 - Summary: [ACTserv x2280c](https://www.advancedclustering.com/act_systems/actserv-x2280c/) (32-cores, 384GB)
 *   GPU: 4x NVIDIA Tesla A100 PCI-E Passive Single GPU each with 40GB of GDDR5 memory
@@ -95,25 +108,60 @@ author:
 *   Processor: 2x Intel 12-Core Xeon Gold 6216 2.6GHz – 125W
 *   CPU Memory: 384GB – 12x 32GB DDR4 2666MHz
 
+[top](#quick-links)
+
 # Gateway Nodes
  - Summary:  4 x [ACTserv x1210](https://www.advancedclustering.com/act_systems/actserv-x1210/) (32-cores, 192GB)
 * Processor: 2x Intel 16-Core Xeon Gold 6226R 2.9GHz – 150W
 * Memory: 192GB – 12x 16GB DDR4 2933MHz
 * Storage: 2x 240GB SATA 2.5″ solid state drives
 
-# BeeGFS Storage
+[top](#quick-links)
 
-#### 3 x BeeGFS HDD storage block
+# Storage
+For architectural concepts and usage of storage, see [here](../getting-started/storage-systems.html).
 
+## High-throughput file system (scratch)
+BeeGFS storage with 1.3PB (i.e., 1,327,032 GiB) of total usable storage.
+
+### 3 x BeeGFS HDD storage block
+```
+beegfs-oss01.cluster [ID: 1]
+beegfs-oss02.cluster [ID: 2]
+beegfs-oss03.cluster [ID: 3]
+```
 *   Enclosure: 4U, 60 drive JBOD with redundant SAS expanders
 *   Storage: 480TB usable – 6GB/s (60x 10TB)
-*   Fabric: ConnectX-6 VPI adapter card, HDR-100 IB (100Gb/s) and 100GbE, single-port QSFP56, PCIe3/4 x16 Slot
+*   Fabric: ConnectX6, HDR-100 IB (100Gb/s) and 100GbE, single-port QSFP56, PCIe3/4 x16 Slot
 
-#### 2 x BeeGFS meta data server
-
+### 2 x BeeGFS meta data server
+```
+beegfs-mds01.cluster [ID: 1]
+beegfs-mds02.cluster [ID: 2]
+```
 *   Memory: 192GB – (12x 16GB DIMMs)
 *   Metadata storage: 4x 3.2TB PCIe NVMe 2.5″ solid state drives
 *   Fabric: ConnectX-6 VPI adapter card, HDR-100 IB (100Gb/s) and 100GbE, single-port QSFP56, PCIe3/4 x16 Slot
+
+## Large-volume file system (persistent)
+Ceph storage with 5.82PB of total usable storage.
+
+### 14 x Ceph HDD storage block
+```
+croit-osd[1-14]
+```
+
+### 3 x Ceph meta data server
+```
+croit-mds01
+croit-mds02
+croit-mds03
+```
+*   32-core CPU
+*   Memory: 267GB
+*   Metadata storage: 6x PCIe NVMe 2.5″ solid state drives
+
+[top](#quick-links)
 
 # Infiniband
 
@@ -123,3 +171,16 @@ author:
 *   Used IB ports: 38x HDR-100 ports
 *   Unused ports: 42x HDR-100 available ports for expansion – 21x HDR-200 physical
 *   Node cables: 19x 2 Meter HDR Infiniband Cable – 1x QSFP (200Gb/s) to 2x QSFP (100Gb/s)
+
+[top](#quick-links)
+
+# Legacy
+
+CHPC2 has 528 CPU cores in 23x CPU-based nodes and 11x GPU-accelerated nodes.
+GPU acceleration adds 122.5TF of SFLOP performance and 160GB of global memory from 31 GPUs.  
+
+*   Dual-socket Intel E5-2630 8-core CPUs
+*   128GB memory
+*   GPU-acceleration: NVIDIA K20m and K20xm
+
+[top](#quick-links)

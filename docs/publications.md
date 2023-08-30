@@ -1,19 +1,23 @@
-# Publications
-## Quick links
+---
+title: Publications
+tags: []
+---
+
+# Quick links
 - [Citing the RCIF](#citing-the-rcif) 
 - [Journal Articles](#journal-articles)
 - [Conference Papers](#conference-papers) 
 - [Books](#books)
 - [Dissertations](#dissertations)
 
-## Citing the RCIF
+# Citing the RCIF
 In order to participate in future funding opportunities, we need you, the users, to cite the RCIF in your publications:
 
 _Computations were performed using the facilities of the Washington University Research Computing and Informatics Facility, which were partially funded by NIH grants S10OD025200, 1S10RR022984-01A1 and 1S10OD018091-01. Additional support is provided The McDonnell Center for Systemes Neuroscience._
 
 [top](#quick-links)
 
-## Journal Articles
+# Journal Articles
 ### 2022
 1. McKay, N. S.; Dincer, A.; Mehrotra, V.; Aschenbrenner, A. J.; Balota, D. A.; Hornbeck, R. C.; Hassenst, J.; Morris, J. C.; Benzinger, T. L.S.; Gordon, B, A., Beta-amyloid moderates the relationship between cortical thickness and attentional control in middle- and older-aged adults. Neurobiology of Aging 2022, 112, 181-190.
 2. Hawks, Z. W.; Todorov, A.; Marrus, N., Nishino, T.; Talovic, M.; Nebel, M. B.; Girault, J. B.; Davis, S.; Marek, S.; Seitzman, B.A.; Eggebrecht ,A. T.; Elison, J.; Dager, S.; Mosconi, M. W.; Tychsen, L.; Snyder, A. Z.; Botteron, K.; Estes, A.; Evans, A.; Gerig, G.; Hazlett, H.C.; McKinstry, R.C.; Pandey, J.; Schultz, R.; Styner, M.; Wolff, J. J.; Zwaigenbaum, L.; Markson, L.; Petersen, S. E.; Constantino, J. N.; White, D. A.; Piven, J.; Pruett J.; for The IBIS Network, A prospective evaluation of infant cerebellar-cerebral functional connectivity in relation to behavioral development in autism. Biological Psychiatry Global Open Science 2022, XX, yy-zz.
@@ -137,7 +141,7 @@ _Computations were performed using the facilities of the Washington University R
 
 [top](#quick-links)
 
-## Conference Papers
+# Conference Papers
 ### 2020
 1. Rahman, M. A.; Laforest, R.; Jha, A. K., “A list-mode OSEM-based attenuation and scatter compensation method for SPECT,” 2020 IEEE 17th International Symposium on Biomedical Imaging, Iowa City, IA, USA, 2020, 646-650.
 ### 2019
@@ -153,13 +157,13 @@ _Computations were performed using the facilities of the Washington University R
 
 [top](#quick-links)
 
-## Books
+# Books
 ### 2012
 1. Etzel, J.A.; Cole, M. W.; Braver, T. S., Looking outside the searchlight. In machine learning and interpretation in neuroimaging; lecture notes in computer science, volume 7263; Langs, G., Rish, I.; Grosse-Wentrup, M.; Murphy, B., Ed.; Springer: Berlin, Heidelberg, 2012, 26-33.
 
 [top](#quick-links)
 
-## Dissertations
+# Dissertations
 ### 2021
 1. Hawks, Z. W. Testing candidate cerebellar presymptomatic biomarkers for autism spectrum disorder. Ph.D. Dissertation, Washington University in St. Louis, MO, 2021.
 2020
