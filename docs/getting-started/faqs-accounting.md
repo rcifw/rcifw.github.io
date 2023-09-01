@@ -11,8 +11,8 @@ For details on 2023 rates see the July users meeting [slides](https://wustl.box.
 
 There are 3 separate options to pay for resources on the CHPC:
 * Pay only for hours used (**consumption**)
-* Subscribe to get unlimited hours (pay for priority - **subscription**)
-* Buy a machine through us for your unlimited use at a fixed yearly maiuntenance cost (**condo**)
+* Subscribe to get unlimited hours (i.e., pay for priority via **subscription**)
+* Buy a machine through us for your unlimited use at a fixed yearly maintenance cost (**condo**)
 
 You can choose a different option for each tier (priority level) and for each resource pool (set of servers). 
 
