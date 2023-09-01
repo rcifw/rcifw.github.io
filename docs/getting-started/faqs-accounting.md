@@ -7,6 +7,30 @@ author: Scott Johnson
 
 For details on 2023 rates see the July users meeting [slides](https://wustl.box.com/s/j0ot01qxdh463qyrs21dxzvutax6byzr)
 
+## The tiers and rates are confusing; can you provide some examples of how I will be charged?
+
+There are 3 separate options to pay for resources on the CHPC:
+* Pay only for hours used (**consumption**)
+* Subscribe to get unlimited hours (pay for priority - **subscription**)
+* Buy a machine through us for your unlimited use at a fixed yearly maiuntenance cost (**condo**)
+
+You can choose a different option for each tier (priority level) and for each resource pool (set of servers). 
+
+**Example 1: PI with heavy CPU usage but only limited GPU usage--**
+You can get a CPU-inclusive subscription, which provides unlimited hours on the CPU resources for a __fixed annual cost__; for the CPU resources you just pay the subscription for a particular priority level for your jobs. For the GPU resources, you can pay per hour with the hourly rate based on whatever priority level you select for your jobs. In this case, you would pay the fixed cost for CPU usage and the hourly rate for GPUs.
+
+**Example 2: PI with heavy GPU usage--**
+You can get an all-inclusive subscription, which provides unlimited access to both CPU- and GPU-based resources for a __fixed annual cost__. In this case, you would just pay the annual fixed cost in our rate sheet.
+
+**Example 3: Student who does not have funding --**
+We are introducing the Free Tier to support researchers who want to use CHPC resources for small projects and to test out their workflows before putting them into the paid queues. In this case, just submit your job to the free partition, and your PI will not be charged for that use!
+
+**Example 4: PI with a condo'ed server but wants to use other CHPC resources periodically--**
+You pay a fixed annual maintenance fee, and you have unlimited access to your machine (to be clear - for no additional fee)! It is your machine, so you can use it as much or as little as you like. If you have explicitly allowed us to offer your machine to others when you are not using it, we give you credit for the hours others use ("lending credits"), which can be used to offset any charges you accrue for using other CHPC resources. To use other CHPC resources, just submit to the appropriate partition, and we will take care of tracking that time and discounting it by your lending credits.
+
+**Example 5: I am working on several projects with several PIs during the year; how can I make sure the correct PI is charged for each job I run?--**
+Our batch scheduler (SLURM) allows us to associate you with multiple PIs, so the first step is to [let us know](mailto:chpc@nrg.wustl.edu) so we can set up the association. Once you are associated with multiple PIs, you can charge usage to different accounts, by specifying the `-A <account to charge>` flag for any job.
+
 ## Where can I get funding for this?
 
 What is better than getting RCIF computation at lower than market rates? Have someone else pay for it! Pilot funds are available for **any** researcher (in MIR or not) who is using qualifying MIR facilities – **we are a qualifying facility**! Please see [here](https://www.mir.wustl.edu/research/core-resources/pilot-funds/) for details, and note that while left off the main list, in the links for the [pilot funding](https://apps.mir.wustl.edu/PilotFunding) we are listed as the “Research Computing and Informatics Facility” and for the [ICTS JIT](https://icts.wustl.edu/funding/just-in-time-jit/) we are listed as the “Center for High Performance Computing (CHPC)” in the [PDF](https://wustl.box.com/s/umpd5cel70codg1x0wpxf599p4p8827a).
