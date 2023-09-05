@@ -19,3 +19,12 @@ You can then update and activate your conda environment using:
 conda update -y --update-all
 . ~/miniconda/bin/activate
 ```
+
+**Note**: when using Miniconda-based Python in your batch scripts you may need to add one of the following to your script:
+```
+source ~/.bashrc
+```
+or
+```
+. ~/path/to/miniconda/bin/activate
+```
