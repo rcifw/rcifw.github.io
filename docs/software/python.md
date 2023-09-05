@@ -20,11 +20,8 @@ conda update -y --update-all
 . ~/miniconda/bin/activate
 ```
 
-**Note**: when using Miniconda-based Python in your batch scripts you may need to add one of the following to your script:
+**Note**: when using Miniconda-based Python in your batch scripts you may need to add the following to your script:
 ```
 source ~/.bashrc
-```
-or
-```
-. ~/path/to/miniconda/bin/activate
+. ~/miniconda/bin/activate
 ```
