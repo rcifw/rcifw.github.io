@@ -14,7 +14,7 @@ There are 3 separate options to pay for resources on the CHPC:
 * Subscribe to get unlimited hours (i.e., pay for priority via **subscription**)
 * Buy a machine through us for your unlimited use at a fixed yearly maintenance cost (**condo**)
 
-You can choose a different option for each tier (priority level) and for each resource pool (set of servers). 
+You can choose a different option for each tier (priority level) and for each resource pool (set of servers).
 
 **Example 1: PI with heavy CPU usage but only limited GPU usage--**
 You can get a CPU-inclusive subscription, which provides unlimited hours on the CPU resources for a __fixed annual cost__; for the CPU resources you just pay the subscription for a particular priority level for your jobs. For the GPU resources, you can pay per hour with the hourly rate based on whatever priority level you select for your jobs. In this case, you would pay the fixed cost for CPU usage and the hourly rate for GPUs.
@@ -35,13 +35,25 @@ Our batch scheduler (SLURM) allows us to associate you with multiple PIs, so the
 
 What is better than getting RCIF computation at lower than market rates? Have someone else pay for it! Pilot funds are available for **any** researcher (in MIR or not) who is using qualifying MIR facilities – **we are a qualifying facility**! Please see [here](https://www.mir.wustl.edu/research/core-resources/pilot-funds/) for details, and note that while left off the main list, in the links for the [pilot funding](https://apps.mir.wustl.edu/PilotFunding) we are listed as the “Research Computing and Informatics Facility” and for the [ICTS JIT](https://icts.wustl.edu/funding/just-in-time-jit/) we are listed as the “Center for High Performance Computing (CHPC)” in the [PDF](https://wustl.box.com/s/umpd5cel70codg1x0wpxf599p4p8827a).
 
+## What is the condo option?
+
+The condo option is for those who want access to dedicated hardware, and it is meant to be a simple arrangement where the PI pays for the hardware up front (via the RCIF), and we just charge an annual maintenance fee. We normally require that the RCIF arrange the purchase of the computing equipment (we call this a "node", "machine" or "server" interchangeably) to assure it is compatible with our current and anticipated infrastructure.
+
+Since our costs are based on how much staff time we spend per (machine/server/node) and how many “units” in the rack that equipment occupies, our condo rates are based on a per (machine/server/node) basis.
+ 
+Condo users are treated no differently than other users with respect to shared storage. Any local storage that is built into a physical condo (machine/server/node) is available to the owner of that condo, as well, but it is local to that (machine/server/node), and we do not handle backups, etc., of any local storage.
+
+## How is storage charged?
+
+Everyone, including those on the free tier, get a quota of shared storage without charge. That is independent of what people will additionally pay for shared storage or compute. For us, “archive” storage is synonymous with “large volume storage” and is currently the Ceph parallel file system storage. Currently, a user receives a quota of storage in the "home directory", which is a space for each user that is hosted on the “large volume storage”. This is the only “free” storage in the “large volume storage”.
+
 ## What do the “Limits” represent in the rates tables?
 
 The “Limits” term on the rates slide refers to the time limit applied to each job. These limits are applied to the **reserved** time for each job.
 
 Actual _usage_ within a reservation would only be collected for research purposes (e.g., assess power usage and thermal statistics, generate aggregate usage statistics for understanding efficiency, etc.).
 
-## What is the difference between “CPU-inclusive” and “All-inclusive”?  Is the former CPU-only, with no access to the GPUs?
+## What is the difference between “CPU-inclusive” and “All-inclusive” in the subscriptions?  Is the former CPU-only, with no access to the GPUs?
 
 CPU-inclusive only includes CPU cycles in the subscription. Users enrolled in the CPU subscription would then pay for any GPU usage on a per-reservation basis at the consumption rates for whatever tier they decide for those jobs.
 
