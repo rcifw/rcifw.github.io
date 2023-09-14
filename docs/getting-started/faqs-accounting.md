@@ -5,7 +5,7 @@ tags: []
 author: Scott Johnson
 ---
 
-For details on 2023 rates see the July users meeting [slides](https://wustl.box.com/s/j0ot01qxdh463qyrs21dxzvutax6byzr)
+Our [2023 RCIF HPC rate sheet](https://wustl.box.com/s/vp8qd1js979p7wx3ywogoiaxqo46q0mx) is now available. For more details on the development of the 2023 rates, please see the July users meeting [slides](https://wustl.box.com/s/j0ot01qxdh463qyrs21dxzvutax6byzr).
 
 ## The tiers and rates are confusing; can you provide some examples of how I will be charged?
 
