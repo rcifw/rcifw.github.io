@@ -29,7 +29,7 @@ We tried to make this a (mostly) linear workflow, from getting an account to spe
 2. [Connecting to the cluster](getting-started/connect-to-login-nodes.md)
 3. [Fundamental tools](under-construction.md)
 4. [Building your application](under-construction.md)
-5. [Importing and exporting data](under-construction.md)
+5. [Importing and exporting data](getting-started/import-export-data.md)
 6. [Testing your workflow](under-construction.md)
 7. [Running your workflow](under-construction.md)
 8. [Analyzing your results](under-construction.md)
