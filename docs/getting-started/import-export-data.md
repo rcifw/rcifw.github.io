@@ -85,3 +85,46 @@ You may use `sshfs` to mount your local computer's filesystem over the reverse t
 [clusteruser@login01 ~]$ cp ~/local_mnt/localfile ./ # fetch from local machine
 [clusteruser@login01 ~]$ fusermount -u ~/local_mnt   # unmount
 ```
+
+## Controlling Transfers Using a Worker Node
+
+The login node is not suitable for computational tasks. Sometimes you will want to access a remote filesystem directly from a worker node running a computational job. For example, you might start an interactive, remote desktop environment on a worker node and want to copy files to and from your local desktop computer. You can connect from a worker node to your local network using a reverse tunnel. The process is similar to that for creating a reverse tunnel to a login node (see above).
+
+At the time of this writing, reverse tunnels to a worker node are only supported on login01. You can connect to login01 explicitly using it's IP address. It is, numerically, the first IP address.
+
+```
+[localuser@localmachine ~]$ host login3.chpc.wustl.edu
+login3.chpc.wustl.edu has address 128.252.185.8 # login02
+login3.chpc.wustl.edu has address 128.252.185.7 # login01
+```
+
+Then use the following syntax to open the reverse tunnel.
+- `-R` requests a reverse tunnel.
+- `login01` resolves to 10.1.1.251 and specifies which IP address the tunnel should listen on. Without this, the tunnel defaults to listening on 127.0.0.1 and would only be accessible from the login node. Binding to an external IP address allows worker nodes on the cluster's subnet to connect to the tunnel.
+- `0` makes ssh automatically allocate an open port for the tunnel to listen on, in this case 45627.
+- `127.0.0.1` refers to your local computer. You may specify a different tunnel endpoint on your local computer's subnet.
+- `22` is the port at the tunnel's endpoint to send data to. You may specify a different port if you want to tunnel a protocol other than ssh.
+
+```
+[localuser@localmachine ~]$ ssh -R login01:0:127.0.0.1:22 clusteruser@128.252.185.7
+Allocated port 45627 for remote forward to 127.0.0.1:22
+[clusteruser@login01 ~]$ # do your file transfers here
+[clusteruser@login01 ~]$ exit # close the tunnel
+```
+
+While the tunnel is open, you can connect to your local computer and access files from a worker node. For example, request an interactive job:
+
+```
+[clusteruser@login01 ~]$ salloc --nodes=1 --ntasks-per-node=1 --time=00:30:00 --mem=128mb --qos=interactive
+salloc: Nodes node15 are ready for job
+[clusteruser@node15 ~]$
+```
+
+And then user sftp, sshfs, etc. from the worker node. (Use the automatically allocated port in place of 2222).
+
+```
+[clusteruser@node15 ~]$ sftp -P 2222 localuser@login01
+sftp>
+```
+
+In the above example, sftp is connecting to port 2222 on login01. The connection is forwarded to port 22 on your local computer. You will use your local username to authenticate.
