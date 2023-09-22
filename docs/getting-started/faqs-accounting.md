@@ -96,3 +96,6 @@ We would like to push everyone towards buying into the system if they are doing 
 Everyone will have access to the free tier regardless of whatever other account associations they have. So if a user is associated with the PI account, they would have access to the partitions for whatever plans the PI has selected as well as the free tier.
  
 We have not yet decided on a default (or whether to force a user to specify for every job), but the safest thing for a user to do is specify the appropriate partition for the free tier in their job submission using the `-p` flag (see [here](https://slurm.schedmd.com/sbatch.html#SECTION_OPTIONS)) if that is the partition they want to use for a job.
+
+## How do I check my account usage?
+You can always contact us to have us send you usage, but you can also log in to the cluster any time and use the instructions [here](slurm-basics.md#checking-your-account). We are also sending out monthly updates with this information along with current invoicing and a projection of the rest of the year's usage to your PI email address of record. You may need to check your spam filters if you are not receiving these from our `support@rcif.wustl.edu` email address.
