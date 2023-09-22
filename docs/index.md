@@ -30,14 +30,15 @@ We tried to make this a (mostly) linear workflow, from getting an account to spe
 3. [Fundamental tools](under-construction.md)
 4. [Building your application](under-construction.md)
 5. [Importing and exporting data](getting-started/import-export-data.md)
-6. [Testing your workflow](under-construction.md)
-7. [Running your workflow](under-construction.md)
-8. [Analyzing your results](under-construction.md)
-9. [Tips and tricks for batch management](under-construction.md)
-9. [Managing experiments](under-construction.md)
-10. [Managing your jobs](under-construction.md)
-11. [Asking for help](under-construction.md)
-12. [Special services](under-construction.md)
+6. [Using SLURM](getting-started/slurm-basics.md)
+7. [Testing your workflow](under-construction.md)
+8. [Running your workflow](under-construction.md)
+9. [Analyzing your results](under-construction.md)
+10. [Tips and tricks for batch management](under-construction.md)
+11. [Managing experiments](under-construction.md)
+12. [Managing your jobs](under-construction.md)
+13. [Asking for help](under-construction.md)
+14. [Special services](under-construction.md)
 
 ## Additional Services
 
