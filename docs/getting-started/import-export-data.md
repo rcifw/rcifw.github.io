@@ -39,6 +39,44 @@ Linux users and Mac users (via Homebrew) can access the cluster filesystem with 
 [localuser@localmachine ~]$ fusermount -u ~/cluster_mnt    # unmount
 ```
 
+### sftp + Python
+
+[Python](https://www.python.org/) is a programming language that is widely-used for scientific computing. You can transfer files over sftp directly from your Python scripts using [Paramiko](https://www.paramiko.org/). This functionality is particularly powerful when combined with Python's interactive [Jupyter notebooks](https://jupyter.org/). See the full API documentation [here](https://docs.paramiko.org/en/3.3/api/sftp.html).
+
+```python
+import os
+import paramiko
+paramiko.util.log_to_file('paramiko.log')
+
+# Parse ~/.ssh/config
+config = paramiko.SSHConfig()
+with open(os.path.expanduser('~/.ssh/config')) as config_file:
+    config.parse(config_file)
+
+# Extract configuration for this host.
+host = 'login3.chpc.wustl.edu'
+host_config = config.lookup(host)
+
+with paramiko.SSHClient() as ssh:
+    # Skip verification of the host key for this example.
+    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+
+    # Open the SSH connection.
+    ssh.connect(host_config['hostname'],
+                port = int(host_config.get('port') or 22),
+                username = host_config['user'],
+                key_filename = host_config['identityfile'])
+
+    # Do SFTP over the SSH connection.
+    sftp = ssh.open_sftp()
+
+    # Syntax: put(localpath, remotepath)
+    sftp.put('localfile', 'localfile')
+    
+    # Syntax: get(remotepath, localpath)
+    sftp.get('clusterfile', 'clusterfile')
+```
+
 ## Controlling Transfers Using the Login Node
 
 The examples above use your local computer to control the transfer of files to and from the cluster. Intead, you may want to use the cluster's login node to control the transfer of files to and from your local computer. A firewall limits communication from the cluster to outside systems. You can safely and securely connect through the firewall using an ssh reverse tunnel. The following examples assume you have an ssh/sftp server running on your local computer and listening on port 22.
@@ -84,6 +122,20 @@ You may use `sshfs` to mount your local computer's filesystem over the reverse t
 [clusteruser@login01 ~]$ cp clusterfile ~/local_mnt  # upload to local machine
 [clusteruser@login01 ~]$ cp ~/local_mnt/localfile ./ # fetch from local machine
 [clusteruser@login01 ~]$ fusermount -u ~/local_mnt   # unmount
+```
+
+### sftp + Python
+
+As in the preceding section, you can control the sftp connection from the login node using Python and a suitable sftp package like [Paramiko](https://www.paramiko.org/). Just modify the previous example using Python on your local computer to use the reverse tunnel as in the examples above. Don't forget to load the Python module.
+
+```
+[clusteruser@login01 ~]$ module load python
+[clusteruser@login01 ~]$ python
+Python 3.10.9 (main, Mar  1 2023, 18:23:06) [GCC 11.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import os
+>>> import paramiko
+>>> # ...
 ```
 
 ## Controlling Transfers Using a Worker Node
