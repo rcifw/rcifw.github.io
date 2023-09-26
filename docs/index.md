@@ -40,6 +40,11 @@ We tried to make this a (mostly) linear workflow, from getting an account to spe
 13. [Asking for help](under-construction.md)
 14. [Special services](under-construction.md)
 
+## Advanced Topics
+
+- [Jupyter](advanced/jupyter.md)
+- [Visual Studio Code](advanced/visual-studio-code.md)
+
 ## Additional Services
 
 We offer the following services:
