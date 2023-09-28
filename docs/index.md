@@ -40,10 +40,16 @@ We tried to make this a (mostly) linear workflow, from getting an account to spe
 13. [Asking for help](under-construction.md)
 14. [Special services](under-construction.md)
 
-## Advanced Topics
+## Remote Development
 
-- [Jupyter](advanced/jupyter.md)
-- [Visual Studio Code](advanced/visual-studio-code.md)
+We encourage you to utilize the cluster not only for your compute-intensive jobs, but also for one-off tasks and day-to-day development activities. We believe developing your cluster jobs on the cluster reduces headaches, speeds deployment, and eases testing/debugging. See below for some resources and tutorials to get started.
+
+- [Jupyter Notebook](software/jupyter-notebook.md)
+- [Visual Studio Code](software/visual-studio-code.md)
+- Remote Desktop Environment (coming soon)
+
+As always, please be courteous and avoid running compute-intensive jobs on the login nodes.
+
 
 ## Additional Services
 

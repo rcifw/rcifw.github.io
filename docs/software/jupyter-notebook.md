@@ -1,5 +1,5 @@
 ---
-title: Jupyter
+title: Jupyter Notebook
 created: 2023-09-25T13:15:00 (UTC -05:00)
 tags: []
 author: Benjamin Kay
@@ -10,7 +10,7 @@ exclude: true
 
 You can run a Jupyter Lab server as a cluster job and connect to it using a web browser on your local computer. This setup is very convenient for interacting with large data sets and computational expensive operations that would grind your laptop to a halt. It's also a great way to incrementally develop batch jobs to run on the cluster.
 
-## Setting Up a Worker Node
+## Setting Up a Compute Node
 
 Log into the cluster and use [`salloc`](https://slurm.schedmd.com/salloc.html) to request an interactive job with reasonable resources. Here we ask for 4 GB of memory, which should be enough for basic Python work, and 3 hours of runtime, which is the maximum allowed under the free tier. Take note of which node the job runs on.
 
@@ -22,7 +22,7 @@ salloc: Nodes node31 are ready for job
 [clusteruser@node31 ~]$ 
 ```
 
-You can also figure out which worker node your job is running on with [`squeue`](https://slurm.schedmd.com/squeue.html).
+You can also figure out which compute node your job is running on with [`squeue`](https://slurm.schedmd.com/squeue.html).
 
 ```
 [clusteruser@login02 ~] squeue -u clusteruser -t running
@@ -38,7 +38,7 @@ And when you are finished working, you can cancel the job.
 
 ## Starting a Server
 
-Start a Jupyter Lab server from your interactive job on the worker node. First you will need to load the python Slurm module. Append this line to your `~/.bashrc` to avoid having to run it each time you log in.
+Start a Jupyter Lab server from your interactive job on the compute node. First you will need to load the python Slurm module. Append this line to your `~/.bashrc` to avoid having to run it each time you log in.
 
 ```
 [clusteruser@node31] module load python
@@ -46,14 +46,14 @@ Start a Jupyter Lab server from your interactive job on the worker node. First y
 
 Then you can start a Jupyter Lab server using the system-wide Python environment. For a [full list of options](https://jupyter-server.readthedocs.io/en/latest/other/full-config.html) see `jupyter lab --help-all`.
 
-- `allow_remote_access=True` allows you to connect from your local machine. Otherwise you would need to run a web browser from an interactive Desktop session on the worker node.
-- `ip=$(hostname)` causes the Jupyter Lab server to listen on the subnet-public IP address (e.g. 10.3.1.31 for node 31) instead of just 127.0.0.1, another prerequisite for you to connect from your local machine.
-- `open_browser=False` tells jupyter not to try to open a web browser on the worker node. You will open a web browser on your local machine instead.
+- `allow_remote_access=True` allows you to connect from your local machine. Otherwise you would need to run a web browser from an interactive Desktop session on the compute node.
+- `ip=*` causes the Jupyter Lab server to listen on all IP addresses instead of just 127.0.0.1, another prerequisite for you to connect from your local machine.
+- `open_browser=False` tells jupyter not to try to open a web browser on the compute node. You will open a web browser on your local machine instead.
 
 ```
 [clusteruser@node31 ~]$ jupyter lab \
 --ServerApp.allow_remote_access=True \
---ServerApp.ip=$(hostname) \
+--ServerApp.ip=* \
 --ServerApp.open_browser=False
 ```
 
@@ -71,7 +71,7 @@ Copy the _entire_ URL starting with `http://127.0.0.1:8888/` to your clipboard a
 
 > Note: You can request a fixed port number with: `--ServerApp.port=8888`
 
-Open an ssh tunnel from some port (the first 8888) on your local machine to whichever port jupyter is listening on (the second 8888) on the worker node (e.g. node31).
+Open an ssh tunnel from some port (the first 8888) on your local machine to whichever port jupyter is listening on (the second 8888) on the compute node (e.g. node31).
 
 ```
 [localuser@localmachine ~]$ ssh -L 8888:node31:8888 login3.chpc.wustl.edu
@@ -81,11 +81,11 @@ Then paste the URL into your local computer's web browser. You should see someth
 
 ![Screenshot of a Jupyter notebook](../images/jupyter-screenshot-1.png)
 
-Python code in the Jupyter notebook will run on the worker node, and results will be rendered in your local machine's web browser. For example:
+Python code in the Jupyter notebook will run on the compute node, and results will be rendered in your local machine's web browser. For example:
 
 ![Screenshot of a Jupyter notebook](../images/jupyter-screenshot-2.png)
 
-When you are finished, close your web browser and, on the worker node, press `Ctrl + C`. You will be promped with:
+When you are finished, close your web browser and, on the compute node, press `Ctrl + C`. You will be promped with:
 
 ```
 Shutdown this Jupyter server (y/[n])?
@@ -105,7 +105,7 @@ Shutdown this Jupyter server (y/[n])? y
 
 ## Keeping an Interactive Job Alive With Screen
 
-Should you accidentally lose the interactive ssh connection to the worker node your Jupyter Lab server may shut down. To keep it open, use a terminal multiplexer like [screen](https://www.gnu.org/software/screen/manual/screen.html) or [tmux](https://github.com/tmux/tmux/wiki) to keep the terminal connection going in the background. For example:
+Should you accidentally lose the interactive ssh connection to the compute node your Jupyter Lab server may shut down. To keep it open, use a terminal multiplexer like [screen](https://www.gnu.org/software/screen/manual/screen.html) or [tmux](https://github.com/tmux/tmux/wiki) to keep the terminal connection going in the background. For example:
 
 ```
 [clusteruser@node31 ~]$ screen -S jupyter # can use any name
@@ -139,7 +139,7 @@ module load python
 
 jupyter lab \
 --ServerApp.allow_remote_access=True \
---ServerApp.ip=$(hostname) \
+--ServerApp.ip=* \
 --ServerApp.open_browser=False
 ```
 
@@ -160,7 +160,7 @@ Inspect the job's slurm output to get the URL to connect to the Jupyter Lab serv
 http://127.0.0.1:8888/lab?token=a0237c01c8c25c3e443e6060f088013935b72955056ce6be
 ```
 
-Open an ssh tunnel to the appropriate worker node and port.
+Open an ssh tunnel to the appropriate compute node and port.
 
 ```
 [localuser@localmachine ~]$ ssh -L 8888:node15:8888 login3.chpc.wustl.edu
@@ -199,6 +199,21 @@ Once you have everything set up you can run your Jupyter Lab server from the vir
 ```
 (.venv) [clusteruser@node31 ~]$ jupyter lab
 ```
+
+## Using the "Classic Notebook" Interface
+
+The preceding examples use the latest and greatest Jupyter Lab interface. If you prefer the older but "classic" Jupyter Notebook interface, follow all the steps above, but instead of launching `jupyter lab` use `jupyter notebook`. For example:
+
+```
+[clusteruser@node31 ~]$ jupyter notebook --allow-remote-access=true --ip=* --no-browser
+To access the notebook, open this file in a browser:
+    file:///ceph/chpc/home/clusteruser/.local/share/jupyter/runtime/nbserver-983560-open.html
+Or copy and paste one of these URLs:
+    http://localhost:8888/?token=26236aedf5fb4c3305361c01ddca271efb7fe93f4601f6db
+    or http://127.0.0.1:8888/?token=26236aedf5fb4c3305361c01ddca271efb7fe93f4601f6db
+```
+
+Use the provided link and port number to set up an SSH tunnel and connect as above.
 
 ## See Also
 
