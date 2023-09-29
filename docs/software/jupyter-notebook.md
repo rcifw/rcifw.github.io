@@ -174,7 +174,7 @@ Now you can copy and paste the Jupyter URL into your web browser and use your no
 
 ## Jupyter from a Virtual Environment
 
-Python developers frequently need to install specific versions of packages not available in the system-wide Python environment. You have free reign to install just the right packages inside a Python virtual environment. You can create a virtual environment in the folder `.venv` and install jupyter like this.
+Python developers frequently need to install specific versions of packages not available in the system-wide Python environment. You have free reign to install just the right packages inside a Python virtual environment. Follow [our documentation](python.md) to set up a miniconda environment, or you can use pip to create a simple virtual environment in the folder `.venv` and install jupyter like this. We recommend you also install the `lsp` language server packages to get syntax highlighting and coding hints.
 
 > Note: Folders starting with a `.` are hidden. You can list them using `ls -a`. You don't have to put your virtual environment in a hidden folder -- you can call the folder whatever you want.
 
@@ -182,7 +182,7 @@ Python developers frequently need to install specific versions of packages not a
 [clusteruser@node31 ~]$ python -m venv .venv
 [clusteruser@node31 ~]$ source .venv/bin/activate
 (.venv) [clusteruser@node31 ~]$ pip install --upgrade pip
-(.venv) [clusteruser@node31 ~]$ pip install jupyter
+(.venv) [clusteruser@node31 ~]$ pip install jupyter jupyterlab-lsp python-lsp-server
 ```
 
 And to re-enter the virtual environment later, just run:
@@ -192,7 +192,7 @@ And to re-enter the virtual environment later, just run:
 (.venv) [clusteruser@node31 ~]$ # now you are in the virtual environment
 ```
 
-> Note: Some developers prefer to manage packages and virtual enrionments using [conda](https://docs.conda.io/projects/conda/en/stable/) instead.
+> Note: Some developers prefer to manage packages and virtual environments using [conda](https://docs.conda.io/projects/conda/en/stable/) instead.
 
 Once you have everything set up you can run your Jupyter Lab server from the virtual environment as usual; see above for all of the command line options.
 
@@ -205,7 +205,7 @@ Once you have everything set up you can run your Jupyter Lab server from the vir
 The preceding examples use the latest and greatest Jupyter Lab interface. If you prefer the older but "classic" Jupyter Notebook interface, follow all the steps above, but instead of launching `jupyter lab` use `jupyter notebook`. For example:
 
 ```
-[clusteruser@node31 ~]$ jupyter notebook --allow-remote-access=true --ip=* --no-browser
+[clusteruser@node31 ~]$ jupyter notebook --ip=* --no-browser
 To access the notebook, open this file in a browser:
     file:///ceph/chpc/home/clusteruser/.local/share/jupyter/runtime/nbserver-983560-open.html
 Or copy and paste one of these URLs:
@@ -219,3 +219,4 @@ Use the provided link and port number to set up an SSH tunnel and connect as abo
 
 - [Importing and Exporting Data](../getting-started/import-export-data.md) from outside the cluster. In particular, see the section on [using sftp from a Python script](../getting-started/import-export-data.md#sftp--python). You can easily adapt the example to import and export data from inside your Jupyter notebook.
 - [Visual Studio Code](visual-studio-code.md) is a popular IDE with support for Jupyter notebooks. You can write your code in the familiar VS Code IDE and run the code interactively on jupyter from within the IDE, without the need to manually configure jupyter and start a web browser. VS Code also has [lightweight code cells](https://code.visualstudio.com/docs/python/jupyter-support-py) if you don't want to store a big `*.ipynb` file.
+- [Matlab Jupyter Kernel](matlabinteractive.md#jupyter-notebook) to run Matlab code in your Jupyter notebook.
