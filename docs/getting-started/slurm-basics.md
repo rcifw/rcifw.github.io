@@ -7,8 +7,18 @@ author: Scott Johnson
 # Guide for Slurm
 This page provides reference information for Slurm and strategies for how to use the job scheduler to best execute your research workflows.
 
+## Accounts
+
+Any cluster user may submit jobs to the free partition without specifying an account using `srun --partition=free` or `salloc --partition=free`. Jobs on the free partition are limited in terms of their priority, hardware, and run time (max 3 hours). Jobs submitted to a higher tier of service must be associated with an account using `--account=<my account>`.
+
+Accounts are linked to a principal investigator (PI). By default, the account is named `<first_name>_<last_name>` in lowercase after the PI. For example, to submit a job to the tier1_cpu partition for the PI John Smith: `salloc --account-john_smith --partition=tier1_cpu`. If a job is not associated with an account then the job _must_ specify `--partition=free`.
+
+A research assistant, student, or post-doc may submit jobs under their PI's account. A lab member with more than one PI can specify which PI's account to use for which job by passing the appropriate `--account=` argument for that job.  PI's may set up an account, select a tier of service, and add/remove lab members who can submit jobs to that account by e-mailing [chpc@nrg.wustl.edu](mailto:chpc@nrg.wustl.edu).
+
+For a complete list of accounts on the cluster run: `sacctmgr list accounts -P`.
+
 ## Partitions and Quality of Service
-The partition is a great tool to assemble jobs of similar properties. Depending on the requested number of CPUs and/or GPUs, CPU memory allocation and walltime, we have defined six partitions in the cluster. The relevant properties for each partition are summarized in the table below.
+The partition is a great tool to assemble jobs of similar properties. Depending on the requested number of CPUs and/or GPUs, CPU memory allocation and walltime, we have defined six partitions in the cluster. The relevant properties for each partition are summarized in the table below. To see a current list of partitions, run [`sinfo`](https://manpages.ubuntu.com/manpages/xenial/man1/sinfo.1.html).
 
 | **Partition** | **Max CPUs per job** | **Max nodes** | **Default memory****per CPU** | **Default / Max runtime** | **Max jobs per user** |
 | --- | --- | --- | --- | --- | --- |
@@ -43,10 +53,11 @@ If your job requires CPU memory greater than 784 GB, then it only fits on a high
 Partition is a high level parameter grouping jobs of similar properties. Each of your submitted jobs is also assigned to a quality of service (QOS), a more granular method of defining job queues. For instance, in the **small** partition, we have defined two QOS, `small_1_24h` for serial jobs and `small_32_24h` for multi-threaded jobs. The former allows each user to run a maximum of 96 serial jobs (finishing within 24 hours) at the same time, while the latter allows each user to run up to 24 multi-threaded jobs (finishing within 24 hours) at the same time with the total number of occupied CPUs capped at 96. If you are interested in learning details of each QOS defined on the cluster, run `sacctmgr show qos -s` in the terminal.
 
 ## Options ##
-The table below lists `sbatch` options for executing your Slurm jobs:
+The table below lists [`sbatch` options](https://slurm.schedmd.com/sbatch.html) for executing your Slurm jobs:
 
 | **Job Specification** | **Description** |
 | --- | --- |
+| `#SBATCH -A, ‐‐account=<account>` | Charge resources used by this job to specified account. The account is an arbitrary string. The account name may be changed after job submission using the scontrol command. |
 | `#SBATCH -a, ‐‐array=<*indexes*>` | Job Arrays with array index values. For example, `‐‐array=0-15`, or `‐‐array=0-15:4`, which is equivalent to `‐‐array=0,4,8,12`.|
 | `#SBATCH -c, ‐‐cpus-per-task=<*ncpus*>` | Number of processors per task requested. For example,`‐‐cpus-per-task=3` requires 3 processors on the same node. This option requires an explicit task count. |
 | `#SBATCH -d, ‐‐dependency=<*dependency_list*>` | Defer the start of this job until the specified dependencies have been satisfied completed. |
@@ -62,7 +73,7 @@ The table below lists `sbatch` options for executing your Slurm jobs:
 | `#SBATCH -n, ‐‐ntasks=<*number*>` | A maximum of **number** tasks requested for a running job. The default is one task per node, but note that the `‐‐cpus-per-task` option will change this default. |
 | `#SBATCH -‐ntasks-per-node=<*ntasks*>` | Request that **ntasks** be invoked on each node. If used with the `‐‐ntasks` option, the `‐‐ntasks` option will take precedence and the `‐‐ntasks-per-node` will be treated as a maximum count of tasks per node. Meant to be used with the `‐‐nodes` option. |
 | `#SBATCH -o, ‐‐output=<*filename pattern*>` | Defines the output file name specified in the **filename pattern**. For example, "JOB.o%j", where the “%j” is replaced by the job ID, or "JOB.%A_%a.out”, “%A” is replaced by the job ID and “%a” with the array index. |
-| `#SBATCH -p, ‐‐partition=<*partition_names*>` | Request a specific partition for the resource allocation. If not specified, the default behavior is to allow the  Slurm controller to select the default partition. For example, `SBATCH ‐‐partition=highmem` requests jobs to run on highmem partition. |
+| `#SBATCH -p, ‐‐partition=<*partition_names*>` | Request a specific partition for the resource allocation. If not specified, the default behavior is to allow the  Slurm controller to select the default partition. For example, `SBATCH ‐‐partition=free` requests jobs to run on the free partition. *Note:* all other partitions require specifying an `--account`. |
 | `#SBATCH ‐‐reservation**=<*reservation_names*>` | Allocate resources for the job from the named reservation. Each reservation will be considered in the order it was requested. All reservations will be listed in `scontrol show reservation`/`squeue` through the life of the job. |
 | `#SBATCH –t, –-time=<*time*>` | Set a limit on the total run time of the job allocation. A time limit of zero requests that no time limit be imposed. Acceptable time formats include “minutes”, “minutes:seconds”, “hours:minutes:seconds”, “days-hours”, “days-hours:minutes” and “days-hours:minutes:seconds”. For example, `#SBATCH ‐‐time=24:0:0` requests 24 hours of walltime. |
 | `#SBATCH ‐‐workdir=<*directory_name*>` | Set the working directory for the submitted job. |
@@ -139,6 +150,8 @@ Following is a list of job states described by Slurm.
 #SBATCH -o Sample_job.o%j
 ######## Job Error File: Sample_job.eJOBID ########
 #SBATCH -e Sample_job.e%j
+######## Use the free partition ########
+#SBATCH --partition=free
 ######## Number of nodes: 1 ########
 #SBATCH -N 1
 ######## Number of tasks: 1 ########
@@ -163,6 +176,8 @@ module load intel/19.1.0.166
 #SBATCH -o Sample_job.o%j
 ######## Job Error File: Sample_job.eJOBID ########
 #SBATCH -e Sample_job.e%j
+######## Use the free partition ########
+#SBATCH --partition=free
 ######## Number of nodes: 1 ########
 #SBATCH -N 1
 ######## Number of tasks: 1 ########
@@ -192,6 +207,10 @@ module load openmpi/4.0.2-intel-19.1.0.166\n\nexport OMP_NUM_THREADS=1
 #SBATCH -o Sample_job.o%j
 ######## Job Error File: Sample_job.eJOBID ########
 #SBATCH -e Sample_job.e%j
+######## Use the the tier1_gpu partition ########
+#SBATCH --partition=tier1_gpu
+######## Non-free partitions require an account ########
+#SBATCH --account=john_smith
 ######## Number of nodes: 1 ########
 #SBATCH -N 1
 ######## Number of gpus per node: 1 ########

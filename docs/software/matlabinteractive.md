@@ -11,7 +11,6 @@ exclude: true
 
 > Note: Interactive MATLAB may only allow running serial jobs with one CPU core. If you need to run parallel jobs, use the [MATLAB Parallel Server](matlabparallelserver.md).
 
-
 ## Terminal Interface
 
 Log into the cluster and start an interactive job on a compute node using [`salloc`](https://slurm.schedmd.com/salloc.html). Here we ask for 4 GB of memory, which should be enough for basic Matlab work, and 3 hours of runtime, which is the maximum allowed under the free tier.
@@ -19,7 +18,7 @@ Log into the cluster and start an interactive job on a compute node using [`sall
 ```
 [localuser@localmachine ~]$ ssh login3.chpc.wustl.edu
 Last login: Tue Sep 19 14:15:38 2023 from 10.20.145.192
-[clusteruser@login02 ~]$ salloc --nodes=1 --time=3:00:00 --mem=4GB --qos=interactive
+[clusteruser@login02 ~]$ salloc --partition=free --nodes=1 --time=3:00:00 --mem=4GB --qos=interactive
 salloc: Nodes node16 are ready for job
 [clusteruser@node16 ~]$ 
 ```
@@ -146,6 +145,7 @@ If you prefer, you can dispatch your job using a batch script. Create a slurm sc
 ```bash
 #!/bin/bash
 #SBATCH --job-name=matlab
+#SBATCH --partition=free
 #SBATCH --nodes=1
 #SBATCH --time=3:00:00
 #SBATCH --mem=4GB
@@ -220,7 +220,7 @@ If you see a prompt like this, select the `Existing License` tab and then click 
 We *do not* recommend using the Matlab graphical user interface with X11 forwarding due to performance, reliability, and stability issues. Instead, consider using the web application or Jupyter notebook interface above. 
 
 ```
-[clusteruser@login01 ~]$ srun -p test -N 1 -n 8 --time=04:00:00 --pty --x11 bash
+[clusteruser@login01 ~]$ srun --partition=free -N 1 -n 8 --time=04:00:00 --pty --x11 bash
 [clusteruser@node01 ~]$ module load matlab
 [clusteruser@node01 ~]$ matlab
 MATLAB is selecting SOFTWARE OPENGL rendering.
