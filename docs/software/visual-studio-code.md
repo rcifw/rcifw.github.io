@@ -10,15 +10,14 @@ exclude: true
 
 ## Setting Up a Compute Node
 
-Log into the cluster and use [`salloc`](https://slurm.schedmd.com/salloc.html) to request an interactive job with reasonable resources. Here we ask for 4 GB of memory, which should be enough for most development tasks, and 3 hours of runtime, which is the maximum allowed under the free tier. Take note of which node the job runs on.
+Log into the cluster and use [`srun`](https://slurm.schedmd.com/srun.html) to request an interactive job with reasonable resources. Here we ask for 4 GB of memory, which should be enough for most development tasks, and 3 hours of runtime, which is the maximum allowed under the free tier. We ask for an interactive bash terminal with `--pty bash`. Take note of which node the job runs on.
 
-> Note: VS Code's remote development extension works over SSH. At the time of this writing, the only compute node you can SSH into is node17. Request node17 specifically using `salloc -w node17`
+> Note: VS Code's remote development extension works over SSH. At the time of this writing, the only compute node you can SSH into is node17. Request node17 specifically using `srun -w node17`
 
 ```
 [localuser@localmachine ~]$ ssh login3.chpc.wustl.edu
 Last login: Tue Sep 19 14:15:38 2023 from 10.20.145.192
-[clusteruser@login02 ~]$ salloc -w node17 --partition=free --nodes=1 --time=3:00:00 --mem=4GB --qos=interactive
-salloc: Nodes node17 are ready for job
+[clusteruser@login02 ~]$ srun -w node17 --partition=free --nodes=1 --time=3:00:00 --mem=4GB --pty bash
 [clusteruser@node17 ~]$ 
 ```
 

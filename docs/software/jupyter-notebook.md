@@ -12,13 +12,12 @@ You can run a Jupyter Lab server as a cluster job and connect to it using a web 
 
 ## Setting Up a Compute Node
 
-Log into the cluster and use [`salloc`](https://slurm.schedmd.com/salloc.html) to request an interactive job with reasonable resources. Here we ask for 4 GB of memory, which should be enough for basic Python work, and 3 hours of runtime, which is the maximum allowed under the free tier. Take note of which node the job runs on.
+Log into the cluster and use [`srun`](https://slurm.schedmd.com/srun.html) to request an interactive job with reasonable resources. Here we ask for 4 GB of memory, which should be enough for basic Python work, and 3 hours of runtime, which is the maximum allowed under the free tier. We ask for an interactive bash terminal with `--pty bash`. Take note of which node the job runs on.
 
 ```
 [localuser@localmachine ~]$ ssh login3.chpc.wustl.edu
 Last login: Tue Sep 19 14:15:38 2023 from 10.20.145.192
-[clusteruser@login02 ~]$ salloc --partition=free --nodes=1 --time=3:00:00 --mem=4GB --qos=interactive
-salloc: Nodes node31 are ready for job
+[clusteruser@login02 ~]$ srun --partition=free --nodes=1 --time=3:00:00 --mem=4GB --pty bash
 [clusteruser@node31 ~]$ 
 ```
 
@@ -126,7 +125,7 @@ Then press `Ctrl + A` followed by `d` to "detach" from the terminal. You can use
 
 ## Running Jupyter as a Batch Job
 
-Instead of starting an interactive job with `salloc --qos=interactive` you may submit a batch job that automatically starts Jupyter. Create a slurm script like this one and give it a name like `jupyter.sh`. Make the script executable with `chmod u+x jupyter.sh`.
+Instead of starting an interactive job with `srun --pty bash` you may submit a batch job that automatically starts Jupyter. Create a slurm script like this one and give it a name like `jupyter.sh`. Make the script executable with `chmod u+x jupyter.sh`.
 
 ```bash
 #!/bin/bash
