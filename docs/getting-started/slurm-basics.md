@@ -9,9 +9,9 @@ This page provides reference information for Slurm and strategies for how to use
 
 ## Accounts
 
-Any cluster user may submit jobs to the free partition without specifying an account using `srun --partition=free` or `salloc --partition=free`. Jobs on the free partition are limited in terms of their priority, hardware, and run time (max 3 hours). Jobs submitted to a higher tier of service must be associated with an account using `--account=<my account>`.
+Any cluster user may submit jobs to the free partition without specifying an account using `srun --partition=free`. Jobs on the free partition are limited in terms of their priority, hardware, and run time (max 3 hours). Jobs submitted to a higher tier of service must be associated with an account using `--account=<my account>`.
 
-Accounts are linked to a principal investigator (PI). By default, the account is named `<first_name>_<last_name>` in lowercase after the PI. For example, to submit a job to the tier1_cpu partition for the PI John Smith: `salloc --account-john_smith --partition=tier1_cpu`. If a job is not associated with an account then the job _must_ specify `--partition=free`.
+Accounts are linked to a principal investigator (PI). By default, the account is named `<first_name>_<last_name>` in lowercase after the PI. For example, to submit a job to the tier1_cpu partition for the PI John Smith: `srun --account-john_smith --partition=tier1_cpu`. If a job is not associated with an account then the job _must_ specify `--partition=free`.
 
 A research assistant, student, or post-doc may submit jobs under their PI's account. A lab member with more than one PI can specify which PI's account to use for which job by passing the appropriate `--account=` argument for that job.  PI's may set up an account, select a tier of service, and add/remove lab members who can submit jobs to that account by e-mailing [chpc@nrg.wustl.edu](mailto:chpc@nrg.wustl.edu).
 

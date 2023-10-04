@@ -167,8 +167,7 @@ Allocated port 45627 for remote forward to 127.0.0.1:22
 While the tunnel is open, you can connect to your local computer and access files from a worker node. For example, request an interactive job:
 
 ```
-[clusteruser@login01 ~]$ salloc --partition=free --nodes=1 --ntasks-per-node=1 --time=00:30:00 --mem=128mb --qos=interactive
-salloc: Nodes node15 are ready for job
+[clusteruser@login01 ~]$ srun --partition=free --nodes=1 --ntasks-per-node=1 --time=00:30:00 --mem=128mb --pty bash
 [clusteruser@node15 ~]$
 ```
 

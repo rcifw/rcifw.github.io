@@ -13,13 +13,12 @@ exclude: true
 
 ## Terminal Interface
 
-Log into the cluster and start an interactive job on a compute node using [`salloc`](https://slurm.schedmd.com/salloc.html). Here we ask for 4 GB of memory, which should be enough for basic Matlab work, and 3 hours of runtime, which is the maximum allowed under the free tier.
+Log into the cluster and start an interactive job on a compute node using [`srun`](https://slurm.schedmd.com/srun.html). Here we ask for 4 GB of memory, which should be enough for basic Matlab work, and 3 hours of runtime, which is the maximum allowed under the free tier. We ask for an interactive bash terminal with `--pty bash`.
 
 ```
 [localuser@localmachine ~]$ ssh login3.chpc.wustl.edu
 Last login: Tue Sep 19 14:15:38 2023 from 10.20.145.192
-[clusteruser@login02 ~]$ salloc --partition=free --nodes=1 --time=3:00:00 --mem=4GB --qos=interactive
-salloc: Nodes node16 are ready for job
+[clusteruser@login02 ~]$ srun --partition=free --nodes=1 --time=3:00:00 --mem=4GB --pty bash
 [clusteruser@node16 ~]$ 
 ```
 
