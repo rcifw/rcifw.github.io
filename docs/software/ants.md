@@ -54,6 +54,8 @@ Be default, ANTs software will run on 4 CPU cores, therefore you should have you
 #SBATCH -o Sample_job.o%j
 ######## Job Error File: Sample_job.eJOBID ########
 #SBATCH -e Sample_job.e%j
+######## Use the free partition ########
+#SBATCH --partition=free
 ######## Number of nodes: 1 ########
 #SBATCH -N 1
 ######## Number of tasks: 1 ########
@@ -82,6 +84,8 @@ However, if you need to run on different number of CPU cores, you need to modify
 #SBATCH -o Sample_job.o%j
 ######## Job Error File: Sample_job.eJOBID ########
 #SBATCH -e Sample_job.e%j
+######## Use the free partition ########
+#SBATCH --partition=free
 ######## Number of nodes: 1 ########
 #SBATCH -N 1
 ######## Number of tasks: 1 ########
