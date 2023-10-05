@@ -212,7 +212,7 @@ If you see a prompt like this, select the `Existing License` tab and then click 
 
 ## See Also
 
-- [Importing and Exporting Data](../getting-started/import-export-data.md) from outside the cluster. In particular, see the section on [using sshfs](../getting-started/import-export-data.md#sshfs-1), [from a worker node](../getting-started/import-export-data.md#controlling-transfers-using-a-worker-node), to mount your local computer as a network filesystem on the cluster.
+- [Importing and Exporting Data](../getting-started/import-export-data.md) from outside the cluster. In particular, see the section on [using sshfs](../getting-started/import-export-data.md#sshfs-1), [from a worker node](../getting-started/import-export-data.md#controlling-transfers-using-a-compute-node), to mount your local computer as a network filesystem on the cluster.
 
 ## X11 Forwarding
 
