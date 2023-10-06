@@ -19,9 +19,8 @@ _Computations were performed using the facilities of the Washington University R
 See current list [here](publications.md)
 
 ## Calendar of Events
-**September 7, 2023** -- Stay tuned for more details on our mixer in East Imaging from 2:30-3:30pm!
 
-**mid-October 2023** -- Stay tuned for more details on our all-RCIF open house!
+**October 26, 2023** -- Save the date for the all-RCIF Open House in Holden Auditorium 10am-1pm ([draft agenda](https://wustl.box.com/s/92xh6s5m5wzsz9ssmqjqvcyv7v09mb1i))
 
 ## Organization of the Site
 We tried to make this a (mostly) linear workflow, from getting an account to specialized applications and recipes for doing specific tasks.
