@@ -26,7 +26,7 @@ You can also figure out which compute node your job is running on with [`squeue`
 ```
 [clusteruser@login02 ~] squeue -u clusteruser -t running
 JOBID      PARTITION    NAME        USER           ST    TIME    NODES    NODELIST(REASON)
-4074089    small        interact    clusteruser    R     7:58    1        node17
+4074089    free        interact    clusteruser    R     7:58    1        node17
 ```
 
 And when you are finished working, you can cancel the job.

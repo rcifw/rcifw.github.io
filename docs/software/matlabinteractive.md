@@ -162,7 +162,7 @@ Submit your job with `sbatch` and then check to see if it is running with `squeu
 Submitted batch job 4089300
 [clusteruser@login02 ~] squeue -u clusteruser -t running
 JOBID      PARTITION    NAME        USER           ST    TIME    NODES    NODELIST(REASON)
-4089300    small        interact    clusteruser    R     0:10    1        node15
+4089300    free        interact    clusteruser    R     0:10    1        node15
 ```
 
 Inspect the job's slurm output to get the URL to connect to the Matlab Proxy app. Note the port number in the URL.

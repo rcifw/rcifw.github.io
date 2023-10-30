@@ -22,35 +22,23 @@ The partition is a great tool to assemble jobs of similar properties. Depending 
 
 | **Partition** | **Max CPUs per job** | **Max nodes** | **Default memory****per CPU** | **Default / Max runtime** | **Max jobs per user** |
 | --- | --- | --- | --- | --- | --- |
-| test | 32 | 4 | 6G | 5m / 4h | 16 |
-| small | 32 | 1 | 6G | 5m / 24h | 128 |
-| medium | 32 | 4 | 12G | 5m / 168h | 64 |
-| large | 128 | 4 | 12G | 5m / 168h | 4 |
-| gpu | 64 | 2 | 6G | 5m / 168h | 4 |
-| highmem | 36 | 1 | 48G | 5m / 168h | 1 |
+| free | 30 | 2 | 6G | 5m / 3h | - |
+| free_gpu | - | 1 | 6G | 5m / 3h | - |
+| tier1_cpu | 30 | 2 | 6G | 30m / 24h | - |
+| tier1_gpu | 30 | 2 | 6G | 30m / 24h | - |
+| tier2_cpu | - | - | 6G | 30m / 7d | - |
+| tier2_gpu | - | - | 6G | 30m / 7d | - |
 
 *Note: Max jobs per user is based on the least amount of CPUs or GPUs and walltime requested within this particular partition*.
 
-### Test Partition ###
-This partition is designed for users who want to develop and test their applications. This partition sets aside 8 compute nodes in the **test** partition to accommodate testing. These jobs will be limited to run on a single CPU node for no more than 4 hours.
+### Free Partitions ###
+This partition is designed for users who want to develop and test their applications. This partition sets aside 6 compute nodes in the **free** partition to accommodate testing. These jobs will be limited to run no more than 3 hours. The **free_gpu** partition similarly allows for testing of GPU-based workloads for no more than 3 hours per job.
 
-### Small Partition ###
-The **small** partition is designed for *CPU-only* jobs running on a single compute node for no more than 24 hours.
+### Tier 1 Partitions ###
+The **tier1_cpu** and **tier1_gpu** partitions are designed for *CPU-only* and *GPU-accelerated* jobs, respectively, to be run for no more than 24 hours per job.
 
-### Medium Partition ###
-The **medium** partition is designed for *CPU-only* jobs running on no more than 4 compute nodes for more than 1 day but no greater than 7 days.
-
-### Large Partition ###
-For *CPU-only* jobs requiring more than 4 compute nodes and walltime up to 1 week, they are assigned to the **large** partition.
-
-### Gpu Partition ###
-For all types of *GPU-based* jobs, we have defined the **gpu** partition. Depending on your specific need, you can request a particular type of GPU as well as GPUs with a particular sized GPU memory.
-
-### Highmem Partition ###
-If your job requires CPU memory greater than 784 GB, then it only fits on a high memory node. We have defined **highmem** partition for this type of job. However, if you need to run jobs on the highmem node, must explicitly specify highmem partition in your batch script with `#SBATCH -p highmem` or `#SBATCH –partition highmem` or include `-p highmem` or `–partition highmem` in the `srun` command if you are initiating an interactive job.
-
-### Quality of Service (QOS) ###
-Partition is a high level parameter grouping jobs of similar properties. Each of your submitted jobs is also assigned to a quality of service (QOS), a more granular method of defining job queues. For instance, in the **small** partition, we have defined two QOS, `small_1_24h` for serial jobs and `small_32_24h` for multi-threaded jobs. The former allows each user to run a maximum of 96 serial jobs (finishing within 24 hours) at the same time, while the latter allows each user to run up to 24 multi-threaded jobs (finishing within 24 hours) at the same time with the total number of occupied CPUs capped at 96. If you are interested in learning details of each QOS defined on the cluster, run `sacctmgr show qos -s` in the terminal.
+### Tier 2 Partitions ###
+The **tier1_cpu** and **tier1_gpu** partitions are designed for *CPU-only* and *GPU-accelerated* jobs, respectively, to be run for no more than 1 week per job.
 
 ## Options ##
 The table below lists [`sbatch` options](https://slurm.schedmd.com/sbatch.html) for executing your Slurm jobs:
@@ -272,7 +260,7 @@ You can specify the number of nodes for your job, using the option `--nodes` or 
 ### 3. Memory ###
 You can request the total amount of memory **per node** using the option `--mem`, or the amount of memory **per CPU** using the option `--mem-per-cpu`. These two options are mutually exclusive.
 
-Half of the compute nodes, the maximum CPU memory per node is 384 GB and the other half is 768 GB. If your job does not specify a particular amount of memory, your job would run within **6 GB** of memory **per node** if assigned to **test**, **small** or **gpu** partition, or within **12 GB** of memory **per node** if assigned to **medium** or **large** partition.
+Half of the compute nodes, the maximum CPU memory per node is 384 GB and the other half is 768 GB. If your job does not specify a particular amount of memory, your job would run within **6 GB** of memory **per node**.
 
 ## Additional resources on Slurm ##
 A Quick-Start Guide for those unfamiliar with Slurm can be found [here](https://slurm.schedmd.com/quickstart.html)
