@@ -1,8 +1,12 @@
 ---
 title: RCIF Facilities Document
+created: 2023-10-26T13:31:10 (UTC -04:00)
 tags: []
 author: MIR Staff
+exclude: true
 ---
+
+*With permission, see also the related [CIRC facilities document](https://docs.google.com/document/d/1FVO2i87eicxxEeQXr5rX96CJbqllFH7fDw2wcNmEClI).*
 
 # Washington University Facilities and Resources
 
