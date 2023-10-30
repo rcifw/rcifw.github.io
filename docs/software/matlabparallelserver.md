@@ -103,7 +103,7 @@ The following settings are optional depending on the nature of your job.
 *   Specify a partition to use for MATLAB jobs
 
 ```
->> c.AdditionalProperties.Partition = 'test';
+>> c.AdditionalProperties.Partition = 'free';
 ```
 
 Save changes after modifying _AdditionalProperties_ for the above changes to persist between MATLAB sessions.

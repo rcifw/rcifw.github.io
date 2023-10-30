@@ -26,7 +26,7 @@ You can also figure out which compute node your job is running on with [`squeue`
 ```
 [clusteruser@login02 ~] squeue -u clusteruser -t running
 JOBID      PARTITION    NAME        USER           ST    TIME    NODES    NODELIST(REASON)
-4074089    small        interact    clusteruser    R     7:58    1        node31
+4074089    free        interact    clusteruser    R     7:58    1        node31
 ```
 
 And when you are finished working, you can cancel the job.
@@ -150,7 +150,7 @@ Submit your job with `sbatch` and then check to see if it is running with `squeu
 Submitted batch job 4089300
 [clusteruser@login02 ~] squeue -u clusteruser -t running
 JOBID      PARTITION    NAME        USER           ST    TIME    NODES    NODELIST(REASON)
-4089300    small        interact    clusteruser    R     0:10    1        node15
+4089300    free        interact    clusteruser    R     0:10    1        node15
 ```
 
 Inspect the job's slurm output to get the URL to connect to the Jupyter Lab server. Note the port number in the URL.
