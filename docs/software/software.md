@@ -37,6 +37,7 @@ We support a variety of software on the RCIF HPC cluster
 * [octave](octave.md)
 * [openmpi](openmpi.md)
 * [openslide](openslide.md)
+* [pandoc](pandoc.md)
 * [perl](perl.md)
 * [plink](plink.md)
 * [python](python.md)
