@@ -7,13 +7,14 @@ author:
 exclude: true
 ---
 
-Singularity is not longer officially supported and Apptainer is the replacement for it.
+Singularity is no longer officially supported in its original form and has forked in a version via Syslabs (same name) and
+Apptainer. We have Apptainer supported on the CHPC.
 
 The APPTAINER home page is [https://apptainer.org/](https://apptainer.org/).
 
-To use APPTAINER, you’ll use the module tool.
+To use APPTAINER, you’ll use the module tool or alternatively use the container; see [example](../getting-started/working-with-containers.md).
 
-You can see what versions are available by using:
+You can see what module versions are available by using:
 
 ```
 [me@login01 ~]$ module avail apptainer/
