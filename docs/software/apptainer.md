@@ -43,7 +43,7 @@ The complete user guide be found at [https://apptainer.org/docs/user/latest/](ht
 ## Building containers
 In order to build a singularity container from a definition file, you need sudo permissions, which only admins have. For now, there are 2 reasonable options while we work on deploying Virtual Desktops (at which time you would be able to build in the Virtual Machine and immediately have it available on the sahred storage, e.g., `~/` or in your scratch folder) ... but until then we suggest:
 
-* Building the container on your local laptop or desktop, then `scp` or otherwise transfer the container to the cluster (or for the adventurous you can save directly to the CHPC shared storage via sshfs or similar remote mounting)
+* Building the container on your local laptop or desktop, then `scp` or otherwise transfer the container to the cluster (or for the adventurous you can save directly to the CHPC shared storage via [sshfs](../getting-started/import-export-data.md#sshfs)  or similar remote mounting)
 * Using **Remote Builder** from Sylabs to build your singularity container at [https://cloud.sylabs.io/builder](https://cloud.sylabs.io/builder).
 
 Check out [Working with Containers](../getting-started/working-with-containers.md) for more information about working with Singularity/Apptainer and a working example.
