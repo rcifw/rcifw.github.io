@@ -9,7 +9,7 @@ exclude: true
 
 Singularity is no longer officially supported in its original form and has forked into a version via Syslabs (with the same name, i.e., "Singularity") and Apptainer.
 
-We have only Apptainer currently supported on the CHPC; see the [Appatainer documentation](https://apptainer.org/) for more info. For users who are familiar with Singularity, Apptainer is (more-or-less) the same. For most cases, you can simply replace “singularity” with “apptainer” to run singularity commands, and "singularity" is currently aliased to "apptainer".
+We have only Apptainer currently supported on the CHPC; see the [Apptainer documentation](https://apptainer.org/) for more info. For users who are familiar with Singularity, Apptainer is (more-or-less) the same. For most cases, you can simply replace “singularity” with “apptainer” to run singularity commands, and "singularity" is currently aliased to "apptainer".
 
 To use Apptainer, you’ll use the module tool. You can see what module versions are available by using:
 
@@ -44,7 +44,7 @@ The complete user guide be found at [https://apptainer.org/docs/user/latest/](ht
 In order to build a singularity container from a definition file, you need sudo permissions, which only admins have. For now, there are 2 reasonable options while we work on deploying Virtual Desktops (at which time you would be able to build in the Virtual Machine and immediately have it available on the sahred storage, e.g., `~/` or in your scratch folder) ... but until then we suggest:
 
 * Building the container on your local laptop or desktop, then `scp` or otherwise transfer the container to the cluster (or for the adventurous you can save directly to the CHPC shared storage via sshfs or similar remote mounting)
-* Using **Remote Builder** from Sylabs to build your singularity container at [https://cloud.sylabs.io/builder](https://cloud.sylabs.io/builder); from there, you can transfer to the cluster.
+* Using **Remote Builder** from Sylabs to build your singularity container at [https://cloud.sylabs.io/builder](https://cloud.sylabs.io/builder).
 
 Check out [Working with Containers](../getting-started/working-with-containers.md) for more information about working with Singularity/Apptainer and a working example.
 

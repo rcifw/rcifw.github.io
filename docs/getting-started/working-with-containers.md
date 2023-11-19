@@ -84,7 +84,7 @@ And export to Apptainer:
 ```
 
 ## Step 4: Sending the container to the CHPC
-Now, you have a container that can be exectued in Apptainer! Send it to the cluster:
+Now, you have a container that can be executed in Apptainer! Send it to the cluster:
 ```
 [me@my_local_machine]:$ scp -i ~/.ssh/my_ssh_certificate freesurfer-7.2.0.linux-amd64.sif me@login3.chpc.wustl.edu:~/
 ```
