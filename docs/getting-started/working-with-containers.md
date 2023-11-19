@@ -119,3 +119,5 @@ You are running this version of FreeSurfer:
 
   freesurfer-linux-centos7_x86_64-7.2.0-20210720-aa8f76b
 ```
+
+See also the [Docker documentation](https://docs.docker.com/build/building/secrets/) for more tips on building containers.
