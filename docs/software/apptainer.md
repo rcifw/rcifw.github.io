@@ -7,57 +7,49 @@ author:
 exclude: true
 ---
 
-Singularity is no longer officially supported in its original form and has forked in a version via Syslabs (same name) and
-Apptainer. We have Apptainer supported on the CHPC.
+Singularity is no longer officially supported in its original form and has forked into a version via Syslabs (with the same name, i.e., "Singularity") and Apptainer.
 
-The APPTAINER home page is [https://apptainer.org/](https://apptainer.org/).
+We have only Apptainer currently supported on the CHPC; see the [Appatainer documentation](https://apptainer.org/) for more info. For users who are familiar with Singularity, Apptainer is (more-or-less) the same. For most cases, you can simply replace “singularity” with “apptainer” to run singularity commands, and "singularity" is currently aliased to "apptainer".
 
-To use APPTAINER, you’ll use the module tool or alternatively use the container; see [example](../getting-started/working-with-containers.md).
-
-You can see what module versions are available by using:
+To use Apptainer, you’ll use the module tool. You can see what module versions are available by using:
 
 ```
 [me@login01 ~]$ module avail apptainer/
 
-------------------------------- /opt/modulefiles -------------------------------
-   apptainer/1.1.3
+------------------------------------------------------------ /opt/modulefiles ------------------------------------------------------------
+   apptainer/1.1.3    apptainer/1.2.3 (D)
 
-If the avail list is too long consider trying:
-
-"module --default avail" or "ml -d av" to just list the default modules.
-"module overview" or "ml ov" to display the number of modules for each name.
-
-Use "module spider" to find all possible modules and extensions.
-Use "module keyword key1 key2 ..." to search for all possible modules matching any of the "keys".
+  Where:
+   D:  Default Module
 ```
 
 To load a specific version, you would use:
 
 ```
-[me@login01 ~]$ module load apptainer/1.1.3
+[me@login01 ~]$ module load apptainer/1.2.3
 ```
 
-while the “apptainer” wildcard will load the default version, apptainer-1.1.3 in this case.
+while the “apptainer” wildcard will load the default version, "apptainer-1.2.3" in this case.
 
-You should now be able to run APPTAINER commands:
+You should now be able to run Apptainer commands:
 
 ```
 [me@login01 ~]$ apptainer --version
-apptainer version 1.1.3
+apptainer version 1.2.3
 ```
 
-For users who are familiar with singularity, the apptainer is very similar. For most cases, you can simply replace “singularity” with “apptainer” to run singularity commands.
+The complete user guide be found at [https://apptainer.org/docs/user/latest/](https://apptainer.org/docs/user/latest/).
 
-The complete user guide be found at [https://apptainer.org/docs/user/1.1/](https://apptainer.org/docs/user/1.1/).
+## Building containers
+In order to build a singularity container from a definition file, you need sudo permissions, which only admins have. For now, there are 2 reasonable options while we work on deploying Virtual Desktops (at which time you would be able to build in the Virtual Machine and immediately have it available on the sahred storage, e.g., `~/` or in your scratch folder) ... but until then we suggest:
 
-**If one needs to build a singularity container on the cluster from a definition file**, a root permission is required, which is not permitted. A work-around is building a container from your local machine and transfer it to the cluster.
+* Building the container on your local laptop or desktop, then `scp` or otherwise transfer the container to the cluster (or for the adventurous you can save directly to the CHPC shared storage via sshfs or similar remote mounting)
+* Using **Remote Builder** from Sylabs to build your singularity container at [https://cloud.sylabs.io/builder](https://cloud.sylabs.io/builder); from there, you can transfer to the cluster.
 
-**We recommend use** **Remote Builder** from Sylabs to build your singularity container, and you can sign in and use it at [https://cloud.sylabs.io/builder](https://cloud.sylabs.io/builder).
+Check out [Working with Containers](../getting-started/working-with-containers.md) for more information about working with Singularity/Apptainer and a working example.
 
 **Note:** when building singularity container images, avoid using either home or scratch directory as the temporary directory, for instance, you may set the temporary directory to /tmp by specifying the option “–tmpdir /tmp” for the singularity command. Otherwise, you may encounter the following error.
 
 ```
 FATAL:   While performing build: packer failed to pack: while unpacking tmpfs: error unpacking rootfs: unpack layer: unpack entry: usr/share/terminfo/c/cons25: link: unpriv.link: unpriv.wrap target: operation not permitted
 ```
-
-Other questions related to the singularity container may find answers in the _Docker images_ section in [FAQ](https://sites.wustl.edu/chpc/for-users/frequently-asked-questions-faq/).
