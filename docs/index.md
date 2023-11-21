@@ -7,7 +7,7 @@ layout: home
 exclude: true
 ---
 
-The **Research Computing and Informatics Facility** (**RCIF**) provides access to high-performance computing (HPC) resources, high-capacity and high-throughput storage, access to open and proprietary human imaging datasets, and the expertise necessary to tackle any computationally intensive human imaging project, including AI/ML applications. See [hardware](system-info/hpc-hardware.md) and [software](software/software.md) for more information.
+The **Research Computing and Informatics Facility** (**RCIF**) provides access to high-performance computing (HPC) resources, high-capacity and high-throughput storage, access to open and proprietary human imaging datasets, and the expertise necessary to tackle any computationally intensive human imaging project, including AI/ML applications. See [hardware](system-info/hpc-hardware.md) and [software](software/software.md) for more information, and check out our [training and support](getting-started/training-and-support.md) page for how to get one-on-one or community support to kickstart your research with the RCIF.
 
 **Writing a grant?** Check out this sample [facilities document](system-info/facilities-doc.md).
 
@@ -34,7 +34,7 @@ We tried to make this a (mostly) linear workflow, from getting an account to spe
 10. [Tips and tricks for batch management](under-construction.md)
 11. [Managing experiments](under-construction.md)
 12. [Managing your jobs](under-construction.md)
-13. [Asking for help](under-construction.md)
+13. [Support and Training](getting-started/training-and-support.md)
 14. [Special services](under-construction.md)
 
 ## Remote Development
