@@ -16,7 +16,7 @@ To connect to the login node, you simply connect to `login3.chpc.wustl.edu`, an 
 ### How do I connect to these login nodes?
 If you are on the WashU network, you can directly connect to the cluster (note: if NOT on the WashU cluster you will need to [setup 2-factor authentication](#how-can-i-set-up-2-factor-authentication-on-my-personal-device) and [setup and start the WashU VPN](#how-can-i-access-the-cluster-from-off-campus))
 
-The cluster is Linux-based (see [training](training.md) if you are interested in programs to get familiarized with Linux). The easiest way is to SSH using your favorite terminal application ("mobaxterm" is one choice for Windows, and Terminal is built in to MacOS - another excellent cross-platform option is "Visual Studio Code", which not only has a multi-terminal window built in but also has a great set of tools for working with source code and containers). For example:
+The cluster is Linux-based (see [training and support](training-and-support.md) if you are interested in programs to get familiarized with Linux). The easiest way is to SSH using your favorite terminal application ("mobaxterm" is one choice for Windows, and Terminal is built in to MacOS - another excellent cross-platform option is "Visual Studio Code", which not only has a multi-terminal window built in but also has a great set of tools for working with source code and containers). For example:
 * For _**Windows OS user**_, you can use MobaXterm to launch a terminal window, and then click “Start local terminal”.
 * For _**Mac OS user**_, to launch a terminal window, you can go to the Finder window and select: Applications -> Utilities -> Terminal.
 * For _**Linux OS user**_, you can choose either GNOME or KDE windows manager to launch a terminal window. If choosing GNOME, start in the upper-left corner of the screen and select:
@@ -59,6 +59,8 @@ In order to connect to the login nodes from off campus, you need to establish th
 6. Enter your WUSTL key username as the username and WUSTL key password as the password, and enter the 6-digit 2FA code from the Duo app installed on your mobile device for the authentication method (in the last line) or use "push" to initiate a push authorization to your mobile device.
 7. If everything is correct, a new window would pop up. You should be asked to confirm the connection by clicking the “Accept” button.
 8. Once the “Cisco Anyconnect Secure Mobility Client” shows an icon of a green tick on the upper-right corner of a lock along with the message “VPN: Connected to msvpn.wusm.wustl.edu”, the VPN connection is successfully established. At this point, you can access the cluster from off campus.
+
+Users have reported that if you are connecting from a Linux computer after 11/20/23, you need to set your useragent string to something starting with AnyConnect to be directed to the new SSO process. If you use an old useragent string, the gateway will repeatedly ask you for your username and password rather than giving you an error. For example: `sudo openconnect --protocol=anyconnect --useragent="AnyConnect-compatible OpenConnect VPN Agent" https://msvpn.wusm.wustl.edu/`
 
 ### Entering my password to login every time is so annoying ... How can I connect to the cluster without entering the password?
 
