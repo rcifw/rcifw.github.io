@@ -9,7 +9,87 @@ exclude: true
 
 The R home page is [https://www.r-project.org/](https://www.r-project.org/).
 
-To use R, you’ll want to use Anaconda distributions (see [Python](python.md) for instructions on how to setup your conda environment), which come pre-bundled with many R packages. Regardless of which R package you use, you need to set up a R environment similar to Python Virtual Environment using conda command. This will allow you to update or install any packages that you’d like.
+## Quick Start
+
+R is installed on the cluster, and can be loaded with `module load R`. For example, to start an interactive job on the cluster and run R on the terminal:
+
+```
+[localuser@localmachine ~]$ ssh login3.chpc.wustl.edu
+Last login: Tue Sep 19 14:15:38 2023 from 10.20.145.192
+[clusteruser@login02 ~]$ srun --partition=free --nodes=1 --time=3:00:00 --mem=4GB --pty bash
+[clusteruser@node16 ~]$ module load R
+[clusteruser@node16 ~]$ R
+R version 4.3.2 (2023-10-31) -- "Eye Holes"
+...
+> print("Hello world!");
+[1] "Hello world!"
+> q()
+Save workspace image? [y/n/c]: n
+[clusteruser@node16 ~]$ exit
+[clusteruser@login02 ~]$
+```
+
+## Jupyter Notebook
+
+Please use Jupyter from a compute node, not a login node. Follow the [directions to install Jupyter](jupyter-notebook.md). If you are using a python or conda virtual environment, activate it. In this example we are working inside a python virtual environment. The command `IRkernel::installspec()` installs the R Jupyter kernel. We will also need to make sure the `Cairo` package is installed (see below).
+
+```
+[clusteruser@node16 ~]$ R
+R version 4.3.2 (2023-10-31) -- "Eye Holes"
+> install.packages(c("Cairo", "IRkernel"))
+Warning:
+  'lib = "/export/R/4.3.2/lib64/R/library"' is not writable
+Would you like to use a personal library instead? (yes/No/cancel) yes
+Would you like to create a personal library
+‘/ceph/chpc/home/clusteruser/R/x86_64-pc-linux-gnu-library/4.3’
+to install packages into? (yes/No/cancel) yes
+--- Please select a CRAN mirror for use in this session ---
+Secure CRAN mirrors 
+
+ 1: 0-Cloud [https]
+ ...
+ 71: USA (MO) [https]
+
+Selection: 71
+... 
+* installing *source* package ‘IRkernel’ ...
+** package ‘IRkernel’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (IRkernel)
+
+The downloaded source packages are in
+	‘/tmp/RtmpaqC0Fx/downloaded_packages’
+> library(IRkernel)
+> IRkernel::installspec()
+> q()
+Save workspace image? [y/n/c]: n
+[clusteruser@node16 ~]$
+```
+
+Next, edit `~/.Rprofile` and add the following. Run `install.packages("Cairo")` if you have not already done so above. See [IRkernel #388](https://github.com/IRkernel/IRkernel/issues/388) for an explanation of why this step is needed.
+
+```
+## Set default 'type' for png() calls - useful when X11 device is not available!
+## NOTE: Needs 'cairo' capability
+options(bitmapType='cairo')
+```
+
+Then follow the [directions to start and connect to your Jupyter server](jupyter-notebook.md). Before starting the server, make sure you `module load R` in your shell. You should see the following in your Jupyter launcher:
+
+![Screenshot of Jupyter Lab launcher with Matlab available.](../images/jupyter-r-screenshot.png)
+
+## Using Conda
+
+To use development versions of R, or to customize your R installation, you’ll want to use Anaconda distributions (see [Python](python.md) for instructions on how to setup your conda environment), which come pre-bundled with many R packages. Regardless of which R package you use, you need to set up a R environment similar to Python Virtual Environment using conda command. This will allow you to update or install any packages that you’d like.
 
 You can now create a R environment with:
 
