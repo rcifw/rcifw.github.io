@@ -53,3 +53,13 @@ as **persistent** storage, which is meant for:
 * archiving data for inactive accounts - see `/ceph/chpc/archive`
 
 This is not volatile and is regularly backed up to an off-site disaster recovery location.
+
+## Checking Quotas
+While our high-throughput and large-volume storage systems support custom command line tools for working with the respective filesystem, we currently suggest using standard Linux command line tools for querying current quota usage, e.g.:
+```
+du -d0 -h ~/
+```
+will give you the total usage in your home directory (mounted on the large-volume storage system). You can likewise query your usage in the `/scratch` mount in a similar way, e.g.:
+```
+du -d0 -h /scratch/$(whoami)
+```
