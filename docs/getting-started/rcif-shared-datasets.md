@@ -44,5 +44,4 @@ A collection of breast dynamic contrast-enhanced (DCE) MRI data from a longitudi
 
 ## Requesting Datasets
 
-Requests for additional TCIA or other datasets can be made through the Data Request Portal.
-Other requests can be directed to [support@rcif.wustl.edu](mailto:support@rcif.wustl.edu).
+Requests for additional TCIA or other datasets can be made through the [Data Request Portal](https://wustl.az1.qualtrics.com/jfe/form/SV_6gPG6D5xbpgF5Pg).Other requests can be directed to [support@rcif.wustl.edu](mailto:support@rcif.wustl.edu).
