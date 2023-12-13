@@ -11,6 +11,8 @@ The **Research Computing and Informatics Facility** (**RCIF**) provides access t
 
 **Writing a grant?** Check out this sample [facilities document](system-info/facilities-doc.md).
 
+**Need data?** Request Access to shared datasets [here](getting-started/rcif-shared-datasets.md).
+
 This documentation is a community effort - please contribute [here](https://github.com/rcifw/rcifw.github.io)! Also, visit our [site](https://sites.wustl.edu/chpc/) for more (and sometimes the same) information.
 
 ## Citing the RCIF
