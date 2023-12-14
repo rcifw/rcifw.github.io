@@ -5,7 +5,7 @@ tags: []
 author: Scott Johnson
 ---
 
-Our [2023 RCIF HPC rate sheet](https://wustl.box.com/s/vp8qd1js979p7wx3ywogoiaxqo46q0mx) is now available. For more details on the development of the 2023 rates, please see the July users meeting [slides](https://wustl.box.com/s/j0ot01qxdh463qyrs21dxzvutax6byzr).
+Our [2023 RCIF HPC rate sheet](https://wustl.box.com/s/ngnhclzgvzx4irroee4h2eh7gv9b1lsj) is now available. For more details on the development of the 2023 rates, please see the July users meeting [slides](https://wustl.box.com/s/j0ot01qxdh463qyrs21dxzvutax6byzr).
 
 ## The tiers and rates are confusing; can you provide some examples of how I will be charged?
 
@@ -20,7 +20,7 @@ You can choose a different option for each tier (priority level) and for each re
 You can get a CPU-inclusive subscription, which provides unlimited hours on the CPU resources for a __fixed annual cost__; for the CPU resources you just pay the subscription for a particular priority level for your jobs. For the GPU resources, you can pay per hour with the hourly rate based on whatever priority level you select for your jobs. In this case, you would pay the fixed cost for CPU usage and the hourly rate for GPUs.
 
 **Example 2: PI with heavy GPU usage--**
-You can get an all-inclusive subscription, which provides unlimited access to both CPU- and GPU-based resources for a __fixed annual cost__. In this case, you would just pay the annual fixed cost in our rate sheet.
+You can get an all-inclusive subscription, which provides unlimited access to both CPU- and GPU-based resources for a __fixed annual cost__. In this case, you would just pay the annual fixed cost in our [rate sheet](https://wustl.box.com/s/ngnhclzgvzx4irroee4h2eh7gv9b1lsj).
 
 **Example 3: Student who does not have funding --**
 We are introducing the Free Tier to support researchers who want to use CHPC resources for small projects and to test out their workflows before putting them into the paid queues. In this case, just submit your job to the free partition, and your PI will not be charged for that use!
