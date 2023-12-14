@@ -32,6 +32,7 @@ author:
 - [Storage](#storage)
 - [Fabric](#infiniband)
 - [Legacy](#legacy)
+- [COMING SOON!](#next-generation)
 
 ## Login Nodes
 
@@ -236,5 +237,17 @@ GPU acceleration adds 122.5TF of SFLOP performance and 160GB of global memory fr
 - Dual-socket Intel E5-2630 8-core CPUs
 - 128GB memory
 - GPU-acceleration: NVIDIA K20m and K20xm
+
+[top](#quick-links)
+
+## Next Generation
+
+Our next generation CHPC4 machines are in the racks and currently being integrated into the system. After benchmarking in early 2024, these systems will be released into production, increasing our SFLOP capacity to >3PF and our usable storage to ~18PB. We cannot wait!
+
+CHPC4 adds the following computing nodes:
+- 12 nodes (A100-SXM-40G): Lenovo SR670 V2 with dual-socket Intel Xeon Gold 6338 4th gen processors, 1TB TruDDR4 3200MHz, 6.4TB NVMe, and 4x NVIDIA A100-SXM-40G (modular, NVLINK)
+- 5 nodes (A100-SXM-80G): Lenovo SR670 V2 with dual-socket Intel Xeon Gold 6338 4th gen processors, 1TB TruDDR4 3200MHz, 6.4TB NVMe, and 4x NVIDIA A100-SXM-80G (modular, NVLINK)
+- 2 nodes (H100-SXM-80G): Lenovo SR675 V3 with dual-socket AMD EPYC 9334 4th gen processors, 1.5TB TruDDR4 3200MHz, 6.4TB NVMe, and 4x NVIDIA H100-SXM-80G (modular, NVLINK)
+- 1 node: QCT S74G GH200 Grace Hopper system - Grace CPU with 72 Arm Neoverse V2 cores, up to 480GB LPDDRX memory with an NVSWITCH connecting to a Hopper H100 GPU 96GB HBM3 GPU accelerator
 
 [top](#quick-links)
