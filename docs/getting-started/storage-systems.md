@@ -55,11 +55,40 @@ as **persistent** storage, which is meant for:
 This is not volatile and is regularly backed up to an off-site disaster recovery location.
 
 ## Checking Quotas
-While our high-throughput and large-volume storage systems support custom command line tools for working with the respective filesystem, we currently suggest using standard Linux command line tools for querying current quota usage, e.g.:
+On both login nodes, you can use the `check_user_quota` utility (which is already on your path):
 ```
-du -d0 -h ~/
+# which check_user_quota
+/usr/local/sbin/check_user_quota
 ```
-will give you the total usage in your home directory (mounted on the large-volume storage system). You can likewise query your usage in the `/scratch` mount in a similar way, e.g.:
+
+Running this command will give you output like the following:
 ```
-du -d0 -h /scratch/$(whoami)
+$ check_user_quota
+=========================================================================
+home - quota information for <my_user>:
+
+--------- || ----------- 
+  current || quota (max) 
+--------- || ----------- 
+  25 GB   || 50 GB
+--------- || ----------- 
+
+=========================================================================
+scratch - quota information for johnsonscott:
+      user/group     ||           size          ||    chunk files    
+     name     |  id  ||    used    |    hard    ||  used   |  hard   
+--------------|------||------------|------------||---------|---------
+  my_user|1234567||    11.00 GiB|   10.00 TiB||   123456|unlimited
+
+=========================================================================
+Quota information for johnsonscott in scratch directory:
+
+      user/group     ||           size          ||    chunk files    
+     name     |  id  ||    used    |    hard    ||  used   |  hard   
+--------------|------||------------|------------||---------|---------
+ my_current_PI|  1234||      0 Byte|   10.00 TiB||        0|unlimited
+
+Note: for scratch, we use group-based quota.
 ```
+
+This shows that the user is using 25GB in the home directory out of a maximum of 50GB, and the user is also using 11GiB out of a maximum of 10TiB on the scratch storage.

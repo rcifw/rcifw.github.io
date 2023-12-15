@@ -37,10 +37,16 @@ What is better than getting RCIF computation at lower than market rates? Have so
 
 ## What is the condo option?
 
-The condo option is for those who want access to dedicated hardware, and it is meant to be a simple arrangement where the PI pays for the hardware up front (via the RCIF), and we just charge an annual maintenance fee. We normally require that the RCIF arrange the purchase of the computing equipment (we call this a "node", "machine" or "server" interchangeably) to assure it is compatible with our current and anticipated infrastructure.
+The condo option is for those who want access to dedicated hardware, and it is meant to be a simple arrangement where the PI pays for the hardware up front (via the RCIF), and we just charge a fixed annual maintenance fee. We normally require that the RCIF arrange the purchase of the computing equipment (we call this a "node", "machine" or "server" interchangeably) to assure it is compatible with our current and anticipated infrastructure.
 
-Since our costs are based on how much staff time we spend per (machine/server/node) and how many “units” in the rack that equipment occupies, our condo rates are based on a per (machine/server/node) basis.
- 
+Since our costs are based on how much staff time we spend per (machine/server/node) and how many “units” in the rack that equipment occupies, our condo rates are based on a per (machine/server/node) basis. Specifically, this is our way of recovering the (pro rata) costs associated with:
+
+* Renting rack space in the data centers (both our primary and secondary locations), which also covers the associated redundant power, cooling, security, and networking.
+* Staff time to provide user support, keep software and operating systems up to date, address new security vulnerabilities and implement proactive countermeasures, install software and drivers according to user needs and to facilitate efficient computing, and to configure networking (including Ethernet and InfiniBand)
+* Shared storage direct and indirect costs, including: maintenance and drive replacement for the large-volume and high-throughput storage systems and maintenance within our disaster recovery (DR) facility, which backs up home and group storage.
+
+For WUSTL alternatives, WUIT RIS offers a [custom server condo option](https://wustl.app.box.com/s/dwmwgnpctqeqjhxanfi4e5yw24626zmx); however, our rate is currently at >60% discount.
+
 Condo users are treated no differently than other users with respect to shared storage. Any local storage that is built into a physical condo (machine/server/node) is available to the owner of that condo, as well, but it is local to that (machine/server/node), and we do not handle backups, etc., of any local storage.
 
 ## How is storage charged?
@@ -71,6 +77,15 @@ While it is useful to understand the algorithm (for reference you can find the c
 
 Fair Tree has made the algorithm for determining the fairshare term much simpler. The facility implements a “fat tree” account hierarchy where all accounts form a single level beneath root, and users form a second level, each associated with >=1 account. In our case, the tree first determines which account fairshare is greater then progresses to individual users and their individual fairshare values as determinants of job priority.
 
+You can see current partition priority using `sprio`, e.g.:
+```
+sprio -nlp tier2_gpu
+```
+or the current priority for your jobs using:
+```
+sprio -nu $USER
+```
+
 ## What if I am working on multiple projects?
 
 Users can charge their usage to different accounts ... iff we have associated the user with more than one account. Please [contact us](mailto:chpc@nrg.wustl.edu) if you are a PI and need to associate (or unassociate) a user with your account.
@@ -85,7 +100,9 @@ We do not charge for access through the login nodes, including to look at data i
 
 We are currently working to stand up a web portal, which will allow users to audit both their usage and the members associated with their account(s).
 
-In the meantime, we are happy to provide reports whenever you want (please [contact us](mailto:chpc@nrg.wustl.edu)), and we also plan to send monthly reports to let users know where their usage stands.
+In the meantime, we are happy to provide reports whenever you want (please [contact us](mailto:chpc@nrg.wustl.edu)), and we send monthly reports on or about the first of every month to let users know where their usage stands (if that usage is non-trivial).
+
+If you are a PI whose group is actively using fee-based services on the CHPC and are **not** receiving these updates, please contact us!
 
 ## Why is the free tier so limited?
 
