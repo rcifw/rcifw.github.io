@@ -2,6 +2,7 @@
 title: FAQs for Accounting
 created: 2023-08-28T12:54:08 (UTC -05:00)
 tags: []
+permalink: /rates/
 author: Scott Johnson
 ---
 
@@ -33,7 +34,9 @@ Our batch scheduler (SLURM) allows us to associate you with multiple PIs, so the
 
 ## Where can I get funding for this?
 
-What is better than getting RCIF computation at lower than market rates? Have someone else pay for it! Pilot funds are available for **any** researcher (in MIR or not) who is using qualifying MIR facilities – **we are a qualifying facility**! Please see [here](https://www.mir.wustl.edu/research/core-resources/pilot-funds/) for details, and note that while left off the main list, in the links for the [pilot funding](https://apps.mir.wustl.edu/PilotFunding) we are listed as the “Research Computing and Informatics Facility” and for the [ICTS JIT](https://icts.wustl.edu/funding/just-in-time-jit/) we are listed as the “Center for High Performance Computing (CHPC)” in the [PDF](https://wustl.box.com/s/umpd5cel70codg1x0wpxf599p4p8827a).
+What is better than getting RCIF computation at lower than market rates? Have someone else pay for it! Pilot funds are available for **any** researcher (in MIR or not) who is using qualifying MIR facilities – **we are a qualifying facility**!
+
+Please see [here](https://www.mir.wustl.edu/research/core-resources/pilot-funds/) for details, and note that while left off the main list, in the links for the [pilot funding](https://apps.mir.wustl.edu/PilotFunding) we are listed as the “Research Computing and Informatics Facility” and for the [ICTS JIT](https://icts.wustl.edu/funding/just-in-time-jit/) we are listed as the “Center for High Performance Computing (CHPC)” in the [PDF](https://wustl.box.com/s/umpd5cel70codg1x0wpxf599p4p8827a).
 
 ## What is the condo option?
 
@@ -52,6 +55,11 @@ Condo users are treated no differently than other users with respect to shared s
 ## How is storage charged?
 
 Everyone, including those on the free tier, get a quota of shared storage without charge. That is independent of what people will additionally pay for shared storage or compute. For us, “archive” storage is synonymous with “large volume storage” and is currently the Ceph parallel file system storage. Currently, a user receives a quota of storage in the "home directory", which is a space for each user that is hosted on the “large volume storage”. This is the only “free” storage in the “large volume storage”.
+
+Our general policy is:
+
+* Let PI’s buy additional space for shared use (e.g., for projects, etc.), and they can have us set up arbitrary user permissions for that space. That storage access does not necessarily have to have the same user list as that for computing resource access.
+* The storage quota for an individual user is used at the discretion of that user. If a user wants to use it for project storage, etc., that is up to them; however, that storage is not meant for shared access.
 
 ## What do the “Limits” represent in the rates tables?
 

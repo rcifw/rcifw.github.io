@@ -2,6 +2,7 @@
 title: Account
 created: 2023-03-31T09:21:24 (UTC -04:00)
 tags: []
+permalink: /apply/
 source: https://sites.wustl.edu/chpc/for-users/frequently-asked-questions-faq/applying-user-account-2/
 author:
 ---

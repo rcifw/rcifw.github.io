@@ -2,6 +2,7 @@
 title: Working with containers
 created: 2023-11-17T16:31:00 (UTC -04:00)
 tags: []
+permalink: /containers/
 author: Scott Johnson
 exclude: true
 ---

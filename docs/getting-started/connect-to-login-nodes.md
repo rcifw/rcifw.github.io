@@ -3,26 +3,33 @@ title: Connect
 created: 2023-03-31T09:22:22 (UTC -04:00)
 last_modified_at: 2023-08-24T09:30:21 (UTC -05:00)
 tags: []
+permalink: /connect/
 source: https://sites.wustl.edu/chpc/for-users/frequently-asked-questions-faq/connecting-to-login-nodes-1/
 author:
 ---
 
 ### What is the hostname for the login nodes of the cluster?
 
-We have two login nodes, namely, `login01` and `login02`.
+We have two (2) login nodes: `login01` and `login02`.
 
-To connect to the login node, you simply connect to `login3.chpc.wustl.edu`, an alias for the hostname of the login nodes. If you ever have trouble connecting to `login3.chpc.wustl.edu`, you can directly connect to either `login3-01.chpc.wustl.edu` (`128.252.185.7`) or `login3-02.chpc.wustl.edu` (`128.252.185.8`)
+To connect to the login node, you simply connect to `login3.chpc.wustl.edu`
+
+If you ever have trouble connecting to `login3.chpc.wustl.edu`, you can directly connect to either:
+- `login01`: `login3-01.chpc.wustl.edu` (`128.252.185.7`)
+- `login02`: `login3-02.chpc.wustl.edu` (`128.252.185.8`)
 
 ### How do I connect to these login nodes?
-If you are on the WashU network, you can directly connect to the cluster (note: if NOT on the WashU cluster you will need to [setup 2-factor authentication](#how-can-i-set-up-2-factor-authentication-on-my-personal-device) and [setup and start the WashU VPN](#how-can-i-access-the-cluster-from-off-campus))
+If you are on the WashU network, you can directly connect to the cluster (note: if _NOT_ on the WashU cluster you will need to [setup 2-factor authentication](#how-can-i-set-up-2-factor-authentication-on-my-personal-device) and [setup and start the WashU VPN](#how-can-i-access-the-cluster-from-off-campus))
 
-The cluster is Linux-based (see [training and support](training-and-support.md) if you are interested in programs to get familiarized with Linux). The easiest way is to SSH using your favorite terminal application ("mobaxterm" is one choice for Windows, and Terminal is built in to MacOS - another excellent cross-platform option is "Visual Studio Code", which not only has a multi-terminal window built in but also has a great set of tools for working with source code and containers). For example:
+The cluster is Linux-based (see [training and support](training-and-support.md) if you are interested in programs to get familiarized with Linux). The easiest way is to SSH using your favorite terminal application ("mobaxterm" is one choice for Windows, and Terminal is built in to MacOS - another excellent cross-platform option is "Visual Studio Code", which not only has a multi-terminal window built in but also has a great set of tools for working with source code and containers).
+
+For example:
 * For _**Windows OS user**_, you can use MobaXterm to launch a terminal window, and then click “Start local terminal”.
 * For _**Mac OS user**_, to launch a terminal window, you can go to the Finder window and select: Applications -> Utilities -> Terminal.
 * For _**Linux OS user**_, you can choose either GNOME or KDE windows manager to launch a terminal window. If choosing GNOME, start in the upper-left corner of the screen and select:
 Applications -> System Tools -> Terminal. If choosing KDE, start in the lower-left corner and select: Applications -> Utilities -> Terminal.
 
-1. The syntax to connect is then `ssh -Y USERNAME@MACHINE`, where `USERNAME` is your **WUSTL Key ID** (_not your WUSTL email_), and `MACHINE` is `login3.chpc.wustl.edu` or one of the addresses or IP addresses above, e.g.:
+1. The syntax to connect is then `ssh -Y USERNAME@MACHINE`, where `USERNAME` is your **WUSTL Key ID** (_not your WUSTL email_), and `MACHINE` is `login3.chpc.wustl.edu` or one of the addresses or IP addresses [above](#how-do-i-connect-to-these-login-nodes), e.g.:
 ```
 [me@my_local_machine ~]$ ssh -Y me@login3.chpc.wustl.edu
 ```
@@ -32,7 +39,7 @@ your keystrokes are registering.
 ```
 [me@login01 ~]$
 ```
-4. Take a look around your home directory. Using ls command, you can find that no files exist in either your home or your scratch directory:
+4. Take a look around your home directory. Using `ls` command, you can find that no files exist in either your home or your scratch directory:
 ```
 [me@login01 ~]$ ls -lh ~/
 total 0
@@ -60,13 +67,15 @@ In order to connect to the login nodes from off campus, you need to establish th
 7. If everything is correct, a new window would pop up. You should be asked to confirm the connection by clicking the “Accept” button.
 8. Once the “Cisco Anyconnect Secure Mobility Client” shows an icon of a green tick on the upper-right corner of a lock along with the message “VPN: Connected to msvpn.wusm.wustl.edu”, the VPN connection is successfully established. At this point, you can access the cluster from off campus.
 
-Users have reported that if you are connecting from a Linux computer after 11/20/23, you need to set your useragent string to something starting with AnyConnect to be directed to the new SSO process. If you use an old useragent string, the gateway will repeatedly ask you for your username and password rather than giving you an error. For example: `sudo openconnect --protocol=anyconnect --useragent="AnyConnect-compatible OpenConnect VPN Agent" https://msvpn.wusm.wustl.edu/`
+Users have reported that if you are connecting from a Linux computer after 11/20/23, you need to set your useragent string to something starting with AnyConnect to be directed to the new SSO process. If you use an old useragent string, the gateway will repeatedly ask you for your username and password rather than giving you an error.
+
+For example: `sudo openconnect --protocol=anyconnect --useragent="AnyConnect-compatible OpenConnect VPN Agent" https://msvpn.wusm.wustl.edu/`
 
 ### Entering my password to login every time is so annoying ... How can I connect to the cluster without entering the password?
 
 Luckily, a more secure and convenient way to log into the cluster is using a SSH key-pair! SSH key-pairs can be more secure, as they are less vulnerable to common brute-force password attacks ... and more convenient. So yes, you can have your access cake and eat it too ... almost: If the user’s workstation were compromised, the malicious user could then connect to the CHPC without needing a password. All things considered, it is much more difficult to access a physical machine than sitting somewhere else picking away at passwords, so we suggest this method.
 
-An SSH key-pair consist of a public key and a private key. You can place the public key on any server, and then connect to the server using an SSH client with access to the private key. When the public and private keys match up, the SSH server grants access without the need for a password. 
+An SSH key-pair consist of a public key and a private key. You can place the public key on any server, and then connect to the server using an SSH client with access to the private key. When the public and private keys match up, the SSH server grants access without the need for a password.
 
 But enough explanation, let's get to making one of these and getting you connected. You can follow [these instructions from our friends at Github](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) to generate your key and add it to your ssh-agent. Basically:
 * For Linux OS or MacOS, you simply need to run “ssh-keygen” command in a terminal window. You can just hit enter to accept all of the defaults.
@@ -124,4 +133,4 @@ Be aware, SSH is very sensitive to file permissions. If the permissions would al
 chmod -R 600 ~/.ssh
 ```
 
-If you have any questions or problems, please contact us!
+If you have any questions or problems, please [see our support options](../getting-started/training-and-support.md)!
