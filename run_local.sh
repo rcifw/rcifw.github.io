@@ -1,3 +1,4 @@
 #!/bin/bash
 bundle install
-bundle exec jekyll serve
+bundle update
+bundle exec jekyll serve --livereload

@@ -3,7 +3,7 @@ title: Research Computing and Informatics Facility (RCIF)
 created: 2023-03-31T09:26:02 (UTC -04:00)
 tags: []
 author: 
-layout: home
+layout: default
 exclude: true
 ---
 
