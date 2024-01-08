@@ -21,17 +21,14 @@
 title: Research Computing and Informatics Facility
 email: chpc@nrg.wustl.edu
 description: >- # this means to ignore newlines until "baseurl:"
-  The Research Computing and Informatic Facitity (RCIF) based in the 
-  Mallinckrodt Institute of Radiology (MIR) supports a broad user
-  base of human imaging researchers from across the campuses of
-  Washington University in St. Louis. This documentation is supported
-  by users - like you! Please help us keep this maintained.
-baseurl: "" # the subpath of your site, e.g. /blog
+  The RCIF supports human imaging researchers across all campuses of
+  Washington University in St. Louis.
+# baseurl: "" # the subpath of your site, e.g. /blog
 url: https://rcifw.github.io # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  rcifadmin
 
 # Build settings
-theme: minima
+theme: jekyll-theme-modernist
 plugins:
   - jekyll-feed
 # Exclude from processing.
