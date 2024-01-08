@@ -2,6 +2,7 @@
 title:  Slurm Basics
 created: 2023-09-20T18:35:11 (UTC -05:00)
 tags: []
+permalink: /slurm/
 author: Scott Johnson
 ---
 # Guide for Slurm

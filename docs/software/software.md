@@ -1,6 +1,7 @@
 ---
 title: Software
 tags: []
+permalink: /software/
 author: Scott Johnson
 ---
 

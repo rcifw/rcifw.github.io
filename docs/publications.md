@@ -1,6 +1,7 @@
 ---
 title: Publications
 tags: []
+permalink: /pubs/
 ---
 
 # Quick links

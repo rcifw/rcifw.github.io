@@ -1,6 +1,7 @@
 ---
 title: Hardware
 tags: []
+permalink: /computers/
 author: 
 ---
 
