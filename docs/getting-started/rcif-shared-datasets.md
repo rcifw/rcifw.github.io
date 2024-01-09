@@ -2,6 +2,7 @@
 title: RCIF Datasets
 created: 2023-12-12T16:30:00 (UTC -04:00)
 tags: []
+permalink: /datasets/
 source: https://docs.google.com/document/d/1UYF7q3GorwmKSrd2fFK_g1GMfZjsnkpLDqcHne1RVWQ/edit
 author: Jenn Elam
 ---
