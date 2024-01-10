@@ -3,7 +3,6 @@ created: 2023-03-31T09:26:35 (UTC -04:00)
 tags: []
 source: https://sites.wustl.edu/chpc/resources/software/ffmpeg/
 author:
-exclude: true
 ---
 
 The FFMPEG home page is [https://ffmpeg.org/](https://ffmpeg.org/).

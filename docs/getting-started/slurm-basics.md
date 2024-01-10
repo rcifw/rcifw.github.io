@@ -4,6 +4,7 @@ created: 2023-09-20T18:35:11 (UTC -05:00)
 tags: []
 permalink: /slurm/
 author: Scott Johnson
+include: true
 ---
 # Guide for Slurm
 This page provides reference information for Slurm and strategies for how to use the job scheduler to best execute your research workflows.

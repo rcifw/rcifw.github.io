@@ -4,7 +4,6 @@ created: 2023-03-31T09:27:24 (UTC -04:00)
 tags: []
 source: https://sites.wustl.edu/chpc/resources/software/openslide/
 author:
-exclude: true
 ---
 
 The OPENSLIDE home page is [https://openslide.org/](https://openslide.org/).

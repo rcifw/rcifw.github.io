@@ -1,10 +1,10 @@
 ---
-title: Research Computing and Informatics Facility (RCIF)
+title: RCIF
 created: 2023-03-31T09:26:02 (UTC -04:00)
 tags: []
 author: 
 layout: default
-exclude: true
+include: true
 ---
 
 ## RCIF

@@ -4,7 +4,6 @@ created: 2023-03-31T09:26:55 (UTC -04:00)
 tags: []
 source: https://sites.wustl.edu/chpc/resources/software/itksnap/
 author:
-exclude: true
 ---
 
 The ITK-SNAP home page is [http://www.itksnap.org/pmwiki/pmwiki.php?n=Main.HomePage](http://www.itksnap.org/pmwiki/pmwiki.php?n=Main.HomePage).

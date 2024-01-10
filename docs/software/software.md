@@ -3,6 +3,7 @@ title: Software
 tags: []
 permalink: /software/
 author: Scott Johnson
+include: true
 ---
 
 We support a variety of software on the RCIF HPC cluster

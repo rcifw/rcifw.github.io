@@ -4,7 +4,6 @@ created: 2023-03-31T09:27:29 (UTC -04:00)
 tags: []
 source: https://sites.wustl.edu/chpc/resources/software/plink/
 author:
-exclude: true
 ---
 
 The PLINK home page is [https://www.cog-genomics.org/plink/2.0/](https://www.cog-genomics.org/plink/2.0/).

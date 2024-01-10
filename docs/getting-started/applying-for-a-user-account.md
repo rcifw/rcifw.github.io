@@ -5,6 +5,7 @@ tags: []
 permalink: /apply/
 source: https://sites.wustl.edu/chpc/for-users/frequently-asked-questions-faq/applying-user-account-2/
 author:
+include: true
 ---
 
 ### How can I onboard to use the cluster? (I have a WUSTL key).

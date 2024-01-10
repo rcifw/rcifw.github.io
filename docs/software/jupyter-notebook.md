@@ -3,7 +3,6 @@ title: Jupyter Notebook
 created: 2023-09-25T13:15:00 (UTC -05:00)
 tags: []
 author: Benjamin Kay
-exclude: true
 ---
 
 [Jupyter](https://jupyter.org/) and the Jupyter Lab notebook interface are a widely-used open-source project for interactive, reproducible computing. They are widely used by data scientists. For example, Jupyter powers [Google Colab](https://colab.research.google.com/) and the automatic manuscript figure rendering in [Quarto](https://quarto.org/). Jupyter is written in Python but supports many data science languages including R, Julia, and Matlab.
@@ -78,11 +77,11 @@ Open an ssh tunnel from some port (the first 8888) on your local machine to whic
 
 Then paste the URL into your local computer's web browser. You should see something like this. Congratulations, you are running Jupyter Lab on the cluster!
 
-![Screenshot of a Jupyter notebook](../images/jupyter-screenshot-1.png)
+![Screenshot of a Jupyter notebook](../assets/images/jupyter-screenshot-1.png)
 
 Python code in the Jupyter notebook will run on the compute node, and results will be rendered in your local machine's web browser. For example:
 
-![Screenshot of a Jupyter notebook](../images/jupyter-screenshot-2.png)
+![Screenshot of a Jupyter notebook](../assets/images/jupyter-screenshot-2.png)
 
 When you are finished, close your web browser and, on the compute node, press `Ctrl + C`. You will be promped with:
 

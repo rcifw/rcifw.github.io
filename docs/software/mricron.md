@@ -4,7 +4,6 @@ created: 2023-03-31T09:27:12 (UTC -04:00)
 tags: []
 source: https://sites.wustl.edu/chpc/resources/software/mricron/
 author:
-exclude: true
 ---
 
 The MRICRON home page is [https://www.nitrc.org/projects/mricron](https://www.nitrc.org/projects/mricron).

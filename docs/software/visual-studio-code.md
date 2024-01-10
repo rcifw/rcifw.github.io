@@ -3,7 +3,6 @@ title: Visual Studio Code
 created: 2023-09-21T11:43:00 (UTC -05:00)
 tags: []
 author: Benjamin Kay
-exclude: true
 ---
 
 [Visual Studio Code](https://code.visualstudio.com/) is a popular, free, and multi-platform (including Linux) IDE supported by Microsoft. It has an officially-supported [remote development extension](https://code.visualstudio.com/docs/remote/ssh) that allows you to write, compile, run, test, and debug code on the cluster from the comfort of your local computer. Remote development is particularly handy if compilation or testing would take a long time on your laptop. It is also very convenient for developing batch jobs to run on the cluster.
@@ -67,27 +66,27 @@ Now you are ready to connect to the compute node using VS Code.
 
 Assuming you've already installed the [remote extension](https://code.visualstudio.com/docs/remote/ssh), when you start VS Code you should see something like this.
 
-![Screenshot of VS Code](../images/vscode-screenshot-1.png)
+![Screenshot of VS Code](../assets/images/vscode-screenshot-1.png)
 
 Click on the blue connection icon at the bottom left of the screen and then click on Connect to Host...
 
-![Screenshot of VS Code](../images/vscode-screenshot-2.png)
+![Screenshot of VS Code](../assets/images/vscode-screenshot-2.png)
 
 Click on the profile you added to `~/.ssh/config`. The first time you connect VS Code will take a minute to install its lightweight server in your home folder on the cluster. Subsequent connections should establish themselves more quickly.
 
-![Screenshot of VS Code](../images/vscode-screenshot-3.png)
+![Screenshot of VS Code](../assets/images/vscode-screenshot-3.png)
 
 Once connected, you can use `File > Open Folder...` to browse for a project folder to open on the cluster's filesystem.
 
-![Screenshot of VS Code](../images/vscode-screenshot-4.png)
+![Screenshot of VS Code](../assets/images/vscode-screenshot-4.png)
 
 Commands run in the VS Code terminal will run on the compute node. For example, suppose you are a Python developer. You can run `module load python` in the VS Code terminal, or append it to your `~/.bashrc` on the cluster to run it automatically each time you log in.
 
-![Screenshot of VS Code](../images/vscode-screenshot-5.png)
+![Screenshot of VS Code](../assets/images/vscode-screenshot-5.png)
 
 You can even use VS Code for interactive debugging, for example, using a [Jupyter notebook](https://code.visualstudio.com/docs/datascience/jupyter-notebooks) or [Python code cells](https://code.visualstudio.com/docs/python/jupyter-support-py). The Jupyter kernel will run on the compute node. See the tutorial for [Jupyter](jupyter.md) for more information.
 
-![Screenshot of VS Code running a Jupyter notebook](../images/vscode-screenshot-6.png)
+![Screenshot of VS Code running a Jupyter notebook](../assets/images/vscode-screenshot-6.png)
 
 ## Running VS Code Directly on a Compute Node
 

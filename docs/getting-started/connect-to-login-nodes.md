@@ -6,6 +6,7 @@ tags: []
 permalink: /connect/
 source: https://sites.wustl.edu/chpc/for-users/frequently-asked-questions-faq/connecting-to-login-nodes-1/
 author:
+include: true
 ---
 
 ### What is the hostname for the login nodes of the cluster?

@@ -4,6 +4,7 @@ created: 2023-08-28T12:54:08 (UTC -05:00)
 tags: []
 permalink: /rates/
 author: Scott Johnson
+include: true
 ---
 
 Our [2023 RCIF HPC rate sheet](https://wustl.box.com/s/ngnhclzgvzx4irroee4h2eh7gv9b1lsj) is now available. For more details on the development of the 2023 rates, please see the July users meeting [slides](https://wustl.box.com/s/j0ot01qxdh463qyrs21dxzvutax6byzr).

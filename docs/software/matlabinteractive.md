@@ -4,7 +4,6 @@ created: 2023-03-31T09:27:02 (UTC -04:00)
 tags: []
 source: https://sites.wustl.edu/chpc/resources/software/matlab_interactive/
 author: Benjamin Kay
-exclude: true
 ---
 
 [MATLAB](https://www.mathworks.com/) is a popular programming and numeric computing platform. Matlab is available to cluster users via cluster-wide parallel license.
@@ -125,11 +124,11 @@ Take note of the port number in the access URL and what compute note you are run
 
 Once the Matlab Proxy app is running and you have a tunnel set up, copy and paste the access URL into your local computer's web browser. You may have to change `localhost` to `127.0.0.1`. You should see something like this. You can click the close button on the informational popup and begin working.
 
-![Screenshot of a Matlab](../images/matlab-screenshot-1.png)
+![Screenshot of a Matlab](../assets/images/matlab-screenshot-1.png)
 
 The files in the file explorer will all be on the cluster, although you can access files on your local computer using [sshfs and a reverse tunnel](../getting-started/import-export-data.md#sshfs-1). Computation happens on the cluster. You can interact with the Matlab editor, debugger, and graphics just as you would if you were running Matlab on your local computer.
 
-![Screenshot of a Matlab](../images/matlab-screenshot-2.png)
+![Screenshot of a Matlab](../assets/images/matlab-screenshot-2.png)
 
 When you are finished, press `Ctrl` + `c` in your interactive compute job to stop the Matlab Proxy app. Then `exit` to end your job.
 
@@ -200,15 +199,15 @@ To use the Jupyter Matlab kernel, follow our instructions for [Jupyter](jupyter-
 
 Start the Jupyter Lab server and connect to it in your web browser as usual. You should see something like this.
 
-![Screenshot of Jupyter Lab launcher with Matlab available.](../images/jupyter-matlab-screenshot-1.png)
+![Screenshot of Jupyter Lab launcher with Matlab available.](../assets/images/jupyter-matlab-screenshot-1.png)
 
 Clicking `Open MATLAB` will open a new browser tab with the Matlab Proxy web application, the same one you can install standalone (without Jupyter) in the [previous section](#web-application). Clicking `MATLAB Kernel` will open a new Jupyter notebook (`*.ipynb` file) with a Matlab kernel. You can write code blocks in Matlab and run them just as you would a Python-based notebook.
 
-![Screenshot of Jupyter notebook with Matlab kernel.](../images/jupyter-matlab-screenshot-2.png)
+![Screenshot of Jupyter notebook with Matlab kernel.](../assets/images/jupyter-matlab-screenshot-2.png)
 
 If you see a prompt like this, select the `Existing License` tab and then click `Start MATLAB`.
 
-![Configuring Matlab license](../images/jupyter-matlab-screenshot-3.png)
+![Configuring Matlab license](../assets/images/jupyter-matlab-screenshot-3.png)
 
 ## See Also
 

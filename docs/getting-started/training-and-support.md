@@ -4,7 +4,7 @@ created: 2023-11-21T12:32:00 (UTC -04:00)
 tags: []
 permalink: /support/
 author: Scott Johnson
-exclude: true
+include: true
 ---
 
 # Training and Workshops

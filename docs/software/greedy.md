@@ -4,7 +4,6 @@ created: 2023-03-31T09:26:51 (UTC -04:00)
 tags: []
 source: https://sites.wustl.edu/chpc/resources/software/greedy/
 author:
-exclude: true
 ---
 
 The GREEDY home page is [https://sites.google.com/view/greedyreg/home?authuser=0/](https://sites.google.com/view/greedyreg/home?authuser=0).

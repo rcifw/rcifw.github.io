@@ -5,6 +5,7 @@ tags: []
 permalink: /datasets/
 source: https://docs.google.com/document/d/1UYF7q3GorwmKSrd2fFK_g1GMfZjsnkpLDqcHne1RVWQ/edit
 author: Jenn Elam
+include: true
 ---
 
 To request access to datasets visit the [Data Request Portal](https://wustl.az1.qualtrics.com/jfe/form/SV_6gPG6D5xbpgF5Pg).
