@@ -2,7 +2,8 @@
 title: Hardware
 tags: []
 permalink: /computers/
-author: 
+author: Scott Johnson
+include: true
 ---
 
 ## List of Computational Nodes

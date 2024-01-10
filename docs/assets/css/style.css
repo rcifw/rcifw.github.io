@@ -7,22 +7,27 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    background-color: #333;
-}
-
-.navigation-menu li {
-    float: left;
-}
-
-.navigation-menu li a {
+    display: flex; /* Use flexbox to arrange items in a row */
+    justify-content: center; /* Center items horizontally */
+    flex-wrap: nowrap; /* Prevent wrapping to a new line */
+  }
+  
+  .navigation-menu li {
+    margin: 0 5px; /* Add some space between buttons */
+  }
+  
+  .navigation-menu li a {
     display: block;
-    color: white;
+    background-color: #333; /* Button background color */
+    color: white; /* Button text color */
     text-align: center;
-    padding: 14px 16px;
+    padding: 10px 20px; /* Button padding */
     text-decoration: none;
-}
-
-.navigation-menu li a:hover {
-    background-color: #111;
-}
+    border: none; /* Remove border */
+    border-radius: 4px; /* Optional: Rounded corners for buttons */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+  }
+  
+  .navigation-menu li a:hover, .navigation-menu li a:focus {
+    background-color: #111; /* Darker background on hover
+  

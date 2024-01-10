@@ -15,15 +15,6 @@
     <![endif]-->
 
     {% include head-custom.html %}
-    <nav>
-      <ul class="navigation-menu">
-          {% for page in site.pages %}
-          {% unless page.exclude %}
-              <li><a href="{{ page.url | relative_url }}">{{ page.title }}</a></li>
-          {% endunless %}
-          {% endfor %}
-      </ul>
-  </nav>
   
   </head>
   <body>
@@ -42,6 +33,15 @@
           <li><a href="{{ site.github.repository_url }}">View On <strong>GitHub</strong></a></li>
         </ul>
       </header>
+      <section>
+        <ul class="navigation-menu">
+          {% for page in site.pages %}
+          {% if page.include %}
+              <li><a href="{{ page.url | relative_url }}">{{ page.title }}</a></li>
+          {% endif %}
+          {% endfor %}
+        </ul>
+      </section>
       <section>
 
       {{ content }}

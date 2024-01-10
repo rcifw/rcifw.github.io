@@ -4,7 +4,6 @@ created: 2023-03-31T09:26:00 (UTC -04:00)
 tags: []
 source: https://sites.wustl.edu/chpc/resources/software/afni/
 author: 
-exclude: true
 ---
 
 The AFNI home page is [https://afni.nimh.nih.gov](https://afni.nimh.nih.gov/).

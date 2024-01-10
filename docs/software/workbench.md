@@ -4,7 +4,6 @@ created: 2023-03-31T09:27:55 (UTC -04:00)
 tags: []
 source: https://sites.wustl.edu/chpc/resources/software/workbench/
 author:
-exclude: true
 ---
 
 The WORKBENCH home page is [https://www.humanconnectome.org/software/get-connectome-workbench](https://www.humanconnectome.org/software/get-connectome-workbench).

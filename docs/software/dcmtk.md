@@ -4,7 +4,6 @@ created: 2023-03-31T09:26:28 (UTC -04:00)
 tags: []
 source: https://sites.wustl.edu/chpc/resources/software/dcmtk/
 author: 
-exclude: true
 ---
 
 The DCMTK home page is [https://dicom.offis.de/dcmtk.php.en](https://dicom.offis.de/dcmtk.php.en).

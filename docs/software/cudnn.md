@@ -4,7 +4,6 @@ created: 2023-03-31T09:26:25 (UTC -04:00)
 tags: []
 source: https://sites.wustl.edu/chpc/resources/software/cudnn/
 author: 
-exclude: true
 ---
 
 The CUDNN home page is [https://developer.nvidia.com/cudnn/](https://developer.nvidia.com/cudnn).

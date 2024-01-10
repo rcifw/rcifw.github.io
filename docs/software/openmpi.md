@@ -4,7 +4,6 @@ created: 2023-03-31T09:27:21 (UTC -04:00)
 tags: []
 source: https://sites.wustl.edu/chpc/resources/software/openmpi/
 author:
-exclude: true
 ---
 
 The OPEN MPI Developers home page is [https://www.open-mpi.org](https://www.open-mpi.org/).

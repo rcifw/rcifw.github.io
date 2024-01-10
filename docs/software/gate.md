@@ -4,7 +4,6 @@ created: 2023-03-31T09:26:42 (UTC -04:00)
 tags: []
 source: https://sites.wustl.edu/chpc/resources/software/gate/
 author:
-exclude: true
 ---
 
 The GATE home page is [http://www.opengatecollaboration.org](http://www.opengatecollaboration.org/).

@@ -4,7 +4,6 @@ created: 2023-03-31T09:26:40 (UTC -04:00)
 tags: []
 source: https://sites.wustl.edu/chpc/resources/software/fsl/
 author:
-exclude: true
 ---
 
 The FSL home page is [https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FSL](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FSL).

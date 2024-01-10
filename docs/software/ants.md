@@ -4,7 +4,6 @@ created: 2023-03-31T09:26:02 (UTC -04:00)
 tags: []
 source: https://sites.wustl.edu/chpc/resources/software/ants/
 author: 
-exclude: true
 ---
 
 The ANTS home page is [http://stnava.github.io/ANTs](http://stnava.github.io/ANTs/).

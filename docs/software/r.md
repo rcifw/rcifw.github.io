@@ -4,7 +4,6 @@ created: 2023-03-31T09:27:37 (UTC -04:00)
 tags: []
 source: https://sites.wustl.edu/chpc/resources/software/r/
 author:
-exclude: true
 ---
 
 The R home page is [https://www.r-project.org/](https://www.r-project.org/).
@@ -85,7 +84,7 @@ options(bitmapType='cairo')
 
 Then follow the [directions to start and connect to your Jupyter server](jupyter-notebook.md). Before starting the server, make sure you `module load R` in your shell. You should see the following in your Jupyter launcher:
 
-![Screenshot of Jupyter Lab launcher with Matlab available.](../images/jupyter-r-screenshot.png)
+![Screenshot of Jupyter Lab launcher with Matlab available.](../assets/images/jupyter-r-screenshot.png)
 
 ## Using Conda
 
