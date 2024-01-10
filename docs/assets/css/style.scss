@@ -1,0 +1,48 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+.navigation-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Use flexbox to arrange items in a row */
+  justify-content: center; /* Center items horizontally */
+  flex-wrap: wrap; /* Allow wrapping to a new line */
+}
+
+.navigation-menu li {
+  margin: 5px; /* Add some space between buttons */
+  flex-basis: calc(100% / 5 - 10px); /* Three items per row, adjust margin accordingly */
+}
+
+.navigation-menu li a {
+  display: block;
+  background-color: rgb(72, 104, 168); /* Button background color */
+  color: white; /* Button text color */
+  text-align: center;
+  padding: 5px 10px; /* Button padding */
+  font-size: 0.8em; /* Decrease font size */
+  text-decoration: none;
+  border: none; /* Remove border */
+  border-radius: 2px; /* Optional: Rounded corners for buttons */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+  width: 100%; /* Make buttons stretch to fill their container */
+}
+
+.navigation-menu li a:hover, .navigation-menu li a:focus {
+  background-color: rgb(18, 26, 42); /* Darker background on hover/focus */
+  color: #fff; /* Text color on hover/focus */
+}
+
+/* Add responsive design if needed */
+@media screen and (max-width: 400px) {
+  .navigation-menu {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+  }
+
+  .navigation-menu li {
+    margin: 2px 0; /* Adjust margin for vertical layout */
+  }
+}
