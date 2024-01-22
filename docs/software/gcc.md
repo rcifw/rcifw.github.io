@@ -1,43 +1,44 @@
 ---
-title: Gnu Compilers
-created: 2023-03-31T09:26:44 (UTC -04:00)
+title: GNU C Compiler
+created: 2024-01-22T15:43:59 (UTC -0600)
+topic: gcc
 tags: []
-source: https://sites.wustl.edu/chpc/resources/software/gcc/
-author:
+author: 
 ---
 
-The GCC Developers home page is [https://gcc.gnu.org](https://gcc.gnu.org/).
-
-To use the GCC compilers, you’ll use the module tool.
+{% assign mod = site.data.tokens[page.topic] %}
+See the <a rel="module"
+  href="{{ mod.url }}"
+  title="{{ mod.name }}">
+    {{ mod.name }} home page
+</a>. To use {{ mod.name }}, you’ll use the `module` tool.
 
 You can see what versions are available by using:
-
 ```
-[me@login01 ~]$ module avail gcc/
+[me@login01 ~]$ module avail {{ mod.module }}
 
 ------------------------------ /opt/modulefiles -------------------------------
-   gcc/8.3.1 (D)    gcc/9.3.0    gcc/10.2.0
-
-  Where:
-   D:  Default Module
+   {{ mod.module }}/{{ mod.version }}
 
 Use "module spider" to find all possible modules and extensions.
-Use "module keyword key1 key2 ..." to search for all possible modules matching any of the "keys".
+Use "module keyword key1 key2 ..." to search for all possible modules matching
+any of the "keys".
 ```
 
 To load a specific version, you would use:
-
 ```
-[me@login01 ~]$ module load gcc/9.3.0
+[me@login01 ~]$ module load {{ mod.module }}/{{ mod.version }}
 ```
 
-while the “gcc” wildcard will load the default version, gcc-8.3.1 in this case.
+while the "{{ mod.module }}" wildcard will load the default version, {{ mod.module }}-{{ mod.version }} in this case.
 
-You should now have GCC compilers in your path:
-
+You should now be able to run {{ mod.name }} commands:
 ```
-[me@login01 ~]$ gcc --version
-gcc (GCC) 9.3.0
-Copyright (C) 2019 Free Software Foundation, Inc.
-This is free software; see the source for copying conditions.  There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+[me@login01 ~]$ {{ mod.example_request }}
+```
+{% assign lines = mod.example_response | newline_to_br | split: '<br />' %}
+```
+{% for line in lines %}
+{{ line }}
+{% endfor %}
 ```

@@ -1,21 +1,24 @@
 ---
 title: PANDOC
-created: 2023-11-15T13:21:00 (UTC -04:00)
+created: 2024-01-22T15:43:59 (UTC -0600)
+topic: pandoc
 tags: []
-source: https://sites.wustl.edu/chpc/resources/software/pandoc/
 author: 
 ---
 
-The PANDOC home page is [https://pandoc.org/](https://pandoc.org/).
-
-To use PANDOC, you’ll use the module tool.
+{% assign mod = site.data.tokens[page.topic] %}
+See the <a rel="module"
+  href="{{ mod.url }}"
+  title="{{ mod.name }}">
+    {{ mod.name }} home page
+</a>. To use {{ mod.name }}, you’ll use the `module` tool.
 
 You can see what versions are available by using:
 ```
-[me@login01 ~]$ module avail pandoc/
+[me@login01 ~]$ module avail {{ mod.module }}
 
 ------------------------------ /opt/modulefiles -------------------------------
-   pandoc/3.1.9
+   {{ mod.module }}/{{ mod.version }}
 
 Use "module spider" to find all possible modules and extensions.
 Use "module keyword key1 key2 ..." to search for all possible modules matching
@@ -24,20 +27,18 @@ any of the "keys".
 
 To load a specific version, you would use:
 ```
-[me@login01 ~]$ module load pandoc/3.1.9
+[me@login01 ~]$ module load {{ mod.module }}/{{ mod.version }}
 ```
 
-while the "pandoc" wildcard will load the default version, pandoc-3.1.9 in this case.
+while the "{{ mod.module }}" wildcard will load the default version, {{ mod.module }}-{{ mod.version }} in this case.
 
-You should now be able to run PANDOC commands:
+You should now be able to run {{ mod.name }} commands:
 ```
-[me@login01 ~]$ module load pandoc
-[me@login01 ~]$ pandoc --version
-pandoc 3.1.9
-Features: +server +lua
-Scripting engine: Lua 5.4
-User data directory: /home/me/.local/share/pandoc
-Copyright (C) 2006-2023 John MacFarlane. Web: https://pandoc.org
-This is free software; see the source for copying conditions. There is no
-warranty, not even for merchantability or fitness for a particular purpose.```
+[me@login01 ~]$ {{ mod.example_request }}
+```
+{% assign lines = mod.example_response | newline_to_br | split: '<br />' %}
+```
+{% for line in lines %}
+{{ line }}
+{% endfor %}
 ```
