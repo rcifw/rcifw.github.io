@@ -24,7 +24,13 @@ this repo, since it is only for documentation. Basically, if you want to suggest
 4. then open up a [pull request](https://github.com/rcifw/rcifw.github.io/pulls) ... aka "PR"
 5. someone will look at the changes and either approve or suggest changes
 6. once all changes are accepted, the pull request can be merged by an admin ...
-7. and magically you will see your contributions in [https://rcifw.github.io/](https://rcifw.github.io/) 
+7. and magically you will see your contributions in [https://rcifw.github.io/](https://rcifw.github.io/)
+
+## Automated software pages
+For even more magic, we've added `_data/tokens.yml` to semi-automatically generate certain simple software pages:
+1. Add a new section to the `_data/tokens.yml` file with all of the fields filled out (tip: it is easiest to copy and paste one of the pre-existing records and replace with your new content)
+2. Add a new software page to the `software` folder and add content with appropriate Liquid tags (tip: it is easiest to copy `adni.md` to the new file and just replace the front matter)
+3. Add a new list item to the `software.md`
 
 # Conventions
 We just ask that you observe some basic conventions when you make changes:

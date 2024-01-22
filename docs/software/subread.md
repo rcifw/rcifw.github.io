@@ -1,9 +1,8 @@
 ---
-title: DCMTK
-created: 2023-03-31T09:26:28 (UTC -04:00)
-topic: dcmtk
+title: Subread
+created: 2023-03-31T09:26:00 (UTC -04:00)
+topic: subread
 tags: []
-source: https://sites.wustl.edu/chpc/resources/software/dcmtk/
 author: 
 ---
 

@@ -1,10 +1,9 @@
 ---
-title: DCMTK
-created: 2023-03-31T09:26:28 (UTC -04:00)
-topic: dcmtk
+title: CASTOR
+created: 2024-01-22T11:37:00 (UTC -04:00)
+topic: castor
 tags: []
-source: https://sites.wustl.edu/chpc/resources/software/dcmtk/
-author: 
+author: Scott Johnson
 ---
 
 {% assign mod = site.data.tokens[page.topic] %}

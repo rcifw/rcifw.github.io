@@ -1,9 +1,8 @@
 ---
-title: DCMTK
-created: 2023-03-31T09:26:28 (UTC -04:00)
-topic: dcmtk
+title: FastQC
+created: 2024-01-22T11:37:00 (UTC -04:00)
+topic: fastqc
 tags: []
-source: https://sites.wustl.edu/chpc/resources/software/dcmtk/
 author: 
 ---
 

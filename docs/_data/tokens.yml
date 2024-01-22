@@ -1,0 +1,522 @@
+afni:
+    name: AFNI
+    module: afni
+    url: https://afni.nimh.nih.gov/
+    version: 20.3.03
+    example_request: afni --version
+    example_response: |
+      Precompiled binary linux_openmp_64: Dec  7 2020 (Version AFNI_20.3.03 'Vespasian')"
+castor:
+    name: CASTOR
+    module: castor
+    url: http://www.castor-project.org/
+    version: 3.1.1
+    example_request: castor-recon -h
+    example_response: |
+      Usage:  castor-recon.exe  -df file.cdh  -(f/d)out output  -it iter  [settings]
+
+      [Main options]:
+        -df file.cdh         : Give an input CASTOR datafile header (no default).
+        -fout name           : Give the root name for all output files (no default, alternative to -dout)
+        -dout name           : Give the name of the output directory where all output files will be written (no default, alternative to -fout)
+        -it  list            : Give the sequence of iterations:subsets separated by commas (no default).
+        -dim x,y,z           : Give the number of voxels in each dimension (default: those of the scanner).
+        -fov x,y,z           : Give the size of the field-of-view in each dimension, in mm (default: those of the scanner, or calculated from
+                              the voxel sizes provided using '-vox').
+        -vox x,y,z           : Give the size of the voxels in each dimension, in mm (default: those of the scanner, or calculated from the fov
+                              if a fov value is provided using '-fov').
+        -vb                  : Give the general verbosity level, from 0 (no verbose) to 5 and above (at the event level) (default: 1).
+
+      [Specific help options]:
+        -help-dim            : Print out specific help about dimensions settings.
+        -help-in             : Print out specific help about input settings.
+        -help-out            : Print out specific help about output settings.
+        -help-algo           : Print out specific help about reconstruction algorithms and their settings.
+        -help-proj           : Print out specific help about projection operators.
+        -help-dynamic        : Print out specific help about dynamic methodologies settings.
+        -help-imgp           : Print out specific help about image processing modules.
+        -help-comp           : Print out specific help about computing settings.
+        -help-corr           : Print out specific help about all corrections that can be disabled.
+        -help-misc           : Print out specific help about miscellaneous and verbose settings.
+
+      [Implemented Modules]:
+        -help-scan           : Show the list of all scanners from the configuration directory.
+        -help-projm          : Show the list and description of all implemented projectors.
+        -help-opti           : Show the list and description of all implemented optimizer algorithms.
+        -help-pnlt           : Show the list and description of all implemented penalties for optimizers.
+        -help-motion-model   : Show the list and description of all implemented image-based deformation models.
+        -help-dynamic-model  : Show the list and description of all implemented dynamic models.
+        -help-conv           : Show the list and description of all implemented image convolvers.
+        -help-proc           : Show the list and description of all implemented image processing modules.
+
+
+        --help,-h,-help      : Print out this help page.
+
+        This program is part of the CASToR release version 3.1.1.
+dcmtk:
+    name: DCMTK
+    module: dcmtk
+    url: https://dicom.offis.de/dcmtk.php.en
+    version: 3.6.7
+    example_request: dcmdump
+    example_response: |
+      $dcmtk: dcmdump v3.6.7 2022-04-22 $
+
+      dcmdump: Dump DICOM file and data set
+      usage: dcmdump [options] dcmfile-in...
+
+      parameters:
+        dcmfile-in                    DICOM input file or directory to be dumped
+
+      general options:
+        -h     --help                 print this help text and exit
+              --version              print version information and exit
+              --arguments            print expanded command line arguments
+        -q     --quiet                quiet mode, print no warnings and errors
+        -v     --verbose              verbose mode, print processing details
+        -d     --debug                debug mode, print debug information
+        -ll    --log-level            [l]evel: string constant
+                                      (fatal, error, warn, info, debug, trace)
+                                      use level l for the logger
+        -lc    --log-config           [f]ilename: string
+                                      use config file f for the logger
+      input options:
+        input file format:
+          +f   --read-file            read file format or data set (default)
+          +fo  --read-file-only       read file format only
+          -f   --read-dataset         read data set without file meta information
+        input transfer syntax:
+          -t=  --read-xfer-auto       use TS recognition (default)
+          -td  --read-xfer-detect     ignore TS specified in the file meta header
+          -te  --read-xfer-little     read with explicit VR little endian TS
+          -tb  --read-xfer-big        read with explicit VR big endian TS
+          -ti  --read-xfer-implicit   read with implicit VR little endian TS
+        input files:
+          +sd  --scan-directories     scan directories for input files (dcmfile-in)
+          +sp  --scan-pattern         [p]attern: string (only with --scan-directories)
+                                      pattern for filename matching (wildcards)
+          -r   --no-recurse           do not recurse within directories (default)
+          +r   --recurse              recurse within specified directories
+        long tag values:
+          +M   --load-all             load very long tag values (default)
+          -M   --load-short           do not load very long values (e.g. pixel data)
+          +R   --max-read-length      [k]bytes: integer (4..4194302, default: 4)
+                                      set threshold for long values to k kbytes
+        parsing of file meta information:
+          +ml  --use-meta-length      use file meta information group length (default)
+          -ml  --ignore-meta-length   ignore file meta information group length
+        parsing of odd-length attributes:
+          +ao  --accept-odd-length    accept odd length attributes (default)
+          +ae  --assume-even-length   assume real length is one byte larger
+        handling of explicit VR:
+          +ev  --use-explicit-vr      use explicit VR from dataset (default)
+          -ev  --ignore-explicit-vr   ignore explicit VR (prefer data dictionary)
+        handling of non-standard VR:
+          +vr  --treat-as-unknown     treat non-standard VR as unknown (default)
+          -vr  --assume-implicit      try to read with implicit VR little endian TS
+        handling of undefined length UN elements:
+          +ui  --enable-cp246         read undefined len UN as implicit VR (default)
+          -ui  --disable-cp246        read undefined len UN as explicit VR
+        handling of defined length UN elements:
+          -uc  --retain-un            retain elements as UN (default)
+          +uc  --convert-un           convert to real VR if known
+        handling of private max-length elements (implicit VR):
+          -sq  --maxlength-dict       read as defined in dictionary (default)
+          +sq  --maxlength-seq        read as sequence with undefined length
+        handling of wrong delimitation items:
+          -rd  --use-delim-items      use delimitation items from dataset (default)
+          +rd  --replace-wrong-delim  replace wrong sequence/item delimitation items
+        handling of illegal undefined length OB/OW elements:
+          -oi  --illegal-obow-rej     reject dataset with illegal element (default)
+          +oi  --illegal-obow-conv    convert undefined length OB/OW element to SQ
+        handling of VOI LUT Sequence with OW VR and explicit length:
+          -vi  --illegal-voi-rej      reject dataset with illegal VOI LUT (default)
+          +vi  --illegal-voi-conv     convert illegal VOI LUT to SQ
+        handling of explicit length pixel data for encaps. transfer syntaxes:
+          -pe  --abort-expl-pixdata   abort on explicit length pixel data (default)
+          +pe  --use-expl-pixdata     use explicit length pixel data
+        general handling of parser errors: 
+          +Ep  --ignore-parse-errors  try to recover from parse errors
+          -Ep  --handle-parse-errors  handle parse errors and stop parsing (default)
+        other parsing options:
+          +st  --stop-after-elem      [t]ag: "gggg,eeee" or dictionary name
+                                      stop parsing after element specified by t
+          +sb  --stop-before-elem     [t]ag: "gggg,eeee" or dictionary name
+                                      stop parsing before element specified by t
+        automatic data correction:
+          +dc  --enable-correction    enable automatic data correction (default)
+          -dc  --disable-correction   disable automatic data correction
+        bitstream format of deflated input:
+          +bd  --bitstream-deflated   expect deflated bitstream (default)
+          +bz  --bitstream-zlib       expect deflated zlib bitstream
+      processing options:
+        specific character set:
+          +U8  --convert-to-utf8      convert all element values that are affected
+                                      by Specific Character Set (0008,0005) to UTF-8
+      output options:
+        printing:
+          +L   --print-all            print long tag values completely
+          -L   --print-short          print long tag values shortened (default)
+          +T   --print-tree           print hierarchical structure as a simple tree
+          -T   --print-indented       print hierarchical structure indented (default)
+          +F   --print-filename       print header with filename for each input file
+          +Fs  --print-file-search    print header with filename only for those input
+                                      files that contain one of the searched tags
+        mapping:
+          +Un  --map-uid-names        map well-known UID numbers to names (default)
+          -Un  --no-uid-names         do not map well-known UID numbers to names
+        quoting:
+          +Qn  --quote-nonascii       quote non-ASCII and control chars as XML markup
+          +Qo  --quote-as-octal       quote non-ASCII and control ch. as octal numbers
+          -Qn  --print-nonascii       print non-ASCII and control chars (default)
+        color:
+          +C   --print-color          use ANSI escape codes for colored output
+          -C   --no-color             do not use any ANSI escape codes (default)
+        error handling:
+          -E   --stop-on-error        do not print if file is damaged (default)
+          +E   --ignore-errors        attempt to print even if file is damaged
+        searching:
+          +P   --search               [t]ag: "gggg,eeee" or dictionary name
+                                      print the textual dump of tag t
+                                      this option can be specified multiple times
+                                      (default: the complete file is printed)
+          +s   --search-all           print all instances of searched tags (default)
+          -s   --search-first         only print first instance of searched tags
+          +p   --prepend              prepend sequence hierarchy to printed tag,
+                                      denoted by: (gggg,eeee).(gggg,eeee).*
+                                      (only when used with --search)
+          -p   --no-prepend           do not prepend hierarchy to tag (default)
+        writing:
+          +W   --write-pixel          [d]irectory: string
+                                      write pixel data to a .raw file stored in d
+                                      (little endian, filename created automatically)
+dramms:
+    name: DRAMMS
+    module: dramms
+    url: https://www.nitrc.org/projects/dramms
+    version: 1.5.1
+    example_request: dramms --version
+    example_response: |
+      dramms (DRAMMS) v1.5
+      Copyright (c) 2011--2013 UPenn; 2014--2016 MGH, HMS; 2016-- BCH, HMS.. All rights reserved.
+      See http://www.cbica.upenn.edu/sbia/software/license.html or COPYING file.
+elastix:
+    name: Elastix
+    module: elastix
+    url: https://elastix.lumc.nl/
+    version: 5.0.1
+    example_request: elastix --help
+    example_response: |
+      elastix version: 5.0.1
+
+      elastix registers a moving image to a fixed image.
+      The registration-process is specified in the parameter file.
+        --help, -h displays this message and exit
+        --version  output version information and exit
+        --extended-version  output extended version information and exit
+
+      Call elastix from the command line with mandatory arguments:
+        -f        fixed image
+        -m        moving image
+        -out      output directory
+        -p        parameter file, elastix handles 1 or more "-p"
+
+      Optional extra commands:
+        -fMask    mask for fixed image
+        -mMask    mask for moving image
+        -t0       parameter file for initial transform
+        -priority set the process priority to high, abovenormal, normal (default),
+                  belownormal, or idle (Windows only option)
+        -threads  set the maximum number of threads of elastix
+
+      The parameter-file must contain all the information necessary for elastix to run properly. That includes which metric to use, which optimizer, which transform, etc. It must also contain information specific for the metric, optimizer, transform, etc. For a usable parameter-file, see the website.
+
+      Need further help?
+      Check the website http://elastix.isi.uu.nl, or mail elastix@bigr.nl.
+fastqc:
+    name: FastQC
+    module: fastqc
+    url: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/
+    version: 0.12.1
+    example_request: fastqc --version
+    example_response: |
+      FastQC v0.12.1
+ffmpeg:
+    name: FFMPEG
+    module: ffmpeg
+    url: https://ffmpeg.org/
+    version: 5.1.2
+    example_request: ffmpeg
+    example_response: |
+      ffmpeg version 5.1.2 Copyright (c) 2000-2022 the FFmpeg developers
+        built with gcc 8 (GCC)
+        configuration: --prefix=/export/ffmpeg/ffmpeg-5.1.2
+        libavutil      57. 28.100 / 57. 28.100
+        libavcodec     59. 37.100 / 59. 37.100
+        libavformat    59. 27.100 / 59. 27.100
+        libavdevice    59.  7.100 / 59.  7.100
+        libavfilter     8. 44.100 /  8. 44.100
+        libswscale      6.  7.100 /  6.  7.100
+        libswresample   4.  7.100 /  4.  7.100
+      Hyper fast Audio and Video encoder
+      usage: ffmpeg [options] [[infile options] -i infile]... {[outfile options] outfile}...
+
+      Use -h to get full help or, even better, run 'man ffmpeg'
+pandoc:
+    name: PANDOC
+    module: pandoc
+    url: https://pandoc.org/
+    version: 3.1.9
+    example_request: pandoc --version
+    example_response: |
+      pandoc 3.1.9
+      Features: +server +lua
+      Scripting engine: Lua 5.4
+      User data directory: /home/me/.local/share/pandoc
+      Copyright (C) 2006-2023 John MacFarlane. Web: https://pandoc.org
+      This is free software; see the source for copying conditions. There is no
+      warranty, not even for merchantability or fitness for a particular purpose.
+plink:
+    name: Plink
+    module: plink
+    url: https://www.cog-genomics.org/plink/2.0/
+    version: 2.0
+    example_request: plink2 --version
+    example_response: |
+      PLINK v2.00a3LM AVX2 Intel (12 Dec 2020)
+root:
+    name: ROOT
+    module: root
+    url: https://root.cern/
+    version: 6.20.02
+    example_request: root --help
+    example_response: |
+      usage: root [-b B] [-x X] [-e E] [-n N] [-t T] [-q Q] [-l L] [-a A]
+                  [-config CONFIG] [-memstat MEMSTAT] [-h HELP] [--version VERSION]
+                  [--notebook NOTEBOOK] [--web WEB] [--web=<browser> WEB=<BROWSER>]
+                  [dir] [file:data.root] [file1.C...fileN.C]
+
+      OPTIONS:
+        -b                             Run in batch mode without graphics
+        -x                             Exit on exceptions
+        -e                             Execute the command passed between single quot                                                                    es
+        -n                             Do not execute logon and logoff macros as spec                                                                    ified in .rootrc
+        -t                             Enable thread-safety and implicit multi-thread                                                                    ing (IMT)
+        -q                             Exit after processing command line macro files
+        -l                             Do not show the ROOT banner
+        -a                             Show the ROOT splash screen
+        -config                        print ./configure options
+        -memstat                       run with memory usage monitoring
+        -h, -?, --help                 Show summary of options
+        --version                      Show the ROOT version
+        --notebook                     Execute ROOT notebook
+        --web                          Display graphics in a default web browser
+        --web=<browser>                Display graphics in specified web browser
+        [dir]                          if dir is a valid directory cd to it before ex                                                                    ecuting
+        [file:data.root]               Open the ROOT file data.root
+        [file1.C...fileN.C]            Execute the the ROOT macro file1.C ... fileN.C
+star:
+    name: STAR
+    module: star
+    url: https://github.com/alexdobin/STAR/
+    version: 2.7.11a
+    example_request: /export/star/2.7.11a/bin/Linux_x86_64_static/STAR
+    example_response: |
+      Usage: STAR  [options]... --genomeDir /path/to/genome/index/   --readFilesIn R1.fq R2.fq
+      Spliced Transcripts Alignment to a Reference (c) Alexander Dobin, 2009-2022
+
+      STAR version=2.7.11a
+      STAR compilation time,server,dir=2023-08-15T11:38:34-04:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+      For more details see:
+      <https://github.com/alexdobin/STAR>
+      <https://github.com/alexdobin/STAR/blob/master/doc/STARmanual.pdf>
+
+      To list all parameters, run STAR --help
+subread:
+    name: Subread
+    module: subread
+    url: https://github.com/ShiLab-Bioinformatics/subread
+    version: 2.0.6
+    example_request: subread
+    example_response: |
+      Version 2.0.6
+
+      Usage:
+
+      ./subread-align [options] -i <index_name> -r <input> -t <type> -o <output>
+
+      ## Mandatory arguments:
+          
+        -i <string>       Base name of the index.
+
+        -r <string>       Name of an input read file. If paired-end, this should be
+                          the first read file (typically containing "R1"in the file
+                          name) and the second should be provided via "-R".
+                          Acceptable formats include gzipped FASTQ, FASTQ, gzipped
+                          FASTA and FASTA.
+                          These formats are identified automatically.
+          
+        -t <int>          Type of input sequencing data. Its values include
+                            0: RNA-seq data
+                            1: genomic DNA-seq data.
+          
+      ## Optional arguments:
+      # input reads and output
+          
+        -o <string>       Name of an output file. By default, the output is in BAM
+                          format. Omitting this option makes the output be written to
+                          STDOUT.
+
+        -R <string>       Name of the second read file in paired-end data (typically
+                          containing "R2" the file name).
+
+        --SAMinput        Input reads are in SAM format.
+
+        --BAMinput        Input reads are in BAM format.
+
+        --SAMoutput       Save mapping results in SAM format.
+
+      # Phred offset
+
+        -P <3:6>          Offset value added to the Phred quality score of each read
+                          base. '3' for phred+33 and '6' for phred+64. '3' by default.
+
+      # thresholds for mapping
+
+        -n <int>          Number of selected subreads, 10 by default.
+
+        -m <int>          Consensus threshold for reporting a hit (minimal number of
+                          subreads that map in consensus) . If paired-end, this gives
+                          the consensus threshold for the anchor read (anchor read
+                          receives more votes than the other read in the same pair).
+                          3 by default
+
+        -p <int>          Consensus threshold for the non- anchor read in a pair. 1 by
+                          default.
+
+        -M <int>          Maximum number of mis-matched bases allowed in each reported
+                          alignment. 3 by default. Mis-matched bases found in soft-
+                          clipped bases are not counted.
+
+      # unique mapping and multi-mapping
+
+        --multiMapping    Report multi-mapping reads in addition to uniquely mapped
+                          reads. Use "-B" to set the maximum number of equally-best
+                          alignments to be reported.
+
+        -B <int>          Maximum number of equally-best alignments to be reported for
+                          a multi-mapping read. Equally-best alignments have the same
+                          number of mis-matched bases. 1 by default.
+
+      # indel detection
+
+        -I <int>          Maximum length (in bp) of indels that can be detected. 5 by
+                          default. Indels of up to 200bp long can be detected.
+
+        --complexIndels   Detect multiple short indels that are in close proximity
+                          (they can be as close as 1bp apart from each other).
+
+      # read trimming
+
+        --trim5 <int>     Trim off <int> number of bases from 5' end of each read. 0
+                          by default.
+
+        --trim3 <int>     Trim off <int> number of bases from 3' end of each read. 0
+                          by default.
+
+      # distance and orientation of paired end reads
+
+        -d <int>          Minimum fragment/insert length, 50bp by default.
+
+        -D <int>          Maximum fragment/insert length, 600bp by default.
+
+        -S <ff:fr:rf>     Orientation of first and second reads, 'fr' by default (
+                          forward/reverse).
+
+      # number of CPU threads
+
+        -T <int>          Number of CPU threads used, 1 by default.
+
+      # read group
+
+        --rg-id <string>  Add read group ID to the output.
+
+        --rg <string>     Add <tag:value> to the read group (RG) header in the output.
+
+      # read order
+
+        --keepReadOrder   Keep order of reads in BAM output the same as that in the
+                          input file. Reads from the same pair are always placed next
+                          to each other no matter this option is specified or not.
+
+        --sortReadsByCoordinates Output location-sorted reads. This option is
+                          applicable for BAM output only. A BAI index file is also
+                          generated for each BAM file so the BAM files can be directly
+                          loaded into a genome browser.
+
+      # color space reads
+
+        -b                Convert color-space read bases to base-space read bases in
+                          the mapping output. Note that read mapping is performed at
+                          color-space.
+
+      # dynamic programming
+
+        --DPGapOpen <int> Penalty for gap opening in short indel detection. -1 by
+                          default.
+
+        --DPGapExt <int>  Penalty for gap extension in short indel detection. 0 by
+                          default.
+
+        --DPMismatch <int> Penalty for mismatches in short indel detection. 0 by
+                          default.
+
+        --DPMatch <int>   Score for matched bases in short indel detection. 2 by
+                          default.
+
+      # detect structural variants
+
+        --sv              Detect structural variants (eg. long indel, inversion,
+                          duplication and translocation) and report breakpoints. Refer
+                          to Users Guide for breakpoint reporting.
+
+      # gene annotation
+
+        -a                Name of an annotation file (gzipped file is accepted).
+                          GTF/GFF format by default. See -F option for more format
+                          information.
+
+        -F                Specify format of the provided annotation file. Acceptable
+                          formats include 'GTF' (or compatible GFF format) and
+                          'SAF'. 'GTF' by default. For SAF format, please refer to
+                          Users Guide.
+
+        -A                Provide a chromosome name alias file to match chr names in
+                          annotation with those in the reads. This should be a two-
+                          column comma-delimited text file. Its first column should
+                          include chr names in the annotation and its second column
+                          should include chr names in the index. Chr names are case
+                          sensitive. No column header should be included in the
+                          file.
+
+        --gtfFeature <string>  Specify feature type in GTF annotation. 'exon'
+                          by default. Features used for read counting will be 
+                          extracted from annotation using the provided value.
+
+        --gtfAttr <string>     Specify attribute type in GTF annotation. 'gene_id'
+                          by default. Meta-features used for read counting will be 
+                          extracted from annotation using the provided value.
+
+      # others
+
+        -v                Output version of the program.
+
+      Refer to Users Manual for detailed description to the arguments. 
+trimmomatic:
+    name: Trimmomatic
+    module: trimmomatic
+    url: http://www.usadellab.org/cms/index.php?page=trimmomatic
+    version: 0.39
+    example_request: java -jar /export/trimmomatic/0.39/bin/trimmomatic-0.39.jar -version
+    example_response: |
+      0.39

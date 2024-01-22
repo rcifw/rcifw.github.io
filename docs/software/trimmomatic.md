@@ -1,9 +1,8 @@
 ---
-title: DCMTK
-created: 2023-03-31T09:26:28 (UTC -04:00)
-topic: dcmtk
+title: Trimmomatic
+created: 2023-03-31T09:26:00 (UTC -04:00)
+topic: trimmomatic
 tags: []
-source: https://sites.wustl.edu/chpc/resources/software/dcmtk/
 author: 
 ---
 
@@ -36,10 +35,5 @@ while the "{{ mod.module }}" wildcard will load the default version, {{ mod.modu
 You should now be able to run {{ mod.name }} commands:
 ```
 [me@login01 ~]$ {{ mod.example_request }}
-```
-{% assign lines = mod.example_response | newline_to_br | split: '<br />' %}
-```
-{% for line in lines %}
-{{ line }}
-{% endfor %}
+{{ mod.example_response }}
 ```
