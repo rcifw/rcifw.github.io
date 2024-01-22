@@ -1,6 +1,6 @@
 ---
 title: AFNI
-created: 2023-03-31T09:26:00 (UTC -04:00)
+created: 2023-03-31T09:26:00 (UTC -0600)
 topic: afni
 tags: []
 author: 

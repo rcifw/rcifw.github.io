@@ -1,27 +1,24 @@
 ---
 title: OPENSLIDE
-created: 2023-03-31T09:27:24 (UTC -04:00)
+created: 2024-01-22T15:43:59 (UTC -0600)
+topic: openslide
 tags: []
-source: https://sites.wustl.edu/chpc/resources/software/openslide/
-author:
+author: 
 ---
 
-The OPENSLIDE home page is [https://openslide.org/](https://openslide.org/).
-
-To use OPENSLIDE, you’ll use the module tool.
+{% assign mod = site.data.tokens[page.topic] %}
+See the <a rel="module"
+  href="{{ mod.url }}"
+  title="{{ mod.name }}">
+    {{ mod.name }} home page
+</a>. To use {{ mod.name }}, you’ll use the `module` tool.
 
 You can see what versions are available by using:
-
 ```
-[me@login01 ~]$ module avail openslide/
+[me@login01 ~]$ module avail {{ mod.module }}
 
-------------------------------- /opt/modulefiles -------------------------------
-   openslide/3.4.1
-
-If the avail list is too long consider trying:
-
-"module --default avail" or "ml -d av" to just list the default modules.
-"module overview" or "ml ov" to display the number of modules for each name.
+------------------------------ /opt/modulefiles -------------------------------
+   {{ mod.module }}/{{ mod.version }}
 
 Use "module spider" to find all possible modules and extensions.
 Use "module keyword key1 key2 ..." to search for all possible modules matching
@@ -29,25 +26,19 @@ any of the "keys".
 ```
 
 To load a specific version, you would use:
-
 ```
-[me@login01 ~]$ module load openslide/3.4.1
+[me@login01 ~]$ module load {{ mod.module }}/{{ mod.version }}
 ```
 
-while the “openslide” wildcard will load the default version, openslide-3.4.1 in this case.
+while the "{{ mod.module }}" wildcard will load the default version, {{ mod.module }}-{{ mod.version }} in this case.
 
-You should now be able to run OpenSlide commands:
-
+You should now be able to run {{ mod.name }} commands:
 ```
-[me@login01 ~]$ openslide-show-properties
-Usage:
-  openslide-show-properties [OPTION…] FILE...
-
-Print OpenSlide properties for a slide.
-
-Help Options:
-  -h, --help       Show help options
-
-Application Options:
-  --version        Show version
+[me@login01 ~]$ {{ mod.example_request }}
+```
+{% assign lines = mod.example_response | newline_to_br | split: '<br />' %}
+```
+{% for line in lines %}
+{{ line }}
+{% endfor %}
 ```

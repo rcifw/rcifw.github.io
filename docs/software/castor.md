@@ -1,9 +1,9 @@
 ---
 title: CASTOR
-created: 2024-01-22T11:37:00 (UTC -04:00)
+created: 2024-01-22T15:43:59 (UTC -0600)
 topic: castor
 tags: []
-author: Scott Johnson
+author: 
 ---
 
 {% assign mod = site.data.tokens[page.topic] %}

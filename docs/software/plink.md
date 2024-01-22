@@ -1,10 +1,9 @@
 ---
-title: PLINK
+title: Plink
+created: 2024-01-22T15:43:59 (UTC -0600)
 topic: plink
-created: 2023-03-31T09:27:29 (UTC -04:00)
 tags: []
-source: https://sites.wustl.edu/chpc/resources/software/plink/
-author:
+author: 
 ---
 
 {% assign mod = site.data.tokens[page.topic] %}

@@ -1,10 +1,9 @@
 ---
 title: FFMPEG
-created: 2023-03-31T09:26:35 (UTC -04:00)
+created: 2024-01-22T15:43:59 (UTC -0600)
 topic: ffmpeg
 tags: []
-source: https://sites.wustl.edu/chpc/resources/software/ffmpeg/
-author:
+author: 
 ---
 
 {% assign mod = site.data.tokens[page.topic] %}

@@ -1,9 +1,8 @@
 ---
 title: DCMTK
-created: 2023-03-31T09:26:28 (UTC -04:00)
+created: 2024-01-22T15:43:59 (UTC -0600)
 topic: dcmtk
 tags: []
-source: https://sites.wustl.edu/chpc/resources/software/dcmtk/
 author: 
 ---
 

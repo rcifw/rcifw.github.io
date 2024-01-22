@@ -1,6 +1,6 @@
 ---
 title: Trimmomatic
-created: 2023-03-31T09:26:00 (UTC -04:00)
+created: 2024-01-22T15:43:59 (UTC -0600)
 topic: trimmomatic
 tags: []
 author: 
@@ -35,5 +35,10 @@ while the "{{ mod.module }}" wildcard will load the default version, {{ mod.modu
 You should now be able to run {{ mod.name }} commands:
 ```
 [me@login01 ~]$ {{ mod.example_request }}
-{{ mod.example_response }}
+```
+{% assign lines = mod.example_response | newline_to_br | split: '<br />' %}
+```
+{% for line in lines %}
+{{ line }}
+{% endfor %}
 ```

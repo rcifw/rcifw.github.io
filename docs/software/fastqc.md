@@ -1,6 +1,6 @@
 ---
 title: FastQC
-created: 2024-01-22T11:37:00 (UTC -04:00)
+created: 2024-01-22T15:43:59 (UTC -0600)
 topic: fastqc
 tags: []
 author: 

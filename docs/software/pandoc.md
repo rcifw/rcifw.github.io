@@ -1,9 +1,8 @@
 ---
 title: PANDOC
+created: 2024-01-22T15:43:59 (UTC -0600)
 topic: pandoc
-created: 2023-11-15T13:21:00 (UTC -04:00)
 tags: []
-source: https://sites.wustl.edu/chpc/resources/software/pandoc/
 author: 
 ---
 
