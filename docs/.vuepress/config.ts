@@ -8,6 +8,8 @@ export default defineUserConfig({
         'Washington University in St. Louis.',
     head: [['link', {rel: 'icon', href: '/images/logo.png'}]],
     theme: defaultTheme({
+        repo: 'rcifw/rcifw.github.io',
+        docsDir: 'docs',
         navbar: [
             {
                 text: "Account",
