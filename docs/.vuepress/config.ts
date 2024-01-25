@@ -1,5 +1,7 @@
-import {defaultTheme, defineUserConfig} from 'vuepress'
+import {defineUserConfig} from 'vuepress'
 import {searchPlugin} from "@vuepress/plugin-search"
+import {defaultTheme} from "@vuepress/theme-default";
+import viteBundler from "@vuepress/bundler-vite";
 
 export default defineUserConfig({
     lang: 'en-US',
@@ -61,6 +63,7 @@ export default defineUserConfig({
             }
         ]
     }),
+    bundler: viteBundler(),
     plugins: [
         searchPlugin({
             hotKeys: [
