@@ -6,4 +6,5 @@ export default defineUserConfig({
   description: 'The Research Computing and Informatics Facility (RCIF) ' +
       'supports human imaging researchers across all campuses of ' +
       'Washington University in St. Louis.',
+  head: [['link', { rel: 'icon', href: '/images/logo.png' }]],
 })
