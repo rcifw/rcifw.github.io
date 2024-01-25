@@ -3,5 +3,7 @@ import { defineUserConfig } from 'vuepress'
 export default defineUserConfig({
   lang: 'en-US',
   title: 'RCIF',
-  description: 'Research Computing and Informatics Facility',
+  description: 'The Research Computing and Informatics Facility (RCIF) ' +
+      'supports human imaging researchers across all campuses of ' +
+      'Washington University in St. Louis.',
 })
