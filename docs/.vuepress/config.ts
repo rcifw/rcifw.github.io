@@ -1,4 +1,5 @@
 import {defaultTheme, defineUserConfig} from 'vuepress'
+import {searchPlugin} from "@vuepress/plugin-search"
 
 export default defineUserConfig({
     lang: 'en-US',
@@ -59,6 +60,15 @@ export default defineUserConfig({
                 link: "/getting-started/training-and-support.md"
             }
         ]
-    })
+    }),
+    plugins: [
+        searchPlugin({
+            maxSuggestions: 7,
+            // To add more fields to the index, (Other than title + headers) you should extend the `SearchIndex` type:
+            // https://v2.vuepress.vuejs.org/reference/plugin/search.html#getextrafields
+
+        })
+    ]
+
 
 })
