@@ -63,6 +63,15 @@ export default defineUserConfig({
     }),
     plugins: [
         searchPlugin({
+            hotKeys: [
+                's',
+                '/',
+                '?',
+                {
+                    key: 'k',
+                    ctrl: true,
+                }
+            ],
             maxSuggestions: 7,
             // To add more fields to the index, (Other than title + headers) you should extend the `SearchIndex` type:
             // https://v2.vuepress.vuejs.org/reference/plugin/search.html#getextrafields
