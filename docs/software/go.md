@@ -1,24 +1,30 @@
 ---
 title: GO
-created: 2024-01-22T15:43:59 (UTC -0600)
-topic: go
+created: 2023-03-31T09:26:49 (UTC -04:00)
 tags: []
-author: 
+source: https://sites.wustl.edu/chpc/resources/software/go/
+author:
 ---
 
-{% assign mod = site.data.tokens[page.topic] %}
-See the <a rel="module"
-  href="{{ mod.url }}"
-  title="{{ mod.name }}">
-    {{ mod.name }} home page
-</a>. To use {{ mod.name }}, you’ll use the `module` tool.
+The GO home page is [https://go.dev](https://go.dev/).
+
+To use GO, you’ll use the module tool.
 
 You can see what versions are available by using:
+
 ```
-[me@login01 ~]$ module avail {{ mod.module }}
+[me@login01 ~]$ module avail go/
 
 ------------------------------ /opt/modulefiles -------------------------------
-   {{ mod.module }}/{{ mod.version }}
+   go/1.13    go/1.15.6   go/1.17.5    go/1.19.2 (D)
+
+  Where:
+   D:  Default Module
+
+If the avail list is too long consider trying:
+
+"module --default avail" or "ml -d av" to just list the default modules.
+"module overview" or "ml ov" to display the number of modules for each name.
 
 Use "module spider" to find all possible modules and extensions.
 Use "module keyword key1 key2 ..." to search for all possible modules matching
@@ -26,19 +32,20 @@ any of the "keys".
 ```
 
 To load a specific version, you would use:
+
 ```
-[me@login01 ~]$ module load {{ mod.module }}/{{ mod.version }}
+[me@login01 ~]$ module load go/1.15.6
 ```
 
-while the "{{ mod.module }}" wildcard will load the default version, {{ mod.module }}-{{ mod.version }} in this case.
+while the “go” wildcard will load the default version, go-1.15.6 in this case.
 
-You should now be able to run {{ mod.name }} commands:
+You should now be able to run GO commands:
+
 ```
-[me@login01 ~]$ {{ mod.example_request }}
-```
-{% assign lines = mod.example_response | newline_to_br | split: '<br />' %}
-```
-{% for line in lines %}
-{{ line }}
-{% endfor %}
+[me@login01 ~]$ go help build
+usage: go build [-o output] [-i] [build flags] [packages]
+
+Build compiles the packages named by the import paths,
+along with their dependencies, but it does not install the results.
+...
 ```

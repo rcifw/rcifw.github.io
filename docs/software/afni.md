@@ -1,24 +1,21 @@
 ---
 title: AFNI
-created: 2023-03-31T09:26:00 (UTC -0600)
-topic: afni
+created: 2023-03-31T09:26:00 (UTC -04:00)
 tags: []
+source: https://sites.wustl.edu/chpc/resources/software/afni/
 author: 
 ---
 
-{% assign mod = site.data.tokens[page.topic] %}
-See the <a rel="module"
-  href="{{ mod.url }}"
-  title="{{ mod.name }}">
-    {{ mod.name }} home page
-</a>. To use {{ mod.name }}, you’ll use the `module` tool.
+The AFNI home page is [https://afni.nimh.nih.gov](https://afni.nimh.nih.gov/).
+
+To use AFNI, you’ll use the module tool.
 
 You can see what versions are available by using:
 ```
-[me@login01 ~]$ module avail {{ mod.module }}
+[me@login01 ~]$ module avail afni/
 
 ------------------------------ /opt/modulefiles -------------------------------
-   {{ mod.module }}/{{ mod.version }}
+   afni/20.3.03
 
 Use "module spider" to find all possible modules and extensions.
 Use "module keyword key1 key2 ..." to search for all possible modules matching
@@ -27,18 +24,13 @@ any of the "keys".
 
 To load a specific version, you would use:
 ```
-[me@login01 ~]$ module load {{ mod.module }}/{{ mod.version }}
+[me@login01 ~]$ module load afni/20.3.03
 ```
 
-while the "{{ mod.module }}" wildcard will load the default version, {{ mod.module }}-{{ mod.version }} in this case.
+while the “afni” wildcard will load the default version, afni-20.3.03 in this case.
 
-You should now be able to run {{ mod.name }} commands:
+You should now be able to run AFNI commands:
 ```
-[me@login01 ~]$ {{ mod.example_request }}
-```
-{% assign lines = mod.example_response | newline_to_br | split: '<br />' %}
-```
-{% for line in lines %}
-{{ line }}
-{% endfor %}
+[me@login01 ~]$ afni --version
+Precompiled binary linux_openmp_64: Dec  7 2020 (Version AFNI_20.3.03 'Vespasian')
 ```

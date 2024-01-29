@@ -1,24 +1,22 @@
 ---
-title: Intel Compilers
-created: 2024-01-22T15:43:59 (UTC -0600)
-topic: intel
+title: Intel Developer Tools
+created: 2023-03-31T09:26:53 (UTC -04:00)
 tags: []
-author: 
+source: https://sites.wustl.edu/chpc/resources/software/intel/
+author:
 ---
 
-{% assign mod = site.data.tokens[page.topic] %}
-See the <a rel="module"
-  href="{{ mod.url }}"
-  title="{{ mod.name }}">
-    {{ mod.name }} home page
-</a>. To use {{ mod.name }}, you’ll use the `module` tool.
+The INTEL Developers home page is [https://software.intel.com/content/www/us/en/develop/tools/parallel-studio-xe.html](https://software.intel.com/content/www/us/en/develop/tools/parallel-studio-xe.html).
 
-You can see what versions are available by using:
+To use the INTEL compilers, you’ll use the module tool.
+
+You can see what versions of the compilers are available by using:
+
 ```
-[me@login01 ~]$ module avail {{ mod.module }}
+[me@login01 ~]$ module avail intel/
 
 ------------------------------ /opt/modulefiles -------------------------------
-   {{ mod.module }}/{{ mod.version }}
+   intel/19.1.0.166
 
 Use "module spider" to find all possible modules and extensions.
 Use "module keyword key1 key2 ..." to search for all possible modules matching
@@ -26,19 +24,33 @@ any of the "keys".
 ```
 
 To load a specific version, you would use:
+
 ```
-[me@login01 ~]$ module load {{ mod.module }}/{{ mod.version }}
+[me@login01 ~]$ module load intel/19.1.0.166
 ```
 
-while the "{{ mod.module }}" wildcard will load the default version, {{ mod.module }}-{{ mod.version }} in this case.
+while the “intel” wildcard will load the default version, intel-19.1.0.166 in this case.
 
-You should now be able to run {{ mod.name }} commands:
+You should now have INTEL compilers in your path:
+
 ```
-[me@login01 ~]$ {{ mod.example_request }}
+[me@login01 ~]$ which icc
+/opt/intel/compilers_and_libraries_2020.0.166/linux/bin/intel64/icc
+[me@login01 ~]$ icc --version
+icc (ICC) 19.1.0.166 20191121
+Copyright (C) 1985-2019 Intel Corporation.  All rights reserved.
+
+[me@login01 ~]$ which ifort
+/opt/intel/compilers_and_libraries_2020.0.166/linux/bin/intel64/ifort
+[me@login01 ~]$ ifort --version
+ifort (IFORT) 19.1.0.166 20191121
+Copyright (C) 1985-2019 Intel Corporation.  All rights reserved.
 ```
-{% assign lines = mod.example_response | newline_to_br | split: '<br />' %}
+
+You should now be able to compile your code:
+
 ```
-{% for line in lines %}
-{{ line }}
-{% endfor %}
+[me@login01 C]$ icc hello.c
+[me@login01 C]$ ./a.out
+hello
 ```

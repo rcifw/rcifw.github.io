@@ -51,9 +51,3 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-defaults:
-  - scope:
-      path: ""
-    values:
-      tokens: "tokens.yml"
-

@@ -1,8 +1,0 @@
-name: rcifw_github_io
-channels:
- - conda-forge
-dependencies:
- - python=3.9
- - pip
- - pandas
- - pyyaml
