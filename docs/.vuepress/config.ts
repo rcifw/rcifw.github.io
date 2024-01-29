@@ -114,6 +114,9 @@ export default defineUserConfig({
         link: '/getting-started/training-and-support.md',
       },
     ],
+    themePlugins: {
+      git: false,
+    }
   }),
   bundler: viteBundler(),
   plugins: [

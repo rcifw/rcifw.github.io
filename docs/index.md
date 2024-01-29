@@ -4,7 +4,6 @@ created: 2023-03-31T09:26:02 (UTC -04:00)
 tags: []
 author:
 include: true
-contributors: false
 ---
 # RCIF
 The [**Research Computing and Informatics Facility (RCIF)**](https://www.mir.wustl.edu/research/core-resources/research-computing-and-informatics-facility/)
