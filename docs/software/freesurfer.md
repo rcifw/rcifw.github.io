@@ -5,8 +5,9 @@ tags: []
 source: https://sites.wustl.edu/chpc/resources/software/freesurfer/
 author:
 ---
-> [!WARNING]
-> Due to some inconsistencies between the Perl code in FreeSurfer 5.3.0 and the Perl offered with CentOS 8 , the MNI code for both FreeSurfer 5.3.0, and 5.3.0-HCP has been replaced with the MNI code from FreeSurfer 6.0 which was modified to fix this issue.  This could potentially impact the results, so users should be careful.  If there are any questions, please contact us.
+::: warning
+Due to some inconsistencies between the Perl code in FreeSurfer 5.3.0 and the Perl offered with CentOS 8 , the MNI code for both FreeSurfer 5.3.0, and 5.3.0-HCP has been replaced with the MNI code from FreeSurfer 6.0 which was modified to fix this issue.  This could potentially impact the results, so users should be careful.  If there are any questions, please contact us.
+:::
 
 The FREESURFER home page is [http://freesurfer.net](http://freesurfer.net/).
 

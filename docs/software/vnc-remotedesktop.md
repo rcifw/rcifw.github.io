@@ -8,8 +8,9 @@ author:
 
 The Virtual Network Computing (VNC) home page is [https://www.realvnc.com/en/](https://www.realvnc.com/en/).
 
-> [!NOTE]
-> In order to run remote desktop on the login node, you need to make that request to us so that we can grant that permission for you. We would put an entry in the VNC server user database for you and you would get an exclusive port to connect. The port number would be ranging from 5903 to 5900+N. You should note down the port exclusively assigned to you and use that to connect.
+::: warning
+In order to run remote desktop on the login node, you need to make that request to us so that we can grant that permission for you. We would put an entry in the VNC server user database for you and you would get an exclusive port to connect. The port number would be ranging from 5903 to 5900+N. You should note down the port exclusively assigned to you and use that to connect.
+:::
 
 You would first need to create a password for VNC connection on both login nodes by running “vncpasswd” command:
 
