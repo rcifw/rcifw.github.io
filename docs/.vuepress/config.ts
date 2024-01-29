@@ -10,7 +10,7 @@ export default defineUserConfig({
     'The Research Computing and Informatics Facility (RCIF) ' +
     'supports human imaging researchers across all campuses of ' +
     'Washington University in St. Louis.',
-  head: [['link', { rel: 'icon', href: '/images/logo.png' }]],
+  head: [['link', { rel: 'icon', href: '/images/icon.png' }]],
   theme: defaultTheme({
     repo: 'rcifw/rcifw.github.io',
     docsDir: 'docs',
