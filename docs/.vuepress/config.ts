@@ -13,6 +13,8 @@ export default defineUserConfig({
   head: [['link', { rel: 'icon', href: '/images/icon.png' }]],
   theme: defaultTheme({
     repo: 'rcifw/rcifw.github.io',
+    repoLabel: 'Contribute!',
+    docsBranch: 'vuepress',
     docsDir: 'docs',
     navbar: [
       {
