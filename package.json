@@ -2,7 +2,7 @@
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs --clean-cache --clean-temp",
-    "format": "prettier --write ."
+    "format": "prettier --write **/*.{ts,js}"
   },
   "prettier": "prettier-config-vuepress",
   "dependencies": {
