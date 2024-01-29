@@ -63,6 +63,57 @@ export default defineUserConfig({
         link: '/getting-started/training-and-support.md',
       },
     ],
+    sidebar: [
+      {
+        text: 'Account',
+        link: '/getting-started/applying-for-a-user-account.md',
+      },
+      {
+        text: 'Connect',
+        link: '/getting-started/connect-to-login-nodes.md',
+      },
+      {
+        text: 'FAQs for Accounting',
+        link: '/getting-started/faqs-accounting.md',
+      },
+      {
+        text: 'Hardware',
+        link: '/system-info/hpc-hardware.md',
+      },
+      {
+        text: 'RCIF',
+        link: '/',
+      },
+      {
+        text: 'RCIF Datasets',
+        link: '/getting-started/rcif-shared-datasets.md',
+      },
+      {
+        text: 'Slurm Basics',
+        link: '/getting-started/slurm-basics.md',
+      },
+      {
+        text: 'Software',
+        link: '/software/software.md',
+        collapsible: true,
+        children: [
+          {
+            text: 'See Full List',
+            link: '/software/software.md',
+          },
+          '/software/apptainer.md',
+          '/software/jupyter-notebook.md',
+        ],
+      },
+      {
+        text: 'Storage Systems',
+        link: '/getting-started/storage-systems.md',
+      },
+      {
+        text: 'Training and Support',
+        link: '/getting-started/training-and-support.md',
+      },
+    ],
   }),
   bundler: viteBundler(),
   plugins: [
