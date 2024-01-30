@@ -15,7 +15,6 @@ export default defineUserConfig({
     logo: '/images/washu_logo.png',
     repo: 'rcifw/rcifw.github.io',
     repoLabel: 'Contribute!',
-    docsBranch: 'vuepress',
     docsDir: 'docs',
     navbar: [
       {
