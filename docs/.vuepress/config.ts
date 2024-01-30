@@ -69,19 +69,23 @@ export default defineUserConfig({
     sidebar: [
       {
         text: 'Account',
-        link: '/getting-started/applying-for-a-user-account.md',
+        link: '/apply/',
+        activeMatch: '^/apply/',
       },
       {
         text: 'Connect',
-        link: '/getting-started/connect-to-login-nodes.md',
+        link: '/connect/',
+        activeMatch: '^/connect/',
       },
       {
         text: 'FAQs for Accounting',
-        link: '/getting-started/faqs-accounting.md',
+        link: '/rates/',
+        activeMatch: '^/rates/',
       },
       {
         text: 'Hardware',
-        link: '/system-info/hpc-hardware.md',
+        link: '/computers/',
+        activeMatch: '^/computers/',
       },
       {
         text: 'RCIF',
@@ -89,11 +93,13 @@ export default defineUserConfig({
       },
       {
         text: 'RCIF Datasets',
-        link: '/getting-started/rcif-shared-datasets.md',
+        link: '/datasets/',
+        activeMatch: '^/datasets/',
       },
       {
         text: 'Slurm Basics',
-        link: '/getting-started/slurm-basics.md',
+        link: '/slurm/',
+        activeMatch: '^/slurm/',
       },
       {
         text: 'Software',
@@ -110,11 +116,13 @@ export default defineUserConfig({
       },
       {
         text: 'Storage Systems',
-        link: '/getting-started/storage-systems.md',
+        link: '/storage/',
+        activeMatch: '^/storage/',
       },
       {
         text: 'Training and Support',
-        link: '/getting-started/training-and-support.md',
+        link: '/support/',
+        activeMatch: '^/support/',
       },
     ],
     themePlugins: {
