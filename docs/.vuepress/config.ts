@@ -12,6 +12,7 @@ export default defineUserConfig({
     'Washington University in St. Louis.',
   head: [['link', { rel: 'icon', href: '/images/icon.png' }]],
   theme: defaultTheme({
+    logo: '/images/washu_logo.png',
     repo: 'rcifw/rcifw.github.io',
     repoLabel: 'Contribute!',
     docsBranch: 'vuepress',
