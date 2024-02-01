@@ -35,9 +35,9 @@ this repo, since it is only for documentation. Basically, if you want to suggest
 7. and magically you will see your contributions in [https://rcifw.github.io/](https://rcifw.github.io/)
 
 ## Automated software pages
-For even more magic, we've added `_data/tokens.yml` to semi-automatically generate certain simple software pages:
-1. Add a new section to the `_data/tokens.yml` file with all of the fields filled out (tip: it is easiest to copy and paste one of the pre-existing records and replace with your new content)
-2. Add a new software page to the `software` folder and add content with appropriate Liquid tags (tip: it is easiest to copy `adni.md` to the new file and just replace the front matter)
+For even more magic, we've added `software_packages.yml` to semi-automatically generate certain simple software pages:
+1. Add a new section to the `software_packages.yml` file with all of the fields filled out (tip: it is easiest to copy and paste one of the pre-existing records and replace with your new content)
+2. Run `./generate_pages.py` to generate the new software pages into the `software/` folder
 3. Add a new list item to the `software.md`
 
 # Conventions
