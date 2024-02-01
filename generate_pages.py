@@ -30,19 +30,18 @@ tags: []
 author: 
 ---
 
-{{% assign mod = site.data.tokens[page.topic] %}}
 See the <a rel="module"
-  href="{{{{ mod.url }}}}"
-  title="{{{{ mod.name }}}}">
-    {{{{ mod.name }}}} home page
-</a>. To use {{{{ mod.name }}}}, you’ll use the `module` tool.
+  href="{ record['url'] }"
+  title="{ record['name'] }">
+    { record['name'] } home page
+</a>. To use { record['name'] }, you’ll use the `module` tool.
 
 You can see what versions are available by using:
 ```
-[me@login01 ~]$ module avail {{{{ mod.module }}}}
+[me@login01 ~]$ module avail { record['module'] }
 
 ------------------------------ /opt/modulefiles -------------------------------
-   {{{{ mod.module }}}}/{{{{ mod.version }}}}
+   { record['module'] }/{ record['version'] }
 
 Use "module spider" to find all possible modules and extensions.
 Use "module keyword key1 key2 ..." to search for all possible modules matching
@@ -51,20 +50,17 @@ any of the "keys".
 
 To load a specific version, you would use:
 ```
-[me@login01 ~]$ module load {{{{ mod.module }}}}/{{{{ mod.version }}}}
+[me@login01 ~]$ module load { record['module'] }/{ record['version'] }
 ```
 
-while the "{{{{ mod.module }}}}" wildcard will load the default version, {{{{ mod.module }}}}-{{{{ mod.version }}}} in this case.
+while the "{ record['module'] }" wildcard will load the default version, { record['module'] }-{ record['version'] } in this case.
 
-You should now be able to run {{{{ mod.name }}}} commands:
+You should now be able to run { record['name'] } commands:
 ```
-[me@login01 ~]$ {{{{ mod.example_request }}}}
+[me@login01 ~]$ { record['example_request'] }
 ```
-{{% assign lines = mod.example_response | newline_to_br | split: '<br />' %}}
 ```
-{{% for line in lines %}}
-{{{{ line }}}}
-{{% endfor %}}
+{ record['example_response'] }
 ```
 """
         # Write the content to the file
