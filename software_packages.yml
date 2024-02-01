@@ -5,7 +5,7 @@ afni:
     version: 20.3.03
     created: 2023-03-31T09:26:00 (UTC -0600)
     example_request: afni --version
-    example_response: |
+    example_response: |-
       Precompiled binary linux_openmp_64: Dec  7 2020 (Version AFNI_20.3.03 'Vespasian')"
 castor:
     name: CASTOR
@@ -13,7 +13,7 @@ castor:
     url: http://www.castor-project.org/
     version: 3.1.1
     example_request: castor-recon -h
-    example_response: |
+    example_response: |-
       Usage:  castor-recon.exe  -df file.cdh  -(f/d)out output  -it iter  [settings]
 
       [Main options]:
@@ -60,7 +60,7 @@ cmake:
     url: https://cmake.org/
     version: 3.20.0
     example_request: cmake --version
-    example_response: |
+    example_response: |-
       cmake version 3.20.0-rc3
       CMake suite maintained and supported by Kitware (kitware.com/cmake).
 cuda:
@@ -69,7 +69,7 @@ cuda:
     url: https://developer.nvidia.com/cuda-zone
     version: 12.2
     example_request: nvcc --version
-    example_response: |
+    example_response: |-
       nvcc: NVIDIA (R) Cuda compiler driver
       Copyright (c) 2005-2023 NVIDIA Corporation
       Built on Tue_Jun_13_19:16:58_PDT_2023
@@ -81,7 +81,7 @@ dcmtk:
     url: https://dicom.offis.de/dcmtk.php.en
     version: 3.6.7
     example_request: dcmdump
-    example_response: |
+    example_response: |-
       $dcmtk: dcmdump v3.6.7 2022-04-22 $
 
       dcmdump: Dump DICOM file and data set
@@ -218,7 +218,7 @@ dramms:
     url: https://www.nitrc.org/projects/dramms
     version: 1.5.1
     example_request: dramms --version
-    example_response: |
+    example_response: |-
       dramms (DRAMMS) v1.5
       Copyright (c) 2011--2013 UPenn; 2014--2016 MGH, HMS; 2016-- BCH, HMS.. All rights reserved.
       See http://www.cbica.upenn.edu/sbia/software/license.html or COPYING file.
@@ -228,7 +228,7 @@ elastix:
     url: https://elastix.lumc.nl/
     version: 5.0.1
     example_request: elastix --help
-    example_response: |
+    example_response: |-
       elastix version: 5.0.1
 
       elastix registers a moving image to a fixed image.
@@ -261,7 +261,7 @@ fastqc:
     url: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/
     version: 0.12.1
     example_request: fastqc --version
-    example_response: |
+    example_response: |-
       FastQC v0.12.1
 ffmpeg:
     name: FFMPEG
@@ -269,7 +269,7 @@ ffmpeg:
     url: https://ffmpeg.org/
     version: 5.1.2
     example_request: ffmpeg
-    example_response: |
+    example_response: |-
       ffmpeg version 5.1.2 Copyright (c) 2000-2022 the FFmpeg developers
         built with gcc 8 (GCC)
         configuration: --prefix=/export/ffmpeg/ffmpeg-5.1.2
@@ -290,7 +290,7 @@ fsl:
     url: https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FSL
     version: 6.0.5
     example_request: flirt -version
-    example_response: |
+    example_response: |-
       FLIRT version 6.0
 gate:
     name: GATE
@@ -298,7 +298,7 @@ gate:
     url: http://www.opengatecollaboration.org/
     version: 9.1
     example_request: Gate
-    example_response: |
+    example_response: |-
       [G4]
       [G4] **************************************************************
       [G4]  Geant4 version Name: geant4-10-07-patch-01    (5-February-2021)
@@ -329,7 +329,7 @@ gcc:
     url: https://gcc.gnu.org/
     version: 9.3.0
     example_request: gcc --version
-    example_response: |
+    example_response: |-
       gcc (GCC) 9.3.0
       Copyright (C) 2019 Free Software Foundation, Inc.
       This is free software; see the source for copying conditions.  There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
@@ -339,7 +339,7 @@ geant4:
     url: https://geant4.web.cern.ch/
     version: 10.7.1
     example_request: which geant4.sh
-    example_response: |
+    example_response: |-
       /export/geant4/v10.7.1/bin/geant4.sh
 go:
     name: GO
@@ -347,7 +347,7 @@ go:
     url: https://www.bioinformatics.babraham.ac.uk/projects/fastqc/
     version: 1.15.6
     example_request: go help build
-    example_response: |
+    example_response: |-
       usage: go build [-o output] [-i] [build flags] [packages]
 
       Build compiles the packages named by the import paths,
@@ -358,7 +358,7 @@ greedy:
     url: https://sites.google.com/view/greedyreg/home?authuser=0
     version: 1.0.1
     example_request: greedy --help
-    example_response: |
+    example_response: |-
       greedy: Paul's greedy diffeomorphic registration implementation
       Usage:
         greedy [options]
@@ -403,7 +403,7 @@ intel:
     url: https://software.intel.com/content/www/us/en/develop/tools/parallel-studio-xe.html
     version: 19.1.0.166
     example_request: ifort --version
-    example_response: |
+    example_response: |-
       ifort (IFORT) 19.1.0.166 20191121
       Copyright (C) 1985-2019 Intel Corporation.  All rights reserved.
 itksnap:
@@ -412,7 +412,7 @@ itksnap:
     url: http://www.itksnap.org/pmwiki/pmwiki.php?n=Main.HomePage
     version: 3.8.0
     example_request: itksnap --help
-    example_response: |
+    example_response: |-
       ITK-SnAP Command Line Usage:
         /export/itksnap/itksnap-3.8.0/lib/snap-3.8.0/ITK-SNAP [options] [main_image]
       Image Options:
@@ -444,7 +444,7 @@ mpich:
     url: https://www.mpich.org/
     version: 3.3.1-gcc-8.3.1
     example_request: mpicc --version
-    example_response: |
+    example_response: |-
       gcc (GCC) 8.3.1 20191121 (Red Hat 8.3.1-5)
       Copyright (C) 2018 Free Software Foundation, Inc.
       This is free software; see the source for copying conditions.  There is NO
@@ -455,7 +455,7 @@ mricron:
     url: https://www.nitrc.org/projects/mricron
     version: 20190902
     example_request: dcm2niix --version
-    example_response: |
+    example_response: |-
       Chris Rorden's dcm2niiX version v1.0.20190902  (JP2:OpenJPEG) GCC4.8.2 (64-bit Linux)
       v1.0.20190902
 node:
@@ -464,7 +464,7 @@ node:
     url: https://nodejs.org/en/
     version: 19.0.0
     example_request: node --help
-    example_response: |
+    example_response: |-
       Usage: node [options] [ script.js ] [arguments]
             node inspect [options] [ script.js | host:port ] [arguments]
 
@@ -504,7 +504,7 @@ octave:
     url: https://www.gnu.org/software/octave/index
     version: 7.3.0
     example_request: octave
-    example_response: |
+    example_response: |-
       GNU Octave, version 7.3.0
       Copyright (C) 1993-2022 The Octave Project Developers.
       This is free software; see the source code for copying conditions.
@@ -528,7 +528,7 @@ openslide:
     url: https://openslide.org/
     version: 3.4.1
     example_request: openslide-show-properties
-    example_response: |
+    example_response: |-
       Usage:
         openslide-show-properties [OPTION…] FILE...
 
@@ -545,7 +545,7 @@ pandoc:
     url: https://pandoc.org/
     version: 3.1.9
     example_request: pandoc --version
-    example_response: |
+    example_response: |-
       pandoc 3.1.9
       Features: +server +lua
       Scripting engine: Lua 5.4
@@ -559,7 +559,7 @@ perl:
     url: https://www.perl.org/
     version: 5.10.1
     example_request: perl --version
-    example_response: |
+    example_response: |-
       This is perl, v5.10.1 (*) built for x86_64-linux
 
       Copyright 1987-2009, Larry Wall
@@ -576,7 +576,7 @@ plink:
     url: https://www.cog-genomics.org/plink/2.0/
     version: 2.0
     example_request: plink2 --version
-    example_response: |
+    example_response: |-
       PLINK v2.00a3LM AVX2 Intel (12 Dec 2020)
 root:
     name: ROOT
@@ -584,7 +584,7 @@ root:
     url: https://root.cern/
     version: 6.20.02
     example_request: root --help
-    example_response: |
+    example_response: |-
       usage: root [-b B] [-x X] [-e E] [-n N] [-t T] [-q Q] [-l L] [-a A]
                   [-config CONFIG] [-memstat MEMSTAT] [-h HELP] [--version VERSION]
                   [--notebook NOTEBOOK] [--web WEB] [--web=<browser> WEB=<BROWSER>]
@@ -615,7 +615,7 @@ star:
     url: https://github.com/alexdobin/STAR/
     version: 2.7.11a
     example_request: /export/star/2.7.11a/bin/Linux_x86_64_static/STAR
-    example_response: |
+    example_response: |-
       Usage: STAR  [options]... --genomeDir /path/to/genome/index/   --readFilesIn R1.fq R2.fq
       Spliced Transcripts Alignment to a Reference (c) Alexander Dobin, 2009-2022
 
@@ -632,7 +632,7 @@ subread:
     url: https://github.com/ShiLab-Bioinformatics/subread
     version: 2.0.6
     example_request: subread
-    example_response: |
+    example_response: |-
       Version 2.0.6
 
       Usage:
@@ -812,7 +812,7 @@ trimmomatic:
     url: http://www.usadellab.org/cms/index.php?page=trimmomatic
     version: 0.39
     example_request: java -jar /export/trimmomatic/0.39/bin/trimmomatic-0.39.jar -version
-    example_response: |
+    example_response: |-
       0.39
 workbench:
     name: WORKBENCH
@@ -820,7 +820,7 @@ workbench:
     url: https://www.humanconnectome.org/software/get-connectome-workbench
     version: 1.5.0
     example_request: wb_command
-    example_response: |
+    example_response: |-
       Version: 1.5.0
       Commit Date: 2021-02-16 13:46:47 -0600
       Operating System: Linux
