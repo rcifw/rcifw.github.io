@@ -20,5 +20,6 @@ R2012b  R2014a  R2014b  R2015a  R2015b  R2016a  R2016b  R2017a  R2017b  R2018a  
 ```
 
 
-> [!NOTE]
-> The MATLAB code run via MCR needs to be compiled on the same architecture as that of the cluster. In other words, it needs to be compiled on a Linux system.
+::: warning
+The MATLAB code run via MCR needs to be compiled on the same architecture as that of the cluster. In other words, it needs to be compiled on a Linux system.
+:::

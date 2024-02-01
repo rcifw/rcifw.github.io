@@ -1,26 +1,24 @@
 ---
-title: RCIF
+title: Overview
 created: 2023-03-31T09:26:02 (UTC -04:00)
 tags: []
-author: 
-layout: default
+author:
 include: true
 ---
+# RCIF
+The [**Research Computing and Informatics Facility (RCIF)**](https://www.mir.wustl.edu/research/core-resources/research-computing-and-informatics-facility/)
+is a human imaging facility to help *you* create and execute computationally intensive studies:
+- RCIF's **Center for High-Performance Computing (CHPC)** offers [hardware](system-info/hpc-hardware.md) and [software](software/software.md) resources.
+- **Shared storage** - high-throughput, high-volume storage systems, more [details available here](getting-started/storage-systems.md).
+- **Data services** - you can [request shared datasets here](getting-started/rcif-shared-datasets.md).
+- **Expertise** - we provide support in HPC, data, AI, and more. Find [support and training options here](getting-started/training-and-support.md).
 
-## RCIF
-*[RCIF]: Research Computing and Informatics Facility
-*[HPC]: high-performance computing
-*[CHPC]: Center for High-Performance Computing
-The [RCIF](https://www.mir.wustl.edu/research/core-resources/research-computing-and-informatics-facility/) is a human imaging facility to help **you** create and execute computationally intensive studies:
-- **HPC** - RCIF CHPC [hardware](system-info/hpc-hardware.md), [software](software/software.md)
-- **Shared storage** - high-throughput, high-volume: [details](getting-started/storage-systems.md)
-- **Data services** - [request here](getting-started/rcif-shared-datasets.md)
-- **Expertise** - HPC, data, AI, and more: [support and training](getting-started/training-and-support.md)
-
+## Funding
 To help you access funding:
-- **Facilities document** - [example](system-info/facilities-doc.md)
-- **Pilot funds** - available to anyone using the RCIF: [here](https://www.mir.wustl.edu/research/core-resources/pilot-funds/)
-- **ICTS JIT Funds** - available to anyone using the RCIF: [here](https://icts.wustl.edu/funding/just-in-time-jit/) - note: we are listed as the “Center for High Performance Computing (CHPC)” in the [PDF](https://wustl.box.com/s/umpd5cel70codg1x0wpxf599p4p8827a).
+- **Facilities document** - view an [example of our facilities document](system-info/facilities-doc.md).
+- **Pilot funds** - available to anyone using the RCIF, learn more [about pilot funds](https://www.mir.wustl.edu/research/core-resources/pilot-funds/).
+- **ICTS JIT Funds** - also available to anyone using the RCIF. More information [about JIT Funds](https://icts.wustl.edu/funding/just-in-time-jit/)
+    - **note:** We are listed as the "**Center for High Performance Computing (CHPC)**" in this [supporting PDF document](https://wustl.box.com/s/umpd5cel70codg1x0wpxf599p4p8827a).
 
 To help the RCIF access funding, we need you, the users, to cite the RCIF in your publications:
 
