@@ -4,19 +4,20 @@ import os
 import datetime
 from datetime import datetime
 import pytz
+from pathlib import Path
 
-def main(yaml_file_path, output_directory):
+def main(yaml_file_path:Path, output_directory:Path):
     # Load the YAML file
-    with open(yaml_file_path, 'r') as file:
-        data = yaml.safe_load(file)
+    data = yaml.safe_load(yaml_file_path.read_text())
 
     # Ensure output directory exists
-    assert os.path.exists(output_directory)
-    
+    if not output_directory.is_dir():
+        raise FileNotFoundError(f"Output directory does not exist: {output_directory}")
+
     for key, record in data.items():
         # Construct the filename and content
         file_name = f"{record['module']}.md"
-        file_path = os.path.join(output_directory, file_name)
+        file_path = output_directory / file_name
         timezone = pytz.timezone('America/Chicago')
         now = datetime.now(timezone)
         now_str = record.get('created', now.strftime("%Y-%m-%dT%H:%M:%S (UTC %z)"))
@@ -66,11 +67,10 @@ You should now be able to run {{{{ mod.name }}}} commands:
 ```
 """
         # Write the content to the file
-        with open(file_path, 'w') as file:
-            file.write(content)
-        print(f"File written: {file_path}")
+        file_path.write_text(content)
+        print(f"File written: {file_path.name}")
 
 if __name__ == "__main__":
-    yaml_file_path = './software_packages.yml'
-    output_directory = './docs/software/'
+    yaml_file_path = Path('./software_packages.yml')
+    output_directory = Path('./docs/software/')
     main(yaml_file_path, output_directory)
