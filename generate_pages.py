@@ -23,8 +23,6 @@ def main(yaml_file_path:Path, output_directory:Path):
 title: {record['name']}
 created: {now_str}
 topic: {record['module']}
-tags: []
-author: 
 ---
 
 See the <a rel="module"
