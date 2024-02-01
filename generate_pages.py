@@ -1,7 +1,4 @@
-import sys
-
 import yaml
-import os
 import datetime
 from datetime import datetime
 import zoneinfo
