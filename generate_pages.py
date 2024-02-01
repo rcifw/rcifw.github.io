@@ -1,9 +1,10 @@
 import sys
+
 import yaml
 import os
 import datetime
 from datetime import datetime
-import pytz
+import zoneinfo
 from pathlib import Path
 
 def main(yaml_file_path:Path, output_directory:Path):
@@ -18,7 +19,7 @@ def main(yaml_file_path:Path, output_directory:Path):
         # Construct the filename and content
         file_name = f"{record['module']}.md"
         file_path = output_directory / file_name
-        timezone = pytz.timezone('America/Chicago')
+        timezone = zoneinfo.ZoneInfo("America/Chicago")
         now = datetime.now(timezone)
         now_str = record.get('created', now.strftime("%Y-%m-%dT%H:%M:%S (UTC %z)"))
         content = f"""---
