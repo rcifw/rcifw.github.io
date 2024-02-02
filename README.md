@@ -38,7 +38,7 @@ this repo, since it is only for documentation. Basically, if you want to suggest
 For even more magic, we've added `software_packages.yml` to semi-automatically generate certain simple software pages:
 1. Add a new section to the `software_packages.yml` file with all of the fields filled out (tip: it is easiest to copy and paste one of the pre-existing records and replace with your new content)
 2. Run `./generate_pages.py` to generate the new software pages into the `software/` folder
-3. Add a new list item to the `software.md`
+3. Add a new list item to the `software.md` and to `config.ts` (to update the drop-down list)
 
 # Conventions
 We just ask that you observe some basic conventions when you make changes:
