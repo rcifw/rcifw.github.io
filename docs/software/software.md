@@ -7,6 +7,7 @@ include: true
 ---
 
 We support a variety of software on the RCIF HPC cluster
+
 * [afni](afni.md)
 * [amber](amber.md)
 * [ants](ants.md)
@@ -17,6 +18,7 @@ We support a variety of software on the RCIF HPC cluster
 * [dcmtk](dcmtk.md)
 * [dramms](dramms.md)
 * [elastix](elastix.md)
+* [fastqc](fastqc.md)
 * [ffmpeg](ffmpeg.md)
 * [freesurfer](freesurfer.md)
 * [fsl](fsl.md)
@@ -26,7 +28,7 @@ We support a variety of software on the RCIF HPC cluster
 * [go](go.md)
 * [greedy](greedy.md)
 * [intel](intel.md)
-* [itk-snap](itk-snap.md)
+* [itk-snap](itksnap.md)
 * [Jupyter Notebook](jupyter-notebook.md)
 * [matlabcompilerruntime](matlabcompilerruntime.md)
 * [matlabinteractive](matlabinteractive.md)
@@ -35,7 +37,7 @@ We support a variety of software on the RCIF HPC cluster
 * [mpich](mpich.md)
 * [mricron](mricron.md)
 * [mvapich2](mvapich2.md)
-* [node.js](node.js.md)
+* [node.js](node.md)
 * [octave](octave.md)
 * [openmpi](openmpi.md)
 * [openslide](openslide.md)
@@ -46,6 +48,9 @@ We support a variety of software on the RCIF HPC cluster
 * [r](r.md)
 * [root](root.md)
 * [singularity](singularity.md)
+* [star](star.md)
+* [subread](subread.md)
+* [trimmomatic](trimmomatic.md)
 * [Visual Studio Code](visual-studio-code.md)
 * [vnc-remotedesktop](vnc-remotedesktop.md)
 * [workbench](workbench.md)
