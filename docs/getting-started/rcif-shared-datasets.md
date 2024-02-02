@@ -44,6 +44,9 @@ Investigation of Serial studies to Predict Your Therapeutic Response with Imagin
 #### QIN_Breast_DCE-MRI
 A collection of breast dynamic contrast-enhanced (DCE) MRI data from a longitudinal study to assess breast cancer response to neoadjuvant chemotherapy. [https://wiki.cancerimagingarchive.net/pages/viewpage.action?pageId=18514286](https://wiki.cancerimagingarchive.net/pages/viewpage.action?pageId=18514286)
 
+#### VICTRE
+The VICTRE Trial is an open-source, in-silico clinical trial to investigate a new paradigm for evaluating digital breast tomosynthesis (DBT) as a replacement for digital mammography (DM). A total of 2986 subjects, with breast sizes and radiographic densities representative of a screening population and compressed thicknesses from 3.5 to 6 cm, were simulated and imaged on in-silico versions of DM and DBT systems using fast Monte Carlo x-ray transport. Images were interpreted by a computational reader detecting the presence of lesions. The in-silico trial (VICTRE) was designed to replicate a comparative trial from a previous regulatory submission. [https://www.cancerimagingarchive.net/collection/victre/](https://www.cancerimagingarchive.net/collection/victre/)
+
 ## Requesting Datasets
 
 Requests for additional TCIA or other datasets can be made through the [Data Request Portal](https://wustl.az1.qualtrics.com/jfe/form/SV_6gPG6D5xbpgF5Pg).Other requests can be directed to [support@rcif.wustl.edu](mailto:support@rcif.wustl.edu).
