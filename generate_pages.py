@@ -25,11 +25,7 @@ created: {now_str}
 topic: {record['module']}
 ---
 
-See the <a rel="module"
-  href="{ record['url'] }"
-  title="{ record['name'] }">
-    { record['name'] } home page
-</a>. To use { record['name'] }, you’ll use the `module` tool.
+See the [{ record['name'] } project page]({ record['url'] }). To use { record['name'] }, you’ll use the `module` tool.
 
 You can see what versions are available by using:
 ```
