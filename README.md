@@ -8,7 +8,7 @@ The documentation is organized in sections under the main `docs/` directory, and
 repository is automatically published to [https://rcifw.github.io/](https://rcifw.github.io/) whenever a pull
 request is merged to the branch.
 
-## Setting up Local Development Environmnet
+## Setting up Local Development Environment
 1. [Install yarn](https://classic.yarnpkg.com/lang/en/docs/install/) if you don't have it already.
 2. Install the Project Dependencies
 ```bash
