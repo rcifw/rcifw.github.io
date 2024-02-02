@@ -8,7 +8,7 @@ The documentation is organized in sections under the main `docs/` directory, and
 repository is automatically published to [https://rcifw.github.io/](https://rcifw.github.io/) whenever a pull
 request is merged to the branch.
 
-## Setting up Local Development Environmnet
+## Setting up Local Development Environment
 1. [Install yarn](https://classic.yarnpkg.com/lang/en/docs/install/) if you don't have it already.
 2. Install the Project Dependencies
 ```bash
@@ -33,6 +33,12 @@ this repo, since it is only for documentation. Basically, if you want to suggest
 5. someone will look at the changes and either approve or suggest changes
 6. once all changes are accepted, the pull request can be merged by an admin ...
 7. and magically you will see your contributions in [https://rcifw.github.io/](https://rcifw.github.io/)
+
+## Automated software pages
+For even more magic, we've added `software_packages.yml` to semi-automatically generate certain simple software pages:
+1. Add a new section to the `software_packages.yml` file with all of the fields filled out (tip: it is easiest to copy and paste one of the pre-existing records and replace with your new content)
+2. Run `./generate_pages.py` to generate the new software pages into the `software/` folder
+3. Add a new list item to the `software.md`
 
 # Conventions
 We just ask that you observe some basic conventions when you make changes:
