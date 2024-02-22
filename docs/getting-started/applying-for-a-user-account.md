@@ -9,7 +9,7 @@ include: true
 ---
 
 ### How can I onboard to use the cluster? (I have a WUSTL key).
-You need to fill out the on the home page of our site; see the [account request form](https://sites.wustl.edu/chpc/).
+You need to fill out the on the home page of our site; see the [account request form](https://wustl.az1.qualtrics.com/jfe/form/SV_5793MIwodtHIpMy).
 
 ### How do I upload my WUSTL HIPAA certificate?
 1. Go to website Learn@Work: [https://sites.wustl.edu/learnatwork/](https://sites.wustl.edu/learnatwork/)
