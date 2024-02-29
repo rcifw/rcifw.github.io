@@ -12,7 +12,7 @@ You can see what versions are available by using:
 [me@login01 ~]$ module avail fsl
 
 ------------------------------ /opt/modulefiles -------------------------------
-   fsl/6.0.7
+   fsl/6.0.7.8
 
 Use "module spider" to find all possible modules and extensions.
 Use "module keyword key1 key2 ..." to search for all possible modules matching
@@ -21,10 +21,10 @@ any of the "keys".
 
 To load a specific version, you would use:
 ```
-[me@login01 ~]$ module load fsl/6.0.7
+[me@login01 ~]$ module load fsl/6.0.7.8
 ```
 
-while the "fsl" wildcard will load the default version, fsl-6.0.7 in this case.
+while the "fsl" wildcard will load the default version, fsl-6.0.7.8 in this case.
 
 You should now be able to run FSL commands:
 ```
