@@ -22,12 +22,12 @@ First, create and activate a new conda environment with the packages you need fo
 For instance:
 ```
 [clusteruser@login01 ~]$ . ~/miniconda3/bin/activate
-[clusteruser@login01 ~]$ conda env create -n jlab -c conda-forge jupyterlab
+[clusteruser@login01 ~]$ conda create --name jlab --channel=conda-forge jupyterlab
 ```
 
 Second, get a Slurm allocation to give you resources to run your Jupyter Lab notebooks:
 ```
-[clusteruser@login01 ~]$ salloc -N1 -n1 --gpus=1 --partition=tier2_gpu --account=admin --time=40:00
+[clusteruser@login01 ~]$ salloc -N1 -n1 --gpus=1 --partition=tier1_gpu --account=pi_name --time=40:00
 salloc: Pending job allocation XXXXX
 salloc: job XXXXX queued and waiting for resources
 ```
