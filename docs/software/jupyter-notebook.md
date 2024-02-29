@@ -13,9 +13,9 @@ You can run a Jupyter Lab server as a cluster job and connect to it using a web 
 Read below for other ways, but here we go over the method in our [YouTube video](https://youtu.be/ad0YMKDNNZ8) for how to access Jupyter Notebooks in your local web browser using storage and GPUs on the CHPC! The text instructions follow (if you are already a user you can probably skip to 3 or 4):
 
 **Prereqs:**
-1. [Get an account](<../getting-started/applying-for-a-user-account>)
-2. [Connect to the VPN and set up SSH keys](../getting-started/connect-to-login-nodes)
-3. [Setup Miniconda](python)
+1. [Get an account](../getting-started/applying-for-a-user-account.md)
+2. [Connect to the VPN and set up SSH keys](../getting-started/connect-to-login-nodes.md)
+3. [Setup Miniconda](python.md)
 
 First, create and activate a new conda environment with the packages you need for your research (at a minimum it will need `jupyterlab`).
 
