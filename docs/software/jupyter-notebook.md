@@ -8,7 +8,44 @@ author: Benjamin Kay
 [Jupyter](https://jupyter.org/) and the Jupyter Lab notebook interface are a widely-used open-source project for interactive, reproducible computing. They are widely used by data scientists. For example, Jupyter powers [Google Colab](https://colab.research.google.com/) and the automatic manuscript figure rendering in [Quarto](https://quarto.org/). Jupyter is written in Python but supports many data science languages including R, Julia, and Matlab.
 
 You can run a Jupyter Lab server as a cluster job and connect to it using a web browser on your local computer. This setup is very convenient for interacting with large data sets and computational expensive operations that would grind your laptop to a halt. It's also a great way to incrementally develop batch jobs to run on the cluster.
+## Quick Start
 
+Read below for other ways, but here we go over the method in our [YouTube video](https://youtu.be/ad0YMKDNNZ8) for how to access Jupyter Notebooks in your local web browser using storage and GPUs on the CHPC! The text instructions follow (if you are already a user you can probably skip to 3 or 4):
+
+**Prereqs:**
+1. [Get an account](../getting-started/applying-for-a-user-account.md)
+2. [Connect to the VPN and set up SSH keys](../getting-started/connect-to-login-nodes.md)
+3. [Setup Miniconda](python.md)
+
+4. Create and activate a new conda environment with the packages you need for your research (at a minimum it will need `jupyterlab`). For instance:
+```
+[clusteruser@login01 ~]$ . ~/miniconda3/bin/activate
+[clusteruser@login01 ~]$ conda create --name jlab --channel=conda-forge jupyterlab
+```
+
+5. Get a Slurm allocation to give you resources to run your Jupyter Lab notebooks:
+```
+[clusteruser@login01 ~]$ salloc -N1 -n1 --gpus=1 --partition=tier1_gpu --account=pi_name --time=40:00
+salloc: Pending job allocation XXXXX
+salloc: job XXXXX queued and waiting for resources
+```
+
+6. Once you have resources allocated you can run Jupyter Lab:
+```
+[clusteruser@gpu01 ~]$ . ~/miniconda3/bin/activate
+[clusteruser@gpu01 ~]$ conda activate jlab
+(jlab)[clusteruser@gpu01 ~]$ jupyter lab --ServerApp.allow_remote_access=True --ServerApp.ip=* --ServerApp.open_browser=False
+```
+
+7. Once the server is running, open a new terminal from your local machine and open an SSH tunnel through the CHPC login node to the GPU node you were allocated:
+```
+[localuser@localmachine ~]$ ssh -L 8888:gpu01:8888 me@login3.chpc.wustl.edu
+```
+> Note: If 8888 is being used on your local machine, just replace the first "8888" with another open port like "9876" (e.g., `ssh -L 9876:gpu01:8888 me@login3.chpc.wustl.edu`) and then also use that new port after the ":" in the next step, too.
+8. You can now open your browser on your local machine and navigate to `http://127.0.0.1:8888` (or look at the output from 6. to get the URL with the token and skip 9.)
+9. In the text box prompt, just enter the token given as part of the URL displayed when you ran Jupyter Lab in 6.
+
+Done! You can now create Jupyter Notebooks and save them in your CHPC home directory. You can also use the GPUs and CPUs on the CHPC to run your analyses.
 ## Setting Up a Compute Node
 
 Log into the cluster and use [`srun`](https://slurm.schedmd.com/srun.html) to request an interactive job with reasonable resources. Here we ask for 4 GB of memory, which should be enough for basic Python work, and 3 hours of runtime, which is the maximum allowed under the free tier. We ask for an interactive bash terminal with `--pty bash`. Take note of which node the job runs on.

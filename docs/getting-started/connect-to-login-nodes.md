@@ -74,11 +74,13 @@ For example: `sudo openconnect --protocol=anyconnect --useragent="AnyConnect-com
 
 ### Entering my password to login every time is so annoying ... How can I connect to the cluster without entering the password?
 
-Luckily, a more secure and convenient way to log into the cluster is using a SSH key-pair! SSH key-pairs can be more secure, as they are less vulnerable to common brute-force password attacks ... and more convenient. So yes, you can have your access cake and eat it too ... almost: If the user’s workstation were compromised, the malicious user could then connect to the CHPC without needing a password. All things considered, it is much more difficult to access a physical machine than sitting somewhere else picking away at passwords, so we suggest this method.
+Luckily, a more secure _and_ convenient way to log into the cluster is using a SSH key-pair! SSH key-pairs can be more secure, as they are less vulnerable to common brute-force password attacks ... and more convenient. An SSH key-pair consist of a public key and a private key. You can place the public key on any server, and then connect to the server using an SSH client with access to the private key. When the public and private keys match up, the SSH server grants access without the need for a password.
 
-An SSH key-pair consist of a public key and a private key. You can place the public key on any server, and then connect to the server using an SSH client with access to the private key. When the public and private keys match up, the SSH server grants access without the need for a password.
+So yes, you can have your access cake and eat it too ...
 
-But enough explanation, let's get to making one of these and getting you connected. You can follow [these instructions from our friends at Github](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) to generate your key and add it to your ssh-agent. Basically:
+**Step 1: Create the key pair**
+
+You can follow [these instructions from our friends at Github](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) to generate your key and add it to your `ssh-agent`. Basically:
 * For Linux OS or MacOS, you simply need to run “ssh-keygen” command in a terminal window. You can just hit enter to accept all of the defaults.
 * For Windows OS, you can run the command in mobaxterm. An example of generating a rsa-type key pair in mobaxterm is shown as below:
 
@@ -113,6 +115,21 @@ The key's randomart image is:
 +----[SHA256]-----+
 ```
 
+**Step 2 (optional): Add the key to your ssh-agent**
+
+We recommend you add a passphrase to your key ... but if you set up your SSH key to have a passphrase, doesn't that take away the convenience? It can, but there is a convenient solution to that, too:  SSH agent! 
+
+You can start a local terminal session and do the following just once every time you start working:
+```
+[me@local_machine]: eval "$(ssh-agent -s)"
+[me@local_machine]: ssh-add ~/.ssh/id_ed25519
+Enter passphrase for /Users/me/.ssh/id_ed25519:
+```
+
+Now the SSH agent will manage key requests and not bother you with the key passphrase ... at least until you need to login to your local machine again.
+
+**Step 3: Send the key to the cluster**
+
 The next step would be to place the public key on the login nodes.
 
 ```
@@ -127,9 +144,10 @@ Now try logging into the machine, with:   "ssh 'me@login3-01.chpc.wustl.edu'"
 and check to make sure that only the key(s) you wanted were added.
 ```
 
-Alternatively, the user could manually edit the ~/.ssh/authorized\_keys and add a copy of their public key.
+Alternatively, the user could manually edit the `~/.ssh/authorized_keys` and add a copy of their public key as an entry in the file.
 
-Be aware, SSH is very sensitive to file permissions. If the permissions would allow another user to edit files under ~/.ssh, SSH will silently fail using key-pairs and revert back to password authentication. For this reason, do the following:
+> [!danger] SSH is sensitive to file permissions! If the permissions allow another user to view files under `~/.ssh`, SSH will silently fail and revert back to password authentication. For this reason, do the following
+
 ```
 chmod -R 600 ~/.ssh
 ```
