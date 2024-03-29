@@ -53,7 +53,7 @@ The table below lists [`sbatch` options](https://slurm.schedmd.com/sbatch.html) 
 | `#SBATCH -d, ‐‐dependency=<*dependency_list*>` | Defer the start of this job until the specified dependencies have been satisfied completed. |
 | `#SBATCH -e, ‐‐error=<*filename pattern*>` | Defines the error file name specified in the “*filename pattern*“. For example, `‐‐error=JOB.e%j`, where the "%j" is replaced by the job ID, or "JOB.%A_%a.err", "%A" is replaced by the job ID and "%a" with the array index. |
 | `#SBATCH ‐‐exclude=<*node name list*>` | Explicitly exclude certain nodes from the resources granted to the job. |
-| `#SBATCH ‐‐gres=<*list*>` | Specify the number of GPUs required for the job on each node included in the job’s resource allocation. For example, `‐‐gres=gpu:2` requests jobs running on 2 GPUs. |
+| `#SBATCH ‐‐gres=<*list*>` | Specify the number of GPUs required for the job on each node included in the job’s resource allocation. For example, `‐‐gres=gpu:2` requests jobs running on 2 GPUs. You can also ask for specific GPUs, e.g., `--gres=gpu:tesla_a100:2` would request 2 A100 GPUs |
 | `#SBATCH -J, ‐‐job-name=<*jobname*>` | Specify a name for the job allocation. The specified name will appear along with the job id number when querying running jobs on the system with, e.g., `squeue`. |
 | `#SBATCH ‐‐mail-type=<*type*>` | Notify user by email when certain event types occur. Valid **type** values are **NONE**, **BEGIN**, **END**, **FAIL**, **REQUEUE**, **ALL**. For example, `‐‐mail-type=end` sends email to the user when the job finishes. |
 | `#SBATCH ‐‐mail-user=<*user* *email*>` | User to receive email notification of state changes as defined by `‐‐mail-type`. The default value is the user submitting jobs. |
@@ -67,6 +67,27 @@ The table below lists [`sbatch` options](https://slurm.schedmd.com/sbatch.html) 
 | `#SBATCH ‐‐reservation**=<*reservation_names*>` | Allocate resources for the job from the named reservation. Each reservation will be considered in the order it was requested. All reservations will be listed in `scontrol show reservation`/`squeue` through the life of the job. |
 | `#SBATCH –t, –-time=<*time*>` | Set a limit on the total run time of the job allocation. A time limit of zero requests that no time limit be imposed. Acceptable time formats include “minutes”, “minutes:seconds”, “hours:minutes:seconds”, “days-hours”, “days-hours:minutes” and “days-hours:minutes:seconds”. For example, `#SBATCH ‐‐time=24:0:0` requests 24 hours of walltime. |
 | `#SBATCH ‐‐workdir=<*directory_name*>` | Set the working directory for the submitted job. |
+
+## GRES Types ##
+The table below lists [`gres` options](https://slurm.schedmd.com/gres.html) for executing your Slurm jobs on resources with specific attributes (generic resources). While we realize that Tesla is not correct for the line of NVIDIA GPUs we are referencing, we have kept the nomenclature to avoid breaking already existing workflows:
+
+| **GRES** | **Description** |
+| --- | --- |
+| `gpu:tesla_a100` | NVIDIA A100 GPU (both PCIe and SXM) |
+| `gpu:tesla_t4` | NVIDIA T4 GPU |
+| `gpu:tesla_v100` | NVIDIA V100 GPU |
+| `gpu:tesla_v100S` | NVIDIA V100S GPU |
+| `vmem:15gb` | GPU with 15G global memory (currently, T4) |
+| `vmem:16gb` | GPU with 15G global memory (currently, V100-PCIe-16) |
+| `vmem:32gb` | GPU with 32G global memory (currently, V100 and V100S) |
+| `vmem:40gb` | GPU with 40G global memory (currently, A100-PCIe-40 and A100-SXM-40)  |
+
+For example, to request an allocation of 1 node and 2 cores with a single 40G GPU for 30 minutes:
+```
+salloc -N1 -n2 --partition=<partition name> --account=<account name> --time=30:00 --gres=vmem:40gb:1
+```
+
+We will also be moving 80G GPUs into production soon. Stay tuned!
 
 ## Environmental Variables ##
 If you need to extract information from the job data collected by  Slurm for assessing your job performance in addition to the information provided in the standard output file, you can take advantage of the Slurm environmental variables and include them in your batch script.
