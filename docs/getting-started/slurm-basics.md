@@ -77,14 +77,10 @@ The table below lists [`gres` options](https://slurm.schedmd.com/gres.html) for 
 | `gpu:tesla_t4` | NVIDIA T4 GPU |
 | `gpu:tesla_v100` | NVIDIA V100 GPU |
 | `gpu:tesla_v100S` | NVIDIA V100S GPU |
-| `vmem:15gb` | GPU with 15G global memory (currently, T4) |
-| `vmem:16gb` | GPU with 15G global memory (currently, V100-PCIe-16) |
-| `vmem:32gb` | GPU with 32G global memory (currently, V100 and V100S) |
-| `vmem:40gb` | GPU with 40G global memory (currently, A100-PCIe-40 and A100-SXM-40)  |
 
-For example, to request an allocation of 1 node and 2 cores with a single 40G GPU for 30 minutes:
+For example, to request an allocation of 1 node and 2 cores with a single A100 GPU for 30 minutes:
 ```
-salloc -N1 -n2 --partition=<partition name> --account=<account name> --time=30:00 --gres=vmem:40gb:1
+salloc -N1 -n2 --gres=gpu:tesla_a100:1 --partition=<partition name> --account=<account name> --time=30:00
 ```
 
 We will also be moving 80G GPUs into production soon. Stay tuned!
