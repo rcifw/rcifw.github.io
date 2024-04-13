@@ -30,6 +30,7 @@ The partition is a great tool to assemble jobs of similar properties. Depending 
 | tier1_gpu | 30 | 2 | 6G | 30m / 24h | - |
 | tier2_cpu | - | - | 6G | 30m / 7d | - |
 | tier2_gpu | - | - | 6G | 30m / 7d | - |
+| tier3_gpu | - | - | 6G | 30m / 14d | - |
 
 *Note: Max jobs per user is based on the least amount of CPUs or GPUs and walltime requested within this particular partition*.
 
@@ -40,7 +41,10 @@ This partition is designed for users who want to develop and test their applicat
 The **tier1_cpu** and **tier1_gpu** partitions are designed for *CPU-only* and *GPU-accelerated* jobs, respectively, to be run for no more than 24 hours per job.
 
 ### Tier 2 Partitions ###
-The **tier1_cpu** and **tier1_gpu** partitions are designed for *CPU-only* and *GPU-accelerated* jobs, respectively, to be run for no more than 1 week per job.
+The **tier2_cpu** and **tier2_gpu** partitions are designed for *CPU-only* and *GPU-accelerated* jobs, respectively, to be run for no more than 1 week per job.
+
+### Tier 3 Partitions ###
+The **tier3_gpu** partitions are designed for the highest performance *GPU-accelerated* jobs for up to 2 weeks per job.
 
 ## Options ##
 The table below lists [`sbatch` options](https://slurm.schedmd.com/sbatch.html) for executing your Slurm jobs:
@@ -73,6 +77,7 @@ The table below lists [`gres` options](https://slurm.schedmd.com/gres.html) for 
 
 | **GRES** | **Description** |
 | --- | --- |
+| `gpu:nvidia_a100_80` | NVIDIA A100-SXM-80 GPU |
 | `gpu:tesla_a100` | NVIDIA A100 GPU (both PCIe and SXM) |
 | `gpu:tesla_t4` | NVIDIA T4 GPU |
 | `gpu:tesla_v100` | NVIDIA V100 GPU |
@@ -82,8 +87,6 @@ For example, to request an allocation of 1 node and 2 cores with a single A100 G
 ```
 salloc -N1 -n2 --gres=gpu:tesla_a100:1 --partition=<partition name> --account=<account name> --time=30:00
 ```
-
-We will also be moving 80G GPUs into production soon. Stay tuned!
 
 ## Environmental Variables ##
 If you need to extract information from the job data collected by  Slurm for assessing your job performance in addition to the information provided in the standard output file, you can take advantage of the Slurm environmental variables and include them in your batch script.
