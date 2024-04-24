@@ -9,6 +9,28 @@ include: true
 # Guide for Slurm
 This page provides reference information for Slurm and strategies for how to use the job scheduler to best execute your research workflows.
 
+## Very Quick Start
+After [connecting](connect-to-login-nodes.md) you can ask for 5 minutes of free time by running `gimme5`. This script just calls:
+```
+$ cat `which gimme5`
+#!/bin/bash
+salloc -N 1 -n 1 --partition=free --time=5:00
+```
+
+Example:
+```
+$ gimme5
+salloc: Pending job allocation 272745
+salloc: job 272745 queued and waiting for resources
+salloc: job 272745 has been allocated resources
+salloc: Granted job allocation 272745
+salloc: Waiting for resource configuration
+salloc: Nodes node16 are ready for job
+[me@node16 chpc-billing]$ hostname
+node16.cluster
+```
+This example is giving the user 5 minutes of time on 1 CPU on node16 and automatically opens a prompt on node16. When the requested time is up, the batch management system will shut down any user programs on that allocation and remove user access.
+
 ## Accounts
 
 Any cluster user may submit jobs to the free partition without specifying an account using `srun --partition=free`. Jobs on the free partition are limited in terms of their priority, hardware, and run time (max 3 hours). Jobs submitted to a higher tier of service must be associated with an account using `--account=<my account>`.
