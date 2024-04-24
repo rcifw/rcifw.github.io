@@ -4,7 +4,6 @@ created: 2023-09-15T09:29:00 (UTC -05:00)
 tags: []
 author: Benjamin Kay
 ---
-
 ## Performance Considerations
 
 Importing and exporting data to/from the cluster is a necessary and routine activity for cluster users. However, please be aware that storing data locally on the cluster will always be faster than importing or exporting from another computer system, often by a considerable margin. Importing and exporting should ideally be an infrequent activity, with frequently-accessed data stored locally on the cluster for optimum performance. See [Storage Systems](storage-systems.md) for more information on cluster-local storage options and the [Accounting FAQ](faqs-accounting.md) for storage pricing options.

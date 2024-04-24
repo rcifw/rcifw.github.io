@@ -153,3 +153,16 @@ chmod -R 600 ~/.ssh
 ```
 
 If you have any questions or problems, please [see our support options](../getting-started/training-and-support.md)!
+### How do I get my data onto the CHPC?
+There is a great guide on transfer options [here](import-export-data.md).
+
+We can also provide access to several human imaging datasets, which we host for free as part of our shared datasets program, and if we do not have it you can request it. See our [datasets page](rcif-shared-datasets.md) for more information and howto's.
+
+Contact us via [our support options](training-and-support.md) if you have specific needs not addressed.
+### What if I want to share data among users in my group?
+We have several groups that do this, and all you have to do is contact us via one of [our support options](training-and-support.md) to get this started.
+
+We will create and configure a directory in `/ceph/chpc/shared` and apply permissions as you want (e.g., we can allow all members of your group, an arbitrary list of users, or even use an Active Directory group to manage the access list).
+
+Fees will be assessed based on the amount of data stored. See our [accounting FAQs](faqs-accounting.md#how-is-storage-charged).
+

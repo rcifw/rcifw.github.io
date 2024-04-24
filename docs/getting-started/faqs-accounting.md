@@ -62,6 +62,9 @@ Our general policy is:
 * Let PI’s buy additional space for shared use (e.g., for projects, etc.), and they can have us set up arbitrary user permissions for that space. That storage access does not necessarily have to have the same user list as that for computing resource access.
 * The storage quota for an individual user is used at the discretion of that user. If a user wants to use it for project storage, etc., that is up to them; however, that storage is not meant for shared access.
 
+For assessing data usage by the PI, we take the sum of any shared storage (see `/ceph/chpc/shared`) and the excess data usage by an account's members. Members are considered to be those users who are associated with the account and **only** the account. For instance, users with access to multiple accounts will be subject to default quota enforcement but not be considered as part of the data usage for any account.
+
+You can check quotas and usage at the user level by following the directions [here](storage-systems.md#checking-quotas), and [this](connect-to-login-nodes.md#what-if-i-want-to-share-data-among-users-in-my-group) describes how to have shared storage set up for your group.
 ## What do the “Limits” represent in the rates tables?
 
 The “Limits” term on the rates slide refers to the time limit applied to each job. These limits are applied to the **reserved** time for each job.
