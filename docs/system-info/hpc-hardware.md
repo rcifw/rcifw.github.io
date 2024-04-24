@@ -5,26 +5,30 @@ permalink: /computers/
 author: Scott Johnson
 include: true
 ---
-
 ## List of Computational Nodes
 
-| Name  | CPU                  | Cores per socket | Sockets | CPU Cores | Real Memory | GPU         | GPU Count |
-|-----------|----------------------|----------------|---------|-----------|------------|-------------|-----------|
-| node[01-14]    | Intel Xeon Gold 6226R | 16             | 2       | 32        | 770000     |             |           |
-| node[15-32]    | Intel Xeon Gold 6226R | 16             | 2       | 32        | 385000     |             |           |
-| gpu01     | Intel Xeon Gold 6226R | 16             | 2       | 32        | 385000     | tesla_a100 | 4         |
-| gpu02     | Intel Xeon Gold 6226R | 16             | 2       | 32        | 770000     | tesla_v100S | 4         |
-| gpu03     | Intel Xeon Gold 6226R | 16             | 2       | 32        | 770000     | tesla_v100S | 2         |
-| gpu04     | Intel Xeon Gold 6226R | 16             | 2       | 32        | 385000     | tesla_v100S | 2         |
-| gpu05     | Intel Xeon Gold 6226R | 16             | 2       | 32        | 385000     | tesla_v100S | 2         |
-| gpu06     | Intel Xeon Gold 6226  | 12             | 2       | 24        | 385000     | tesla_v100 | 4         |
-| gpu07     | Intel Xeon Gold 6226  | 12             | 2       | 24        | 385000     | tesla_v100 | 3         |
-| gpu08     | Intel Xeon Gold 6226  | 12             | 2       | 24        | 385000     | tesla_t4   | 2         |
-| gpu09     | Intel Xeon Gold 6226  | 12             | 2       | 24        | 386000     | tesla_v100 | 4         |
-| highmem01 | Intel Xeon Gold 6240L | 18             | 2       | 36        | 2984000     |             |           |
-| highmem02 | Intel Xeon Gold 6226  | 12             | 4       | 48        | 2984000     |             |           |
+| Name          | CPU                   | Cores per socket | Sockets | CPU Cores | Real Memory | GPU (gres)     | GPU Count |
+| ------------- | --------------------- | ---------------- | ------- | --------- | ----------- | -------------- | --------- |
+| node[01-14]   | Intel Xeon Gold 6226R | 16               | 2       | 32        | 770000      |                |           |
+| node[15-32]   | Intel Xeon Gold 6226R | 16               | 2       | 32        | 385000      |                |           |
+| gpu01         | Intel Xeon Gold 6226R | 16               | 2       | 32        | 385000      | tesla_a100     | 4         |
+| gpu02         | Intel Xeon Gold 6226R | 16               | 2       | 32        | 770000      | tesla_v100S    | 4         |
+| gpu03         | Intel Xeon Gold 6226R | 16               | 2       | 32        | 770000      | tesla_v100S    | 2         |
+| gpu04         | Intel Xeon Gold 6226R | 16               | 2       | 32        | 385000      | tesla_v100S    | 2         |
+| gpu05         | Intel Xeon Gold 6226R | 16               | 2       | 32        | 385000      | tesla_v100S    | 2         |
+| gpu06         | Intel Xeon Gold 6226  | 12               | 2       | 24        | 385000      | tesla_v100     | 4         |
+| gpu07         | Intel Xeon Gold 6226  | 12               | 2       | 24        | 385000      | tesla_v100     | 3         |
+| gpu08         | Intel Xeon Gold 6226  | 12               | 2       | 24        | 385000      | tesla_t4       | 2         |
+| gpu09         | Intel Xeon Gold 6226  | 12               | 2       | 24        | 386000      | tesla_v100     | 4         |
+| highmem01     | Intel Xeon Gold 6240L | 18               | 2       | 36        | 2984000     |                |           |
+| highmem02     | Intel Xeon Gold 6226  | 12               | 4       | 48        | 2984000     |                |           |
+| gpa[401-410]  | Intel Xeon Gold 6338  | 64               | 2       | 128       | 1024000     | tesla_a100     | 4         |
+| gpua[801-805] | Intel Xeon Gold 6338  | 64               | 2       | 128       | 1024000     | nvidia_a100_80 | 4         |
+| gpuh[801-802] | AMD EPYC 9334         | 64               | 2       | 128       | 1024000     | nvidia_h100_80 | 4         |
+| gpugh01       | Grace Superchip       | 72               | 1       | 72        | 1200000     | nvidia_gh200   | 1         |
+(note: "tesla_a100" is used to denote A100-SXM-40 and A100-PCIe-40 cards)
 
-*See also the [spreadsheet](https://gowustl-my.sharepoint.com/:x:/g/personal/johnsonscott_wustl_edu/ETi34n73B7lPrrb7NtQqOqkB3JI43UpNq4cS5_lCB6k0bA?e=ToeMxt)*
+*See also the [spreadsheet](https://gowustl-my.sharepoint.com/:x:/g/personal/johnsonscott_wustl_edu/ETi34n73B7lPrrb7NtQqOqkB3JI43UpNq4cS5_lCB6k0bA?e=ummoEZ)*
 
 ## Quick links
 - [Login](#login-nodes) 
@@ -34,7 +38,6 @@ include: true
 - [Storage](#storage)
 - [Fabric](#infiniband)
 - [Legacy](#legacy)
-- [COMING SOON!](#next-generation)
 
 ## Login Nodes
 
@@ -158,6 +161,40 @@ Summary: [ACTserv x4170c](https://www.advancedclustering.com/act_systems/actserv
 
 [top](#quick-links)
 
+### gpua\[401-412\]
+- GPU: 4x NVIDIA A100-SXM-40 each with 40GB of HBM memory - modular cards with NVLINK
+- Processor: 2x Intel 32-Core Xeon Gold 6338
+- CPU Memory: 1TB TruDDR4 3200MHz
+- Internal storage: 6.4TB NVMe
+- Chassis: Lenovo SR670 V2
+
+[top](#quick-links)
+### gpua\[801-805\]
+- GPU: 4x NVIDIA A100-SXM-80 each with 80GB of HBM memory - modular cards with NVLINK
+- Processor: 2x Intel 32-Core Xeon Gold 6338
+- CPU Memory: 1TB TruDDR4 3200MHz
+- Internal storage: 6.4TB NVMe
+- Chassis: Lenovo SR670 V2
+
+[top](#quick-links)
+
+### gpuh\[801-802\]
+- GPU: 4x NVIDIA H100-SXM-80 each with 80GB of HBM memory - modular cards with NVLINK
+- Processor: 2x Intel 32-Core AMD EPYC 9334
+- CPU Memory: 1TB TruDDR4 3200MHz
+- Internal storage: 6.4TB NVMe
+- Chassis: Lenovo SR675 V3
+
+[top](#quick-links)
+
+gpugh01
+- Chassis: QCT S74G GH200 Grace Hopper system
+- GPU: H100-SXM-96 with 96GB of HBM memory
+* Processor: Grace CPU with 72 Arm Neoverse V2 cores with an NVSWITCH connecting to the Hopper H100 GPU
+* Memory: 480GB LPDDRX memory  96GB HBM3 GPU accelerator
+
+[top](#quick-links)
+
 ## Gateway Nodes
 
 Summary: 4 x [ACTserv x1210](https://www.advancedclustering.com/act_systems/actserv-x1210/) (32-cores, 192GB)
@@ -187,7 +224,16 @@ BeeGFS storage with 1.3PB (i.e., 1,327,032 GiB) of total usable storage.
 - Enclosure: 4U, 60 drive JBOD with redundant SAS expanders
 - Storage: 480TB usable – 6GB/s (60x 10TB)
 - Fabric: ConnectX6, HDR-100 IB (100Gb/s) and 100GbE, single-port QSFP56, PCIe3/4 x16 Slot
+#### 3 x BeeGFS NVMe storage block
 
+> beegfs-oss04.cluster [ID: 4]
+>
+> beegfs-oss05.cluster [ID: 5]
+>
+> beegfs-oss06.cluster [ID: 6]
+
+- Storage: 300TB usable – 2x 48GB/s (8x 6GB/s per HDR200 IB card theoretical throughput) for 96GB/s
+- Fabric: ConnectX7, 2x HDR-200 IB (200Gb/s) for a total of 80GB/s theoretical throughput
 #### 2 x BeeGFS meta data server
 
 > beegfs-mds01.cluster [ID: 1]
@@ -200,11 +246,8 @@ BeeGFS storage with 1.3PB (i.e., 1,327,032 GiB) of total usable storage.
 
 ### Large-volume file system (persistent)
 
-Ceph storage with 5.82PB of total usable storage.
-
-#### 14 x Ceph HDD storage block
-
-> croit-osd[1-14]
+Ceph storage with 8.1PB of total usable storage.
+#### 33 x Ceph HDD storage block
 
 #### 3 x Ceph meta data server
 
@@ -239,17 +282,5 @@ GPU acceleration adds 122.5TF of SFLOP performance and 160GB of global memory fr
 - Dual-socket Intel E5-2630 8-core CPUs
 - 128GB memory
 - GPU-acceleration: NVIDIA K20m and K20xm
-
-[top](#quick-links)
-
-## Next Generation
-
-Our next generation CHPC4 machines are in the racks and currently being integrated into the system. After benchmarking in early 2024, these systems will be released into production, increasing our SFLOP capacity to >3PF and our usable storage to ~18PB. We cannot wait!
-
-CHPC4 adds the following computing nodes:
-- 12 nodes (A100-SXM-40G): Lenovo SR670 V2 with dual-socket Intel Xeon Gold 6338 4th gen processors, 1TB TruDDR4 3200MHz, 6.4TB NVMe, and 4x NVIDIA A100-SXM-40G (modular, NVLINK)
-- 5 nodes (A100-SXM-80G): Lenovo SR670 V2 with dual-socket Intel Xeon Gold 6338 4th gen processors, 1TB TruDDR4 3200MHz, 6.4TB NVMe, and 4x NVIDIA A100-SXM-80G (modular, NVLINK)
-- 2 nodes (H100-SXM-80G): Lenovo SR675 V3 with dual-socket AMD EPYC 9334 4th gen processors, 1.5TB TruDDR4 3200MHz, 6.4TB NVMe, and 4x NVIDIA H100-SXM-80G (modular, NVLINK)
-- 1 node: QCT S74G GH200 Grace Hopper system - Grace CPU with 72 Arm Neoverse V2 cores, up to 480GB LPDDRX memory with an NVSWITCH connecting to a Hopper H100 GPU 96GB HBM3 GPU accelerator
 
 [top](#quick-links)
