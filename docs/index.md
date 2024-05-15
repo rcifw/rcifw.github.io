@@ -14,15 +14,14 @@ is a human imaging facility to help *you* create and execute computationally int
 - **Expertise** - we provide support in HPC, data, AI, and more. Find [support and training options here](getting-started/training-and-support.md).
 
 ## Funding
+To help the RCIF access funding, we need you, the users, to cite the RCIF in your publications:
+> _Computations were performed using the facilities of the Washington University Research Computing and Informatics Facility (RCIF). The RCIF has been partially funded by NIH S10: 1S10OD030477-01._
+
 To help you access funding:
 - **Facilities document** - view an [example of our facilities document](system-info/facilities-doc.md).
 - **Pilot funds** - available to anyone using the RCIF, learn more [about pilot funds](https://www.mir.wustl.edu/research/core-resources/pilot-funds/).
 - **ICTS JIT Funds** - also available to anyone using the RCIF. More information [about JIT Funds](https://icts.wustl.edu/funding/just-in-time-jit/)
     - **note:** We are listed as the "**Center for High Performance Computing (CHPC)**" in this [supporting PDF document](https://wustl.box.com/s/umpd5cel70codg1x0wpxf599p4p8827a).
-
-To help the RCIF access funding, we need you, the users, to cite the RCIF in your publications:
-
-> _Computations were performed using the facilities of the Washington University Research Computing and Informatics Facility, which were partially funded by NIH grants S10OD025200, 1S10RR022984-01A1 and 1S10OD018091-01. Additional support is provided The McDonnell Center for Systems Neuroscience._
 
 See current [publication list](publications.md)
 
