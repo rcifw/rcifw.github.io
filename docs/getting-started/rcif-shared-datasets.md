@@ -8,7 +8,7 @@ author: Jenn Elam
 include: true
 ---
 
-To request access to datasets visit the [Data Request Portal](https://wustl.az1.qualtrics.com/jfe/form/SV_6gPG6D5xbpgF5Pg).
+To request access to datasets visit the [Data Request Portal](https://wustl.az1.qualtrics.com/jfe/form/SV_6gPG6D5xbpgF5Pg). Before accessing the shared datasets listed here, all users must agree not to transfer the data off of the RCIF shared storage systems. Violations of this policy will be referred for disciplinary redress.
 
 ## Available Datasets
 
