@@ -15,7 +15,7 @@ is a human imaging facility to help *you* create and execute computationally int
 
 ## Funding
 To help the RCIF access funding, we need you, the users, to cite the RCIF in your publications:
-> _Computations were performed using the facilities of the Washington University Research Computing and Informatics Facility (RCIF). The RCIF has been partially funded by NIH S10: 1S10OD030477-01._
+> _Computations were performed using the facilities of the Washington University Research Computing and Informatics Facility (RCIF). The RCIF has received funding from NIH S10 program grants: 1S10OD025200-01A1 and 1S10OD030477-01._
 
 To help you access funding:
 - **Facilities document** - view an [example of our facilities document](system-info/facilities-doc.md).
