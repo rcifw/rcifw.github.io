@@ -7,7 +7,7 @@ include: true
 ---
 # RCIF
 The [**Research Computing and Informatics Facility (RCIF)**](https://www.mir.wustl.edu/research/core-resources/research-computing-and-informatics-facility/)
-is a human imaging facility to help *you* create and execute computationally intensive studies:
+is a human imaging facility to help *you* create and execute computationally intensive studies. See our [FY25 RCIF Overview](https://wustl.box.com/s/5ga479573mw0emxukivtbfnpuncxsvx1), or see our featured resources:
 - RCIF's **Center for High-Performance Computing (CHPC)** offers [hardware](system-info/hpc-hardware.md) and [software](software/software.md) resources.
 - **Shared storage** - high-throughput, high-volume storage systems, more [details available here](getting-started/storage-systems.md).
 - **Data services** - you can [request shared datasets here](getting-started/rcif-shared-datasets.md).
