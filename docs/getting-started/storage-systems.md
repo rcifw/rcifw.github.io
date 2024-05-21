@@ -83,3 +83,22 @@ This shows that the user is using 25GB in the home directory out of a maximum of
 
 See [accounting FAQs](faqs-accounting.md#how-is-storage-charged) for information on how large-volume storage is assessed for fee purposes, and [this](connect-to-login-nodes.md#what-if-i-want-to-share-data-among-users-in-my-group) describes how to set up shared storage for your group.
 
+## Restoring Files
+Accidents happen, and if you need to get an earlier version of a file (or files) on the large-volume storage (Ceph), you can go back in time using snapshots.
+
+Snapshots are stored in `/ceph/chpc/home/.snap/<snapshot name>/<user>`, which replicates the state of the `<user>`'s home directory at the timestamp in the `<snapshot name>` field.
+
+For example, let's say the user with id `me.user` discovered they just accidentally deleted a file in the path `/home/me.user/my/valuable/directory/file_I_need`, then `me.user` could find the latest snapshot:
+
+```
+# ls -ltr /ceph/chpc/home/.snap/ | tail -1 | awk '{print $NF}'
+daily-2024-05-19.05:00:01
+```
+
+then restore the file from that snapshot:
+
+```
+# export _my_file='my/valuable/directory/file_I_need'
+# cp /ceph/chpc/home/.snap/daily-2024-05-19.05:00:01/me.user/${_my_file} ~/${_my_file}
+```
+
