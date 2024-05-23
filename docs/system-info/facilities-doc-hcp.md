@@ -1,8 +1,8 @@
 ---
 title: RCIF Facilities Document
 created: 2023-10-26T13:31:10 (UTC -04:00)
-tags: []
-permalink: /facilities/
+tags: 
+permalink: /facilities-hcp/
 author: MIR Staff
 ---
 
