@@ -18,7 +18,8 @@ To help the RCIF access funding, we need you, the users, to cite the RCIF in you
 > _Computations were performed using the facilities of the Washington University Research Computing and Informatics Facility (RCIF). The RCIF has received funding from NIH S10 program grants: 1S10OD025200-01A1 and 1S10OD030477-01._
 
 To help you access funding:
-- **Facilities document** - view an [example of our facilities document](system-info/facilities-doc.md).
+- **Facilities document(most projects)** - view an [example of our facilities document](facilities-doc.md).
+- **Facilities document(HCP-related projects)** - view an [example of our HCP facilities document](facilities-doc-hcp.md).
 - **Pilot funds** - available to anyone using the RCIF, learn more [about pilot funds](https://www.mir.wustl.edu/research/core-resources/pilot-funds/).
 - **ICTS JIT Funds** - also available to anyone using the RCIF. More information [about JIT Funds](https://icts.wustl.edu/funding/just-in-time-jit/)
     - **note:** We are listed as the "**Center for High Performance Computing (CHPC)**" in this [supporting PDF document](https://wustl.box.com/s/umpd5cel70codg1x0wpxf599p4p8827a).

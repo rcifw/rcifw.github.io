@@ -3,4 +3,5 @@ node_modules
 .yarnrc.yml
 .cache
 .yarn/
+.obsidian/
 dist/
