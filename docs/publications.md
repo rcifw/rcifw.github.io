@@ -14,7 +14,7 @@ permalink: /pubs/
 # Citing the RCIF
 In order to participate in future funding opportunities, we need you, the users, to cite the RCIF in your publications:
 
-_Computations were performed using the facilities of the Washington University Research Computing and Informatics Facility, which were partially funded by NIH grants S10OD025200, 1S10RR022984-01A1 and 1S10OD018091-01. Additional support is provided The McDonnell Center for Systemes Neuroscience._
+> _Computations were performed using the facilities of the Washington University Research Computing and Informatics Facility (RCIF). The RCIF has received funding from NIH S10 program grants: 1S10OD025200-01A1 and 1S10OD030477-01._
 
 [top](#quick-links)
 
