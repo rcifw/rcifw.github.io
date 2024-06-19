@@ -5,6 +5,7 @@ tags: []
 author:
 include: true
 ---
+**Click [here](system-info/system-status.md) for system status.**
 # RCIF
 The [**Research Computing and Informatics Facility (RCIF)**](https://www.mir.wustl.edu/research/core-resources/research-computing-and-informatics-facility/)
 is dedicated to helping *you* create and execute computationally intensive studies for human imaging applications. See our [FY25 RCIF Overview](https://wustl.box.com/s/5ga479573mw0emxukivtbfnpuncxsvx1), or see our featured resources:
