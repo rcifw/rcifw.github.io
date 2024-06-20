@@ -36,7 +36,6 @@ Linux users and Mac users (via Homebrew) can access the cluster filesystem with 
 [localuser@localmachine ~]$ cp ~/cluster_mnt/clusterfile ./ # fetch from cluster
 [localuser@localmachine ~]$ fusermount -u ~/cluster_mnt    # unmount
 ```
-
 ### sftp + Python
 
 [Python](https://www.python.org/) is a programming language that is widely-used for scientific computing. You can transfer files over sftp directly from your Python scripts using [Paramiko](https://www.paramiko.org/). This functionality is particularly powerful when combined with Python's interactive [Jupyter notebooks](https://jupyter.org/). See the full API documentation [here](https://docs.paramiko.org/en/3.3/api/sftp.html).
@@ -120,6 +119,27 @@ You may use `sshfs` to mount your local computer's filesystem over the reverse t
 [clusteruser@login01 ~]$ cp clusterfile ~/local_mnt  # upload to local machine
 [clusteruser@login01 ~]$ cp ~/local_mnt/localfile ./ # fetch from local machine
 [clusteruser@login01 ~]$ fusermount -u ~/local_mnt   # unmount
+```
+
+### SMB
+
+The server message block ([SMB](https://en.wikipedia.org/wiki/Server_Message_Block)) protocol was invented in 1983 and is still used by some [Microsoft Windows](https://learn.microsoft.com/en-us/windows-server/storage/file-server/file-server-smb-overview) systems and by the [RIS cluster](https://ris.wustl.edu/services/research-storage/). You can access SMB shares with the [`smbclient`](https://www.samba.org/samba/docs/current/man-html/smbclient.1.html) program using a syntax similar to `sftp`. If your share happens to be on the RIS cluster then no tunneling is necessary.
+
+```
+[user@login01 ~]$ smbclient -W ACCOUNTS -U user -m SMB3 \\storage1.ris.wustl.edu/my_storage/
+```
+
+You can also mount an SMB share in a manner similar to `sshfs`. Note that you will need to first [manually start a dbus daemon](../software/dbus.md) to mount an SMB share on a compute node.
+
+```
+[user@login01 ~]$ gio mount smb://storage1.ris.wustl.edu/my_storage
+[user@login01 ~]$ ls $XDG_RUNTIME_DIR/gvfs
+```
+
+The mount will appear under `$XDG_RUNTIME_DIR/gvfs`. To unmount use `gio mount -u`:
+
+```
+[user@login01 ~]$ gio mount -u smb://storage1.ris.wustl.edu/my_storage
 ```
 
 ### sftp + Python
