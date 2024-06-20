@@ -15,6 +15,7 @@ We support a variety of software on the RCIF HPC cluster
 * [cmake](cmake.md)
 * [cuda](cuda.md)
 * [cudnn](cudnn.md)
+* [dbus](dbus.md)
 * [dcmtk](dcmtk.md)
 * [dramms](dramms.md)
 * [elastix](elastix.md)
