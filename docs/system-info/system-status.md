@@ -10,5 +10,13 @@ include: true
 ### CHPC
 All systems operating normally
 
-### NRG
-Currently experiencing systems lagging due to a failed drive. There is no data loss, but responsiveness is impacted. ETA to resolution is afternoon June 19, 2024.
+### NRG/Informatics 
+No known issues
+
+#### If you are seeing an outage that is not reported here please contact:
+
+* CHPC:  *chpc@nrg.wustl.edu*
+* CNDA and XNAT Portals:  *cnda-help@wustl.edu*
+* MIRRIR:  *mirrir-help@wustl.edu*
+* IntraDB:  *intradb-help@humanconnectome.org*
+* All Others:  *cil-help@wustl.edu*
