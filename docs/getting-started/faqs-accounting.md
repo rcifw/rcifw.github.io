@@ -7,7 +7,15 @@ author: Scott Johnson
 include: true
 ---
 
-Our [2023 RCIF HPC rate sheet](https://wustl.box.com/s/ngnhclzgvzx4irroee4h2eh7gv9b1lsj) is now available. For more details on the development of the 2023 rates, please see the July users meeting [slides](https://wustl.box.com/s/j0ot01qxdh463qyrs21dxzvutax6byzr).
+For rates see:
+* [2023 RCIF HPC rate sheet](https://wustl.box.com/s/ngnhclzgvzx4irroee4h2eh7gv9b1lsj)
+* [2023 RCIF Informatics rate sheet](https://wustl.box.com/s/umzho1jlyoxj2agbuee77ic8xkk2z4jw)
+
+For more details on the development of the 2023 rates, please see the July users meeting [slides](https://wustl.box.com/s/j0ot01qxdh463qyrs21dxzvutax6byzr).
+
+## What are the rates for FY25?
+
+Rates will be changing for FY25 (starting July 1). We have received a lot of feedback since October, which helped in crafting our rate change proposal for the coming year. Stay tuned for more information!
 
 ## The tiers and rates are confusing; can you provide some examples of how I will be charged?
 
