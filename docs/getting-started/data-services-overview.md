@@ -12,7 +12,7 @@ The RCIF enables research through sharing of high value datasets under its **sha
 ## Data Services
 
 #### RCIF Shared Datasets Program
-The shared datasets program makes broadly useful datasets available on a subscription basis to WashU imaging researchers.  Data are made available on the RCIF's High-Performance Computing Cluster (CHPC) via filesystem access.  [Click here for information on current datasets and to request access](rcif-shared-datasets).
+The shared datasets program makes broadly useful datasets available on a subscription basis to WashU imaging researchers.  Data are made available on the RCIF's High-Performance Computing Cluster (CHPC) via filesystem access.  [Click here for information on current datasets and to request access](rcif-shared-datasets.md).
 
 #### Central Neuroimaging Data Archive (CNDA)
 The CNDA facilitates acquisition, management, processing of original imaging research data.  All imaging data from CCIR scanning facilities is automatically archived in the CNDA and may be organized into projects for project investigators.  Free project setup is available for single-site WashU-based projects, however support for multi-site projects is also available.  The CNDA maintains connections to the clinical PACS, so original project data may be supplemented with clinical data.  Containerized pipeline processing via CNDA pipelines is available as well.  Documentation, tutorials, help and information on rates is available at the [cnda-help website](https://cnda-help.wustl.edu/).
