@@ -11,7 +11,7 @@ The [**Research Computing and Informatics Facility (RCIF)**](https://www.mir.wus
 is dedicated to helping *you* create and execute computationally intensive studies for human imaging applications. See our [FY25 RCIF Overview](https://wustl.box.com/s/5ga479573mw0emxukivtbfnpuncxsvx1), or see our featured resources:
 - RCIF's **Center for High-Performance Computing (CHPC)** offers [hardware](system-info/hpc-hardware.md) and [software](software/software.md) resources.
 - **Shared storage** - high-throughput and high-volume storage systems, more [details available here](getting-started/storage-systems.md)
-- **Data services** - you can [request shared datasets here](getting-started/rcif-shared-datasets.md).
+- **Data services** - information on shared datasets, imaging data management, and clinical data pulls [is available here](getting-started/data-services-overview.md)
 - **Expertise** - we provide support in HPC, data, AI, and more. Find [support and training options here](getting-started/training-and-support.md).
 Don't miss our [events page](events.md) with upcoming events as well as links to past events!
 ## Funding
