@@ -9,7 +9,7 @@ include: true
 
 For rates see:
 * [2023 RCIF HPC rate sheet](https://wustl.box.com/s/ngnhclzgvzx4irroee4h2eh7gv9b1lsj)
-* [2025 RCIF Informatics rate sheet](https://wustl.app.box.com/s/dmuz8ch9qh9qgdcephr4zts0p4asitcz) - note: [previous](https://wustl.box.com/s/umzho1jlyoxj2agbuee77ic8xkk2z4jw)
+* [2025 RCIF Informatics rate sheet](https://wustl.box.com/s/dmuz8ch9qh9qgdcephr4zts0p4asitcz) - note: [previous](https://wustl.box.com/s/umzho1jlyoxj2agbuee77ic8xkk2z4jw)
 
 For more details on the development of the 2023 rates, please see the July users meeting [slides](https://wustl.box.com/s/j0ot01qxdh463qyrs21dxzvutax6byzr).
 
