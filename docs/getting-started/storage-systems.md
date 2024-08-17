@@ -7,7 +7,7 @@ author: Scott Johnson
 include: true
 ---
 # Best Practices
-It is always best for users to use the "scratch" file system (currently, `/mnt/beegfs`) for production runs. See [NERSC Best Practices](https://docs.nersc.gov/jobs/best-practices/#do-not-run-production-jobs-in-global-homes) for a good overview of the reasons for this.
+It is always best for users to use the "scratch" file system (see `/scratch`) for production runs. See [NERSC Best Practices](https://docs.nersc.gov/jobs/best-practices/#do-not-run-production-jobs-in-global-homes) for a good overview of the reasons for this.
 
 # Background
 The RCIF comprises multiple storage systems. This is architected around the core concept of a 
