@@ -11,7 +11,7 @@ include: true
 All systems operating normally
 
 ### NRG/Informatics 
-No known issues
+There is currently a filesystem issue affecting many NRG systems and virtual machines.  Administrators are aware of the issue and working to resolve it but don't yet have an ETA for resolution.
 
 #### If you are seeing an outage that is not reported here please contact:
 
