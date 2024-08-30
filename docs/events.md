@@ -6,7 +6,7 @@ permalink: /events/
 # Upcoming
 
 ## RCIF Open House
-Welcome to another year! We have been hard at work developing resources to enable imaging research across the university and with our industry partners. Whether you are just curious or are a long-time user, we invite everyone to attend
+Welcome to another year at the Research Computing and Informatics Facility (RCIF)! We have been hard at work developing resources to enable imaging research across the university and with our industry partners. Whether you are just curious or are a long-time user, we invite everyone to attend:
 
 	RCIF Open House
 	October 1, 2024
@@ -25,10 +25,10 @@ About the RCIF (see also [https://docs.chpc.wustl.edu/](https://docs.chpc.wustl.
 - **Data storage**: We provide nearly 20PB through our data facility and our Specialized Data Storage (SDS).
 - **CHPC**: We offer massively parallel computing resources through the Center for High Performance Computing (CHPC) with over 100 datacenter class GPUs and 1000’s of CPU cores, all with consistent access to data.
 - **Server hosting**: We host servers, allowing dedicated computing resources with the ability to “burst” computing to our CHPC computing resources when needed – all with access to data.
-## Other
+## Other Upcoming Events
 * **Sept 4** - RCIF Applied AI Seminar - *10am in the NIL Conference Room (2FL East Imaging - Room 2311)*
 * Sept 18 - RCIF Applied AI Seminar - *10am in the NIL Conference Room (2FL East Imaging - Room 2311)*
-# Past
+# Past Events
 Below are some of our past events with links to visuals and chats when available.
 ## 2024
 * **August 21** - RCIF Applied AI Seminar "Bayesian ML for Healthcare Applications" is also available - see [here](https://youtu.be/dG8H86WDmSo).
