@@ -10,17 +10,12 @@ include: true
 
 To request access to datasets visit the [Data Request Portal](https://wustl.az1.qualtrics.com/jfe/form/SV_6gPG6D5xbpgF5Pg). Before accessing the shared datasets listed here, all users must agree not to transfer the data off of the RCIF shared storage systems. Violations of this policy will be referred for disciplinary redress.
 
-## Available Datasets
+# Available Datasets
+
+## Curated Research Datasets
 
 ### ABCD
 The Adolescent Brain Cognitive Development (ABCD) Study is the largest long-term study of brain development and child health in the United States. 11,528 children ages 9-10 were recruited to track their biological and behavioral development for 10 years through adolescence into young adulthood. The ABCD structural and functional imaging data currently shared by RCIF is from the ABCD Release 2.0 (year 1, baseline) and was obtained through the ABCD-BIDS Community Collection ([ABCC](https://collection3165.readthedocs.io/en/stable/)). DICOM data was converted to Brain Imaging Data Structure (BIDS) data as input to the [DCAN Labs ABCD-BIDS MRI (version 0.0.3) processing pipeline](https://zenodo.org/records/3384983) which outputs [Human Connectome Project (HCP) Minimal Preprocessing Pipelines-style data](https://doi.org/10.1016/j.neuroimage.2013.04.127) in both volume and surface spaces in BIDS derivative format. Derivative output files for [ABCC Release 2.0](https://collection3165.readthedocs.io/en/stable/release_notes/) are described at [https://collection3165.readthedocs.io/en/stable/derivatives/](https://collection3165.readthedocs.io/en/stable/derivatives/). Phenotypic data from ABCD Release 5.1 on NDA is also available.
-
-###  BJC Bulk Clinical Data Sets
-These clinical datasets have been retrieved from the BJC Picture archiving and communication systems (PACS) for analysis.
-
-Currently available BJC Bulk Clinical Data Sets:
-#### MAMMO-BJH-1
-458,486 de-identified screening and diagnostic mammograms acquired in St. Louis at Barnes Jewish Hospital, the Center for Advanced Medicine and the BJH Mammography Van, for dates 01/01/2008-04/08/2020. IRB #201706058
 
 ### HCP Young Adult
 Human Connectome Project- Young Adult (HCP-YA) is a study of 1200 healthy young adult (ages 22-35) subjects from families with twins and non-twin siblings. Unprocessed and preprocessed MR data is available for 1113 subjects. 889 subjects have fully complete data for all of the four 3T MRI modalities in the HCP protocol: structural images (T1w and T2w), resting-state fMRI (rfMRI), task fMRI (tfMRI), and high angular resolution diffusion imaging (dMRI). 46 subjects (all monozygotic twins) have 3T HCP protocol Retest data available. 184 subjects also have 7T multimodal MR scan data available (in addition to 3T MR scans).  95 subjects also have at least some resting-state MEG (rMEG) and/or task MEG (tMEG) data available (in addition to 3T MR scans). More information on the dataset and processing with the HCP pipelines is available in the [S1200 Reference Manual](https://www.humanconnectome.org/storage/app/media/documentation/s1200/HCP_S1200_Release_Reference_Manual.pdf). Behavioral data can be downloaded from [ConnectomeDB](https://db.humanconnectome.org/data/projects/HCP_1200), User support is available in the [hcp-users Google group](https://groups.google.com/u/0/a/humanconnectome.org/g/hcp-users). To get started, create a ConnectomeDB account and sign the Open Access Data Use Terms.
@@ -79,6 +74,13 @@ A collection of breast dynamic contrast-enhanced (DCE) MRI data from a longitudi
 #### VICTRE
 The VICTRE Trial is an open-source, in-silico clinical trial to investigate a new paradigm for evaluating digital breast tomosynthesis (DBT) as a replacement for digital mammography (DM). A total of 2986 subjects, with breast sizes and radiographic densities representative of a screening population and compressed thicknesses from 3.5 to 6 cm, were simulated and imaged on in-silico versions of DM and DBT systems using fast Monte Carlo x-ray transport. Images were interpreted by a computational reader detecting the presence of lesions. The in-silico trial (VICTRE) was designed to replicate a comparative trial from a previous regulatory submission. [https://www.cancerimagingarchive.net/collection/victre/](https://www.cancerimagingarchive.net/collection/victre/)
 
-## Requesting Datasets
+## BJC Bulk Clinical Data Sets
+These clinical datasets have been retrieved from the BJC Hospital System Picture Archiving and Communication Systems (PACS) for analysis.
+
+Currently available BJC Bulk Clinical Data Sets:
+### MAMMO-BJH-1
+458,486 de-identified screening and diagnostic mammograms acquired in St. Louis at Barnes Jewish Hospital, the Center for Advanced Medicine and the BJH Mammography Van, for dates 01/01/2008-04/08/2020. IRB #201706058
+
+# Requesting Datasets
 
 Requests for listed datasets, additional datasets, or transfer of clinical data from PACs for research purposes can be made through the [Data Request Portal](https://wustl.az1.qualtrics.com/jfe/form/SV_6gPG6D5xbpgF5Pg).
