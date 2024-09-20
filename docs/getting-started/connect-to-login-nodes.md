@@ -8,7 +8,6 @@ source: https://sites.wustl.edu/chpc/for-users/frequently-asked-questions-faq/co
 author:
 include: true
 ---
-
 ### What is the hostname for the login nodes of the cluster?
 
 We have two (2) login nodes: `login01` and `login02`.
@@ -18,8 +17,8 @@ To connect to the login node, you simply connect to `login3.chpc.wustl.edu`
 If you ever have trouble connecting to `login3.chpc.wustl.edu`, you can directly connect to either:
 - `login01`: `login3-01.chpc.wustl.edu` (`128.252.185.7`)
 - `login02`: `login3-02.chpc.wustl.edu` (`128.252.185.8`)
-
 ### How do I connect to these login nodes?
+
 If you are on the WashU network, you can directly connect to the cluster (note: if _NOT_ on the WashU cluster you will need to [setup 2-factor authentication](#how-can-i-set-up-2-factor-authentication-on-my-personal-device) and [setup and start the WashU VPN](#how-can-i-access-the-cluster-from-off-campus))
 
 The cluster is Linux-based (see [training and support](training-and-support.md) if you are interested in programs to get familiarized with Linux). The easiest way is to SSH using your favorite terminal application ("mobaxterm" is one choice for Windows, and Terminal is built in to MacOS - another excellent cross-platform option is "Visual Studio Code", which not only has a multi-terminal window built in but also has a great set of tools for working with source code and containers).
@@ -47,7 +46,9 @@ total 0
 [me@login01 ~]$ ls -lh /home/me
 total 0
 ```
+### How do I reset my password?
 
+We use your WUSTL Key for authentication on the CHPC. If you need to reset your WUSTL Key, please visit WUIT at [https://it.wustl.edu/items/how-do-i-change-my-wustl-key-password/](https://it.wustl.edu/items/how-do-i-change-my-wustl-key-password).
 ### How can I set up 2-factor authentication on my personal device?
 
 The university requires users to enable 2-factor authentication (2FA) on their personal devices to connect to campus network. This is a prerequisite to connect to the login node while you are off campus.
@@ -55,7 +56,6 @@ The university requires users to enable 2-factor authentication (2FA) on their p
 Firstly, you need to install the **Duo** app on your personal device either through Google Play if you are using Android devices or through Apple Store if you are using Apple devices. After that, you can enroll in WashU 2-step authentication and create a 2FA account. Finally, you would link your 2FA account to Duo app on your personal device.
 
 The detailed instruction can be found [here](https://it.wustl.edu/items/2fa-enrollment/).
-
 ### How can I access the cluster from off campus?
 
 In order to connect to the login nodes from off campus, you need to establish the connection via virtual private network (VPN):
@@ -71,7 +71,6 @@ In order to connect to the login nodes from off campus, you need to establish th
 Users have reported that if you are connecting from a Linux computer after 11/20/23, you need to set your useragent string to something starting with AnyConnect to be directed to the new SSO process. If you use an old useragent string, the gateway will repeatedly ask you for your username and password rather than giving you an error.
 
 For example: `sudo openconnect --protocol=anyconnect --useragent="AnyConnect-compatible OpenConnect VPN Agent" https://msvpn.wusm.wustl.edu/`
-
 ### Entering my password to login every time is so annoying ... How can I connect to the cluster without entering the password?
 
 Luckily, a more secure _and_ convenient way to log into the cluster is using a SSH key-pair! SSH key-pairs can be more secure, as they are less vulnerable to common brute-force password attacks ... and more convenient. An SSH key-pair consist of a public key and a private key. You can place the public key on any server, and then connect to the server using an SSH client with access to the private key. When the public and private keys match up, the SSH server grants access without the need for a password.
@@ -154,15 +153,16 @@ chmod -R 600 ~/.ssh
 
 If you have any questions or problems, please [see our support options](../getting-started/training-and-support.md)!
 ### How do I get my data onto the CHPC?
+
 There is a great guide on transfer options [here](import-export-data.md).
 
 We can also provide access to several human imaging datasets, which we host for free as part of our shared datasets program, and if we do not have it you can request it. See our [datasets page](rcif-shared-datasets.md) for more information and howto's.
 
 Contact us via [our support options](training-and-support.md) if you have specific needs not addressed.
 ### What if I want to share data among users in my group?
+
 We have several groups that do this, and all you have to do is contact us via one of [our support options](training-and-support.md) to get this started.
 
 We will create and configure a directory in `/ceph/chpc/shared` and apply permissions as you want (e.g., we can allow all members of your group, an arbitrary list of users, or even use an Active Directory group to manage the access list).
 
 Fees will be assessed based on the amount of data stored. See our [accounting FAQs](faqs-accounting.md#how-is-storage-charged).
-
