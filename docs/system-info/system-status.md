@@ -8,7 +8,7 @@ include: true
 ## Current System Status
 
 ### CHPC
-All systems operating normally
+We are experiencing filesystem issues affecting multiple systems.  We are working on the issues but don't yet have an ETA for resolution. You may experience longer file I/O latency than normal, and some mounts have been seen to be intermittently unavailable. Please report issues on the [#ask-an-admin](https://mir-rcif.slack.com/archives/C05SQC1SJ0Y) channel and check for updates on the [#general](https://mir-rcif.slack.com/archives/C05R707TT7F) channel.
 
 ### NRG/Informatics 
 We are experiencing filesystem issues affecting multiple systems.  We are working on the issues but don't yet have an ETA for resolution.
