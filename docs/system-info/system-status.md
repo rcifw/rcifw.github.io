@@ -11,7 +11,7 @@ include: true
 All systems operating normally
 
 ### NRG/Informatics 
-All systems operating normally
+We are experiencing filesystem issues affecting multiple systems.  We are working on the issues but don't yet have an ETA for resolution.
 
 #### If you are seeing an outage that is not reported here please contact:
 
