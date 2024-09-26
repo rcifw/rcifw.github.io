@@ -35,6 +35,7 @@ About the RCIF (see also [https://docs.chpc.wustl.edu/](https://docs.chpc.wustl.
 
 ## Other Upcoming Events
 * **October 2** - RCIF Applied AI Seminar (9:30am - East Imaging 2311)
+* **October 4** - Dr. Scott Johnson at the [Digital Transformation Coffee Hours](https://di2accelerator.wustl.edu/calendar_event/digital-transformation-coffee-hours-10-4-24/) - (9-10am - hearth at FTLC)
 * **October 16** -RCIF Applied AI Seminar (10am - East Imaging 2311)
 # Past Events
 Below are some of our past events with links to visuals and chats when available.
