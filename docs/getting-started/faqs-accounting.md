@@ -7,36 +7,31 @@ author: Scott Johnson
 include: true
 ---
 
+## What are the FY25 rates?
+
 For rates see:
-* [2023 RCIF HPC rate sheet](https://wustl.box.com/s/ngnhclzgvzx4irroee4h2eh7gv9b1lsj)
-* [2025 RCIF Informatics rate sheet](https://wustl.box.com/s/dmuz8ch9qh9qgdcephr4zts0p4asitcz) - note: [previous](https://wustl.box.com/s/umzho1jlyoxj2agbuee77ic8xkk2z4jw)
-
-For more details on the development of the 2023 rates, please see the July users meeting [slides](https://wustl.box.com/s/j0ot01qxdh463qyrs21dxzvutax6byzr).
-
-## What are the rates for FY25?
-
-Rates will be changing for FY25 (starting July 1). We have received a lot of feedback since October, which helped in crafting our rate change proposal for the coming year. Stay tuned for more information!
+* [FY25 RCIF HPC rate sheet](https://wustl.box.com/s/ngnhclzgvzx4irroee4h2eh7gv9b1lsj)
+* [FY25 RCIF Informatics rate sheet](https://wustl.box.com/s/dmuz8ch9qh9qgdcephr4zts0p4asitcz) - note: [previous](https://wustl.box.com/s/umzho1jlyoxj2agbuee77ic8xkk2z4jw)
 
 ## The tiers and rates are confusing; can you provide some examples of how I will be charged?
 
-There are 3 separate options to pay for resources on the CHPC:
-* Pay only for hours used (**consumption**)
-* Subscribe to get unlimited hours (i.e., pay for priority via **subscription**)
+There are 2 separate options to pay for resources on the CHPC:
+* Buy priority on the shared cluster at a fixed annual fee (**subscription**)
 * Buy a machine through us for your unlimited use at a fixed yearly maintenance cost (**condo**)
 
 You can choose a different option for each tier (priority level) and for each resource pool (set of servers).
 
 **Example 1: PI with heavy CPU usage but only limited GPU usage--**
-You can get a CPU-inclusive subscription, which provides unlimited hours on the CPU resources for a __fixed annual cost__; for the CPU resources you just pay the subscription for a particular priority level for your jobs. For the GPU resources, you can pay per hour with the hourly rate based on whatever priority level you select for your jobs. In this case, you would pay the fixed cost for CPU usage and the hourly rate for GPUs.
+You can get a CPU-inclusive subscription, which provides unlimited hours on the CPU resources for a __fixed annual cost__; for the CPU resources you just pay the subscription for a particular priority level for your jobs. For the GPU resources, you can access the Free Tier GPUs.
 
 **Example 2: PI with heavy GPU usage--**
 You can get an all-inclusive subscription, which provides unlimited access to both CPU- and GPU-based resources for a __fixed annual cost__. In this case, you would just pay the annual fixed cost in our [rate sheet](https://wustl.box.com/s/ngnhclzgvzx4irroee4h2eh7gv9b1lsj).
 
 **Example 3: Student who does not have funding --**
-We are introducing the Free Tier to support researchers who want to use CHPC resources for small projects and to test out their workflows before putting them into the paid queues. In this case, just submit your job to the free partition, and your PI will not be charged for that use!
+We have the Free Tier to support researchers who want to use CHPC resources for small projects and to test out their workflows before putting them into the paid queues. In this case, just submit your job to the "free" partition, and your PI will not be charged for that use!
 
 **Example 4: PI with a condo'ed server but wants to use other CHPC resources periodically--**
-You pay a fixed annual maintenance fee, and you have unlimited access to your machine (to be clear - for no additional fee)! It is your machine, so you can use it as much or as little as you like. If you have explicitly allowed us to offer your machine to others when you are not using it, we give you credit for the hours others use ("lending credits"), which can be used to offset any charges you accrue for using other CHPC resources. To use other CHPC resources, just submit to the appropriate partition, and we will take care of tracking that time and discounting it by your lending credits.
+You pay a fixed annual maintenance fee, and you have unlimited access to your machine (to be clear - for no additional fee)! It is your machine, so you can use it as much or as little as you like. If you have explicitly allowed us to offer your machine to others when you are not using it, we give you credit for the hours others use ("lending credits"), which can be used to offset any charges you accrue for using other CHPC resources. To use other CHPC resources, just add a subscription (or use the Free Tier - "free") and submit to the appropriate partition. We will take care of tracking that time and discounting it by your lending credits.
 
 **Example 5: I am working on several projects with several PIs during the year; how can I make sure the correct PI is charged for each job I run?--**
 Our batch scheduler (SLURM) allows us to associate you with multiple PIs, so the first step is to [let us know](mailto:chpc@nrg.wustl.edu) so we can set up the association. Once you are associated with multiple PIs, you can charge usage to different accounts, by specifying the `-A <account to charge>` flag for any job.
@@ -73,6 +68,7 @@ Our general policy is:
 For assessing data usage by the PI, we take the sum of any shared storage (see `/ceph/chpc/shared`) and the excess data usage by an account's members. Members are considered to be those users who are associated with the account and **only** the account. For instance, users with access to multiple accounts will be subject to default quota enforcement but not be considered as part of the data usage for any account.
 
 You can check quotas and usage at the user level by following the directions [here](storage-systems.md#checking-quotas), and [this](connect-to-login-nodes.md#what-if-i-want-to-share-data-among-users-in-my-group) describes how to have shared storage set up for your group.
+
 ## What do the “Limits” represent in the rates tables?
 
 The “Limits” term on the rates slide refers to the time limit applied to each job. These limits are applied to the **reserved** time for each job.
@@ -81,7 +77,7 @@ Actual _usage_ within a reservation would only be collected for research purpose
 
 ## What is the difference between “CPU-inclusive” and “All-inclusive” in the subscriptions?  Is the former CPU-only, with no access to the GPUs?
 
-CPU-inclusive only includes CPU cycles in the subscription. Users enrolled in the CPU subscription would then pay for any GPU usage on a per-reservation basis at the consumption rates for whatever tier they decide for those jobs.
+CPU-inclusive only includes CPU cycles in the subscription. Users enrolled in the CPU subscription would then not have access to the tiered GPU pools but would have access to the free GPU pool.
 
 The all-inclusive option would include both CPU and GPU cycles under the subscription plan, where a user would be paying for priority rather than cycles on the resource pools – this priority is governed by the [Fair Tree](https://slurm.schedmd.com/fair_tree.html#algorithm) algorithm as implemented in SLURM.
 
@@ -135,6 +131,7 @@ Everyone will have access to the free tier regardless of whatever other account 
 We have not yet decided on a default (or whether to force a user to specify for every job), but the safest thing for a user to do is specify the appropriate partition for the free tier in their job submission using the `-p` flag (see [here](https://slurm.schedmd.com/sbatch.html#SECTION_OPTIONS)) if that is the partition they want to use for a job.
 
 ## How do I check my account usage?
+
 You can always contact us to have us send you usage, but you can also log in to the cluster any time and use the instructions [here](slurm-basics.md#checking-your-account). We are also sending out monthly updates with this information along with current invoicing and a projection of the rest of the year's usage to your PI email address of record. You may need to check your spam filters if you are not receiving these from our "support@rcif.wustl.edu" email address.
 
 You may also check your current disk usage for both the high-throughput (scratch) and large-volume file systems by following the instructions [here](storage-systems.md#checking-quotas).
