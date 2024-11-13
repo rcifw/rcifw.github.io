@@ -10,7 +10,14 @@ Singularity is no longer officially supported in its original form and has forke
 
 We have only Apptainer currently supported on the CHPC; see the [Apptainer documentation](https://apptainer.org/) for more info. For users who are familiar with Singularity, Apptainer is (more-or-less) the same. For most cases, you can simply replace “singularity” with “apptainer” to run singularity commands, and "singularity" is currently aliased to "apptainer".
 
-To use Apptainer, you’ll use the module tool. You can see what module versions are available by using:
+## Using Apptainer
+While we transition to a new operating system, we have 2 separate methods to access Apptainer: a system installation on new images and modules for older images
+
+### Rocky 9.4 Images
+As of our Rocky 9.4 image, Apptainer is no longer in modules. You can find the application at: `/opt/apptainer/bin/apptainer`
+
+### Rocky 8.10 Images
+Deprecated: On older images, you’ll use the module tool. You can see what module versions are available by using:
 
 ```
 [me@login01 ~]$ module avail apptainer/
