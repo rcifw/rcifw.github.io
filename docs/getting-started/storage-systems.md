@@ -24,7 +24,7 @@ This is only guaranteed for the duration of a user's job and is cleared after th
 ## High-throughput file system (scratch)
 This is usually a parallel file system consisting of a number of storage volume servers, metadata servers, and a management node, which is connected to the computing nodes via 1 (or more) [InfiniBand](https://www.nvidia.com/en-us/networking/products/infiniband/) interfaces and tuned for performance. The idea is to get as much data to your application as quickly as possible.
 
-For our system, we currently use [BeeGFS](https://www.beegfs.io/c/) mounted at `/mnt/beegfs` as the file system in our high-throughput storage. This is considered as **scratch** space, which is meant for staging data for processing. While this persists beyond the duration of a user's job, it is considered somewhat volatile, and users will be notified when the file system reaches 85% capacity that data will be purged. Sufficient notice is given to  allow users time to move data to persistent storage.
+For our system, we currently use [BeeGFS](https://www.beegfs.io/c/) mounted at `/scratch`  as the file system in our high-throughput storage. This is considered as **scratch** space, which is meant for staging data for processing. While this persists beyond the duration of a user's job, it is considered somewhat volatile, and users will be notified when the file system reaches 85% capacity that data will be purged. Sufficient notice is given to  allow users time to move data to persistent storage.
 
 > [!danger] `/scratch` data is not backed up, and there is no service level agreement (SLA), so please only use this for staging data while it is being actively used for computing jobs!
 ## Large-volume file system (persistent)
