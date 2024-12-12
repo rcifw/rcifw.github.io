@@ -4,15 +4,18 @@ tags:
 permalink: /events/
 ---
 # Upcoming
-* **October 4** - Dr. Scott Johnson at the [Digital Transformation Coffee Hours](https://di2accelerator.wustl.edu/calendar_event/digital-transformation-coffee-hours-10-4-24/) - (10:30-11:30am - hearth at FTLC)
-* **October 16** - RCIF Applied AI Seminar (10am - East Imaging 2311)
-* **November 6** - RCIF Applied AI Seminar (9:30am - East Imaging 2311)
-* **November 20** - RCIF Applied AI Seminar (10am - East Imaging 2311)
 
+### CHPC Workshops
+*NIL Large Conference Room #2311*
+We will be presenting on a range of topics from using parallel Matlab and other HPC tools to where to store your data, how to structure jobs, how to be considerate of the resources and fellow computational scientists while doing your research, how to ask for support, and we will have some open times for addressing specific user issues and questions.
+* January 17 - 8-11am
+* January 24 - 10am-1pm
+* (reserved) January 31 - noon-3pm if there is interest
 # Past Events
 Below are some of our past events with links to visuals and chats when available.
-
 ## 2024
+* **October 16** - RCIF Applied AI Seminar (10am - East Imaging 2311)
+* **October 4** - Dr. Scott Johnson at the [Digital Transformation Coffee Hours](https://di2accelerator.wustl.edu/calendar_event/digital-transformation-coffee-hours-10-4-24/) - (10:30-11:30am - hearth at FTLC)
 * **October 2** - RCIF Applied AI Seminar "Raytune for Healthcare AI" - link coming soon.
 * **October 1** - RCIF Open House - link coming soon.
 * **Sept 18** - RCIF Applied AI Seminar "Model Evaluation with Tensorboard" - see [here](https://youtu.be/hPUKji5h9Qo).
