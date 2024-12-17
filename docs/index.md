@@ -21,7 +21,7 @@ To help the RCIF access funding, we need you, the users, to cite the RCIF in you
 To help you access funding:
 - **Facilities document(most projects)** - view an [example of our facilities document](system-info/facilities-doc.md).
 - **Facilities document(HCP-related projects)** - view an [example of our HCP facilities document](system-info/facilities-doc-hcp.md).
-- **Pilot funds** - available to **anyone** using the RCIF, learn more [about pilot funds](https://www.mir.wustl.edu/research/core-resources/pilot-funds/).
+- **Pilot funds** - available to **anyone** using the RCIF, learn more [about pilot funds](https://www.mir.wustl.edu/research/core-resources/pilot-funds/). See our guide to applying at [/mir-pilot](getting-started/applying-for-pilot-funding.md)
 - **ICTS JIT Funds** - also available to **anyone** using the RCIF. More information [about JIT Funds](https://icts.wustl.edu/funding/just-in-time-jit/)
     - **note:** We are listed as the "**Center for High Performance Computing (CHPC)**" in this [supporting PDF document](https://wustl.box.com/s/umpd5cel70codg1x0wpxf599p4p8827a).
 
