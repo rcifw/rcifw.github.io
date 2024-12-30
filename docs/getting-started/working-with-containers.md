@@ -33,7 +33,7 @@ If you are pretty confident or the build process is fast, just build it:
 
 If you think you may need to do some experimentation to get the container to work, follow [this](https://apptainer.org/docs/user/main/build_a_container.html#converting-containers-from-one-format-to-another) for creating a SIF from the sandbox.
 ## Approach 2: Building with Docker and Importing
-While Apptainer is well-supported on most high-performance computing clusters, you may want something even more portable. [Docker]() is one way to build [OCI](https://opencontainers.org/)-compliant containers that will run (or can be imported) on a wide variety of platforms. Also, you are more likely to find the container published as a Docker container or a Dockerfile (recipe) available on the websites of your favorite software.
+While Apptainer is well-supported on most high-performance computing clusters, you may want something even more portable. [Docker](https://www.docker.com/) is one way to build [OCI](https://opencontainers.org/)-compliant containers that will run (or can be imported) on a wide variety of platforms. Also, you are more likely to find the container published as a Docker container or a Dockerfile (recipe) available on the websites of your favorite software.
 ### Prerequisites:
 * Docker installed on your local machine
 ### Step 1: Create the container on your local machine
