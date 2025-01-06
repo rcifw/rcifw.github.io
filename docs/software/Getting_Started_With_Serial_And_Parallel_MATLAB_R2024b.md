@@ -9,7 +9,7 @@ Jobs will now default to the cluster rather than submit to the local machine.
 **NOTE**: For some applications, there will be a diminishing return when allocating too many workers, as the overhead may exceed computation time.
 
 ## INSTALLATION and CONFIGURATION – MATLAB client on the desktop
-The **CHPC** MATLAB support package can be found **[here](chpc.Desktop.zip)**.
+The **CHPC** MATLAB support package can be found **[here](https://wustl.box.com/v/wustlDesktop2024b)**.
 
 Download the ZIP file and start MATLAB.  The ZIP file should be unzipped in the location returned by calling
 
