@@ -37,13 +37,6 @@ Linux users and Mac users (via MacFUSE and MacPorts) can access the cluster file
 [localuser@localmachine ~]$ cp ~/cluster_mnt/clusterfile ./ # fetch from cluster
 [localuser@localmachine ~]$ fusermount -u ~/cluster_mnt    # unmount
 ```
-### rclone
-If you are using MacOS, you can install rclone:
-1. Install [rclone](https://rclone.org/downloads/) from binaries; see [Getting Started](https://github.com/macfuse/macfuse/wiki/Getting-Started) ... or from MacPorts
-2. Install [sshfs](https://github.com/libfuse/sshfs); see MacPorts (see [here](https://www.macports.org/install.php) for installation instructions) for a managed installation, e.g.:
-```zsh
-port install sshfs
-```
 ### sftp + Python
 
 [Python](https://www.python.org/) is a programming language that is widely-used for scientific computing. You can transfer files over sftp directly from your Python scripts using [Paramiko](https://www.paramiko.org/). This functionality is particularly powerful when combined with Python's interactive [Jupyter notebooks](https://jupyter.org/). See the full API documentation [here](https://docs.paramiko.org/en/3.3/api/sftp.html).
