@@ -10,6 +10,8 @@ Importing and exporting data to/from the cluster is a necessary and routine acti
 
 Extra caution should be exercised when writing parallel jobs that import or export data from outside the cluster. The external server that hosts the data may not be able to satisfy thousands of simultaneous requests from many cluster jobs running in parallel. Even if the data server was designed for a high volume of requests, the network hardware or tunnel connecting the cluster to the external data server may not be able to satisfy the load.
 
+## Using Globus transfer node
+You can use our Globus transfer node to move data from your local computer or other Globus endpoints. See [our documentation](getting-started-with-globus.md).
 ## Controlling Transfers Using Your Local Computer
 
 ### sftp
@@ -24,10 +26,9 @@ sftp> get clusterfile
 Fetching /ceph/chpc/home/user/clusterfile to clusterfile
 sftp> quit
 ```
-
 ### sshfs
 
-Linux users and Mac users (via Homebrew) can access the cluster filesystem with the same convenience as they would access a portable hard drive by mounting it as a network filesystem using [`sshfs`](https://man.archlinux.org/man/sshfs.1). Under the hood, file transfers occur over the ssh protocol as if the user were calling `sftp`. Ordinary users on most systems can mount and unmount sshfs filesystems without `sudo` provided the mount point is in a directory they own; some systems also require that the mount point be in the user's home directory.
+Linux users and Mac users (via MacFUSE and MacPorts) can access the cluster filesystem with the same convenience as they would access a portable hard drive by mounting it as a network filesystem using [`sshfs`](https://man.archlinux.org/man/sshfs.1). Under the hood, file transfers occur over the ssh protocol as if the user were calling `sftp`. Ordinary users on most systems can mount and unmount sshfs filesystems without `sudo` provided the mount point is in a directory they own; some systems also require that the mount point be in the user's home directory.
 
 ```
 [localuser@localmachine ~]$ mkdir ~/cluster_mnt
@@ -95,9 +96,7 @@ Allocated port 45627 for remote forward to 127.0.0.1:22
 ```
 
 Take note of the port number that was allocated. You will need the port number to continue with the examples below.
-
 ### sftp
-
 Instead of running `sftp` from your local machine you will run it from the cluster. To connect through the firewall, you will connect to the tunnel at `127.0.0.1` port 2222 (or the automatically allocated port, e.g. 45627). Here `127.0.0.1` refers to the login node you are running the `sftp` command on.
 
 ```
@@ -108,7 +107,11 @@ sftp> get localfile
 Fetching /home/user/localfile to localfile
 sftp> quit
 ```
-
+### lftp
+You can also connect to Box (see [here](https://it.wustl.edu/items/box-guides/) for details on setting up a password, which is distinct from your WUSTL key). Once you have an external password, you can open an lftp session, e.g.:
+```
+lftp "$USER@wustl.edu@ftp.box.com"
+```
 ### sshfs
 
 You may use `sshfs` to mount your local computer's filesystem over the reverse tunnel using the same principles as above. Note that the mount will only be visible on the login node -- it will not be visible on a compute node running a job.
