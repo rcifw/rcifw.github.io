@@ -5,19 +5,22 @@ permalink: /events/
 ---
 # Upcoming
 
-### CHPC Workshops
+### CHPC Workshops and Office Hours
 *NIL Large Conference Room #2311*
-We will be presenting on a range of topics from using parallel Matlab and other HPC tools to where to store your data, how to structure jobs, how to be considerate of the resources and fellow computational scientists while doing your research, how to ask for support, and we will have some open times for addressing specific user issues and questions.
-* January 17 - 8-11am
-* January 24 - 10am-1pm
-* (reserved) January 31 - noon-3pm if there is interest
+- 1st Wednesday of every month from 9:00am-10:00am
+- 3rd Wednesday of every month from 10:00-11:00am
+We will be presenting on a range of topics from using parallel Matlab and other HPC tools to where to store your data, how to structure jobs, how to be considerate of the resources and fellow computational scientists while doing your research, how to ask for support, and we will have some open times for addressing specific user issues and questions. Next ...
+* **February 5**: 9-10am - Office Hours
+* **February 19**: 10-11am - "Git as your new best friend for managing research"
 # Past Events
 Below are some of our past events with links to visuals and chats when available.
+## 2025
+* **January 17 and 24** - CHPC Orientation (East Imaging 2311) - see video [here](https://wustl.box.com/v/chpc-orientation-jan2025)
 ## 2024
 * **October 16** - RCIF Applied AI Seminar (10am - East Imaging 2311)
 * **October 4** - Dr. Scott Johnson at the [Digital Transformation Coffee Hours](https://di2accelerator.wustl.edu/calendar_event/digital-transformation-coffee-hours-10-4-24/) - (10:30-11:30am - hearth at FTLC)
 * **October 2** - RCIF Applied AI Seminar "Raytune for Healthcare AI" - link coming soon.
-* **October 1** - RCIF Open House - link coming soon.
+* **October 1** - RCIF Open House
 * **Sept 18** - RCIF Applied AI Seminar "Model Evaluation with Tensorboard" - see [here](https://youtu.be/hPUKji5h9Qo).
 * **Sept 4** - RCIF Applied AI Seminar "Introduction to High-Performance Computing" - see [here](https://youtu.be/2y-YvHC47Ws).
 * **August 21** - RCIF Applied AI Seminar "Bayesian ML for Healthcare Applications" - see [here](https://youtu.be/dG8H86WDmSo).
