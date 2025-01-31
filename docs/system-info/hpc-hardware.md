@@ -7,25 +7,25 @@ include: true
 ---
 ## List of Computational Nodes
 
-| Name          | CPU                   | Cores per socket | Sockets | CPU Cores | Real Memory | GPU (gres)     | GPU Count |
-| ------------- | --------------------- | ---------------- | ------- | --------- | ----------- | -------------- | --------- |
-| node[01-14]   | Intel Xeon Gold 6226R | 16               | 2       | 32        | 770000      |                |           |
-| node[15-32]   | Intel Xeon Gold 6226R | 16               | 2       | 32        | 385000      |                |           |
-| gpu01         | Intel Xeon Gold 6226R | 16               | 2       | 32        | 385000      | tesla_a100     | 4         |
-| gpu02         | Intel Xeon Gold 6226R | 16               | 2       | 32        | 770000      | tesla_v100S    | 4         |
-| gpu03         | Intel Xeon Gold 6226R | 16               | 2       | 32        | 770000      | tesla_v100S    | 2         |
-| gpu04         | Intel Xeon Gold 6226R | 16               | 2       | 32        | 385000      | tesla_v100S    | 2         |
-| gpu05         | Intel Xeon Gold 6226R | 16               | 2       | 32        | 385000      | tesla_v100S    | 2         |
-| gpu06         | Intel Xeon Gold 6226  | 12               | 2       | 24        | 385000      | tesla_v100     | 4         |
-| gpu07         | Intel Xeon Gold 6226  | 12               | 2       | 24        | 385000      | tesla_v100     | 3         |
-| gpu08         | Intel Xeon Gold 6226  | 12               | 2       | 24        | 385000      | tesla_t4       | 2         |
-| gpu09         | Intel Xeon Gold 6226  | 12               | 2       | 24        | 386000      | tesla_v100     | 4         |
-| highmem01     | Intel Xeon Gold 6240L | 18               | 2       | 36        | 2984000     |                |           |
-| highmem02     | Intel Xeon Gold 6226  | 12               | 4       | 48        | 2984000     |                |           |
-| gpa[401-410]  | Intel Xeon Gold 6338  | 64               | 2       | 128       | 1024000     | tesla_a100     | 4         |
-| gpua[801-805] | Intel Xeon Gold 6338  | 64               | 2       | 128       | 1024000     | nvidia_a100_80 | 4         |
-| gpuh[801-802] | AMD EPYC 9334         | 64               | 2       | 128       | 1024000     | nvidia_h100_80 | 4         |
-| gpugh01       | Grace Superchip       | 72               | 1       | 72        | 1200000     | nvidia_gh200   | 1         |
+| Name          | CPU                   | Cores per socket | Sockets | CPU Cores | Real Memory | GPU (gres)      | GPU Count |
+| ------------- | --------------------- | ---------------- | ------- | --------- | ----------- | --------------- | --------- |
+| node[01-14]   | Intel Xeon Gold 6226R | 16               | 2       | 32        | 770000      |                 |           |
+| node[15-32]   | Intel Xeon Gold 6226R | 16               | 2       | 32        | 385000      |                 |           |
+| gpu01         | Intel Xeon Gold 6226R | 16               | 2       | 32        | 385000      | tesla_a100      | 4         |
+| gpu02         | Intel Xeon Gold 6226R | 16               | 2       | 32        | 770000      | tesla_v100S     | 4         |
+| gpu03         | Intel Xeon Gold 6226R | 16               | 2       | 32        | 770000      | tesla_v100S     | 2         |
+| gpu04         | Intel Xeon Gold 6226R | 16               | 2       | 32        | 385000      | tesla_v100S     | 2         |
+| gpu05         | Intel Xeon Gold 6226R | 16               | 2       | 32        | 385000      | tesla_v100S     | 2         |
+| gpu06         | Intel Xeon Gold 6226  | 12               | 2       | 24        | 385000      | tesla_v100      | 4         |
+| gpu07         | Intel Xeon Gold 6226  | 12               | 2       | 24        | 385000      | tesla_v100      | 3         |
+| gpu08         | Intel Xeon Gold 6226  | 12               | 2       | 24        | 385000      | tesla_t4        | 2         |
+| gpu09         | Intel Xeon Gold 6226  | 12               | 2       | 24        | 386000      | tesla_v100      | 4         |
+| highmem01     | Intel Xeon Gold 6240L | 18               | 2       | 36        | 2984000     |                 |           |
+| highmem02     | Intel Xeon Gold 6226  | 12               | 4       | 48        | 2984000     |                 |           |
+| gpa[401-410]  | Intel Xeon Gold 6338  | 64               | 2       | 128       | 1024000     | tesla_a100      | 4         |
+| gpua[801-805] | Intel Xeon Gold 6338  | 64               | 2       | 128       | 1024000     | nvidia_a100_80  | 4         |
+| gpuh[801-802] | AMD EPYC 9334         | 64               | 2       | 128       | 1024000     | nvidia_h100_sxm | 4         |
+| gpugh01       | Grace Superchip       | 72               | 1       | 72        | 1200000     | nvidia_gh200    | 1         |
 (note: "tesla_a100" is used to denote A100-SXM-40 and A100-PCIe-40 cards)
 
 *See also the [spreadsheet](https://gowustl-my.sharepoint.com/:x:/g/personal/johnsonscott_wustl_edu/ETi34n73B7lPrrb7NtQqOqkB3JI43UpNq4cS5_lCB6k0bA?e=ummoEZ)*

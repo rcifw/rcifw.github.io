@@ -97,13 +97,14 @@ The table below lists [`sbatch` options](https://slurm.schedmd.com/sbatch.html) 
 ## GRES Types ##
 The table below lists [`gres` options](https://slurm.schedmd.com/gres.html) for executing your Slurm jobs on resources with specific attributes (generic resources). While we realize that Tesla is not correct for the line of NVIDIA GPUs we are referencing, we have kept the nomenclature to avoid breaking already existing workflows:
 
-| **GRES** | **Description** |
-| --- | --- |
-| `gpu:nvidia_a100_80` | NVIDIA A100-SXM-80 GPU |
-| `gpu:tesla_a100` | NVIDIA A100 GPU (both PCIe and SXM) |
-| `gpu:tesla_t4` | NVIDIA T4 GPU |
-| `gpu:tesla_v100` | NVIDIA V100 GPU |
-| `gpu:tesla_v100S` | NVIDIA V100S GPU |
+| **GRES**              | **Description**                     |
+| --------------------- | ----------------------------------- |
+| `gpu:nvidia_h100_sxm` | NVIDIA H100-SXM-80 GPU              |
+| `gpu:nvidia_a100_80`  | NVIDIA A100-SXM-80 GPU              |
+| `gpu:tesla_a100`      | NVIDIA A100 GPU (both PCIe and SXM) |
+| `gpu:tesla_t4`        | NVIDIA T4 GPU                       |
+| `gpu:tesla_v100`      | NVIDIA V100 GPU                     |
+| `gpu:tesla_v100S`     | NVIDIA V100S GPU                    |
 
 For example, to request an allocation of 1 node and 2 cores with a single A100 GPU for 30 minutes:
 ```
