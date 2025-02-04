@@ -22,7 +22,7 @@ include: true
 | gpu09         | Intel Xeon Gold 6226  | 12               | 2       | 24        | 386000      | tesla_v100      | 4         |
 | highmem01     | Intel Xeon Gold 6240L | 18               | 2       | 36        | 2984000     |                 |           |
 | highmem02     | Intel Xeon Gold 6226  | 12               | 4       | 48        | 2984000     |                 |           |
-| gpa[401-410]  | Intel Xeon Gold 6338  | 64               | 2       | 128       | 1024000     | tesla_a100      | 4         |
+| gpa[401-412]  | Intel Xeon Gold 6338  | 64               | 2       | 128       | 1024000     | tesla_a100      | 4         |
 | gpua[801-805] | Intel Xeon Gold 6338  | 64               | 2       | 128       | 1024000     | nvidia_a100_80  | 4         |
 | gpuh[801-802] | AMD EPYC 9334         | 64               | 2       | 128       | 1024000     | nvidia_h100_sxm | 4         |
 | gpugh01       | Grace Superchip       | 72               | 1       | 72        | 1200000     | nvidia_gh200    | 1         |
