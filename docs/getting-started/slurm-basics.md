@@ -42,12 +42,13 @@ A research assistant, student, or post-doc may submit jobs under their PI's acco
 For a complete list of accounts on the cluster run: `sacctmgr list accounts -P`.
 
 ## Partitions and Quality of Service
-The partition is a great tool to assemble jobs of similar properties. Depending on the requested number of CPUs and/or GPUs, CPU memory allocation and walltime, we have defined six partitions in the cluster. The relevant properties for each partition are summarized in the table below. To see a current list of partitions, run [`sinfo`](https://manpages.ubuntu.com/manpages/xenial/man1/sinfo.1.html).
+The partition is a great tool to assemble jobs of similar properties. Depending on the requested number of CPUs and/or GPUs, CPU memory allocation and walltime, we have defined 8 partitions in the cluster. The relevant properties for each partition are summarized in the table below. To see a current list of partitions, run [`sinfo`](https://manpages.ubuntu.com/manpages/xenial/man1/sinfo.1.html).
 
 | **Partition** | **Max CPUs per job** | **Max nodes** | **Default memory****per CPU** | **Default / Max runtime** | **Max jobs per user** |
 | --- | --- | --- | --- | --- | --- |
 | free | 30 | 2 | 6G | 5m / 3h | - |
 | free_gpu | - | 1 | 6G | 5m / 3h | - |
+| interactive_cpu | 2 | 1 | 6G | 5m / 30m | - |
 | tier1_cpu | 30 | 2 | 6G | 30m / 24h | - |
 | tier1_gpu | 30 | 2 | 6G | 30m / 24h | - |
 | tier2_cpu | - | - | 6G | 30m / 7d | - |
