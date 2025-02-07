@@ -8,10 +8,10 @@ include: true
 ## Current System Status
 
 ### CHPC
-All systems are operating normally at this time.
+We are currently experiencing a network outage affecting many systems.  We do not yet have an ETA for a resolution.
 
 ### NRG/Informatics 
-All systems are operating normally at this time.
+We are currently experiencing a network outage affecting many systems.  We do not yet have an ETA for a resolution.
 
 #### If you are seeing an outage that is not reported here please contact:
 
