@@ -10,8 +10,8 @@ include: true
 ### CHPC
 All systems are operating normally at this time.
 
-### NRG/Informatics 
-All systems are operating normally at this time.
+### NRG/Informatics Porals/CNDA/MIRRIR
+We are currently experiencing a storage issue that has taken several production systems offline.  Systems administrators are addressing the issue, but we don't yet have an ETA for resolution.
 
 #### If you are seeing an outage that is not reported here please contact:
 
