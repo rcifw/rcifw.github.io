@@ -6,9 +6,11 @@ author: RCIF
 include: true
 ---
 ## Current System Status
+Our InfiniBand switches are currently undergoing maintenance, which may involve intermittent network interruptions for all
+services. We expect this to be finished some time this evening (Feb 18).
 
 ### CHPC
-All systems are operating normally at this time.
+All systems are operating normally at this time ... see notice above.
 
 ### NRG/Informatics Portals/CNDA/MIRRIR
 We are currently experiencing a storage issue that has taken several production systems offline.  System administrators are addressing the issue, but we don't yet have an ETA for resolution.
