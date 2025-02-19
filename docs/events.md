@@ -10,11 +10,13 @@ permalink: /events/
 - 1st Wednesday of every month from 9:00am-10:00am
 - 3rd Wednesday of every month from 10:00-11:00am
 We will be presenting on a range of topics from using parallel Matlab and other HPC tools to where to store your data, how to structure jobs, how to be considerate of the resources and fellow computational scientists while doing your research, how to ask for support, and we will have some open times for addressing specific user issues and questions. Next ...
-* **February 5**: 9-10am - Office Hours
-* **February 19**: 10-11am - "Git as your new best friend for managing research"
+* **March 5**: 9-10am - "Git as your new best friend for managing research" 
+
 # Past Events
 Below are some of our past events with links to visuals and chats when available.
 ## 2025
+* **February 19**: 10-11am - CANCELED FOR WEATHER AND SYSTEM MAINTENANCE (rescheduled for March)
+* **February 5**: 9-10am - Office Hours
 * **January 17 and 24** - CHPC Orientation (East Imaging 2311) - see video [here](https://wustl.box.com/v/chpc-orientation-jan2025)
 ## 2024
 * **October 16** - RCIF Applied AI Seminar (10am - East Imaging 2311)
