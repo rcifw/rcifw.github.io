@@ -6,11 +6,9 @@ author: RCIF
 include: true
 ---
 ## Current System Status
-Our InfiniBand switches are currently undergoing maintenance, which may involve intermittent network interruptions for all
-services. We expect this to be finished some time today (Feb 19).
 
 ### CHPC
-login access is currently disabled while we work to bring our primary CHPC file system online after the InfiniBand maintenance.
+All systems are operating normally.
 
 ### NRG/Informatics Portals/CNDA/MIRRIR
 We are currently experiencing a storage issue that has taken several production systems offline.  System administrators are addressing the issue, but we don't yet have an ETA for resolution.
