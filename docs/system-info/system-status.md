@@ -11,7 +11,7 @@ include: true
 All systems are operating normally.
 
 ### NRG/Informatics Portals/CNDA/MIRRIR
-We are currently experiencing a storage issue that has taken several production systems offline.  System administrators are addressing the issue, but we don't yet have an ETA for resolution.
+All systems are operating normally.
 
 #### If you are seeing an outage that is not reported here please contact:
 
