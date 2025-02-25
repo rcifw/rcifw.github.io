@@ -6,9 +6,9 @@ source: https://sites.wustl.edu/chpc/resources/software/python/
 author:
 ---
 There are a few ways to setup Python access:
-1. [System](#Python%20Module): Use the `python` module
-2. [Hybrid](#System%20Miniconda): Use the Python module but configure your own packages
-3. [Install](#Your%20Miniconda) your own Miniconda
+1. [System](#python-module): Use the `python` module
+2. [Hybrid](#system-miniconda): Use the Python module but configure your own packages
+3. [Install](#your-miniconda) your own Miniconda
 
 We recommend to install your own, as it gives you the most control over your installation.
 ## Python Module
