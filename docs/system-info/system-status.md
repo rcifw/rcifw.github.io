@@ -8,10 +8,10 @@ include: true
 ## Current System Status
 
 ### CHPC
-All systems are operating normally.
+We are currently experiencing a network issue.  Many systems are down.  Systems administrators are working on the issue but we don't yet have an ETA for resolution.
 
 ### NRG/Informatics Portals/CNDA/MIRRIR
-All systems are operating normally.
+We are currently experiencing a network issue.  Many systems are down.  Systems administrators are working on the issue but we don't yet have an ETA for resolution.
 
 #### If you are seeing an outage that is not reported here please contact:
 
