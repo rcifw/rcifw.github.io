@@ -5,14 +5,8 @@ tags: []
 source: https://sites.wustl.edu/chpc/resources/software/vnc/
 author:
 ---
-
-The Virtual Network Computing (VNC) home page is [https://www.realvnc.com/en/](https://www.realvnc.com/en/).
-
-::: warning
-In order to run remote desktop on the login node, you need to make that request to us so that we can grant that permission for you. We would put an entry in the VNC server user database for you and you would get an exclusive port to connect. The port number would be ranging from 5903 to 5900+N. You should note down the port exclusively assigned to you and use that to connect.
-:::
-
-You would first need to create a password for VNC connection on both login nodes by running “vncpasswd” command:
+## 1. Creating a VNC Password
+You will first need to create a password for VNC connection on both login nodes by running `vncpasswd` command:
 
 ```
 [me@login01 ~]$ mkdir ~/.vnc
@@ -24,18 +18,33 @@ A view-only password is not used
 ```
 
 This is the password you would need to establish the connection via VNC client installed on your local computer.
+## 2. Requesting a Displayport
+In order to run a VNC remote desktop on the login node, request that an administrator assign you a displayport.
 
-_**After you have completed the above step, contact the system administrator and a port number would be assigned to you so that the VNC service is enabled on the login nodes.**_
+The displayport will have a corresponding port number, which is 5900 + displayport, so if you are assigned "91" the port number to forward would be "5991". You should note the port exclusively assigned to you and use that to connect.
+## 3. Forwarding the VNC Port
+Once you have an assigned VNC displayport on the login node, you can establish the connection to the login node using SSH port-forwarding.
 
-Then, you can download and install the version of VNC that fits your computer OS from [https://www.realvnc.com/en/connect/download/viewer/](https://www.realvnc.com/en/connect/download/viewer/).
+You will need to open a terminal on your local machine. An example of forwarding the port via the terminal is shown below, and please remember to replace both port numbers before and after “localhost” with your exclusively assigned port number. 
 
-After installing the client , you can establish the connection to the login node using ssh port-forwarding. An example of doing this is shown as below, and please remember to replace both port numbers before and after “localhost” with your exclusively assigned port number. Note: the RCIF VNC server only runs on `login01`, so make sure to use the "login3-01" url, e.g.:
+Note: the RCIF VNC server only runs on `login01`, so make sure to use the "login3-01" url, e.g.:
 
 ```
 [other_me@my_local_machine ~]$ ssh -L 5902:localhost:5902 me@login3-01.chpc.wustl.edu
 ```
+(replacing "02" in this example with your assigned port)
+## 4. Connecting with a VNC Client
+Next, you will need a VNC client to connect to that port. There are several options, but we detail two popular options (MacOS VNC client and RealVNC) below.
+### MacOS VNC Client
+Once the port is forwarded, if you are on MacOS you can use the simple and effective VNC viewer that is built in.
 
-1. After logging in, you can start the VNC client on your local computer.
+Open the "Finder" application, then select from the top menu "Go" -> "Connect to Server":
+![Screenshot of Finder menu](../assets/images/macos_vnc.png)
+
+Enter "vnc://0.0.0.0:5902" (replace "02" with your assigned display port) in the drop-down and click the "Connect" button. You may be prompted for a password; enter the one you used in the  `vncpasswd` step at the beginning. Done!
+### RealVNC
+If you are not on MacOS or want a different client, the Virtual Network Computing ([VNC](https://www.realvnc.com/en/)) is a popular option. You can download and install a version of the VNC client that fits your computer OS from [https://www.realvnc.com/en/connect/download/viewer/](https://www.realvnc.com/en/connect/download/viewer/).
+1. After forwarding your VNC port, you can start the VNC client on your local computer.
 2. Click on “GOT IT” button, and then click on “File” at the header, and choose “New connection”.
 3. After filling out the server (replace the port number with the one exclusively assigned to you) and username (your username to log into the cluster), click “OK” button and you would see a “computer display” shaped icon for you to connect would appear.
 4. Right click on the icon and choose “Connect”, that would bring you to a new screen asking your confirmation to connect.
