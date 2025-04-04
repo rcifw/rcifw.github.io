@@ -36,6 +36,8 @@ You pay a fixed annual maintenance fee, and you have unlimited access to your ma
 **Example 5: I am working on several projects with several PIs during the year; how can I make sure the correct PI is charged for each job I run?--**
 Our batch scheduler (SLURM) allows us to associate you with multiple PIs, so the first step is to [let us know](mailto:chpc@nrg.wustl.edu) so we can set up the association. Once you are associated with multiple PIs, you can charge usage to different accounts, by specifying the `-A <account to charge>` flag for any job.
 
+See our section in [Slurm Basics](slurm-basics.md#shares) for a detailed description of how job priority is assigned using the shares you purchase.
+
 ## Where can I get funding for this?
 
 What is better than getting RCIF computation at lower than market rates? Have someone else pay for it! Pilot funds are available for **any** researcher (in MIR or not) who is using qualifying MIR facilities – **we are a qualifying facility**!
@@ -89,7 +91,7 @@ For the A100 and H100, up to 7 MIG partitions per GPU are allowed. For users who
 
 ## How is the priority of my job determined?
 
-While it is useful to understand the algorithm (for reference you can find the contributions of the various factors [here](https://slurm.schedmd.com/priority_multifactor.html#general), and the most complex factor is Fairshare, which is described [here](https://slurm.schedmd.com/fair_tree.html#algorithm) and an accessible presentation of the “Fair Tree” is [here](https://slurm.schedmd.com/SUG14/fair_tree.pdf)), the priority of a job at any given time is strongly affected by the competitive landscape among those who have bought shares in the system and their usage pattern.
+While it is useful to understand the algorithm (for reference you can find the contributions of the various factors [here](https://slurm.schedmd.com/priority_multifactor.html#general), and the most complex factor is Fairshare, which is described [here](https://slurm.schedmd.com/fair_tree.html#algorithm) and an accessible presentation of the “Fair Tree” is [here](https://slurm.schedmd.com/SUG14/fair_tree.pdf)), the priority of a job at any given time is strongly affected by the competitive landscape among those who have bought shares in the system and their usage pattern. See [this section](slurm-basics.md#shares) for more on how shares are used in the CHPC and the specific weights.
 
 Fair Tree has made the algorithm for determining the fairshare term much simpler. The facility implements a “fat tree” account hierarchy where all accounts form a single level beneath root, and users form a second level, each associated with >=1 account. In our case, the tree first determines which account fairshare is greater then progresses to individual users and their individual fairshare values as determinants of job priority.
 

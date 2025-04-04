@@ -32,15 +32,21 @@ node16.cluster
 This example is giving the user 5 minutes of time on 1 CPU on node16 and automatically opens a prompt on node16. When the requested time is up, the batch management system will shut down any user programs on that allocation and remove user access.
 
 ## Accounts
-
-Any cluster user may submit jobs to the free partition without specifying an account using `srun --partition=free`. Jobs on the free partition are limited in terms of their priority, hardware, and run time (max 3 hours). Jobs submitted to a higher tier of service must be associated with an account using `--account=<my account>`.
+Any cluster user may submit jobs to the free partition without specifying an account using `srun --partition=free`. Jobs on the free partition are limited in terms of their priority, hardware, and run time (max 3 hours) and use the "unassociated" account. Jobs submitted to a higher tier of service must be associated with an account using `--account=<my account>`.
 
 Accounts are linked to a principal investigator (PI). By default, the account is named `<first_name>_<last_name>` in lowercase after the PI. For example, to submit a job to the tier1_cpu partition for the PI John Smith: `srun --account-john_smith --partition=tier1_cpu`. If a job is not associated with an account then the job _must_ specify `--partition=free`.
 
 A research assistant, student, or post-doc may submit jobs under their PI's account. A lab member with more than one PI can specify which PI's account to use for which job by passing the appropriate `--account=` argument for that job.  PI's may set up an account, select a tier of service, and add/remove lab members who can submit jobs to that account by e-mailing [chpc@nrg.wustl.edu](mailto:chpc@nrg.wustl.edu).
 
 For a complete list of accounts on the cluster run: `sacctmgr list accounts -P`.
+## Shares
+Each Account is assigned a number of shares related to the amount paid for access. Here is a summary:
+* While partition weights are equal, the partition to which you submit jobs controls the maximum runtime and the pool of computing resources you can access (see [here](#partitions-and-quality-of-service))
+* Accounts are assigned a set of shares relative to their paid tier (e.g., Tier 1 = 100 shares, Tier 2 = 200 shares, Tier 3 = 300 shares), while the default (i.e., "unassociated") account (for free usage) receives 1 share.
+* When a user submits jobs via an Account, those jobs draw from that account's shares; users do not have individual shares.
+* Priority is based on the following weights: 62.5% based on shares, 31.25% based on the job wait time, and the rest based on job size
 
+You can get a sense of your account shares through the `sshare` command (see [here](https://slurm.schedmd.com/sshare.html))
 ## Partitions and Quality of Service
 The partition is a great tool to assemble jobs of similar properties. Depending on the requested number of CPUs and/or GPUs, CPU memory allocation and walltime, we have defined 8 partitions in the cluster. The relevant properties for each partition are summarized in the table below. To see a current list of partitions, run [`sinfo`](https://manpages.ubuntu.com/manpages/xenial/man1/sinfo.1.html).
 
