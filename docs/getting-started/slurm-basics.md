@@ -64,8 +64,10 @@ The partition is a great tool to assemble jobs of similar properties. Depending 
 *Note: Max jobs per user is based on the least amount of CPUs or GPUs and walltime requested within this particular partition*.
 
 ### Free Partitions ###
-This partition is designed for users who want to develop and test their applications. This partition sets aside 6 compute nodes in the **free** partition to accommodate testing. These jobs will be limited to run no more than 3 hours. The **free_gpu** partition similarly allows for testing of GPU-based workloads for no more than 3 hours per job.
-
+This set of partitions is designed for users who want to develop and test their applications.
+* The **free** partition includes of the compute nodes to accommodate testing. Each job in this partition is limited to run no more than 3 hours.
+* The **free_gpu** partition similarly allows for testing of GPU-based workloads. Each job in this partition is limited to run no more than 3 hours.
+* The **interactive_cpu** partition is designed for all users to submit interactive jobs. Each job in this partition is limited to run no more than 30 minutes but will get enhanced priority.
 ### Tier 1 Partitions ###
 The **tier1_cpu** and **tier1_gpu** partitions are designed for *CPU-only* and *GPU-accelerated* jobs, respectively, to be run for no more than 24 hours per job.
 
