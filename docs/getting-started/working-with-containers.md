@@ -8,7 +8,7 @@ author: Scott Johnson
 
 # Working with Containers - a Freesurfer example
 
-Containers have become a great way to produce reproducible science and capture exact environments for running workloads. There is, however, some friction and learning curve in designing them. Here, we provide 2 paths: using Apptainer directly or importing a Docker container to Apptainer. In the Docker section (Approach 2 below), we work an example to illustrate common issues and strategies for creating and using containers on the CHPC systems.
+Containers have become a great way to produce reproducible science and capture exact environments for running workloads. There is, however, some friction and learning curve in designing them. Here, we provide 3 paths: using Apptainer directly, pulling a Docker container into Apptainer, or importing a Docker container to Apptainer. In the last Docker section (Approach 3 below), we work an example to illustrate common issues and strategies for creating and using containers on the CHPC systems.
 ## Approach 1: Building with Apptainer on the Cluster
 This approach has fewer steps, but they may be more complicated depending on your comfort level with building software or your need to customize. Luckily, the rise of AI-based tools has significantly decreased the difficulty.
 
@@ -32,7 +32,13 @@ If you are pretty confident or the build process is fast, just build it:
 ```
 
 If you think you may need to do some experimentation to get the container to work, follow [this](https://apptainer.org/docs/user/main/build_a_container.html#converting-containers-from-one-format-to-another) for creating a SIF from the sandbox.
-## Approach 2: Building with Docker and Importing
+## Approach 2: Pulling a Docker container into Apptainer
+You can also try building from a pre-existing Docker container, e.g.:
+```
+[me@login01]:$ module load apptainer
+[me@login01]:$ apptainer pull --disable-cache docker://developer/container:v1.2.3
+```
+## Approach 3: Building with Docker and Importing
 While Apptainer is well-supported on most high-performance computing clusters, you may want something even more portable. [Docker](https://www.docker.com/) is one way to build [OCI](https://opencontainers.org/)-compliant containers that will run (or can be imported) on a wide variety of platforms. Also, you are more likely to find the container published as a Docker container or a Dockerfile (recipe) available on the websites of your favorite software.
 ### Prerequisites:
 * Docker installed on your local machine
