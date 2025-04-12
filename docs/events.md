@@ -5,13 +5,15 @@ permalink: /events/
 ---
 # Upcoming
 
+* **April 14**: 11am+ - SYSTEM MAINTENANCE: Access to the CHPC will be removed.
 ### CHPC Workshops and Office Hours
+
+**NOTE: Currently paused while we onboard our new CHPC support staff. Welcome, John!**
+
 *NIL Large Conference Room #2311*
 - 1st Wednesday of every month from 9:00am-10:00am
 - 3rd Wednesday of every month from 10:00-11:00am
-We will be presenting on a range of topics from using parallel Matlab and other HPC tools to where to store your data, how to structure jobs, how to be considerate of the resources and fellow computational scientists while doing your research, how to ask for support, and we will have some open times for addressing specific user issues and questions. Next ...
-* **March 5**: 9-10am - "Git as your new best friend for managing research" 
-
+We will be presenting on a range of topics from using parallel Matlab and other HPC tools to where to store your data, how to structure jobs, how to be considerate of the resources and fellow computational scientists while doing your research, how to ask for support, and we will have some open times for addressing specific user issues and questions.
 # Past Events
 Below are some of our past events with links to visuals and chats when available.
 ## 2025
