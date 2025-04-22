@@ -9,9 +9,7 @@ include: true
 
 ## What are the FY25 rates?
 
-For rates see:
-* [FY25 RCIF HPC rate sheet](https://wustl.box.com/s/ngnhclzgvzx4irroee4h2eh7gv9b1lsj)
-* [FY25 RCIF Informatics rate sheet](https://wustl.box.com/s/dmuz8ch9qh9qgdcephr4zts0p4asitcz) - note: [previous](https://wustl.box.com/s/umzho1jlyoxj2agbuee77ic8xkk2z4jw)
+For rates see: [FY25 RCIF rate sheet](https://wustl.box.com/s/t01lm5ajuj776wz8w7jra1wjf2zwnejt) (note: WashU Key required)
 
 ## The tiers and rates are confusing; can you provide some examples of how I will be charged?
 
@@ -25,7 +23,7 @@ You can choose a different option for each tier (priority level) and for each re
 You can get a CPU-inclusive subscription, which provides unlimited hours on the CPU resources for a __fixed annual cost__; for the CPU resources you just pay the subscription for a particular priority level for your jobs. For the GPU resources, you can access the Free Tier GPUs.
 
 **Example 2: PI with heavy GPU usage--**
-You can get an all-inclusive subscription, which provides unlimited access to both CPU- and GPU-based resources for a __fixed annual cost__. In this case, you would just pay the annual fixed cost in our [rate sheet](https://wustl.box.com/s/ngnhclzgvzx4irroee4h2eh7gv9b1lsj).
+You can get an all-inclusive subscription, which provides unlimited access to both CPU- and GPU-based resources for a __fixed annual cost__. In this case, you would just pay the annual fixed cost in our [rate sheet](#what-are-the-fy25-rates).
 
 **Example 3: Student who does not have funding --**
 We have the Free Tier to support researchers who want to use CHPC resources for small projects and to test out their workflows before putting them into the paid queues. In this case, just submit your job to the "free" partition, and your PI will not be charged for that use!
@@ -128,9 +126,9 @@ We would like to push everyone towards buying into the system if they are doing 
 
 ## If my PI has chosen a different plan, do I still get to use the free tier?
 
-Everyone will have access to the free tier regardless of whatever other account associations they have. So if a user is associated with the PI account, they would have access to the partitions for whatever plans the PI has selected as well as the free tier.
+Everyone has access to the free tier regardless of whatever other account associations they have. So if a user is associated with the PI account, they have access to the partitions for whatever plans the PI has selected as well as the free tier.
  
-We have not yet decided on a default (or whether to force a user to specify for every job), but the safest thing for a user to do is specify the appropriate partition for the free tier in their job submission using the `-p` flag (see [here](https://slurm.schedmd.com/sbatch.html#SECTION_OPTIONS)) if that is the partition they want to use for a job.
+Please specify the appropriate partition for the free tier in your job submission using the `-p` flag (see [here](https://slurm.schedmd.com/sbatch.html#SECTION_OPTIONS)) if that is the partition you want to use for a job.
 
 ## How do I check my account usage?
 
