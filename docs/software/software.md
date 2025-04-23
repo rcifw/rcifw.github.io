@@ -48,7 +48,7 @@ We support a variety of software on the RCIF HPC cluster
 * [python](python.md)
 * [r](r.md)
 * [root](root.md)
-* [singularity](singularity.md)
+* [singularity](apptainer.md)
 * [star](star.md)
 * [subread](subread.md)
 * [trimmomatic](trimmomatic.md)
