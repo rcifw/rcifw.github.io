@@ -8,8 +8,6 @@ include: true
 ## Current System Status
 
 ### CHPC
-User logins are currently disabled on `login01` while we resolve shared data mounting issues. Note: maintenance begins at 11am on Monday, April 14, 2025.
-
 All computing systems are operating normally
 
 ### NRG/Informatics Portals/CNDA/MIRRIR
