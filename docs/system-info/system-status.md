@@ -11,10 +11,10 @@ include: true
 All computing systems are operating normally
 
 ### NRG/Informatics Portals/CNDA/MIRRIR
-All systems are operating normally.
+We are currently experiencing a storage issue that has some systems (e.g. CNDA, BALSA, ECP) down.  Administrators are working on the issue but we don't yet have an ETA for resolution.
 
 ### Shared Storage Systems (Ceph, BeeGFS, ZFS)
-All systems are operating normally.
+We are currently experiencing a storage issue affecting certain ZFS storage pools.  Some storage datasets may not be available.
 
 #### If you are seeing an outage that is not reported here please contact:
 
