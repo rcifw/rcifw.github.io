@@ -6,7 +6,6 @@ permalink: /getting-started/globus/
 author: dptru10
 include: true
 ---
-
 ## Globus Overview
 
 Globus is a secure, reliable data transfer service designed for research and scientific computing. It allows users to move large datasets between institutions, labs, and computing facilities. Key benefits include:

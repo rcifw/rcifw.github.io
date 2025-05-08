@@ -6,12 +6,12 @@ permalink: /support/
 author: Scott Johnson
 include: true
 ---
-
 # Training and Workshops
-We are currently putting together our topic schedule for 2024. Please check back to see what is coming up!
-
+Check [events](../events.md) for our current schedule.
 # Support
-You have several ways of contacting us for one-on-one or crowd-sourced support.
+For a guide to using the CHPC, see [Slurm basics](slurm-basics.md), and we have a short guide to debugging your scripts in our [debugging fundamentals](debugging-fundamentals.md) page.
+
+You also have several ways of contacting us for one-on-one or crowd-sourced support.
 
 * This documentation is a great resource for up-to-date information.
 * Join our "Research Computing and Informatics Facility" workspace ([mir-rcif](https://mir-rcif.slack.com)) - email support for an invitation. This is an engaged and helpful community; feel free to post your questions to the community, or you can ask us for help directly on the [_#ask-an-admin_](https://mir-rcif.slack.com/archives/C05SQC1SJ0Y) channel.

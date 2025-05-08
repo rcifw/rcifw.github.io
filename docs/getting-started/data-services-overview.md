@@ -7,7 +7,6 @@ source:
 author: Mike Hodge
 include: true
 ---
-
 The RCIF enables research through sharing of high value datasets under its **shared datasets program**, enabling acquisition, management,  and processing of original imaging research data through the **Central Neuroimaging Database Archive (CNDA)**, and facilitating creation, management and processing of large clinical-derived datasets through the **MIR Research Imaging Repository(MIRRIR)**.  The RCIF also operates a number of custom, branded imaging informatics portals to facilitate data aquisition, managment, sharing, and processing for a number of large, multi-site research projects.  
 ## Data Services
 

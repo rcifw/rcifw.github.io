@@ -5,15 +5,14 @@ tags: []
 permalink: /containers/
 author: Scott Johnson
 ---
-
 # Working with Containers - a Freesurfer example
 
-Containers have become a great way to produce reproducible science and capture exact environments for running workloads. There is, however, some friction and learning curve in designing them. Here, we provide 3 paths: using Apptainer directly, pulling a Docker container into Apptainer, or importing a Docker container to Apptainer. In the last Docker section (Approach 3 below), we work an example to illustrate common issues and strategies for creating and using containers on the CHPC systems.
+Containers have become a great way to produce reproducible science and capture exact environments for running workloads. There is, however, some friction and learning curve in designing them. Here, we provide 3 approaches: using Apptainer directly, pulling a Docker container into Apptainer, or importing a Docker container to Apptainer. In the last Docker section (Approach 3 below), we work an example to illustrate common issues and strategies for creating and using containers on the CHPC systems.
 ## Approach 1: Building with Apptainer on the Cluster
 This approach has fewer steps, but they may be more complicated depending on your comfort level with building software or your need to customize. Luckily, the rise of AI-based tools has significantly decreased the difficulty.
 
 We first suggest trying to directly import a Docker container if it exists (see [here](https://apptainer.org/docs/user/main/build_a_container.html#downloading-an-existing-container-from-docker-hub)). Otherwise ...
-### Step 1: Create an Apptainer definition file
+### Step 1.1: Create an Apptainer definition file
 It is not common to find an Apptainer (or, as it was previously called, "Singularity") definition file, so you will probably have to make your own with this method. However, you can design and build them relatively quickly starting with one generated from an LLM tool (e.g., [Claude](https://claude.ai), [ChatGPT](https://chatgpt.com/), [Gemini](https://gemini.google.com), etc.).
 
 For instance, this prompt (using a snippet from the [NIH AFNI setup page](https://afni.nimh.nih.gov/pub/dist/doc/htmldoc/background_install/install_instructs/steps_linux_ubuntu22.html), gave me a great starting point for a definition file):
@@ -22,13 +21,13 @@ Make the following into an Apptainer definition file: This is the quick form of 
 ```
 
 Save the result into a file, e.g., `~/my_file.def`.
-### Step 2: Build the container
+### Step 1.2: Build the container
 Apptainer has a great page: [https://apptainer.org/docs/user/main/build_a_container.html](https://apptainer.org/docs/user/main/build_a_container.html) that describes your options. To summarize ...
 
 If you are pretty confident or the build process is fast, just build it:
 ```
 [me@login01]:$ module load apptainer
-[me@login01]:$ apptainer build ~/my_container.sif ~/my_file.def
+[me@login01]:$ apptainer build --disable-cache ~/my_container.sif ~/my_file.def
 ```
 
 If you think you may need to do some experimentation to get the container to work, follow [this](https://apptainer.org/docs/user/main/build_a_container.html#converting-containers-from-one-format-to-another) for creating a SIF from the sandbox.
@@ -42,7 +41,7 @@ You can also try building from a pre-existing Docker container, e.g.:
 While Apptainer is well-supported on most high-performance computing clusters, you may want something even more portable. [Docker](https://www.docker.com/) is one way to build [OCI](https://opencontainers.org/)-compliant containers that will run (or can be imported) on a wide variety of platforms. Also, you are more likely to find the container published as a Docker container or a Dockerfile (recipe) available on the websites of your favorite software.
 ### Prerequisites:
 * Docker installed on your local machine
-### Step 1: Create the container on your local machine
+### Step 3.1: Create the container on your local machine
 Starting on your local machine:
 ```
 [me@my_local_machine]:$ git clone git@github.com:freesurfer/freesurfer.git
@@ -62,7 +61,7 @@ And you have a brand new container:
 REPOSITORY   TAG       IMAGE ID       CREATED         SIZE
 <none>       <none>    d4e02d861be0   3 minutes ago   13.2GB
 ```
-### Step 2: Quality-checking the container
+### Step 3.2: Quality-checking the container
 But there's a problem ...
 ```
 [me@my_local_machine]:$ docker image inspect d4e02d861be0
@@ -75,7 +74,7 @@ But there's a problem ...
 
 Our container was built for the "arm64" architecture, which is not the architecture of our
 cluster, so what do we do?
-### Step 3: Creating a compliant container
+### Step 3.3: Creating a compliant container
 We explicitly tell Docker to build for "linux/amd64"!
 ```
 [me@my_local_machine]:$ docker buildx build --platform linux/amd64 -f ./Dockerfile -t image .
@@ -95,7 +94,7 @@ We can now save that to an archive file:
 ```
 [me@my_local_machine]:$ docker save af6f74f8577f -o freesurfer-7.2.0.linux-amd64.tar
 ```
-### Step 4: Sending the container to the CHPC
+### Step 3.4: Sending the container to the CHPC
 Now, you have a container that can be imported into Apptainer, so send it to the CHPC:
 ```
 [me@my_local_machine]:$ scp -i ~/.ssh/my_ssh_certificate freesurfer-7.2.0.linux-amd64.tar me@login3.chpc.wustl.edu:~/

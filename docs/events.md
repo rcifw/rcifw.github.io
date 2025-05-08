@@ -5,10 +5,9 @@ permalink: /events/
 ---
 # Upcoming
 
-* **April 14**: 11am+ - SYSTEM MAINTENANCE: Access to the CHPC will be removed.
 ### CHPC Workshops and Office Hours
 
-**NOTE: Currently paused while we onboard our new CHPC support staff. Welcome, John!**
+**NOTE: Currently paused while we onboard our new CHPC support staff. Welcome, Sizhe (John)!**
 
 *NIL Large Conference Room #2311*
 - 1st Wednesday of every month from 9:00am-10:00am

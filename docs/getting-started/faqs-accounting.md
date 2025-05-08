@@ -6,7 +6,6 @@ permalink: /rates/
 author: Scott Johnson
 include: true
 ---
-
 ## What are the FY25 rates?
 
 For rates see: [FY25 RCIF rate sheet](https://wustl.box.com/s/t01lm5ajuj776wz8w7jra1wjf2zwnejt) (note: WashU Key required)
