@@ -8,9 +8,9 @@ include: true
 ---
 
 # Training and Workshops
-Check [events](../events) for our current schedule.
+Check [events](../events.md) for our current schedule.
 # Support
-For a guide to using the CHPC, see [Slurm basics](../getting-started/slurm-basics), and we have a short guide to debugging your scripts in our [debugging fundamentals](../getting-started/debugging-fundamentals) page.
+For a guide to using the CHPC, see [Slurm basics](slurm-basics.md), and we have a short guide to debugging your scripts in our [debugging fundamentals](debugging-fundamentals.md) page.
 
 You also have several ways of contacting us for one-on-one or crowd-sourced support.
 
