@@ -6,6 +6,7 @@ permalink: /debugging/
 author: Scott Johnson
 include: false
 ---
+# Debugging Fundamentals
 Users may encounter times when their jobs fail. It can feel overwhelming, but don't panic! This guide will give you some simple and effective techniques to quickly isolate and address problems in your scripts. If you have not visited the [Slurm fundamentals](slurm-basics.md) page, this is a great resource for basic system use.
 ## Check the output
 Slurm sends standard output to `slurm-<jobid>.out` and standard error to `slurm-<jobid>.err` buy default. Check these files to see if they tell you the problem. Note: you cannot necessarily depend on these being produced; some exit states for programs cause this to fail or to produce `root`-owned output files.

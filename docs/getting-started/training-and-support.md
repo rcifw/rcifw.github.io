@@ -6,7 +6,6 @@ permalink: /support/
 author: Scott Johnson
 include: true
 ---
-
 # Training and Workshops
 Check [events](../events.md) for our current schedule.
 # Support

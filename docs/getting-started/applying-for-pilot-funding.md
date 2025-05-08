@@ -7,7 +7,6 @@ source:
 author:
 include: true
 ---
-
 ## Applying for pilot funding
 Whether you are in MIR or not, one of the best ways to get your project started or get initial data for a study is to apply for MIR Pilot Funding.
 * Application at [https://rad-apps.mir.wustl.edu/pilotfunding](https://rad-apps.mir.wustl.edu/pilotfunding)
