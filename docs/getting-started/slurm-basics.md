@@ -66,7 +66,16 @@ See [GRES types](#gres-types) for a description of the GPU resources.
 ## Limits
 While there is no practical limit on the number of jobs a user or group can run or queue, we apply a maximum limit on cumulative concurrent resource usage of:
 * Per account: 512 cores and 32 GPUs
-* Per user: 16 GPUs 
+* Per user: 24 GPUs
+
+For some users, you may also use different quality of service options for different partitions or resources. We currently support:
+
+| **QoS Name** | **Description** | **Limits** |
+| --- | --- | --- |
+| `normal` | Default quality of service | See above |
+| `normal_gpu` | Offers separate GPU pool limits | CPUs: 256, GPUs: 32 |
+| `condo` | Avoids limits when working on your condo | No limit |
+
 ## Partitions and Quality of Service
 The partition is a great tool to assemble jobs of similar properties. Depending on the requested number of CPUs and/or GPUs, CPU memory allocation and wall time, we have defined 9 partitions in the cluster. The relevant properties for each partition are summarized in the table below. To see a current list of partitions, run [`sinfo`](https://manpages.ubuntu.com/manpages/xenial/man1/sinfo.1.html).
 
@@ -92,6 +101,7 @@ The **tier1_cpu** and **tier1_gpu** partitions are designed for *CPU-only* and *
 The **tier2_cpu** and **tier2_gpu** partitions are designed for *CPU-only* and *GPU-accelerated* jobs, respectively, to be run for no more than 1 week per job.
 ### Tier 3 Partitions ###
 The **tier3_gpu** partitions are designed for the highest performance *GPU-accelerated* jobs for up to 2 weeks per job.
+
 ## Options ##
 The table below lists [`sbatch` options](https://slurm.schedmd.com/sbatch.html) for executing your Slurm jobs:
 
