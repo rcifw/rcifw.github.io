@@ -58,3 +58,14 @@ If you need to access your /scratch folder, you can first click on “Files” i
 Click on the folder named “Computer”, it would show all folders mounted on the login node, among which you can find a folder named “scratch”.
 
 Click on the folder named “scratch”, it would show all user folders, find your own and click on it, you would be able to see all files in your scratch space.
+
+## 5. Troubleshooting
+VNC can be difficult for users. There are several configuration and connection challenges that can arise. We will build the following list, as we receive user feedback:
+### xstartup
+You can define how your VNC session starts by writing a `~/.vnc/xstartup`. If this is incompatible, this can cause the screen to show blank but otherwise produce no errors. Check that this is correct.
+### Lock Screen
+If you leave your window unused, a lock screen can appear. Just run:
+```bash
+loginctl unlock-session
+```
+in a terminal under the user running the VNC server and on the server where the VNC server is running.

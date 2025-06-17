@@ -127,6 +127,7 @@ The table below lists [`sbatch` options](https://slurm.schedmd.com/sbatch.html) 
 | `#SBATCH ‐‐reservation**=<*reservation_names*>` | Allocate resources for the job from the named reservation. Each reservation will be considered in the order it was requested. All reservations will be listed in `scontrol show reservation`/`squeue` through the life of the job. |
 | `#SBATCH –t, –-time=<*time*>` | Set a limit on the total run time of the job allocation. A time limit of zero requests that no time limit be imposed. Acceptable time formats include “minutes”, “minutes:seconds”, “hours:minutes:seconds”, “days-hours”, “days-hours:minutes” and “days-hours:minutes:seconds”. For example, `#SBATCH ‐‐time=24:0:0` requests 24 hours of walltime. |
 | `#SBATCH ‐‐workdir=<*directory_name*>` | Set the working directory for the submitted job. |
+Note: if you would like an e-mail notification, please use the `--mail-user=<me>@wustl.edu --mail-type=ALL` flags
 ## GRES Types ##
 The table below lists [`gres` options](https://slurm.schedmd.com/gres.html) for executing your Slurm jobs on resources with specific attributes (generic resources). While we realize that Tesla is not correct for the line of NVIDIA GPUs we are referencing, we have kept the nomenclature to avoid breaking already existing workflows:
 
