@@ -31,7 +31,6 @@ salloc: Nodes node16 are ready for job
 node16.cluster
 ```
 This example is giving the user 5 minutes of time on 1 CPU on node16 and automatically opens a prompt on node16. When the requested time is up, the batch management system will shut down any user programs on that allocation and remove user access.
-
 ## Accounts
 Any cluster user may submit jobs to the free partition without specifying an account using `srun --partition=free`. Jobs on the free partition are limited in terms of their priority, hardware, and run time (max 3 hours) and use the "unassociated" account. Jobs submitted to a higher tier of service must be associated with an account using `--account=<my account>`.
 
@@ -40,6 +39,21 @@ Accounts are linked to a principal investigator (PI). By default, the account is
 A research assistant, student, or post-doc may submit jobs under their PI's account. A lab member with more than one PI can specify which PI's account to use for which job by passing the appropriate `--account=` argument for that job.  PI's may set up an account, select a tier of service, and add/remove lab members who can submit jobs to that account by e-mailing [chpc@nrg.wustl.edu](mailto:chpc@nrg.wustl.edu).
 
 For a complete list of accounts on the cluster run: `sacctmgr list accounts -P`.
+## Job Priorities
+How a job is prioritized is affected by multiple factors:
+* **Age** - how long has your job been weighting to execute? The longer you wait, the higher the priority
+* **Fairshare** - how many [shares](#shares) has your group purchased? The more shares you have, the higher the priority
+* **Job size** - how many resources are you requesting? The smaller the job request, the higher the priority. Jobsize weights: `CPU=100,Mem=0.025,GR` (note: you can see the current values with `sprio -w`)
+
+| **Factor**            | **Weight** |
+| ----------------------- | ---------- |
+| Age                     | 3000       |
+| Fairshare               | 10000      |
+| Jobsize                 | 2000       |
+
+Whether a job will run at all may also be controlled by hard [limits](#limits) applied at the account and user levels.
+
+On the login nodes, you can run: `check_priority` to see several statistics about your jobs and how they are positioned in the priority queue. You can optionally pass the `-a` flag with an account name to include information about the account as a whole.
 ## Shares
 Each account is assigned a number of shares related to the amount paid for access. Here is a summary:
 * While partition weights are equal, the partition to which you submit jobs controls the maximum runtime and the pool of computing resources you can access (see [here](#partitions-and-quality-of-service))
@@ -75,8 +89,7 @@ For some users, you may also use different quality of service options for differ
 | `normal` | Default quality of service | See above |
 | `normal_gpu` | Offers separate GPU pool limits | CPUs: 256, GPUs: 32 |
 | `condo` | Avoids limits when working on your condo | No limit |
-
-## Partitions and Quality of Service
+## Partitions
 The partition is a great tool to assemble jobs of similar properties. Depending on the requested number of CPUs and/or GPUs, CPU memory allocation and wall time, we have defined 9 partitions in the cluster. The relevant properties for each partition are summarized in the table below. To see a current list of partitions, run [`sinfo`](https://manpages.ubuntu.com/manpages/xenial/man1/sinfo.1.html).
 
 | **Partition**   | **Max CPUs per job** | **Max nodes** | **Default memory****per CPU** | **Default / Max runtime** | **Max jobs per user** |
