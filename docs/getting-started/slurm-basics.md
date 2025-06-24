@@ -41,9 +41,14 @@ A research assistant, student, or post-doc may submit jobs under their PI's acco
 For a complete list of accounts on the cluster run: `sacctmgr list accounts -P`.
 ## Job Priorities
 How a job is prioritized is affected by multiple factors:
-* **Age** - how long has your job been weighting to execute? The longer you wait, the higher the priority
-* **Fairshare** - how many [shares](#shares) has your group purchased? The more shares you have, the higher the priority
-* **Job size** - how many resources are you requesting? The smaller the job request, the higher the priority. Jobsize weights: `CPU=100,Mem=0.025,GR` (note: you can see the current values with `sprio -w`)
+* **Age** - How long has your job been weighting to execute? The longer you wait, the higher the priority.
+* **Fairshare** - How many [shares](#shares) has your group purchased? The more shares you have, the higher the priority.
+* **Job size** - How many resources are you requesting? The smaller the job request, the higher the priority. 
+	* Current Jobsize weights: `CPU=100,Mem=0.025,GR` (Note: you can see the current values with `sprio -w`)
+
+The total Job priority can be expressed with the following equation:
+
+`Job_priority = PriorityWeightAge * age_factor + PriorityWeightFairshare * fairshare_factor + PriorityWeightJobsize * Job_size`
 
 | **Factor**            | **Weight** |
 | ----------------------- | ---------- |
@@ -57,8 +62,8 @@ On the login nodes, you can run: `check_priority` to see several statistics abou
 ## Shares
 Each account is assigned a number of shares related to the amount paid for access. Here is a summary:
 * While partition weights are equal, the partition to which you submit jobs controls the maximum runtime and the pool of computing resources you can access (see [here](#partitions-and-quality-of-service))
-* Accounts are assigned a set of shares relative to their paid tier (e.g., Tier 1 = 100 shares, Tier 2 = 200 shares, Tier 3 = 300 shares), while the default (i.e., "unassociated") account (for free usage) receives 1 share.
-* When a user submits jobs via an Account, those jobs draw from that account's shares; users do not have individual shares.
+* Accounts are assigned a set of shares relative to their paid tier (e.g., Tier 1 = 100 shares, Tier 2 = 200 shares, Tier 3 = 300 shares), while the default (i.e., "unassociated") account (for free [partitions](##Partitions)) receives 1 share.
+* When a user submits jobs via an Account, those jobs draw from that **account**'s shares; users do not have individual shares.
 * Priority is based on the following weights: 62.5% based on shares, 31.25% based on the job wait time, and the rest based on job size
 
 You can get a sense of your account shares through the `sshare` command (see [here](https://slurm.schedmd.com/sshare.html))
