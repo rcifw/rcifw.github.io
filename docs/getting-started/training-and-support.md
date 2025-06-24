@@ -16,9 +16,36 @@ You also have several ways of contacting us for one-on-one or crowd-sourced supp
 * This documentation is a great resource for up-to-date information.
 * Join our "Research Computing and Informatics Facility" workspace ([mir-rcif](https://mir-rcif.slack.com)) - email support for an invitation. This is an engaged and helpful community; feel free to post your questions to the community, or you can ask us for help directly on the [_#ask-an-admin_](https://mir-rcif.slack.com/archives/C05SQC1SJ0Y) channel.
 * Receive news and advisories on the [CHPC Users email group](https://gowustl.sharepoint.com/sites/chpc-users); all new users are added when they receive an account on the CHPC.
-* On campus? You can find us in Suite 2211 of the East Building.
+* On campus? You can find us in Suite 2211 or Suite 3338A of the East Building.
 * Email support for the various services, including CHPC (__chpc _at_ nrg.wustl.edu__), CNDA (__cnda-help _at_ wustl.edu__), and MIRRIR (__mirrir-help _at_ wustl.edu__).
 * Check out our [YouTube channel](https://www.youtube.com/@rcifwustl) for additional content, including videos from user meetings and RCIF Open House events.
+
+## Scope of Support
+We provide a wide range of support including but not limited to:
+* Data Support: Access to [[rcif-shared-datasets]] , data migration with [[getting-started-with-globus|Globus]], or [[hpc-hardware|Ceph]]-based data storage.
+* Connection Support: Access to [[connect-to-login-nodes|login nodes]] and [[hpc-hardware#List of Computational Nodes|computational nodes]], including access via [[vnc-remotedesktop|VNC]], [[visual-studio-code|VSCode]] ,etc.
+* Job Support: CHPC supports a variety of job submission methods, see [[slurm-basics|Slurm Documentation]]. We will provide support for issues encountered during job submission and job running.
+* Hardware and Software Support: We will provide regular updates and maintenance to the computational resources and [[software]] support.
+### *Out of scope support*
+However, it is noteworthy that certain services will be considered out-of-scope and charged according to the rates listed in the rate sheet [FY25 RCIF rate sheet](https://wustl.box.com/s/t01lm5ajuj776wz8w7jra1wjf2zwnejt) :
+1. External software or packages: For instance, issues with jobs submitted with [`parsl` ](https://parsl-project.org/) will count as out-of-scope if the problems are caused by `parsl` code.
+2. Issues with personal devices: Contact [WUIT](https://it.wustl.edu/help/washu-it-support/) for issues specific to your personal device (e.g. software, conda environment, or running code locally on personal device).
+3. Specific coding issues: We won't be able to support specific coding problems, but CHPC provides software development support as individually-priced, external support. See the rate sheet above for details.
+## Slack Channel Best Practices
+
+### Prior to posting
+
+When posting messages to the [_#ask-an-admin_](https://mir-rcif.slack.com/archives/C05SQC1SJ0Y) channel, we suggest the following before posting
+1. Search for relevant questions, as in many cases questions regarding a specific node or software package could have been reported by other users
+2. Check CHPC documentation for potential quick fixes to issues
+
+### Posting formats
+
+We suggest the following formatting guidelines to follow:
+1. 
+![Screenshot of a Jupyter notebook](../assets/images/jupyter-screenshot-1.png)
+
+
 
 # Additional Resources
 The Becker Library provides a series of trainings/workshops on computer basics for users who had no prior experience of Linux OS and high performance computing (Computing 101) as well as basic programming in Python, R, and MATLAB.
