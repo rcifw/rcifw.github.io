@@ -42,11 +42,13 @@ When posting messages to the [_#ask-an-admin_](https://mir-rcif.slack.com/archiv
 ### Posting formats
 
 We suggest the following formatting guidelines to follow:
-1. 
-![Screenshot of a Jupyter notebook](../assets/images/jupyter-screenshot-1.png)
+1. Submit error logs, scripts, and other text-based messages in code blocks:
+![Screenshot of a Jupyter notebook](../assets/images/slack_code_block.png)
 
+2. Explicitly state the node, software, and environment (if applicable) where the issue has occurred.
 
-
+### Notes
+Unless you have a solid reason to believe the scheduler is malfunctioning, please do not post about jobs not being scheduled. You may contact the admins if you consider the current partition insufficient.
 # Additional Resources
 The Becker Library provides a series of trainings/workshops on computer basics for users who had no prior experience of Linux OS and high performance computing (Computing 101) as well as basic programming in Python, R, and MATLAB.
 
