@@ -23,11 +23,11 @@ You also have several ways of contacting us for one-on-one or crowd-sourced supp
 ## Scope of Support
 We provide a wide range of support including but not limited to:
 * Data Support: Access to [RCIF shared datasets](rcif-shared-datasets.md) , data migration with [Globus](getting-started-with-globus.md), or [hpc-hardware](../system-info/hpc-hardware.md)-based data storage.
-* Connection Support: Access to [login nodes](connect-to-login-nodes.md) and [computation nodes](../system-info/hpc-hardware.md#List of Computational Nodes), including access via [VNC](../software/vnc-remotedesktop), [VSCode](../software/visual-studio-code) ,etc.
+* Connection Support: Access to [login nodes](connect-to-login-nodes.md) and [computation nodes](../system-info/hpc-hardware.md), including access via [VNC](../software/vnc-remotedesktop), [VSCode](../software/visual-studio-code) ,etc.
 * Job Support: CHPC supports a variety of job submission methods, see [Slurm Documentation](slurm-basics.md). We will provide support for issues encountered during job submission and job running.
 * Hardware and Software Support: We will provide regular updates and maintenance to the computational resources and software support.
 ### *Out of scope support*
-However, it is noteworthy that certain services will be considered out-of-scope and charged according to the rates listed in the rate sheet [FY25 RCIF rate sheet](https://wustl.box.com/s/t01lm5ajuj776wz8w7jra1wjf2zwnejt) :
+However, it is noteworthy that certain services will be considered out-of-scope and charged according to the preset rates. See  [Accounting FAQ](./faqs-accounting.md):
 1. External software or packages: For instance, issues with jobs submitted with [`parsl` ](https://parsl-project.org/) will count as out-of-scope if the problems are caused by `parsl` code.
 2. Issues with personal devices: Contact [WUIT](https://it.wustl.edu/help/washu-it-support/) for issues specific to your personal device (e.g. software, conda environment, or running code locally on personal device).
 3. Specific coding issues: We won't be able to support specific coding problems, but CHPC provides software development support as individually-priced, external support. See the rate sheet above for details.

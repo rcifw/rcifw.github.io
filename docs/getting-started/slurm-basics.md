@@ -62,7 +62,7 @@ On the login nodes, you can run: `check_priority` to see several statistics abou
 ## Shares
 Each account is assigned a number of shares related to the amount paid for access. Here is a summary:
 * While partition weights are equal, the partition to which you submit jobs controls the maximum runtime and the pool of computing resources you can access (see [here](#partitions-and-quality-of-service))
-* Accounts are assigned a set of shares relative to their paid tier (e.g., Tier 1 = 100 shares, Tier 2 = 200 shares, Tier 3 = 300 shares), while the default (i.e., "unassociated") account (for free [partitions](##partitions)) receives 1 share.
+* Accounts are assigned a set of shares relative to their paid tier (e.g., Tier 1 = 100 shares, Tier 2 = 200 shares, Tier 3 = 300 shares), while the default (i.e., "unassociated") account (for free [partitions](#partitions)) receives 1 share.
 * When a user submits jobs via an Account, those jobs draw from that **account**'s shares; users do not have individual shares.
 * Priority is based on the following weights: 62.5% based on shares, 31.25% based on the job wait time, and the rest based on job size
 
