@@ -5,7 +5,7 @@ permalink: /events/
 ---
 # Upcoming
 
-**May 28**: all day - SYSTEM MAINTENANCE ON STORAGE (queues and BeeGFS storage will be unavailable to allow for work on the metadata servers)
+**July 23-25, 2025**: SYSTEM MAINTENANCE ON NETWORK (all systems will be down)
 
 ### CHPC Workshops and Office Hours
 
