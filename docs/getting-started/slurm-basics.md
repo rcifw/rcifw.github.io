@@ -41,9 +41,14 @@ A research assistant, student, or post-doc may submit jobs under their PI's acco
 For a complete list of accounts on the cluster run: `sacctmgr list accounts -P`.
 ## Job Priorities
 How a job is prioritized is affected by multiple factors:
-* **Age** - how long has your job been weighting to execute? The longer you wait, the higher the priority
-* **Fairshare** - how many [shares](#shares) has your group purchased? The more shares you have, the higher the priority
-* **Job size** - how many resources are you requesting? The smaller the job request, the higher the priority. Jobsize weights: `CPU=100,Mem=0.025,GR` (note: you can see the current values with `sprio -w`)
+* **Age** - How long has your job been waiting to execute? The longer you wait, the higher the priority.
+* **Fairshare** - How many [shares](#shares) has your group purchased? The more shares you have, the higher the priority.
+* **Job size** - How many resources are you requesting? The smaller the job request, the higher the priority. 
+	* Current Jobsize weights: `CPU=100,Mem=0.025,GR` (Note: you can see the current values with `sprio -w`)
+
+The total Job priority can be expressed with the following equation:
+
+`Job_priority = PriorityWeightAge * age_factor + PriorityWeightFairshare * fairshare_factor + PriorityWeightJobsize * Job_size`
 
 | **Factor**            | **Weight** |
 | ----------------------- | ---------- |
@@ -57,8 +62,8 @@ On the login nodes, you can run: `check_priority` to see several statistics abou
 ## Shares
 Each account is assigned a number of shares related to the amount paid for access. Here is a summary:
 * While partition weights are equal, the partition to which you submit jobs controls the maximum runtime and the pool of computing resources you can access (see [here](#partitions-and-quality-of-service))
-* Accounts are assigned a set of shares relative to their paid tier (e.g., Tier 1 = 100 shares, Tier 2 = 200 shares, Tier 3 = 300 shares), while the default (i.e., "unassociated") account (for free usage) receives 1 share.
-* When a user submits jobs via an Account, those jobs draw from that account's shares; users do not have individual shares.
+* Accounts are assigned a set of shares relative to their paid tier (e.g., Tier 1 = 100 shares, Tier 2 = 200 shares, Tier 3 = 300 shares), while the default (i.e., "unassociated") account (for free [partitions](#partitions)) receives 1 share.
+* When a user submits jobs via an Account, those jobs draw from that **account**'s shares; users do not have individual shares.
 * Priority is based on the following weights: 62.5% based on shares, 31.25% based on the job wait time, and the rest based on job size
 
 You can get a sense of your account shares through the `sshare` command (see [here](https://slurm.schedmd.com/sshare.html))
@@ -92,17 +97,17 @@ For some users, you may also use different quality of service options for differ
 ## Partitions
 The partition is a great tool to assemble jobs of similar properties. Depending on the requested number of CPUs and/or GPUs, CPU memory allocation and wall time, we have defined 9 partitions in the cluster. The relevant properties for each partition are summarized in the table below. To see a current list of partitions, run [`sinfo`](https://manpages.ubuntu.com/manpages/xenial/man1/sinfo.1.html).
 
-| **Partition**   | **Max CPUs per job** | **Max nodes** | **Default memory****per CPU** | **Default / Max runtime** | **Max jobs per user** |
-| --------------- | -------------------- | ------------- | ----------------------------- | ------------------------- | --------------------- |
-| free            | 30                   | 2             | 6G                            | 5m / 3h                   | -                     |
-| free_gpu        | -                    | 1             | 6G                            | 5m / 3h                   | -                     |
-| interactive_cpu | 2                    | 1             | 6G                            | 5m / 30m                  | -                     |
-| tier1_cpu       | 30                   | 2             | 6G                            | 30m / 24h                 | -                     |
-| tier1_gpu       | 30                   | 2             | 6G                            | 30m / 24h                 | -                     |
-| tier2_cpu       | -                    | -             | 6G                            | 30m / 7d                  | -                     |
-| tier2_gpu       | -                    | -             | 6G                            | 30m / 7d                  | -                     |
-| tier3_cpu       | -                    | -             | 6G                            | 30m / 14d                 | -                     |
-| tier3_gpu       | -                    | -             | 6G                            | 30m / 14d                 | -                     |
+| **Partition**   | **Max CPUs per job** | **Max nodes** | **Default memory** **per CPU** | **Default / Max runtime** | **Max jobs per user** |
+| --------------- | -------------------- | ------------- | ------------------------------ | ------------------------- | --------------------- |
+| free            | 30                   | 2             | 6G                             | 5m / 3h                   | -                     |
+| free_gpu        | -                    | 1             | 6G                             | 5m / 3h                   | -                     |
+| interactive_cpu | 2                    | 1             | 6G                             | 5m / 30m                  | -                     |
+| tier1_cpu       | 30                   | 2             | 6G                             | 30m / 24h                 | -                     |
+| tier1_gpu       | 30                   | 2             | 6G                             | 30m / 24h                 | -                     |
+| tier2_cpu       | -                    | -             | 6G                             | 30m / 7d                  | -                     |
+| tier2_gpu       | -                    | -             | 6G                             | 30m / 7d                  | -                     |
+| tier3_cpu       | -                    | -             | 6G                             | 30m / 14d                 | -                     |
+| tier3_gpu       | -                    | -             | 6G                             | 30m / 14d                 | -                     |
 ### Free Partitions ###
 This set of partitions is designed for users who want to develop and test their applications.
 * The **free** partition includes of the compute nodes to accommodate testing. Each job in this partition is limited to run no more than 3 hours.
@@ -159,7 +164,7 @@ salloc -N1 -n2 --gres=gpu:tesla_a100:1 --partition=<partition name> --account=<a
 ```
 
 ## Environmental Variables ##
-If you need to extract information from the job data collected by  Slurm for assessing your job performance in addition to the information provided in the standard output file, you can take advantage of the Slurm environmental variables and include them in your batch script.
+If you need to extract information from the job data collected by Slurm for assessing your job performance in addition to the information provided in the standard output file, you can take advantage of the Slurm environmental variables and include them in your batch script.
 
 | **Variable** | **Description** |
 | --- | --- |
@@ -173,21 +178,21 @@ If you need to extract information from the job data collected by  Slurm for ass
 | `SLURM_NODELIST` | List of nodes allocated to the job. |
 | `SLURM_NNODES` | Total number of nodes in the job’s resource allocation. |
 ## Commands ##
-Following is a list of  Slurm commands.
+Following is a list of Slurm commands.
 
-| Command | Description |
-| --- | --- |
-| [`sbatch`](http://slurm.schedmd.com/sbatch.html) *script-name* | Submit a batch script to Slurm. |
-| [`sinfo`](http://slurm.schedmd.com/sinfo.html) | View information about Slurm nodes and partitions. |
-| [`squeue`](http://slurm.schedmd.com/squeue.html) | View information about jobs located in the Slurm scheduling queue. |
-| [`squeue`](http://slurm.schedmd.com/squeue.html) *[username]* | List jobs by user |
-| [`squeue`](http://slurm.schedmd.com/squeue.html) `‐‐job *[job-id]*` | Check job status |
-| [`scancel`](http://slurm.schedmd.com/scancel.html) *[job-id]* | Signal or cancel jobs, job arrays or job steps. |
-| [`sview`](http://slurm.schedmd.com/sview.html) | Graphical user interface to view and modify Slurm state. |
-| [`scontrol`](http://slurm.schedmd.com/scontrol.html) `hold *[job_list]*` | Prevent a pending job from being started. |
-| [`scontrol`](http://slurm.schedmd.com/scontrol.html) `release [job_list]` | Release a previously held job to begin execution. |
-| [`scontrol`](http://slurm.schedmd.com/scontrol.html) `update *[*specification*]*` | Update job, step, node, partition, or reservation configuration per the supplied specification. |
-| [`sacct`](http://slurm.schedmd.com/sacct.html) | Displays accounting data for all jobs and job steps in the Slurm job accounting log or Slurm database |
+| Command                                                                           | Description                                                                                           |
+| --------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| [`sbatch`](http://slurm.schedmd.com/sbatch.html) *script-name*                    | Submit a batch script to Slurm.                                                                       |
+| [`sinfo`](http://slurm.schedmd.com/sinfo.html)                                    | View information about Slurm nodes and partitions.                                                    |
+| [`squeue`](http://slurm.schedmd.com/squeue.html)                                  | View information about jobs located in the Slurm scheduling queue.                                    |
+| [`squeue`](http://slurm.schedmd.com/squeue.html) *[username]*                     | List jobs by user                                                                                     |
+| [`squeue`](http://slurm.schedmd.com/squeue.html) `‐‐job *[job-id]*`               | Check job status                                                                                      |
+| [`scancel`](http://slurm.schedmd.com/scancel.html) *[job-id]*                     | Signal or cancel jobs, job arrays or job steps.                                                       |
+| [`sview`](http://slurm.schedmd.com/sview.html)                                    | Graphical user interface to view and modify Slurm state.                                              |
+| [`scontrol`](http://slurm.schedmd.com/scontrol.html) `hold *[job_list]*`          | Prevent a pending job from being started.                                                             |
+| [`scontrol`](http://slurm.schedmd.com/scontrol.html) `release [job_list]`         | Release a previously held job to begin execution.                                                     |
+| [`scontrol`](http://slurm.schedmd.com/scontrol.html) `update *[*specification*]*` | Update job, step, node, partition, or reservation configuration per the supplied specification.       |
+| [`sacct`](http://slurm.schedmd.com/sacct.html)                                    | Displays accounting data for all jobs and job steps in the Slurm job accounting log or Slurm database |
 ### Checking your Account
 A useful command for checking your account usage is `sreport`. For instance, you can see your users' account usage for CPU time with:
 ```
@@ -307,7 +312,8 @@ module load cuda/10.2
 ### Job array ###
 If you have tens or hundreds of independent jobs needed to run, job array offers the feature to write a single batch script and easily submit these tens of hundreds of jobs for you.
 
-In Slurm, `SLURM_ARRAY_TASK_ID` variable is used the track the job array IDs, which basically tracks tens or hundreds of jobs you submitted to run.\n\n\nTo use job array, typically you would create a text file containing a list of your input files sequentially for all your jobs, *input_files.txt*. In combination with `SLURM_ARRAY_TASK_ID` variable,  Slurm can loop through input files for your jobs one by one.
+In Slurm, `SLURM_ARRAY_TASK_ID` variable is used the track the job array IDs, which basically tracks tens or hundreds of jobs you submitted to run.
+To use job array, typically you would create a text file containing a list of your input files sequentially for all your jobs, *input_files.txt*. In combination with `SLURM_ARRAY_TASK_ID` variable,  Slurm can loop through input files for your jobs one by one.
 
 To declare using job array, you would number your jobs, typically starting from 1.
 
