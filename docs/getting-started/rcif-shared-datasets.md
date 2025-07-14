@@ -82,8 +82,22 @@ The VICTRE Trial is an open-source, in-silico clinical trial to investigate a ne
 These clinical datasets have been retrieved from the BJC Hospital System Picture Archiving and Communication Systems (PACS) for analysis.
 
 Currently available BJC Bulk Clinical Data Sets:
-### MAMMO-BJH-1
-458,486 de-identified screening and diagnostic mammograms acquired in St. Louis at Barnes Jewish Hospital, the Center for Advanced Medicine and the BJH Mammography Van, for dates 01/01/2008-04/08/2020. IRB #201706058
+
+### Mammogram Data Sets
+
+#### MAMMO-BJH-1
+458,486 de-identified screening and diagnostic mammograms acquired in St. Louis at Barnes Jewish Hospital (BJH), the Center for Advanced Medicine and the BJH Mammography Van, for dates 01/01/2008-04/08/2020. IRB #201706058
+
+#### MAMMO-MBMC
+70,379 de-identified screening and diagnostic mammograms acquired in St. Louis at Missouri Baptist Medical Center (MBMC) for dates 01/03/2017-12/29/2023. 
+
+#### MAMMO-BJNORTH
+39,044 de-identified screening and diagnostic mammograms acquired in Northwest Healthcare and Christian Hospital for dates 01/03/2017-12/29/2023. 
+
+### Computed Tomography Data Sets
+
+#### ct_bjh_body
+52,307 de-identified CTs covering the chest, abdomen, and pelvis acquired in St. Louis at Barnes Jewish Hospital (BJH) for the date range 11/23/2012-12/29/2023. 
 
 # Requesting Datasets
 
