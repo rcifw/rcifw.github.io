@@ -5,8 +5,6 @@ permalink: /events/
 ---
 # Upcoming
 
-**July 23-25, 2025**: SYSTEM MAINTENANCE ON NETWORK (all systems will be down)
-
 ### CHPC Workshops and Office Hours
 
 **NOTE: Currently paused while we onboard our new CHPC support staff. Welcome, Sizhe (John)!**
