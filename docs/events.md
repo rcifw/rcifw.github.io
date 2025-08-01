@@ -5,8 +5,6 @@ permalink: /events/
 ---
 # Upcoming
 
-**May 28**: all day - SYSTEM MAINTENANCE ON STORAGE (queues and BeeGFS storage will be unavailable to allow for work on the metadata servers)
-
 ### CHPC Workshops and Office Hours
 
 **NOTE: Currently paused while we onboard our new CHPC support staff. Welcome, Sizhe (John)!**
