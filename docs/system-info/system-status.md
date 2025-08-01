@@ -8,7 +8,7 @@ include: true
 ## Current System Status
 
 ### CHPC
-All computing systems are operating normally
+The following are currently offline for maintenance: `login02`, `node07`, `highmem[01-02]`, `gpu[06-09]`, `gpua401`. No other anomalies reported.
 
 ### NRG/Informatics Portals/CNDA/MIRRIR
 All systems are operating normally.
