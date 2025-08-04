@@ -37,6 +37,10 @@ Linux users and Mac users (via MacFUSE and MacPorts) can access the cluster file
 [localuser@localmachine ~]$ cp ~/cluster_mnt/clusterfile ./ # fetch from cluster
 [localuser@localmachine ~]$ fusermount -u ~/cluster_mnt    # unmount
 ```
+#### BMRC
+
+For those in the BMRC looking to use `sshfs` to connect to the BMRC storage from CHPC, please see the [tutorial on Box](https://wustl.box.com/s/mjm79f3idcivvm2km0k8je10hd37rrdm). This will describe a simplified process to setup direct access to your storage on CHPC.
+
 ### sftp + Python
 
 [Python](https://www.python.org/) is a programming language that is widely-used for scientific computing. You can transfer files over sftp directly from your Python scripts using [Paramiko](https://www.paramiko.org/). This functionality is particularly powerful when combined with Python's interactive [Jupyter notebooks](https://jupyter.org/). See the full API documentation [here](https://docs.paramiko.org/en/3.3/api/sftp.html).
