@@ -11,10 +11,10 @@ include: true
 The following are currently offline for maintenance: `login02`, `node07`, `highmem[01-02]`, `gpu[06-09]`, `gpua401`. No other anomalies reported.
 
 ### NRG/Informatics Portals/CNDA/MIRRIR
-CNDA, MIRRIR and all portals are currently down due to issues contacting their filesystems.  We are working on identifying and fixing the root cause but don't yet have an ETA for a fix.
+CNDA, MIRRIR and all portals are currently down due to issues with the ZFS filesystem on which their RDBMS metadata are stored.  Administrators are working to resolve the issue, but we don't yet have an ETA for a fix.
 
 ### Shared Storage Systems (Ceph, BeeGFS, ZFS)
-We are currently experiencing filesystem issues.  We are working on identifying and fixing the root cause but don't yet have an ETA for a fix.
+All systems are operating normally.
 
 #### If you are seeing an outage that is not reported here please contact:
 
