@@ -8,7 +8,7 @@ include: true
 ## Current System Status
 
 ### CHPC
-The following are currently offline for maintenance: `login02`, `node07`, `highmem[01-02]`, `gpu[06-09]`, `gpua401`. No other anomalies reported.
+The following are currently offline for maintenance: `node07`, `gpu[07]`, `gpua[401,408]`. No other anomalies reported.
 
 ### NRG/Informatics Portals/CNDA/MIRRIR
 The metadata storage system issue has been resolved.  All systems should be back up, with the exception of our MIRRIR system, which is down due to unrelated issues that are being addressed.  Please notify us at the e-mail addresses below if you encounter any machines that are still down or any issues with other systems.  
