@@ -11,7 +11,7 @@ include: true
 The following are currently offline for maintenance: `node07`, `gpu[07]`, `gpua[401,408]`. No other anomalies reported.
 
 ### NRG/Informatics Portals/CNDA/MIRRIR
-The metadata storage system issue has been resolved.  All systems should be back up, with the exception of our MIRRIR system, which is down due to unrelated issues that are being addressed.  Please notify us at the e-mail addresses below if you encounter any machines that are still down or any issues with other systems.  
+We are facing another issue with the server managing our metadata storage.  Informatics systems and portals are currently down.  We don't yet have an ETA for a fix and have not yet determined if the current system can be revived or whether the fix requires migration of data to a new storage system.
 
 ### Shared Storage Systems (Ceph, BeeGFS, ZFS)
 All systems are operating normally.
