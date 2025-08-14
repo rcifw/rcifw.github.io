@@ -11,7 +11,7 @@ include: true
 The following are currently offline for maintenance: `node07`, `gpu[07]`, `gpua[401,408]`. No other anomalies reported.
 
 ### NRG/Informatics Portals/CNDA/MIRRIR
-Informatics metadata has been migrated to a new storage system.  Machines will be coming back online over the course of the day.  Unless unexpected issues are encountered, we expect all production systems to be back online by the end of the day today (Thursday, August 14th).
+Informatics metadata has been migrated to a new storage system.  Machines will be coming back online over the coming hours.  Unless unexpected issues are encountered, we expect all production systems to be back online by the morning of Friday, August 15th.
 
 ### Shared Storage Systems (Ceph, BeeGFS, ZFS)
 All systems are operating normally.
