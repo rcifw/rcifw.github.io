@@ -11,7 +11,7 @@ include: true
 The following are currently offline for maintenance: `node07`, `gpu[07,09]`, `gpua[401,408]`. No other anomalies reported.
 
 ### NRG/Informatics Portals/CNDA/MIRRIR
-All systems are operating normally.
+IntraDB is currently undergoing a database upgrade, which is taking longer than hoped.  The outage is likely to continue at least through Friday morning (Sept 12th).  All other systems are operating normally.
 
 ### Shared Storage Systems (Ceph, BeeGFS, ZFS)
 All systems are operating normally.
