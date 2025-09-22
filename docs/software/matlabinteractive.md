@@ -82,7 +82,6 @@ And to re-enter the virtual environment later, just run:
 (.venv) [clusteruser@node16 ~]$ export PATH="$HOME/.local/bin:$PATH"
 (.venv) [clusteruser@node16 ~]$ # now you are in the virtual environment
 ```
-
 > Note: Some developers prefer to manage packages and virtual environments using [conda](https://docs.conda.io/projects/conda/en/stable/) instead.
 
 From within the virtual environment run the `matlab-proxy-app`. You can find additional usage information [here](https://github.com/mathworks/matlab-proxy#usage).
@@ -140,7 +139,7 @@ When you are finished, press `Ctrl` + `c` in your interactive compute job to sto
 ### Using sbatch
 
 If you prefer, you can dispatch your job using a batch script. Create a slurm script like this one and give it a name like `matlab.sh`. Make the script executable with `chmod u+x matlab.sh`.
-
+See the [slurm tutorial](../getting-started/slurm-basics.md#batch-script-for-a-simple-multi-threaded-job) for details on using a batch script.
 ```bash
 #!/bin/bash
 #SBATCH --job-name=matlab
