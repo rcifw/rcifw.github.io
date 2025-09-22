@@ -79,6 +79,7 @@ And to re-enter the virtual environment later, just run:
 
 ```
 [clusteruser@node16 ~]$ source .venv/bin/activate
+[clusteruser@node16 ~]$ export PATH="$HOME/.local/bin:$PATH"
 (.venv) [clusteruser@node16 ~]$ # now you are in the virtual environment
 ```
 
@@ -117,11 +118,11 @@ For product information, visit www.mathworks.com.
 Take note of the port number in the access URL and what compute note you are running on. In this example it's port 37851 on node16. From your local computer, set up an ssh tunnel:
 
 ```
-[localuser@localmachine ~]$ ssh -L 37851:node16:37851 login3.chpc.wustl.edu
+[localuser@localmachine ~]$ ssh -L 37851:node16:37851 <user>@login3.chpc.wustl.edu
 [clusteruser@login02 ~]$ # use Matlab
 [clusteruser@login02 ~]$ exit # close the tunnel when finished
 ```
-
+Replace ```user``` with your own username to the CHPC server.
 Once the Matlab Proxy app is running and you have a tunnel set up, copy and paste the access URL into your local computer's web browser. You may have to change `localhost` to `127.0.0.1`. You should see something like this. You can click the close button on the informational popup and begin working.
 
 ![Screenshot of a Matlab](../assets/images/matlab-screenshot-1.png)
@@ -149,7 +150,7 @@ If you prefer, you can dispatch your job using a batch script. Create a slurm sc
 #SBATCH --mem=4GB
 pwd; hostname; date # for logging purposes
 module load matlab
-
+export PATH="$HOME/.local/bin:$PATH"
 source ~/.venv/bin/activate
 env MWI_USE_EXISTING_LICENSE=True matlab-proxy-app
 ```
