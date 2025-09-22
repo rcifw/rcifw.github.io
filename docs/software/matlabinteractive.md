@@ -79,7 +79,7 @@ And to re-enter the virtual environment later, just run:
 
 ```
 [clusteruser@node16 ~]$ source .venv/bin/activate
-[clusteruser@node16 ~]$ export PATH="$HOME/.local/bin:$PATH"
+(.venv) [clusteruser@node16 ~]$ export PATH="$HOME/.local/bin:$PATH"
 (.venv) [clusteruser@node16 ~]$ # now you are in the virtual environment
 ```
 
