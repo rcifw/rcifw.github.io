@@ -15,11 +15,12 @@ author: Benjamin Kay
 Log into the cluster and start an interactive job on a compute node using [`srun`](https://slurm.schedmd.com/srun.html). Here we ask for 4 GB of memory, which should be enough for basic Matlab work, and 3 hours of runtime, which is the maximum allowed under the free tier. We ask for an interactive bash terminal with `--pty bash`.
 
 ```
-[localuser@localmachine ~]$ ssh login3.chpc.wustl.edu
+[localuser@localmachine ~]$ ssh user@login3.chpc.wustl.edu
 Last login: Tue Sep 19 14:15:38 2023 from 10.20.145.192
 [clusteruser@login02 ~]$ srun --partition=free --nodes=1 --time=3:00:00 --mem=4GB --pty bash
 [clusteruser@node16 ~]$ 
 ```
+See the [connection tutorial](../getting-started/connect-to-login-nodes.md) and the [slurm tutorial](../getting-started/slurm-basics.md) for details on connecting to the computation clusters and starting a job.
 
 Use the slurm module tool to load Matlab. Append this line to your `~/.bashrc` to load Matlab automatically each time you log in.
 
@@ -79,7 +80,6 @@ And to re-enter the virtual environment later, just run:
 
 ```
 [clusteruser@node16 ~]$ source .venv/bin/activate
-(.venv) [clusteruser@node16 ~]$ export PATH="$HOME/.local/bin:$PATH"
 (.venv) [clusteruser@node16 ~]$ # now you are in the virtual environment
 ```
 > Note: Some developers prefer to manage packages and virtual environments using [conda](https://docs.conda.io/projects/conda/en/stable/) instead.
@@ -87,6 +87,7 @@ And to re-enter the virtual environment later, just run:
 From within the virtual environment run the `matlab-proxy-app`. You can find additional usage information [here](https://github.com/mathworks/matlab-proxy#usage).
 
 ```
+(.venv) [clusteruser@node16 ~]$ export PATH="$HOME/.local/bin:$PATH"
 (.venv) [clusteruser@node16 ~]$ env MWI_USE_EXISTING_LICENSE=True matlab-proxy-app
 
 INFO:MATLABProxyApp:Found MATLAB Executable: /export/matlab/Interactive/R2021a/bin/matlab with Root: /export/matlab/Interactive/R2021a
@@ -117,11 +118,12 @@ For product information, visit www.mathworks.com.
 Take note of the port number in the access URL and what compute note you are running on. In this example it's port 37851 on node16. From your local computer, set up an ssh tunnel:
 
 ```
-[localuser@localmachine ~]$ ssh -L 37851:node16:37851 <user>@login3.chpc.wustl.edu
+[localuser@localmachine ~]$ ssh -L 37851:node16:37851 user@login3.chpc.wustl.edu
 [clusteruser@login02 ~]$ # use Matlab
 [clusteruser@login02 ~]$ exit # close the tunnel when finished
 ```
 Replace ```user``` with your own username to the CHPC server.
+
 Once the Matlab Proxy app is running and you have a tunnel set up, copy and paste the access URL into your local computer's web browser. You may have to change `localhost` to `127.0.0.1`. You should see something like this. You can click the close button on the informational popup and begin working.
 
 ![Screenshot of a Matlab](../assets/images/matlab-screenshot-1.png)
