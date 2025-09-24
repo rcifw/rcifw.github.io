@@ -27,7 +27,7 @@ Fetching /ceph/chpc/home/user/clusterfile to clusterfile
 sftp> quit
 ```
 ### sshfs
-
+#### Mounting a directory on CHPC server to a local device
 Linux users and Mac users (via MacFUSE and MacPorts) can access the cluster filesystem with the same convenience as they would access a portable hard drive by mounting it as a network filesystem using [`sshfs`](https://man.archlinux.org/man/sshfs.1). Under the hood, file transfers occur over the ssh protocol as if the user were calling `sftp`. Ordinary users on most systems can mount and unmount sshfs filesystems without `sudo` provided the mount point is in a directory they own; some systems also require that the mount point be in the user's home directory.
 
 ```
@@ -37,6 +37,7 @@ Linux users and Mac users (via MacFUSE and MacPorts) can access the cluster file
 [localuser@localmachine ~]$ cp ~/cluster_mnt/clusterfile ./ # fetch from cluster
 [localuser@localmachine ~]$ fusermount -u ~/cluster_mnt    # unmount
 ```
+
 #### BMRC
 
 For those in the BMRC looking to use `sshfs` to connect to the BMRC storage from CHPC, please see the [tutorial on Box](https://wustl.box.com/s/mjm79f3idcivvm2km0k8je10hd37rrdm). This will describe a simplified process to setup direct access to your storage on CHPC.
@@ -164,7 +165,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 ```
 
 ## Controlling Transfers Using a Compute Node
-
+### Reverse Tunnel
 The login node is not suitable for computational tasks. Sometimes you will want to access a remote filesystem directly from a compute node running a computational job. For example, you might start an interactive, remote desktop environment on a compute node and want to copy files to and from your local desktop computer. You can connect from a compute node to your local network using a reverse tunnel. The process is similar to that for creating a reverse tunnel to a login node (see above).
 
 > Note: At the time of this writing, reverse tunnels to a compute node are only supported on login01, so you will need to connect to it explicitly.
@@ -199,3 +200,59 @@ sftp>
 ```
 
 In the above example, sftp is connecting to port 2222 on login01. The connection is forwarded to port 22 on your local computer. You will use your local username to authenticate.
+#### Reverse tunnelling for Windows
+For Windows users, you would need [OpenSSH Server](https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse?tabs=gui&pivots=windows-server-2025) to complete reverse tunnelling. You may also use [WSL](https://learn.microsoft.com/en-us/windows/wsl/install). Run `sudo service ssh start` to initiate the `ssh` service.
+### sshfs
+#### Mounting a remote directory onto CHPC server
+We provide a containerized `sshfs` module on the CHPC server. Users may mount remote directory to the CHPC server by `sshfs`. You would need to generate an `ssh` key on the server and add to your local device's `authorized_keys` prior to the steps below. 
+##### Mounting a directory on local device to CHPC
+For users that would like to mount a local directory to CHPC server, the following code provides an example of mounting a local folder onto a path on a computation node.
+1. Starting an interactive job on the computation node and load the `sshfs` module
+    ```
+    [clusteruser@login01 ~]$ salloc -t 1:00:00 --partition=free -n 1 -N 1
+    [clusteruser@login01 ~]$ salloc: Pending job allocation 6045387
+    [clusteruser@login01 ~]$ salloc: job 6045387 queued and waiting for resources
+    [clusteruser@login01 ~]$ salloc: job 6045387 has been allocated resources
+    [clusteruser@login01 ~]$ salloc: Granted job allocation 6045387
+    [clusteruser@login01 ~]$ salloc: Waiting for resource configuration
+    [clusteruser@login01 ~]$ salloc: Nodes node26 are ready for job
+    [clusteruser@node26 ~]$ module load sshfs
+    ```
+    You should see the script for running `sshfs` at `/export/sshfs/sshfs.sh`:
+   ```
+    [clusteruser@node26 ~]$ bash-5.1$ sshfs.sh -H
+    Usage: /export/sshfs/sshfs.sh [options] [-- <extra shell args>]
+    
+    Options:
+      -c <container>     Path to .sif container (default: /containers/sshfs.sif)
+      -k <key>           SSH private key file (default: /home/sizhe/.ssh/id_ed25519)
+      -w <workdir>       Host work directory to bind to /work (default: /scratch/sizhe)
+      -u <ssh_user>      SSH username (default: my_user)
+      -h <ssh_host>      SSH host (default: my_host)
+      -p <port>          SSH port (default: 22)
+      -r <remote_path>   Remote path to mount (default: /path/to/work)
+      -A <apptainer>     apptainer binary (default: apptainer)
+      -B <bindspec>      Extra apptainer --bind (may be given multiple times)
+      -n                 Disable StrictHostKeyChecking (kept as default if omitted)
+      -N                 Enable StrictHostKeyChecking (turns it on)
+      -H                 Show this help
+    
+    Examples:
+      /export/sshfs/sshfs.sh -u alice -h storage.example.edu -p 2222 -r /data/project
+      /export/sshfs/sshfs.sh -w /fast/sizhe -- -l    # start bash in container with '-l'
+
+    ``` 
+3. Start ssh reverse-tunnelling **on your local device**:
+   ```
+   [localuser@localmachine ~]$ ssh -v -J clusteruser@login3.chpc.wustl.edu clusteruser@node26.cluster -R 0:localhost:22
+   ```
+   You should see a line similar to
+   ```
+   Allocated port <port_number> for remote forward to localhost:22
+   ```
+   And the specific port number should be used for the step below.
+5. Run the `sshfs.sh` **on the server**:
+   ```
+   [clusteruser@node26 ~]$ sshfs.sh -k ~/.ssh/your_key -w /your/mountpoint/directory -u localuser -h 127.0.0.1 -p <port_number> -r /your/local/directory
+   ```
+And you should be able to access your local directory at `/work/sshfs` inside the `sshfs` container.
