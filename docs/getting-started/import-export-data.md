@@ -80,7 +80,11 @@ For users that would like to mount a local directory to CHPC server, the followi
    ```
    [localuser@localmachine ~]$ ssh -fN -J clusteruser@login3.chpc.wustl.edu clusteruser@node26.cluster -R 127.0.0.1:55222:localhost:22
    ```
-4. Run the 
+4. Run the `sshfs.sh`:
+   ```
+   [clusteruser@node26 ~]$ sshfs.sh -k ~/.ssh/your_key -w /your/mountpoint/directory -u localuser -h 127.0.0.1 -p 55222 -r /your/local/directory
+   ```
+And you should be able to access your local directory at `/work` inside the `sshfs` container
 ##### BMRC
 
 For those in the BMRC looking to use `sshfs` to connect to the BMRC storage from CHPC, please see the [tutorial on Box](https://wustl.box.com/s/mjm79f3idcivvm2km0k8je10hd37rrdm). This will describe a simplified process to setup direct access to your storage on CHPC.
