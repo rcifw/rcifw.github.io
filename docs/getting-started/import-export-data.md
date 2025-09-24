@@ -205,16 +205,16 @@ For users that would like to mount a local directory to CHPC server, the followi
       /export/sshfs/sshfs.sh -w /fast/sizhe -- -l    # start bash in container with '-l'
 
     ``` 
-3. Start ssh reverse-tunnelling on your local device:
+3. Start ssh reverse-tunnelling **on your local device**:
    ```
    [localuser@localmachine ~]$ ssh -fN -J clusteruser@login3.chpc.wustl.edu clusteruser@node26.cluster -R 127.0.0.1:55222:localhost:22
    ```
-4. Run the `sshfs.sh`:
+4. Run the `sshfs.sh` **on the server**:
    ```
    [clusteruser@node26 ~]$ sshfs.sh -k ~/.ssh/your_key -w /your/mountpoint/directory -u localuser -h 127.0.0.1 -p 55222 -r /your/local/directory
    ```
 And you should be able to access your local directory at `/work` inside the `sshfs` container.
-#### Reverse Tunnels
+#### Reverse Tunnel
 The login node is not suitable for computational tasks. Sometimes you will want to access a remote filesystem directly from a compute node running a computational job. For example, you might start an interactive, remote desktop environment on a compute node and want to copy files to and from your local desktop computer. You can connect from a compute node to your local network using a reverse tunnel. The process is similar to that for creating a reverse tunnel to a login node (see above).
 
 > Note: At the time of this writing, reverse tunnels to a compute node are only supported on login01, so you will need to connect to it explicitly.
