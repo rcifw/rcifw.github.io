@@ -199,7 +199,7 @@ To use the Jupyter Matlab kernel, follow our instructions for [Jupyter](jupyter-
 (.venv) [clusteruser@node16 ~]$ pip install jupyter-matlab-proxy
 ```
 
-Start the Jupyter Lab server and connect to it in your web browser with as usual. You should see something like this.
+Start the Jupyter Lab server and connect to it in your web browser as usual. You should see something like this.
 
 ![Screenshot of Jupyter Lab launcher with Matlab available.](../assets/images/jupyter-matlab-screenshot-1.png)
 
