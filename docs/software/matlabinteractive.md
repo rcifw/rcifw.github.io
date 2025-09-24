@@ -172,12 +172,12 @@ Inspect the job's slurm output to get the URL to connect to the Matlab Proxy app
 [clusteruser@login02 ~]$ egrep -o 'http(s)?://[a-zA-Z0-9.]+:[0-9]+' slurm-4089300.out 
 http://localhost:37851
 ```
-
+You should replace the job id in ```slurm-4089300.out``` with the job id of your task.
 Open an ssh tunnel to the appropriate compute node and port.
 
 
 ```
-[localuser@localmachine ~]$ ssh -L 37851:node15:37851 login3.chpc.wustl.edu
+[localuser@localmachine ~]$ ssh -L 37851:node15:37851 <user>@login3.chpc.wustl.edu
 [clusteruser@login02 ~]$ # use Matlab
 [clusteruser@login02 ~]$ exit # close the tunnel when finished
 ```
@@ -199,7 +199,7 @@ To use the Jupyter Matlab kernel, follow our instructions for [Jupyter](jupyter-
 (.venv) [clusteruser@node16 ~]$ pip install jupyter-matlab-proxy
 ```
 
-Start the Jupyter Lab server and connect to it in your web browser as usual. You should see something like this.
+Start the Jupyter Lab server and connect to it in your web browser with as usual. You should see something like this.
 
 ![Screenshot of Jupyter Lab launcher with Matlab available.](../assets/images/jupyter-matlab-screenshot-1.png)
 
@@ -210,6 +210,8 @@ Clicking `Open MATLAB` will open a new browser tab with the Matlab Proxy web app
 If you see a prompt like this, select the `Existing License` tab and then click `Start MATLAB`.
 
 ![Configuring Matlab license](../assets/images/jupyter-matlab-screenshot-3.png)
+
+For further details, see [Jupyter Notebook](./jupyter-notebook.md) tutorials.
 
 ## See Also
 
