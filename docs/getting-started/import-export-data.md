@@ -165,6 +165,43 @@ Type "help", "copyright", "credits" or "license" for more information.
 ```
 
 ## Controlling Transfers Using a Compute Node
+### Reverse Tunnel
+The login node is not suitable for computational tasks. Sometimes you will want to access a remote filesystem directly from a compute node running a computational job. For example, you might start an interactive, remote desktop environment on a compute node and want to copy files to and from your local desktop computer. You can connect from a compute node to your local network using a reverse tunnel. The process is similar to that for creating a reverse tunnel to a login node (see above).
+
+> Note: At the time of this writing, reverse tunnels to a compute node are only supported on login01, so you will need to connect to it explicitly.
+
+Use the following syntax to open the reverse tunnel:
+- `-R` requests a reverse tunnel.
+- `login01` resolves to 10.1.1.251, the cluster-facing IP address for login01. Without this, the tunnel defaults to listening on 127.0.0.1 and would only be accessible from login01 itself. Binding to an external IP address allows compute nodes on the cluster's subnet to connect to the tunnel.
+- `0` makes ssh automatically allocate an open port for the tunnel to listen on, in this case 45627.
+- `127.0.0.1` refers to your local computer. You may specify a different tunnel endpoint on your local computer's subnet.
+- `22` is the port at the tunnel's endpoint to send data to. You may specify a different port if you want to tunnel a protocol other than ssh.
+- `login3-01.chpc.wustl.edu` resolves to 128.252.185.7, the outward-facing IP address for login01.
+
+```
+[localuser@localmachine ~]$ ssh -R login01:0:127.0.0.1:22 clusteruser@login3-01.chpc.wustl.edu
+Allocated port 45627 for remote forward to 127.0.0.1:22
+[clusteruser@login01 ~]$ # do your file transfers here
+[clusteruser@login01 ~]$ exit # close the tunnel
+```
+
+While the tunnel is open, you can connect to your local computer and access files from a compute node. For example, request an interactive job:
+
+```
+[clusteruser@login01 ~]$ srun --partition=free --nodes=1 --ntasks-per-node=1 --time=00:30:00 --mem=128mb --pty bash
+[clusteruser@node15 ~]$
+```
+
+And then user sftp, sshfs, etc. from the compute node. (Use the automatically allocated port in place of 2222).
+
+```
+[clusteruser@node15 ~]$ sftp -P 2222 localuser@login01
+sftp>
+```
+
+In the above example, sftp is connecting to port 2222 on login01. The connection is forwarded to port 22 on your local computer. You will use your local username to authenticate.
+#### Reverse tunnelling for Windows
+For Windows users, you would need [OpenSSH Server](https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse?tabs=gui&pivots=windows-server-2025) to complete reverse tunnelling. You may also use [WSL](https://learn.microsoft.com/en-us/windows/wsl/install). Run `sudo service ssh start` to initiate the `ssh` service.
 ### sshfs
 #### Mounting a remote directory onto CHPC server
 We provide a containerized `sshfs` module on the CHPC server. Users may mount remote directory to the CHPC server by `sshfs`. You would need to generate an `ssh` key on the server and add to your local device's `authorized_keys` prior to the steps below. 
@@ -207,45 +244,15 @@ For users that would like to mount a local directory to CHPC server, the followi
     ``` 
 3. Start ssh reverse-tunnelling **on your local device**:
    ```
-   [localuser@localmachine ~]$ ssh -fN -J clusteruser@login3.chpc.wustl.edu clusteruser@node26.cluster -R 127.0.0.1:55222:localhost:22
+   [localuser@localmachine ~]$ ssh -v -J clusteruser@login3.chpc.wustl.edu clusteruser@node26.cluster -R 0:localhost:22
    ```
-4. Run the `sshfs.sh` **on the server**:
+   You should see a line similar to
    ```
-   [clusteruser@node26 ~]$ sshfs.sh -k ~/.ssh/your_key -w /your/mountpoint/directory -u localuser -h 127.0.0.1 -p 55222 -r /your/local/directory
+   Allocated port <port_number> for remote forward to localhost:22
    ```
-And you should be able to access your local directory at `/work` inside the `sshfs` container.
-#### Reverse Tunnel
-The login node is not suitable for computational tasks. Sometimes you will want to access a remote filesystem directly from a compute node running a computational job. For example, you might start an interactive, remote desktop environment on a compute node and want to copy files to and from your local desktop computer. You can connect from a compute node to your local network using a reverse tunnel. The process is similar to that for creating a reverse tunnel to a login node (see above).
-
-> Note: At the time of this writing, reverse tunnels to a compute node are only supported on login01, so you will need to connect to it explicitly.
-
-Use the following syntax to open the reverse tunnel:
-- `-R` requests a reverse tunnel.
-- `login01` resolves to 10.1.1.251, the cluster-facing IP address for login01. Without this, the tunnel defaults to listening on 127.0.0.1 and would only be accessible from login01 itself. Binding to an external IP address allows compute nodes on the cluster's subnet to connect to the tunnel.
-- `0` makes ssh automatically allocate an open port for the tunnel to listen on, in this case 45627.
-- `127.0.0.1` refers to your local computer. You may specify a different tunnel endpoint on your local computer's subnet.
-- `22` is the port at the tunnel's endpoint to send data to. You may specify a different port if you want to tunnel a protocol other than ssh.
-- `login3-01.chpc.wustl.edu` resolves to 128.252.185.7, the outward-facing IP address for login01.
-
-```
-[localuser@localmachine ~]$ ssh -R login01:0:127.0.0.1:22 clusteruser@login3-01.chpc.wustl.edu
-Allocated port 45627 for remote forward to 127.0.0.1:22
-[clusteruser@login01 ~]$ # do your file transfers here
-[clusteruser@login01 ~]$ exit # close the tunnel
-```
-
-While the tunnel is open, you can connect to your local computer and access files from a compute node. For example, request an interactive job:
-
-```
-[clusteruser@login01 ~]$ srun --partition=free --nodes=1 --ntasks-per-node=1 --time=00:30:00 --mem=128mb --pty bash
-[clusteruser@node15 ~]$
-```
-
-And then user sftp, sshfs, etc. from the compute node. (Use the automatically allocated port in place of 2222).
-
-```
-[clusteruser@node15 ~]$ sftp -P 2222 localuser@login01
-sftp>
-```
-
-In the above example, sftp is connecting to port 2222 on login01. The connection is forwarded to port 22 on your local computer. You will use your local username to authenticate.
+   And the specific port number should be used for the step below.
+5. Run the `sshfs.sh` **on the server**:
+   ```
+   [clusteruser@node26 ~]$ sshfs.sh -k ~/.ssh/your_key -w /your/mountpoint/directory -u localuser -h 127.0.0.1 -p <port_number> -r /your/local/directory
+   ```
+And you should be able to access your local directory at `/work/sshfs` inside the `sshfs` container.
