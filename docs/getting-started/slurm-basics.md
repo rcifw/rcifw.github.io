@@ -347,6 +347,11 @@ A Quick-Start Guide for those unfamiliar with Slurm can be found [here](https://
 Additional Slurm Tutorial Videos can be found [here](https://slurm.schedmd.com/tutorials.html)
 
 For users who are familiar with TORQUE queuing system and looking for a quick adjustment of migrating to  Slurm queuing system, check the information [here](https://wiki.gacrc.uga.edu/wiki/Migrating_from_Torque_to_Slurm) and [here](https://www.sdsc.edu/~hocks/FG/PBS.slurm.html).
+## Additional Commands for Status Tracking
+You may also check for status of jobs, nodes, or availability of nodes by using the commands below:
+### Checking Job Status
+
+
 ## Good Neighbor Policies ##
 It is great to have a shared resource, but there are pitfalls. For those who either consistently or flagrantly violate the following policies we reserve the right to cancel your jobs, add constraints to the user and/or account involved, or suspend the user or account from the system (depending on the severity and chronic nature of the violations).
 
