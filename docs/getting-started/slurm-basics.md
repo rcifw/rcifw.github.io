@@ -31,6 +31,8 @@ salloc: Nodes node16 are ready for job
 node16.cluster
 ```
 This example is giving the user 5 minutes of time on 1 CPU on node16 and automatically opens a prompt on node16. When the requested time is up, the batch management system will shut down any user programs on that allocation and remove user access.
+
+You can also watch our "slurm_useful_commands" video in our [video tutorials Box folder](https://wustl.app.box.com/s/denupjvlz6qeulqtkm5lujegp4yxcvfo).
 ## Accounts
 Any cluster user may submit jobs to the free partition without specifying an account using `srun --partition=free`. Jobs on the free partition are limited in terms of their priority, hardware, and run time (max 3 hours) and use the "unassociated" account. Jobs submitted to a higher tier of service must be associated with an account using `--account=<my account>`.
 

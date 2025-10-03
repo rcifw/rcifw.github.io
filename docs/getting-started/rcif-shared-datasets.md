@@ -10,7 +10,8 @@ include: true
 To request access to available datasets or request new datasets visit the [Data Request Portal](https://wustl.az1.qualtrics.com/jfe/form/SV_6gPG6D5xbpgF5Pg). For more information on our process for evaluating and adding new datasets see [Requesting New RCIF Datasets](new-dataset-requests.md).
 
 Before accessing the shared datasets listed here, all users must agree not to transfer the data off of the RCIF shared storage systems. Violations of this policy will be referred for disciplinary redress.
-
+# Compliance
+The university is currently attesting that the Research Computing and Informatics Facility (RCIF), which operates the Center for High-Performance Computing (CHPC), satisfies National Institutes of Health (NIH) Genomic Data Sharing (GDS) rules for storing and processing data from NIH Controlled Access Data Repositories (CADR)s. The RCIF is committed to satisfying compliance requirements to comply with GDS rules into the future.
 # Available Datasets
 
 ## Curated Research Datasets

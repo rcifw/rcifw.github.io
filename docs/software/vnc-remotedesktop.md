@@ -5,6 +5,7 @@ tags: []
 source: https://sites.wustl.edu/chpc/resources/software/vnc/
 author:
 ---
+You can also watch our "VNC_tutorial" video in our [video tutorials Box folder](https://wustl.app.box.com/s/denupjvlz6qeulqtkm5lujegp4yxcvfo).
 ## 1. Creating a VNC Password
 You will first need to create a password for VNC connection on both login nodes by running `vncpasswd` command:
 

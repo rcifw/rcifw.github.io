@@ -17,6 +17,8 @@ Globus is a secure, reliable data transfer service designed for research and sci
 - Schedule transfers to run at specific times
 - Receive notifications when transfers complete
 
+## Very Quick Start
+You can watch our "RIS_to_CHPC_globus" video in our [video tutorials Box folder](https://wustl.app.box.com/s/denupjvlz6qeulqtkm5lujegp4yxcvfo).
 ## Prerequisites
 
 Before starting, you'll need:

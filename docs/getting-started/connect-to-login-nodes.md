@@ -8,6 +8,7 @@ source: https://sites.wustl.edu/chpc/for-users/frequently-asked-questions-faq/co
 author:
 include: true
 ---
+You can watch our "ssh_connection" and "VSCode_Connection" videos in our [video tutorials Box folder](https://wustl.app.box.com/s/denupjvlz6qeulqtkm5lujegp4yxcvfo).
 ### What is the hostname for the login nodes of the cluster?
 
 We have two (2) login nodes: `login01` and `login02`.

@@ -26,7 +26,10 @@ sftp> get clusterfile
 Fetching /ceph/chpc/home/user/clusterfile to clusterfile
 sftp> quit
 ```
+You can also watch our "sftp_tutorial" video in our [video tutorials Box folder](https://wustl.app.box.com/s/denupjvlz6qeulqtkm5lujegp4yxcvfo).
 ### sshfs
+
+You can also watch our "sshfs_local_to_server" and "sshfs_tutorial" videos in our [video tutorials Box folder](https://wustl.app.box.com/s/denupjvlz6qeulqtkm5lujegp4yxcvfo).
 #### Mounting a directory on CHPC server to a local device
 Linux users and Mac users (via MacFUSE and MacPorts) can access the cluster filesystem with the same convenience as they would access a portable hard drive by mounting it as a network filesystem using [`sshfs`](https://man.archlinux.org/man/sshfs.1). Under the hood, file transfers occur over the ssh protocol as if the user were calling `sftp`. Ordinary users on most systems can mount and unmount sshfs filesystems without `sudo` provided the mount point is in a directory they own; some systems also require that the mount point be in the user's home directory.
 
@@ -112,12 +115,16 @@ sftp> get localfile
 Fetching /home/user/localfile to localfile
 sftp> quit
 ```
+
+You can also watch our "sftp_tutorial" video in our [video tutorials Box folder](https://wustl.app.box.com/s/denupjvlz6qeulqtkm5lujegp4yxcvfo).
 ### lftp
 You can also connect to Box (see [here](https://it.wustl.edu/items/box-guides/) for details on setting up a password, which is distinct from your WUSTL key). Once you have an external password, you can open an lftp session, e.g.:
 ```
 lftp "$USER@wustl.edu@ftp.box.com"
 ```
 ### sshfs
+
+You can also watch our "sshfs_local_to_server" and "sshfs_tutorial" videos in our [video tutorials Box folder](https://wustl.app.box.com/s/denupjvlz6qeulqtkm5lujegp4yxcvfo).
 
 You may use `sshfs` to mount your local computer's filesystem over the reverse tunnel using the same principles as above. Note that the mount will only be visible on the login node -- it will not be visible on a compute node running a job.
 
@@ -256,3 +263,5 @@ For users that would like to mount a local directory to CHPC server, the followi
    [clusteruser@node26 ~]$ sshfs.sh -k ~/.ssh/your_key -w /your/mountpoint/directory -u localuser -h 127.0.0.1 -p <port_number> -r /your/local/directory
    ```
 And you should be able to access your local directory at `/work/sshfs` inside the `sshfs` container.
+
+You can also watch our "sshfs_local_to_server" and "sshfs_tutorial" videos in our [video tutorials Box folder](https://wustl.app.box.com/s/denupjvlz6qeulqtkm5lujegp4yxcvfo).
