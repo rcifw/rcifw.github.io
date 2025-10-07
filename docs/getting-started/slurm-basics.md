@@ -347,6 +347,71 @@ A Quick-Start Guide for those unfamiliar with Slurm can be found [here](https://
 Additional Slurm Tutorial Videos can be found [here](https://slurm.schedmd.com/tutorials.html)
 
 For users who are familiar with TORQUE queuing system and looking for a quick adjustment of migrating to  Slurm queuing system, check the information [here](https://wiki.gacrc.uga.edu/wiki/Migrating_from_Torque_to_Slurm) and [here](https://www.sdsc.edu/~hocks/FG/PBS.slurm.html).
+## Monitoring Slurm Jobs
+You may also check for status of jobs, nodes, or availability of nodes by using the commands below:
+### ```squeue```
+The ```squeue``` command is the primary tool for viewing the status of an ongoing job in the Slurm queue.
+#### Basic Usage
+```squeue```, by default, shows all jobs on the server. To view your jobs only, use the ```--me``` flag:
+```
+bash-5.1$ squeue --me
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+           6056472 tier1_cpu interact    sizhe  R      31:46      1 node30
+```
+The ```NODELIST``` column will show the node that your job is on if it is running (```R``` in the ```ST``` column). It would show reasons why the job is waiting if the job is currently pending (```PD``` in the ```ST``` column).
+#### Formatting ```squeue``` with ```-o``` option
+In addition to the basic output columns above, you can create a much more informative view using the ```-o``` (equivalently ```--format```) option:
+```
+squeue -o "<format_string>"
+```
+A list of useful format options are given below:
+| **Format String** | **Description** | **Example** |
+| --- | --- | --- |
+| %i | Job ID | ```6056472``` |
+| %j | Job Name | ```interactive``` |
+| %P | Partition | ```tier1_cpu``` |
+| %C | Number of CPUs | ```1``` |
+| %m | Minimum Memory Requested | ```6000M``` |
+| %R | Node List or Reason | ```node30``` or ```Priority``` |
+
+
+For all the options available, run ```squeue --helpformat``` or ```squeue --helpFormat```. You can combine the options above for a customized output:
+```
+bash-5.1$ squeue --me -o "%.12i %.10P %.15j %.8u %.2t %.10M %C %m"
+       JOBID  PARTITION            NAME     USER ST       TIME CPUS MIN_MEMORY
+     6056628  tier1_cpu     interactive    sizhe  R       2:07 1    6000M
+```
+
+### ```scontrol```
+```scontrol``` commands shows all the details of a given job for further diagnostics.
+#### Job diagnostics
+```
+scontrol show job <job_id>
+```
+The command above should provide a long list of parameters associated with the job. The command below filters for a few key fields in job diagnostics:
+```
+bash-5.1$ scontrol show job 6056628 | grep -E 'JobState|BatchHost|NumNodes|ReqTRES|AllocTRES|WorkDir|Min'
+   JobState=RUNNING Reason=None Dependency=(null)
+   RunTime=00:19:54 TimeLimit=01:00:00 TimeMin=N/A
+   BatchHost=node22
+   NumNodes=1 NumCPUs=1 NumTasks=1 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=1,mem=6000M,node=1,billing=1
+   AllocTRES=cpu=1,mem=6000M,node=1,billing=1
+   MinCPUsNode=1 MinMemoryCPU=6000M MinTmpDiskNode=0
+   WorkDir=/home/sizhe
+```
+The ```ReqTRES``` line shows the requested resources while the ```AllocTRES``` shows the allocated resources.
+#### Partition and Node diagnostics
+You can also run the commands below to view the status of a specific node or partitoin:
+```
+# View details for a partition
+scontrol show partition tier1_cpu
+
+# View details for a specific node
+scontrol show node node30
+```
+
+
 ## Good Neighbor Policies ##
 It is great to have a shared resource, but there are pitfalls. For those who either consistently or flagrantly violate the following policies we reserve the right to cancel your jobs, add constraints to the user and/or account involved, or suspend the user or account from the system (depending on the severity and chronic nature of the violations).
 
