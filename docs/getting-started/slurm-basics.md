@@ -347,10 +347,35 @@ A Quick-Start Guide for those unfamiliar with Slurm can be found [here](https://
 Additional Slurm Tutorial Videos can be found [here](https://slurm.schedmd.com/tutorials.html)
 
 For users who are familiar with TORQUE queuing system and looking for a quick adjustment of migrating to  Slurm queuing system, check the information [here](https://wiki.gacrc.uga.edu/wiki/Migrating_from_Torque_to_Slurm) and [here](https://www.sdsc.edu/~hocks/FG/PBS.slurm.html).
-## Additional Commands for Status Tracking
+## Monitoring Slurm Jobs
 You may also check for status of jobs, nodes, or availability of nodes by using the commands below:
-### Checking Job Status
+### ```squeue```: Getting an Overview of the Job Queue
+The ```squeue``` command is the primary tool for viewing the status of an ongoing job in the Slurm queue.
+#### Basic Usage
+```squeue```, by default, shows all jobs on the server. To view your jobs only, use the ```--me``` flag:
+```
+bash-5.1$ squeue --me
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+           6056472 tier1_cpu interact    sizhe  R      31:46      1 node30
+```
+The ```NODELIST``` column will show the node that your job is on if it is running (```R``` in the ```ST``` column). It would show reasons why the job is waiting if the job is currently pending (```PD``` in the ```ST``` column).
+#### Formatting ```squeue``` with ```-o``` option
+In addition to the basic output columns above, you can create a much more informative view using the ```-o``` (equivalently ```--format```) option:
+```
+squeue -o "<format_string>"
+```
+A list of useful format options are given below:
+| **Format String** | **Description** | **Example** |
+| --- | --- | --- |
+| %i | Job ID | ```6056472``` |
+| %j | Job Name | ```interactive``` |
+| %P | Partition | ```tier1_cpu``` |
+| %C | Number of CPUs | ```1``` |
+| %m | Minimum Memory Requested | ```6000M``` |
+| %R | Node List or Reason | ```node30``` or ```Priority``` |
 
+
+#### Filtering and Sorting
 
 ## Good Neighbor Policies ##
 It is great to have a shared resource, but there are pitfalls. For those who either consistently or flagrantly violate the following policies we reserve the right to cancel your jobs, add constraints to the user and/or account involved, or suspend the user or account from the system (depending on the severity and chronic nature of the violations).
