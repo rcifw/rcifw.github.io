@@ -19,7 +19,7 @@ Contact: Heng Li <hli@ds.dfci.harvard.edu>
 
 Usage:   bwa <command> [options]
 ```
-Or use exec to execute bwa commands using the container from the command line:
+Or use `exec` to execute bwa commands using the container from the command line:
 ```
 [sizhe@login02 ~]$ apptainer exec -B "$PWD" /containers/bwa-0.7.19-r1273.sif bwa 
 

@@ -50,6 +50,7 @@ To request new software or to add features, versions, or modules to existing sof
 * [python](python.md)
 * [r](r.md)
 * [root](root.md)
+* [samtools](samtools.md)
 * [singularity](apptainer.md)
 * [star](star.md)
 * [subread](subread.md)
