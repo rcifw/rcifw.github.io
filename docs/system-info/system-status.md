@@ -11,10 +11,10 @@ include: true
 The following are currently offline for maintenance: `node07`, `gpu[07,09]`, `gpua[401,408]`. No other anomalies reported.
 
 ### NRG/Informatics Portals/CNDA/MIRRIR
-IntraDB is currently undergoing a database upgrade, which is taking longer than hoped.  The outage is likely to continue at least through Friday morning (Sept 12th).  All other systems are operating normally.
+CURRENT OUTAGE: We are experiencing a filesystem issue whereby writes to the Ceph filesystem are failing.  Most portals, including CNDA, MIRRIR and several others have been taken down to prevent write attempts that cannot be completed.
 
 ### Shared Storage Systems (Ceph, BeeGFS, ZFS)
-All systems are operating normally.
+CURRENT OUTAGE: Write operations are currently failing on CephFS.
 
 #### If you are seeing an outage that is not reported here please contact:
 
