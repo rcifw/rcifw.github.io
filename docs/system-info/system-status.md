@@ -13,10 +13,10 @@ The following are currently offline for maintenance: `node07`, `gpu[07,09]`, `gp
 ### NRG/Informatics Portals/CNDA/MIRRIR
 **CURRENT OUTAGE:** We are experiencing a filesystem issue whereby writes to the Ceph filesystem are failing.  Most portals, including CNDA, MIRRIR and several others have been taken down to prevent write attempts that cannot be completed.
 
-**OUTAGE UPDATE - 09:48AM Friday, November 14th**:  Administrators are working on a networking issue on the newly deployed servers.  Once resolved, vendors will configure and bring the systems online which should resolve issues.  We are expecting resolution today.
+**OUTAGE UPDATE - 04:09PM Friday, November 14th**:  Metadata servers and storage are back online and the filesystem is healing.  However, connections to CephFS for filesystem access are still hanging.  We are investigating this issue.
 
 ### Shared Storage Systems (Ceph, BeeGFS, ZFS)
-**CURRENT OUTAGE:** Write operations are currently failing on CephFS.
+**CURRENT OUTAGE:** Ceph mounts are currently hanging/failing.
 
 #### If you are seeing an outage that is not reported here please contact:
 
