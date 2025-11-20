@@ -13,10 +13,16 @@ The following are currently offline for maintenance: `node07`, `gpu[07,09]`, `gp
 ### NRG/Informatics Portals/CNDA/MIRRIR
 **CURRENT OUTAGE:** We are experiencing a filesystem issue whereby writes to the Ceph filesystem are failing.  Most portals, including CNDA, MIRRIR and several others have been taken down to prevent write attempts that cannot be completed.
 
-**OUTAGE UPDATE - 08:07AM Monday, November 17th**:  The new storage hardware triggered a metadata replay process that is proceeding very slowly.  Our storage vendor is working on the process, but it is not expected to be completed this week.  The storage system is expected to remain unavailable through Sunday the 23rd.  We understand that the ongoing storage outage is causing substantial inconvenience, and we apologize for the impact this has on your work. 
+**OUTAGE UPDATE - 11:30AM Thursday, November 20th**:  We have received updated information from our storage vendor regarding the ongoing recovery. They are now able to measure the progress of the metadata replay and have provided a more definitive estimate.
+
+Based on the current rate of progress, **the vendor expects the metadata replay to require an additional 8–10 days to complete.**
+During this period, **the filesystem and all systems that rely on it will remain unavailable.**
+This places the anticipated return to service between Friday, November 28th and Saturday, November 30, assuming the current pace continues.
+
+We fully recognize the difficulty caused by this extended outage and sincerely apologize for the continued impact on your work. Thank you for your patience as we complete this mandatory recovery process safely and accurately.
 
 ### Shared Storage Systems (Ceph, BeeGFS, ZFS)
-**CURRENT OUTAGE:** Ceph mounts are currently hanging/failing.
+**CURRENT OUTAGE:** Ceph mounts remain unavailable due to the ongoing Ceph ourage.
 
 #### If you are seeing an outage that is not reported here please contact:
 
