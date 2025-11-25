@@ -13,6 +13,8 @@ The following are currently offline for maintenance: `node07`, `gpu[07,09]`, `gp
 ### NRG/Informatics Portals/CNDA/MIRRIR
 **CURRENT OUTAGE:** We are experiencing a filesystem issue whereby writes to the Ceph filesystem are failing.  Most portals, including CNDA, MIRRIR and several others have been taken down to prevent write attempts that cannot be completed.
 
+**OUTAGE UPDATE - 11:30AM Tuesday, November 25th**:  Our storage vendor reports that the metadata replay process continues and is estimated to complete by Saturday. However, one of the metadata servers rebooted unexpectedly and initiated a concurrent replay process. While we hope this errant process failed early and will not further complicate the recovery process, we are working on plans to deploy alternative infrastructure to make at least a subset of the data available during any additional recovery process. We will provide more details as plans are solidified.
+
 **OUTAGE UPDATE - 11:30AM Thursday, November 20th**:  We have received updated information from our storage vendor regarding the ongoing recovery. They are now able to measure the progress of the metadata replay and have provided a more definitive estimate.
 
 Based on the current rate of progress, **the vendor expects the metadata replay to require an additional 8–10 days to complete.**
