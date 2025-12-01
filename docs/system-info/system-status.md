@@ -13,11 +13,7 @@ The following are currently offline for maintenance: `node07`, `gpu[07,09]`, `gp
 ### NRG/Informatics Portals/CNDA/MIRRIR
 **CURRENT OUTAGE:** We are experiencing a filesystem issue whereby writes to the Ceph filesystem are failing.  Most portals, including CNDA, MIRRIR and several others have been taken down to prevent write attempts that cannot be completed.
 
-**OUTAGE UPDATE - 3:15PM Sunday, November 30th**:  Errors (duplicate inodes) remained after the replay process completed.  Our vendor is running the next process to correct those.  While the tool doesn't specify a run time, they estimated that would be complete this morning, but it is still running.  There should be an update tomorrow.  While making progress, they are in error fix mode. 
-
-**OUTAGE UPDATE - 11:30AM Tuesday, November 25th**:  Our storage vendor reports that the metadata replay process continues and is estimated to complete by Saturday. However, one of the metadata servers rebooted unexpectedly and initiated a concurrent replay process. While we hope this errant process failed early and will not further complicate the recovery process, we are working on plans to deploy alternative infrastructure to make at least a subset of the data available during any additional recovery process. We will provide more details as plans are solidified.
-
-**OUTAGE UPDATE - 11:30AM Thursday, November 20th**:  We have received updated information from our storage vendor regarding the ongoing recovery. They are now able to measure the progress of the metadata replay and have provided a more definitive estimate.
+**OUTAGE UPDATE - 12:00PM Monday, December 1st**:  The Ceph filesystem is back online, however our systems team have asked that it remain in read-only mode until our vendor can verify that it is safe for writes.  Our systems team has a meeting with the vendor tomorrow to discuss.  Most portals remain down due to the read-only status of the filesystem.
 
 Based on the current rate of progress, **the vendor expects the metadata replay to require an additional 8–10 days to complete.**
 During this period, **the filesystem and all systems that rely on it will remain unavailable.**
