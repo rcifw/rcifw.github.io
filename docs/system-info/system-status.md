@@ -11,18 +11,10 @@ include: true
 The following are currently offline for maintenance: `node07`, `gpu[07,09]`, `gpua[401,408]`. No other anomalies reported.
 
 ### NRG/Informatics Portals/CNDA/MIRRIR
-**CURRENT OUTAGE:** We are experiencing a filesystem issue whereby writes to the Ceph filesystem are failing.  Most portals, including CNDA, MIRRIR and several others have been taken down to prevent write attempts that cannot be completed.
-
-**OUTAGE UPDATE - 12:00PM Monday, December 1st**:  The Ceph filesystem is back online, however our systems team have asked that it remain in read-only mode until our vendor can verify that it is safe for writes.  Our systems team has a meeting with the vendor tomorrow to discuss.  Most portals remain down due to the read-only status of the filesystem.
-
-Based on the current rate of progress, **the vendor expects the metadata replay to require an additional 8–10 days to complete.**
-During this period, **the filesystem and all systems that rely on it will remain unavailable.**
-This places the anticipated return to service between Friday, November 28th and Saturday, November 30, assuming the current pace continues.
-
-We fully recognize the difficulty caused by this extended outage and sincerely apologize for the continued impact on your work. Thank you for your patience as we complete this mandatory recovery process safely and accurately.
+The recent Ceph filesystem issue has been resolved. All portals should be up and operating normally at this time.  Please contact the appropriate help e-mail (see below) if you find a system down or experience any issues.  We apologize for the extended outage.
 
 ### Shared Storage Systems (Ceph, BeeGFS, ZFS)
-**CURRENT OUTAGE:** Ceph mounts remain unavailable due to the ongoing Ceph ourage.
+Storage systems, including Ceph, are operating normally at this time.  Write access to Ceph can resume.
 
 #### If you are seeing an outage that is not reported here please contact:
 
