@@ -48,8 +48,8 @@ envs_dirs:
 
 You may also want to define environmental variables:
 ```
-export CONDA_PKGS_DIRS/home/$USER/.conda/pkgs
-export CONDARC/home/$USER/.condarc
+export CONDA_PKGS_DIRS=/home/$USER/.conda/pkgs
+export CONDARC=/home/$USER/.condarc
 ```
 ## Your Miniconda
 The most flexible option to install whatever Python versions you want and not rely on the system installation is to install Miniconda yourself. We have a handy script called `install_conda` that is available on the login nodes and will, by default, install the latest Miniconda to your `/scratch/$USER/` directory.
