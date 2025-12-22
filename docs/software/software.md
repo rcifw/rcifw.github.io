@@ -6,7 +6,16 @@ author: Scott Johnson
 include: true
 ---
 
-We support a variety of software on the RCIF HPC cluster.
+We support a variety of software on the RCIF HPC cluster. We may have different versions or configurations for software on login nodes and computation nodes. For most up-to-date information, please run command
+```
+module spider
+```
+or
+```
+module avail <modulename>
+```
+On the computation nodes.
+
 To request new software or to add features, versions, or modules to existing software on the RCIF HPC cluster, please visit the [Software Request page](https://wustl.az1.qualtrics.com/jfe/form/SV_bEoSD5vvjpsAXR4).
 * [afni](afni.md)
 * [amber](amber.md)
