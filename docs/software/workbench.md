@@ -12,7 +12,7 @@ You can see what versions are available by using:
 [me@login01 ~]$ module avail workbench
 
 ------------------------------ /opt/modulefiles -------------------------------
-   workbench/1.5.0
+   workbench/2.0.1
 
 Use "module spider" to find all possible modules and extensions.
 Use "module keyword key1 key2 ..." to search for all possible modules matching
@@ -21,18 +21,18 @@ any of the "keys".
 
 To load a specific version, you would use:
 ```
-[me@login01 ~]$ module load workbench/1.5.0
+[me@login01 ~]$ module load workbench/2.0.1
 ```
 
-while the "workbench" wildcard will load the default version, workbench-1.5.0 in this case.
+while the "workbench" wildcard will load the default version, workbench-2.0.1 in this case.
 
 You should now be able to run WORKBENCH commands:
 ```
 [me@login01 ~]$ wb_command
 ```
 ```
-Version: 1.5.0
-Commit Date: 2021-02-16 13:46:47 -0600
+Version: 2.0.1
+Commit Date: 2024-10-15 17:38:41 -0500
 Operating System: Linux
 
 Information options:
