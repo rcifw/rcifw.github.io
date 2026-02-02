@@ -222,7 +222,7 @@ For further details, see [Jupyter Notebook](./jupyter-notebook.md) tutorials.
 We *do not* recommend using the Matlab graphical user interface with X11 forwarding due to performance, reliability, and stability issues. Instead, consider using the web application or Jupyter notebook interface above. 
 
 ```
-[clusteruser@login01 ~]$ srun --partition=free -N 1 -n 8 --time=04:00:00 --pty --x11 bash
+[clusteruser@login01 ~]$ srun --partition=free -N 1 -n 8 --time=03:00:00 --pty --x11 bash
 [clusteruser@node01 ~]$ module load matlab
 [clusteruser@node01 ~]$ matlab
 MATLAB is selecting SOFTWARE OPENGL rendering.
