@@ -22,5 +22,5 @@ All systems are operating normally.
 * CNDA and XNAT Portals:  *cnda-help@wustl.edu*
 * MIRRIR:  *mirrir-help@wustl.edu*
 * IntraDB:  *intradb-help@humanconnectome.org*
-* TIP:  *tip-help@wustl.edu"
+* TIP:  *tip-help@wustl.edu*
 * Shared Storage and All Others:  *cil-help@wustl.edu*
