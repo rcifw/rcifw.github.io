@@ -11,7 +11,7 @@ include: true
 All systems are operating normally.
 
 ### NRG/Informatics Portals/CNDA/MIRRIR
-CNDA OUTAGE:  We are currently experiencing database issues with the CNDA.  We are working on the issue but don't yet have an ETA for resolution.
+All systems are operating normally.
 
 ### Shared Storage Systems (Ceph, BeeGFS, ZFS)
 All systems are operating normally.
