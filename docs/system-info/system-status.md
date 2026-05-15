@@ -11,10 +11,10 @@ include: true
 All systems are operating normally.
 
 ### NRG/Informatics Portals/CNDA/MIRRIR
-All systems are operating normally.
+PLANNED OUTAGE:  Informatics portals are currently down due to planned Ceph filesystem maintenance.
 
 ### Shared Storage Systems (Ceph, BeeGFS, ZFS)
-All systems are operating normally.
+PLANNED OUTAGE:  The Ceph filesystem is currently down for planned maintenance.
 
 #### If you are seeing an outage that is not reported here please contact:
 
