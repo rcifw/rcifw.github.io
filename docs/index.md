@@ -30,7 +30,7 @@ See a list of the [publications](publications.md) that have used the RCIF.
 We tried to make this a (mostly) linear workflow, from getting an account to specialized applications and recipes for doing specific tasks.
 - [Requesting an account](getting-started/applying-for-a-user-account.md)
 - [Connecting to the cluster](getting-started/connect-to-login-nodes.md)
-- [Free or paid and other accounting FAQs](getting-started/faqs-accounting.md)
+- [Free and paid services, rates, and accounting FAQs](getting-started/faqs-accounting.md)
 - [Importing and exporting data](getting-started/import-export-data.md)
 - [Accessing shared datasets](getting-started/rcif-shared-datasets.md)
 - [Using SLURM to run jobs](getting-started/slurm-basics.md)
