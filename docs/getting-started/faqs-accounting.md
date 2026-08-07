@@ -6,9 +6,9 @@ permalink: /rates/
 author: Scott Johnson
 include: true
 ---
-## What are the FY25 rates?
+## What are the FY27 rates?
 
-For rates see: [FY25 RCIF rate sheet](https://wustl.box.com/s/t01lm5ajuj776wz8w7jra1wjf2zwnejt) (note: WashU Key required)
+For rates see: [FY27 RCIF rate sheet](https://wustl.app.box.com/file/2395296207989) (note: WashU Key required)
 
 ## The tiers and rates are confusing; can you provide some examples of how I will be charged?
 
