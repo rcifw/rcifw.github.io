@@ -8,7 +8,7 @@ include: true
 ---
 ## What are the FY27 rates?
 
-For rates see: [FY27 RCIF rate sheet](https://wustl.app.box.com/file/2395296207989) (note: WashU Key required)
+For rates see: [FY27 RCIF rate sheet](https://wustl.box.com/v/current-rcif-rates) (note: WashU Key required)
 
 ## The tiers and rates are confusing; can you provide some examples of how I will be charged?
 
