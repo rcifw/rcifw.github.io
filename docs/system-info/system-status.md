@@ -11,7 +11,7 @@ include: true
 All systems are operating normally.
 
 ### NRG/Informatics Portals/CNDA/MIRRIR
-CNDA SCHEDULED OUTAGE:  The CNDA is currently undergoing an upgrade and will be brought back up the evening of Sunday, August 30th.
+All systems are operating normally.
 
 ### Shared Storage Systems (Ceph, BeeGFS, ZFS)
 All systems are operating normally.
