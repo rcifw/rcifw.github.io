@@ -11,7 +11,7 @@ include: true
 All systems are operating normally.
 
 ### NRG/Informatics Portals/CNDA/MIRRIR
-TIP is currently down for an upgrade.  Service is expected to return by end-of-date Tuesday, November 24th.
+TIP is currently down for an upgrade.  Service is expected to return by end-of-day Tuesday, November 24th.
 
 ### Shared Storage Systems (Ceph, BeeGFS, ZFS)
 All systems are operating normally.
